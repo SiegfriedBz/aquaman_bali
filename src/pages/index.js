@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Aquaman Bali | Surf School | Home</title>
+        <title>Aquaman Bali | Surf School | Surf Trips | Home</title>
         <meta
           name='keywords'
           content='Aquaman Bali Surf School Surf Trips'
