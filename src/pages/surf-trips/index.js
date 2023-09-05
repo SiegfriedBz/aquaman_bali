@@ -42,7 +42,7 @@ const SurfTrips = () => {
 
       <hr className='mx-5 my-5 bg-slate-950' />
 
-      <div ref={mapContainerRef} className='mx-2'>
+      <div ref={mapContainerRef} className='mx-2 scroll-mt-20'>
         <LocationMap />
       </div>
 
