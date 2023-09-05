@@ -25,7 +25,7 @@ export default function Home() {
         <meta name='keywords' content='Aquaman Bali Surf School'></meta>
         <meta property='og:title' content='Aquaman Bali | Surf School' />
         <meta property='og:image' content={RendySurfCSmall} />
-        <meta property='og:image:type' content='image/jpg' />
+        <meta property='og:image:type' content='image/png' />
         <meta property='og:image:width' content='1024' />
         <meta property='og:image:height' content='1024' />
       </Head>
