@@ -35,12 +35,16 @@ export default function Home() {
           content='Aquaman Bali | Surf School | Surf Trips'
         />
         <meta
+          property='og:description'
+          content='5 Stars Surf School in Bali!'
+        />
+        <meta
           property='og:image'
-          content='../../public/images/rendy/surf/rendy_surf_A_og.png'
+          content='https://asset.cloudinary.com/dygpd9pkl/c2a48fcae7883abdd7d95fb3cca8d7a0'
         />
         <meta property='og:image:type' content='image/png' />
-        <meta property='og:image:width' content='1024' />
-        <meta property='og:image:height' content='1024' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
       </Head>
 
       <main className='mx-2 my-5'>
