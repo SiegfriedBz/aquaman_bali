@@ -7,8 +7,8 @@ import LocationMap from '../components/LocationMap'
 import Image from 'next/image'
 import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
-import RendySurfBSmall from '../../public/images/rendy/surf/rendy_surf_B_small.jpg'
-import RendySurfCSmall from '../../public/images/rendy/surf/rendy_surf_C_small.jpg'
+import RendySurfBSmall from '../../public/images/rendy/surf/rendy_surf_B_small.png'
+import RendySurfCSmall from '../../public/images/rendy/surf/rendy_surf_C_small.png'
 import Carousel from '@/components/carousel'
 import styles from '@/components/carousel.module.css'
 import { useAppContext } from '@/context/appContext'
@@ -30,7 +30,10 @@ export default function Home() {
           property='og:title'
           content='Aquaman Bali | Surf School | Surf Trips'
         />
-        <meta property='og:image' content={RendySurfCSmall} />
+        <meta
+          property='og:image'
+          content="'../../public/images/rendy/surf/rendy_surf_C_small.png'"
+        />
         <meta property='og:image:type' content='image/png' />
         <meta property='og:image:width' content='1024' />
         <meta property='og:image:height' content='1024' />

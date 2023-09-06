@@ -19,6 +19,7 @@ import RendySurf09 from '../../../public/images/rendy/surf/rendy_surf_09.jpg'
 import RendySurf11 from '../../../public/images/rendy/surf/rendy_surf_11.jpg'
 import RendySurf12 from '../../../public/images/rendy/surf/rendy_surf_12.jpg'
 import RendySurf13 from '../../../public/images/rendy/surf/rendy_surf_13.jpg'
+import Head from 'next/head'
 
 const About = () => {
   const images = [
@@ -42,46 +43,56 @@ const About = () => {
     RendySurf13,
   ]
   return (
-    <div id='about-us' className='my-5'>
-      <div className='justify-bewteen mx-5 my-2 flex flex-col items-center'>
-        <div className='mb-2'>
-          <span className='text-center text-4xl font-bold'>About me</span>
+    <>
+      <Head>
+        <title>Aquaman Bali | Surf School | About me</title>
+        <meta
+          name='keywords'
+          content='Aquaman Bali Surf School About me'
+        ></meta>
+        <meta property='og:title' content='Aquaman Bali Surf School About me' />
+      </Head>
+      <div id='about-us' className='my-5'>
+        <div className='justify-bewteen mx-5 my-2 flex flex-col items-center'>
+          <div className='mb-2'>
+            <span className='text-center text-4xl font-bold'>About me</span>
+          </div>
+
+          <hr className='mx-5 my-2 bg-slate-950' />
+
+          <Carousel>
+            {images.map((src, i) => {
+              return (
+                <div key={i} className={`${styles.embla__slide} h-52`}>
+                  <Image
+                    src={src}
+                    alt='rendy'
+                    className='h-full rounded-lg object-cover shadow-2xl'
+                  />
+                </div>
+              )
+            })}
+          </Carousel>
+
+          <hr className='mx-5 my-2 bg-slate-950' />
+
+          <p className='my-3 text-justify'>
+            My name is Rendy and I am from Krui, South Sumatra. I started
+            surfing at the age of 8 and came to Bali in 2019 to work as a surf
+            instructor at Batu Bolong Beach in Canggu.
+          </p>
+          <p className='my-1 text-justify'>
+            Batu Bolong is an easy place to learn surfing as a beginner but is
+            also good for intermediate surfers.
+          </p>
+          <p className='my-1 text-justify'>
+            I really love surfing and want to share my experience, knowledge and
+            stoke of surfing with you. It is a lot of fun. Come join me and
+            let&apos;s enjoy the waves and make you reach your goals in surfing!
+          </p>
         </div>
-
-        <hr className='mx-5 my-2 bg-slate-950' />
-
-        <Carousel>
-          {images.map((src, i) => {
-            return (
-              <div key={i} className={`${styles.embla__slide} h-52`}>
-                <Image
-                  src={src}
-                  alt='rendy'
-                  className='h-full rounded-lg object-cover shadow-2xl'
-                />
-              </div>
-            )
-          })}
-        </Carousel>
-
-        <hr className='mx-5 my-2 bg-slate-950' />
-
-        <p className='my-3 text-justify'>
-          My name is Rendy and I am from Krui, South Sumatra. I started surfing
-          at the age of 8 and came to Bali in 2019 to work as a surf instructor
-          at Batu Bolong Beach in Canggu.
-        </p>
-        <p className='my-1 text-justify'>
-          Batu Bolong is an easy place to learn surfing as a beginner but is
-          also good for intermediate surfers.
-        </p>
-        <p className='my-1 text-justify'>
-          I really love surfing and want to share my experience, knowledge and
-          stoke of surfing with you. It is a lot of fun. Come join me and
-          let&apos;s enjoy the waves and make you reach your goals in surfing!
-        </p>
       </div>
-    </div>
+    </>
   )
 }
 

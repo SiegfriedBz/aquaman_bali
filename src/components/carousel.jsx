@@ -1,6 +1,6 @@
-import useEmblaCarousel from "embla-carousel-react"
-import Autoplay from "embla-carousel-autoplay"
-import styles from "./carousel.module.css"
+import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
+import styles from './carousel.module.css'
 
 const Carousel = ({ children }) => {
   // 1. useEmblaCarousel returns a emblaRef and we must attach the ref to a container.
