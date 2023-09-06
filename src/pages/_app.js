@@ -5,8 +5,8 @@ config.autoAddCss = false
 import Layout from '@/components/layout'
 import generateSocialImage from '../utils/generateSocialImage'
 
-const TITLE = 'Aquaman Surf Bali'
-const DESCRIPTION = '5 Stars Surf School & Surf Trips'
+const TITLE = 'Aquaman Bali'
+const DESCRIPTION = '5 Stars Surf School & Surf Trips in Bali'
 
 const socialImageConf = generateSocialImage({
   title: TITLE,
@@ -16,12 +16,7 @@ const socialImageConf = generateSocialImage({
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout
-      title={TITLE}
-      description={DESCRIPTION}
-      imageUrl={socialImageConf}
-      type='article'
-    >
+    <Layout title={TITLE} description={DESCRIPTION} imageUrl={socialImageConf}>
       <Component {...pageProps} />
     </Layout>
   )

@@ -6,20 +6,30 @@ import LessonIntermediate from '../../../public/images/lessons/surf-lesson-inter
 import LessonAdvanced from '../../../public/images/lessons/surf-lesson-advanced.jpg'
 import Link from 'next/link'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
-const SurfLessons = () => {
+const SurfLessons = ({ customMeta }) => {
+  const router = useRouter()
+
+  const meta = {
+    ...customMeta,
+    canonicalUrl: `https://aquaman-surf-bali.vercel.app/${router.asPath}`,
+    title: 'Aquaman Bali | Surf School | Surf Lessons',
+    description: 'Aquaman Bali | Discover Our Surf Lessons Packages',
+  }
+
   return (
     <>
       <Head>
-        <title>Aquaman Bali | Surf School | Surf Lessons</title>
+        <title>{meta.title}</title>
+        <meta name='robots' content='follow, index' />
+        <meta content={meta.description} name='description' />
         <meta
-          name='keywords'
-          content='Aquaman Bali Surf School Surf Lessons'
-        ></meta>
-        <meta
-          property='og:title'
-          content='Aquaman Bali Surf School Surf Lessons'
+          property='og:url'
+          content={`https://aquaman-surf-bali.vercel.app${router.asPath}`}
         />
+        <meta property='og:description' content={meta.description} />
+        <meta property='og:title' content={meta.title} />
       </Head>
       <div
         id='surf-lessons'

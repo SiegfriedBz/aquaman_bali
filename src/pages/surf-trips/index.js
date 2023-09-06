@@ -13,8 +13,10 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
-const SurfTrips = () => {
+const SurfTrips = ({ customMeta }) => {
+  const router = useRouter()
   const mapContainerRef = useRef(null)
   const { setShowPopup, setPopup } = useAppContext()
 
@@ -24,18 +26,25 @@ const SurfTrips = () => {
     mapContainerRef?.current?.scrollIntoView()
   }
 
+  const meta = {
+    ...customMeta,
+    canonicalUrl: `https://aquaman-surf-bali.vercel.app/${router.asPath}`,
+    title: 'Aquaman Bali | Surf School | Surf Trips',
+    description: 'Aquaman Bali | Discover Our Surf Trips in Indonesia',
+  }
+
   return (
     <>
       <Head>
-        <title>Aquaman Bali | Surf School | Surf Trips</title>
+        <title>{meta.title}</title>
+        <meta name='robots' content='follow, index' />
+        <meta content={meta.description} name='description' />
         <meta
-          name='keywords'
-          content='Aquaman Bali Surf School Surf Trips'
-        ></meta>
-        <meta
-          property='og:title'
-          content='Aquaman Bali Surf School Surf Trips'
+          property='og:url'
+          content={`https://aquaman-surf-bali.vercel.app${router.asPath}`}
         />
+        <meta property='og:description' content={meta.description} />
+        <meta property='og:title' content={meta.title} />
       </Head>
       <div id='surf-trips'>
         <div className='mx-2 my-5 flex scroll-mt-20 flex-col items-center justify-center'>

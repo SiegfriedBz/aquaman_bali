@@ -20,37 +20,50 @@ import RendySurf11 from '../../../public/images/rendy/surf/rendy_surf_11.jpg'
 import RendySurf12 from '../../../public/images/rendy/surf/rendy_surf_12.jpg'
 import RendySurf13 from '../../../public/images/rendy/surf/rendy_surf_13.jpg'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+const images = [
+  RendySurf06,
+  RendySurfA,
+  RendyKid2,
+  RendyKid01,
+  RendyKid03,
+  RendySurfB,
+  RendySurfC,
+  RendySurfD,
+  RendySurf01,
+  RendySurf02,
+  RendySurf03,
+  RendySurf04,
+  RendySurf05,
+  RendySurf07,
+  RendySurf09,
+  RendySurf11,
+  RendySurf12,
+  RendySurf13,
+]
 
-const About = () => {
-  const images = [
-    RendySurf06,
-    RendySurfA,
-    RendyKid2,
-    RendyKid01,
-    RendyKid03,
-    RendySurfB,
-    RendySurfC,
-    RendySurfD,
-    RendySurf01,
-    RendySurf02,
-    RendySurf03,
-    RendySurf04,
-    RendySurf05,
-    RendySurf07,
-    RendySurf09,
-    RendySurf11,
-    RendySurf12,
-    RendySurf13,
-  ]
+const About = ({ customMeta }) => {
+  const router = useRouter()
+
+  const meta = {
+    ...customMeta,
+    canonicalUrl: `https://aquaman-surf-bali.vercel.app/${router.asPath}`,
+    title: 'Aquaman Bali | Surf School | About me',
+    description: 'Aquaman Bali | Discover My Story',
+  }
+
   return (
     <>
       <Head>
-        <title>Aquaman Bali | Surf School | About me</title>
+        <title>{meta.title}</title>
+        <meta name='robots' content='follow, index' />
+        <meta content={meta.description} name='description' />
         <meta
-          name='keywords'
-          content='Aquaman Bali Surf School About me'
-        ></meta>
-        <meta property='og:title' content='Aquaman Bali Surf School About me' />
+          property='og:url'
+          content={`https://aquaman-surf-bali.vercel.app${router.asPath}`}
+        />
+        <meta property='og:description' content={meta.description} />
+        <meta property='og:title' content={meta.title} />
       </Head>
       <div id='about-us' className='my-5'>
         <div className='justify-bewteen mx-5 my-2 flex flex-col items-center'>
