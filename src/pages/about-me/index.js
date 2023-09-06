@@ -8,12 +8,12 @@ import RendySurfA from '../../../public/images/rendy/surf/rendy_surf_A.jpg'
 import RendySurfB from '../../../public/images/rendy/surf/rendy_surf_B.jpg'
 import RendySurfC from '../../../public/images/rendy/surf/rendy_surf_C.jpg'
 import RendySurfD from '../../../public/images/rendy/surf/rendy_surf_D.jpg'
-import RendySurfAA from '../../../public/images/rendy/surf/rendy_surf_AA.jpg'
 import RendySurf01 from '../../../public/images/rendy/surf/rendy_surf_01.jpg'
 import RendySurf02 from '../../../public/images/rendy/surf/rendy_surf_02.jpg'
 import RendySurf03 from '../../../public/images/rendy/surf/rendy_surf_03.jpg'
 import RendySurf04 from '../../../public/images/rendy/surf/rendy_surf_04.jpg'
 import RendySurf05 from '../../../public/images/rendy/surf/rendy_surf_05.jpg'
+import RendySurf06 from '../../../public/images/rendy/surf/rendy_surf_06.jpg'
 import RendySurf07 from '../../../public/images/rendy/surf/rendy_surf_07.jpg'
 import RendySurf09 from '../../../public/images/rendy/surf/rendy_surf_09.jpg'
 import RendySurf11 from '../../../public/images/rendy/surf/rendy_surf_11.jpg'
@@ -23,7 +23,7 @@ import Head from 'next/head'
 
 const About = () => {
   const images = [
-    RendySurfAA,
+    RendySurf06,
     RendySurfA,
     RendyKid2,
     RendyKid01,
