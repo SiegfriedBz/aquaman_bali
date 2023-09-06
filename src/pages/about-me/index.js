@@ -42,30 +42,23 @@ const images = [
   RendySurf13,
 ]
 
-const About = ({ customMeta }) => {
+const About = () => {
   const router = useRouter()
 
   const meta = {
-    ...customMeta,
-    canonicalUrl: `https://aquaman-surf-bali.vercel.app/${router.asPath}`,
     title: 'Aquaman Bali | Surf School | About me',
-    description: 'Aquaman Bali | Discover My Story',
+    description: 'Discover My Story',
   }
 
   return (
     <>
       <Head>
         <title>{meta.title}</title>
-        <meta name='robots' content='follow, index' />
         <meta content={meta.description} name='description' />
-        <meta
-          property='og:url'
-          content={`https://aquaman-surf-bali.vercel.app${router.asPath}`}
-        />
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
       </Head>
-      <div id='about-us' className='my-5'>
+      <div id='about-me' className='my-5'>
         <div className='justify-bewteen mx-5 my-2 flex flex-col items-center'>
           <div className='mb-2'>
             <span className='text-center text-4xl font-bold'>About me</span>

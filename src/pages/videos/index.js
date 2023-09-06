@@ -7,27 +7,17 @@ import WaterPhoto from '../../../public/images/photo_video/water-photo.jpg'
 import VideoAnalysis from '../../../public/images/photo_video/video-analysis.jpg'
 import Head from 'next/head'
 
-const Videos = ({ customMeta }) => {
-  const router = useRouter()
-
+const Videos = () => {
   const meta = {
-    ...customMeta,
-    canonicalUrl: `https://aquaman-surf-bali.vercel.app/${router.asPath}`,
-    title:
-      'Aquaman Bali | Surf School | Photo & Video | Drone | Video Analysis',
-    description: 'Aquaman Bali | Discover Our Photo & Video Packages',
+    title: 'Aquaman Bali | Surf School | Photo & Video | Drone',
+    description: 'Discover Our Photo & Video Packages',
   }
 
   return (
     <>
       <Head>
         <title>{meta.title}</title>
-        <meta name='robots' content='follow, index' />
         <meta content={meta.description} name='description' />
-        <meta
-          property='og:url'
-          content={`https://aquaman-surf-bali.vercel.app${router.asPath}`}
-        />
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
       </Head>

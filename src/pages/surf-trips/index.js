@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import LocationMap, { usePopup } from '@/components/LocationMap'
+import LocationMap from '@/components/LocationMap'
 import { useAppContext } from '@/context/appContext'
 import { MARKERS } from '@/data/markers'
 import CangguImage from '../../../public/images/lessons/girl_surf.jpg'
@@ -13,10 +13,8 @@ import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 
-const SurfTrips = ({ customMeta }) => {
-  const router = useRouter()
+const SurfTrips = () => {
   const mapContainerRef = useRef(null)
   const { setShowPopup, setPopup } = useAppContext()
 
@@ -27,22 +25,15 @@ const SurfTrips = ({ customMeta }) => {
   }
 
   const meta = {
-    ...customMeta,
-    canonicalUrl: `https://aquaman-surf-bali.vercel.app/${router.asPath}`,
     title: 'Aquaman Bali | Surf School | Surf Trips',
-    description: 'Aquaman Bali | Discover Our Surf Trips in Indonesia',
+    description: 'Discover Our Surf Trips in Indonesia',
   }
 
   return (
     <>
       <Head>
         <title>{meta.title}</title>
-        <meta name='robots' content='follow, index' />
         <meta content={meta.description} name='description' />
-        <meta
-          property='og:url'
-          content={`https://aquaman-surf-bali.vercel.app${router.asPath}`}
-        />
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
       </Head>
