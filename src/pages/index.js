@@ -20,54 +20,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        {/* HTML Meta Tags */}
-        <title>Aquaman Bali | Surf School | Surf Trips</title>
-        <meta name='description' content='5 Stars Surf School in Bali!' />
-
-        {/* Facebook Meta Tags */}
-        <meta
-          property='og:url'
-          content='https://aquaman-surf-bali.vercel.app/'
-        />
-        <meta property='og:type' content='website' />
-        <meta
-          property='og:title'
-          content='Aquaman Bali | Surf School | Surf Trips'
-        />
-        <meta
-          property='og:description'
-          content='5 Stars Surf School in Bali!'
-        />
-        <meta
-          property='og:image'
-          content='https://asset.cloudinary.com/dygpd9pkl/c2a48fcae7883abdd7d95fb3cca8d7a0'
-        />
-
-        {/* Twitter Meta Tags */}
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta
-          property='twitter:domain'
-          content='aquaman-surf-bali.vercel.app'
-        />
-        <meta
-          property='twitter:url'
-          content='https://aquaman-surf-bali.vercel.app/'
-        />
-        <meta
-          name='twitter:title'
-          content='Aquaman Bali | Surf School | Surf Trips'
-        />
-        <meta
-          name='twitter:description'
-          content='5 Stars Surf School in Bali!'
-        />
-        <meta
-          name='twitter:image'
-          content='https://asset.cloudinary.com/dygpd9pkl/c2a48fcae7883abdd7d95fb3cca8d7a0'
-        />
-      </Head>
-
       <main className='mx-2 my-5'>
         <section id='video'>
           <div className='relative'>
