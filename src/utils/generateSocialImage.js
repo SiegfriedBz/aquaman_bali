@@ -10,8 +10,8 @@ export default function generateSocialImage({
   imageHeight = 630,
   textAreaWidth = 630,
   textAreaHeight = 450,
-  textLeftOffset = 45,
-  textBottomOffset = -40,
+  textLeftOffset = 650,
+  textBottomOffset = 275,
   textColor = 'FFFFFF',
   titleFontSize = 60,
 }) {
