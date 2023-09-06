@@ -1,10 +1,19 @@
 export default function generateSocialImage({
+  title,
   cloudName,
   imagePublicID,
   cloudinaryUrlBase = 'https://res.cloudinary.com',
   version = null,
+  titleFont = 'arial',
+  titleExtraConfig = '_bold',
   imageWidth = 1200,
   imageHeight = 630,
+  textAreaWidth = 630,
+  textAreaHeight = 450,
+  textLeftOffset = 45,
+  textBottomOffset = -40,
+  textColor = 'FFFFFF',
+  titleFontSize = 60,
 }) {
   // configure social media image dimensions, quality, and format
   const imageConfig = [
@@ -14,6 +23,20 @@ export default function generateSocialImage({
     'f_auto',
   ].join(',')
 
+  // configure the title text
+  const titleConfig = [
+    `w_${textAreaWidth}`,
+    `h_${textAreaHeight}`,
+    'c_fit',
+    `co_rgb:${textColor}`,
+    'g_west',
+    `x_${textLeftOffset}`,
+    `y_${textBottomOffset}`,
+    `l_text:${titleFont}_${titleFontSize}${titleExtraConfig}:${encodeURIComponent(
+      title
+    )}`,
+  ].join(',')
+
   // combine all the pieces required to generate a Cloudinary URL
   const urlParts = [
     cloudinaryUrlBase,
@@ -21,7 +44,7 @@ export default function generateSocialImage({
     'image',
     'upload',
     imageConfig,
-    // titleConfig,
+    titleConfig,
     version,
     imagePublicID,
   ]

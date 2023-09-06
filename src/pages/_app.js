@@ -5,22 +5,21 @@ config.autoAddCss = false
 import Layout from '@/components/layout'
 import generateSocialImage from '../utils/generateSocialImage'
 
+const TITLE = 'Aquaman Surf Bali'
+const DESCRIPTION = '5 Stars Surf School & Surf Trips'
+
 const socialImageConf = generateSocialImage({
-  title: 'Aquaman Surf Bali',
-  // underlayImage: coverImage.slice(coverImage.lastIndexOf('/') + 1),
+  title: TITLE,
   cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  imagePublicID: 'og_social_aquaman_bali', // the OG template image name uploaded in Cloudinary
+  imagePublicID: 'og_social_aquaman_bali',
 })
 
 export default function App({ Component, pageProps }) {
   return (
     <Layout
-      // title={title}
-      title='{title}'
-      // description={description}
-      description='{description}'
+      title={TITLE}
+      description={DESCRIPTION}
       imageUrl={socialImageConf}
-      // date={new Date(publishedDate).toISOString()}
       type='article'
     >
       <Component {...pageProps} />
