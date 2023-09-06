@@ -23,24 +23,27 @@ const SurfLessons = () => {
       </Head>
       <div
         id='surf-lessons'
-        className='my-5 flex scroll-mt-20 flex-col items-center justify-center'
+        className='flex scroll-mt-20 flex-col items-center justify-center py-5 dark:bg-slate-900 dark:text-gray-200'
       >
         <h2 className='text-center text-4xl font-bold text-slate-900 dark:text-white'>
           Surf lessons
         </h2>
-        <h3 className='mt-2 text-center text-2xl text-slate-900 dark:text-white'>
+        <h3 className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'>
           Enjoy private & group surf lessons
         </h3>
-        <h4 className='text-center text-xl text-slate-900 dark:text-white'>
+        <h4 className='text-center text-xl text-slate-900 dark:text-gray-200'>
           in Canggu & during your{' '}
           <span>
-            <Link href='/surf-trips' className='underline underline-offset-4'>
+            <Link
+              href='/surf-trips'
+              className='text-slate-900 underline  underline-offset-4 dark:text-gray-200'
+            >
               Surf Trips
             </Link>
           </span>
         </h4>
 
-        <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-3 bg-slate-950 dark:bg-slate-200' />
 
         <CldVideoPlayer
           id='rendy-teach-video-01'
@@ -50,10 +53,10 @@ const SurfLessons = () => {
           colors={{ accent: '#38bdf8', base: '#fbbf24', text: '#fbbf24' }}
           autoPlay='always'
           loop={true}
-          className='mx-2 my-3 rounded-md border-0 shadow-2xl'
+          className='rounded-md border-0 shadow-2xl'
         />
 
-        <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-3 bg-slate-950' />
 
         <section id='beginner' className='my-2'>
           <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
@@ -61,13 +64,13 @@ const SurfLessons = () => {
           </h3>
           <p className='text-center'>Level 1: Never surfed before</p>
 
-          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3'>
+          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
             <Image
               src={LessonBeginner}
               width={325}
               height={325}
               alt='lesson-beginner'
-              className='mb-5 rounded-lg drop-shadow-xl'
+              className='mx-auto mb-5 rounded-lg drop-shadow-xl'
             />
             <p className='text-justify'>
               On your very first lesson you will be given an introduction on the
@@ -124,13 +127,13 @@ const SurfLessons = () => {
             Intermediate
           </h3>
           <p className='text-center'>Level 2: Already taken lessons before</p>
-          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3'>
+          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
             <Image
               src={LessonIntermediate}
               width={325}
               height={325}
               alt='lesson-beginner'
-              className='mb-5 rounded-lg drop-shadow-xl'
+              className='mx-auto mb-5 rounded-lg drop-shadow-xl'
             />
             <p className='text-justify'>
               Level 2: Already taken lessons before Beginner/ Intermediate You
@@ -191,13 +194,13 @@ const SurfLessons = () => {
             Advanced
           </h3>
           <p className='text-center'>Level 3: Can surf and wants to improve</p>
-          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3'>
+          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
             <Image
               src={LessonAdvanced}
               width={325}
               height={325}
               alt='lesson-beginner'
-              className='mb-5 rounded-lg drop-shadow-xl'
+              className='mx-auto mb-5 rounded-lg drop-shadow-xl'
             />
             <p className='text-justify'>
               You are able to catch white water or green waves already and want

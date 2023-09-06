@@ -21,20 +21,21 @@ const Videos = () => {
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
       </Head>
+
       <div
         id='videos'
-        className='mx-auto my-5 flex scroll-mt-20 flex-col items-center justify-center'
+        className='flex scroll-mt-20 flex-col items-center justify-center py-5 dark:bg-slate-900 dark:text-gray-200'
       >
         <h2 className='text-center text-3xl font-bold text-slate-900 dark:text-white'>
           Photo & Video | Drone
         </h2>
-        <h3 className='mt-2 text-center text-2xl text-slate-900 dark:text-white'>
+        <h3 className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'>
           Get an amazing souvenir
         </h3>
-        <h3 className='text-center text-2xl text-slate-900 dark:text-white'>
+        <h3 className='text-center text-2xl text-slate-900 dark:text-gray-200'>
           from your surf session
         </h3>
-        <h4 className='text-center text-xl text-slate-900 dark:text-white'>
+        <h4 className='text-center text-xl text-slate-900 dark:text-gray-200'>
           in Canggu & during your{' '}
           <span>
             <Link href='/surf-trips' className='underline underline-offset-4'>
@@ -53,16 +54,16 @@ const Videos = () => {
           colors={{ accent: '#38bdf8', base: '#fbbf24', text: '#fbbf24' }}
           autoPlay='always'
           loop={true}
-          className='mx-2 my-3 rounded-md border-0 shadow-2xl'
+          className='rounded-md border-0 shadow-2xl'
         />
 
-        <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-3 bg-slate-950' />
 
         <section id='photo-video' className='my-2'>
           <h2 className='text-center text-3xl font-bold text-slate-900 dark:text-white'>
             Photo & Video
           </h2>
-          <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3'>
+          <div className='mx-2 my-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
             <Image
               src={PhotoVideo}
               width={325}
@@ -71,7 +72,9 @@ const Videos = () => {
               className='mb-5 rounded-lg drop-shadow-xl'
             />
 
-            <p className='self-start font-bold'>Who is it for?</p>
+            <p className='self-start font-bold dark:text-white'>
+              Who is it for?
+            </p>
             <p className='text-justify'>
               Anyone who wants to keep a memory from their surf session. First
               time surfer, beginner, intermediate and advanced surfer -
@@ -81,7 +84,9 @@ const Videos = () => {
             </p>
             <br />
 
-            <p className='self-start font-bold'>How does it work? </p>
+            <p className='self-start font-bold dark:text-white'>
+              How does it work?{' '}
+            </p>
             <p className='text-justify'>
               Photos or videos will be taken during your surf session (max 2
               hours) with high quality equipment.
@@ -93,7 +98,7 @@ const Videos = () => {
             </p>
 
             <a
-              className='mb-3 mt-2 w-48 rounded-3xl bg-teal-500 px-8 py-4 text-center font-extrabold text-white outline-none hover:bg-teal-400 active:rounded-3xl active:bg-teal-300'
+              className='mx-auto my-3 w-48 rounded-3xl bg-teal-500 px-8 py-4 text-center font-extrabold text-white outline-none hover:bg-teal-400 active:rounded-3xl active:bg-teal-300'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
             >
               Contact Us
@@ -101,16 +106,19 @@ const Videos = () => {
           </div>
         </section>
 
-        <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-3 bg-slate-950' />
 
         <section
           id='water-shots-drone'
           className='flex scroll-mt-20 flex-col items-center justify-center'
         >
           <h2 className='text-center text-3xl font-bold text-slate-900 dark:text-white'>
-            Water Photo & Video | Drone
+            Water Photo & Video
           </h2>
-          <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3'>
+          <h2 className='text-center text-3xl font-bold text-slate-900 dark:text-white'>
+            Drone
+          </h2>
+          <div className='mx-2 my-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
             <Image
               src={WaterPhoto}
               width={325}
@@ -119,7 +127,9 @@ const Videos = () => {
               className='mb-5 rounded-lg drop-shadow-xl'
             />
 
-            <p className='self-start font-bold'>Who is it for?</p>
+            <p className='self-start font-bold dark:text-white'>
+              Who is it for?
+            </p>
             <p className='text-justify'>
               If you want extraordinary shots of your surfing, water photography
               or drone shots are for you. Please inquire if you plan a surf trip
@@ -128,7 +138,9 @@ const Videos = () => {
             </p>
             <br />
 
-            <p className='self-start font-bold'>How does it work? </p>
+            <p className='self-start font-bold dark:text-white'>
+              How does it work?{' '}
+            </p>
             <p className='text-justify'>
               The photographer will be in the water taking close shots of you
               surfing with an underwater camera. Drone shots will be done from
@@ -141,7 +153,7 @@ const Videos = () => {
             </p>
 
             <a
-              className='mb-3 mt-2 w-48 rounded-3xl bg-teal-500 px-8 py-4 text-center font-extrabold text-white outline-none hover:bg-teal-400 active:rounded-3xl active:bg-teal-300'
+              className='mx-auto my-3 w-48 rounded-3xl bg-teal-500 px-8 py-4 text-center font-extrabold text-white outline-none hover:bg-teal-400 active:rounded-3xl active:bg-teal-300'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
             >
               Contact Us
@@ -149,7 +161,7 @@ const Videos = () => {
           </div>
         </section>
 
-        <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-3 bg-slate-950' />
 
         <section
           id='video-analysis'
@@ -159,7 +171,7 @@ const Videos = () => {
             Video Analysis
           </h2>
 
-          <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3'>
+          <div className='mx-2 my-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
             <Image
               src={VideoAnalysis}
               width={325}
@@ -168,7 +180,9 @@ const Videos = () => {
               className='mb-5 rounded-lg drop-shadow-xl'
             />
 
-            <p className='self-start font-bold'>Who is it for?</p>
+            <p className='self-start font-bold dark:text-white'>
+              Who is it for?
+            </p>
             <p className='text-justify'>
               Seeing yourself surf on videos and receive profound feedback what
               you are already good at or where still is room for improvement is
@@ -178,7 +192,9 @@ const Videos = () => {
             </p>
             <br />
 
-            <p className='self-start font-bold'>How does it work? </p>
+            <p className='self-start font-bold dark:text-white'>
+              How does it work?{' '}
+            </p>
             <p className='text-justify'>
               The surf session (max 2 hours) will be filmed with high quality
               equipment. After your surf session (with or without surf
@@ -195,7 +211,7 @@ const Videos = () => {
             </p>
 
             <a
-              className='mb-3 mt-2 w-48 rounded-3xl bg-teal-500 px-8 py-4 text-center font-extrabold text-white outline-none hover:bg-teal-400 active:rounded-3xl active:bg-teal-300'
+              className='mx-auto my-3 w-48 rounded-3xl bg-teal-500 px-8 py-4 text-center font-extrabold text-white outline-none hover:bg-teal-400 active:rounded-3xl active:bg-teal-300'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
             >
               Contact Us

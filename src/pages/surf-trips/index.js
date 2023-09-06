@@ -37,190 +37,189 @@ const SurfTrips = () => {
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
       </Head>
-      <div id='surf-trips'>
-        <div className='mx-2 my-5 flex scroll-mt-20 flex-col items-center justify-center'>
-          <h2 className='text-center text-4xl font-bold text-slate-900 dark:text-white'>
-            Surf trips
-          </h2>
-          <h3 className='mt-2 text-center text-2xl text-slate-900 dark:text-white'>
-            From Lombok to Sumatra
-          </h3>
-          <h4 className='text-center text-xl text-slate-900 dark:text-white'>
-            enjoy an amazing surf trip with Rendy
-          </h4>
-          <h4 className='mt-2 text-center text-xl text-slate-900 dark:text-white'>
-            Starting from 500K IDR
-          </h4>
-        </div>
+      <div
+        id='surf-trips'
+        className='flex scroll-mt-20 flex-col items-center justify-center py-5 dark:bg-slate-900 dark:text-gray-200'
+      >
+        <h2 className='text-center text-4xl font-bold text-slate-900 dark:text-white'>
+          Surf trips
+        </h2>
+        <h3 className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'>
+          From Lombok to Sumatra
+        </h3>
+        <h4 className='text-center text-xl text-slate-900 dark:text-gray-200'>
+          enjoy an amazing surf trip with Rendy
+        </h4>
+        <h4 className='mt-2 text-center text-xl text-slate-900 dark:text-gray-200'>
+          Starting from 500K IDR
+        </h4>
+      </div>
+
+      {/* <hr className='mx-5 my-5 bg-slate-950' /> */}
+
+      <div ref={mapContainerRef} className='scroll-mt-20 p-2 dark:bg-slate-900'>
+        <LocationMap />
+      </div>
+
+      <div className='p-2 dark:bg-slate-900 dark:text-gray-200'>
+        <section id='canggu'>
+          <h2 className='text-3xl font-semibold'>Canggu</h2>
+          <div
+            className='my-2 flex items-center'
+            onClick={() => handleSelectTrip('canggu')}
+          >
+            <FontAwesomeIcon
+              icon={faEye}
+              className='me-2 text-2xl font-bold text-amber-500'
+            />
+            <span className='text'>See on map</span>
+          </div>
+          <div className='h-52'>
+            <Image
+              src={CangguImage}
+              alt='canggu'
+              className='h-full rounded-lg object-cover shadow-2xl'
+            />
+          </div>
+        </section>
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <div ref={mapContainerRef} className='mx-2 scroll-mt-20'>
-          <LocationMap />
-        </div>
+        <section id='medewi'>
+          <h2 className='text-3xl font-semibold'>Medewi</h2>{' '}
+          <div
+            className='my-2 flex items-center'
+            onClick={() => handleSelectTrip('medewi')}
+          >
+            <FontAwesomeIcon
+              icon={faEye}
+              className='me-2 text-2xl font-bold text-amber-500'
+            />
+            <span className='text'>See on map</span>
+          </div>
+          <div className='h-52'>
+            <Image
+              src={MedewiImage}
+              alt='canggu'
+              className='h-full rounded-lg object-cover shadow-2xl'
+            />
+          </div>
+        </section>
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <div className='mx-2'>
-          <section id='canggu'>
-            <h2 className='text-3xl font-semibold'>Canggu</h2>
-            <div
-              className='my-2 flex items-center'
-              onClick={() => handleSelectTrip('canggu')}
-            >
-              <FontAwesomeIcon
-                icon={faEye}
-                className='me-2 text-2xl font-bold text-amber-500'
-              />
-              <span className='text'>See on map</span>
-            </div>
-            <div className='h-52'>
-              <Image
-                src={CangguImage}
-                alt='canggu'
-                className='h-full rounded-lg object-cover shadow-2xl'
-              />
-            </div>
-          </section>
+        <section id='balangan'>
+          <h2 className='text-3xl font-semibold'>Balangan</h2>
+          <div
+            className='my-2 flex items-center'
+            onClick={() => handleSelectTrip('balangan')}
+          >
+            <FontAwesomeIcon
+              icon={faEye}
+              className='me-2 text-2xl font-bold text-amber-500'
+            />
+            <span className='text'>See on map</span>
+          </div>
+          <div className='h-52'>
+            <Image
+              src={BalanganImage}
+              alt='canggu'
+              className='h-full rounded-lg object-cover shadow-2xl'
+            />
+          </div>
+        </section>
 
-          <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-5 bg-slate-950' />
 
-          <section id='medewi'>
-            <h2 className='text-3xl font-semibold'>Medewi</h2>{' '}
-            <div
-              className='my-2 flex items-center'
-              onClick={() => handleSelectTrip('medewi')}
-            >
-              <FontAwesomeIcon
-                icon={faEye}
-                className='me-2 text-2xl font-bold text-amber-500'
-              />
-              <span className='text'>See on map</span>
-            </div>
-            <div className='h-52'>
-              <Image
-                src={MedewiImage}
-                alt='canggu'
-                className='h-full rounded-lg object-cover shadow-2xl'
-              />
-            </div>
-          </section>
+        <section id='uluwatu'>
+          <h2 className='text-3xl font-semibold'>Uluwatu</h2>{' '}
+          <div
+            className='my-2 flex items-center'
+            onClick={() => handleSelectTrip('uluwatu')}
+          >
+            <FontAwesomeIcon
+              icon={faEye}
+              className='me-2 text-2xl font-bold text-amber-500'
+            />
+            <span className='text'>See on map</span>
+          </div>
+          <div className='h-52'>
+            <Image
+              src={UluwatuImage}
+              alt='canggu'
+              className='h-full rounded-lg object-cover shadow-2xl'
+            />
+          </div>
+        </section>
 
-          <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-5 bg-slate-950' />
 
-          <section id='balangan'>
-            <h2 className='text-3xl font-semibold'>Balangan</h2>
-            <div
-              className='my-2 flex items-center'
-              onClick={() => handleSelectTrip('balangan')}
-            >
-              <FontAwesomeIcon
-                icon={faEye}
-                className='me-2 text-2xl font-bold text-amber-500'
-              />
-              <span className='text'>See on map</span>
-            </div>
-            <div className='h-52'>
-              <Image
-                src={BalanganImage}
-                alt='canggu'
-                className='h-full rounded-lg object-cover shadow-2xl'
-              />
-            </div>
-          </section>
+        <section id='serangan'>
+          <h2 className='text-3xl font-semibold'>Serangan</h2>
+          <div
+            className='my-2 flex items-center'
+            onClick={() => handleSelectTrip('serangan')}
+          >
+            <FontAwesomeIcon
+              icon={faEye}
+              className='me-2 text-2xl font-bold text-amber-500'
+            />
+            <span className='text'>See on map</span>
+          </div>
+          <div className='h-52'>
+            <Image
+              src={SeranganImage}
+              alt='canggu'
+              className='h-full rounded-lg object-cover shadow-2xl'
+            />
+          </div>
+        </section>
 
-          <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-5 bg-slate-950' />
 
-          <section id='uluwatu'>
-            <h2 className='text-3xl font-semibold'>Uluwatu</h2>{' '}
-            <div
-              className='my-2 flex items-center'
-              onClick={() => handleSelectTrip('uluwatu')}
-            >
-              <FontAwesomeIcon
-                icon={faEye}
-                className='me-2 text-2xl font-bold text-amber-500'
-              />
-              <span className='text'>See on map</span>
-            </div>
-            <div className='h-52'>
-              <Image
-                src={UluwatuImage}
-                alt='canggu'
-                className='h-full rounded-lg object-cover shadow-2xl'
-              />
-            </div>
-          </section>
+        <section id='nusa'>
+          <h2 className='text-3xl font-semibold'>Nusa</h2>
+          <div
+            className='my-2 flex items-center'
+            onClick={() => handleSelectTrip('nusa')}
+          >
+            <FontAwesomeIcon
+              icon={faEye}
+              className='me-2 text-2xl font-bold text-amber-500'
+            />
+            <span className='text'>See on map</span>
+          </div>
+          <div className='h-52'>
+            <Image
+              src={NusaImage}
+              alt='canggu'
+              className='h-full rounded-lg object-cover shadow-2xl'
+            />
+          </div>
+        </section>
 
-          <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-5 bg-slate-950' />
 
-          <section id='serangan'>
-            <h2 className='text-3xl font-semibold'>Serangan</h2>
-            <div
-              className='my-2 flex items-center'
-              onClick={() => handleSelectTrip('serangan')}
-            >
-              <FontAwesomeIcon
-                icon={faEye}
-                className='me-2 text-2xl font-bold text-amber-500'
-              />
-              <span className='text'>See on map</span>
-            </div>
-            <div className='h-52'>
-              <Image
-                src={SeranganImage}
-                alt='canggu'
-                className='h-full rounded-lg object-cover shadow-2xl'
-              />
-            </div>
-          </section>
-
-          <hr className='mx-5 my-5 bg-slate-950' />
-
-          <section id='nusa'>
-            <h2 className='text-3xl font-semibold'>Nusa</h2>
-            <div
-              className='my-2 flex items-center'
-              onClick={() => handleSelectTrip('nusa')}
-            >
-              <FontAwesomeIcon
-                icon={faEye}
-                className='me-2 text-2xl font-bold text-amber-500'
-              />
-              <span className='text'>See on map</span>
-            </div>
-            <div className='h-52'>
-              <Image
-                src={NusaImage}
-                alt='canggu'
-                className='h-full rounded-lg object-cover shadow-2xl'
-              />
-            </div>
-          </section>
-
-          <hr className='mx-5 my-5 bg-slate-950' />
-
-          <section id='lombok'>
-            <h2 className='text-3xl font-semibold'>Lombok</h2>{' '}
-            <div
-              className='my-2 flex items-center'
-              onClick={() => handleSelectTrip('lombok')}
-            >
-              <FontAwesomeIcon
-                icon={faEye}
-                className='me-2 text-2xl font-bold text-amber-500'
-              />
-              <span className='text'>See on map</span>
-            </div>
-            <div className='h-52'>
-              <Image
-                src={LombokImage}
-                alt='canggu'
-                className='h-full rounded-lg object-cover shadow-2xl'
-              />
-            </div>
-          </section>
-        </div>
+        <section id='lombok' className='pb-5'>
+          <h2 className='text-3xl font-semibold'>Lombok</h2>{' '}
+          <div
+            className='my-2 flex items-center'
+            onClick={() => handleSelectTrip('lombok')}
+          >
+            <FontAwesomeIcon
+              icon={faEye}
+              className='me-2 text-2xl font-bold text-amber-500'
+            />
+            <span className='text'>See on map</span>
+          </div>
+          <div className='h-52'>
+            <Image
+              src={LombokImage}
+              alt='canggu'
+              className='h-full rounded-lg object-cover shadow-2xl'
+            />
+          </div>
+        </section>
       </div>
     </>
   )

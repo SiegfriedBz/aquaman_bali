@@ -13,10 +13,10 @@ import SwissFlag from '../../public/logos/swiss-flag.svg'
 
 const Footer = () => {
   return (
-    <footer className='mt-3 flex flex-col rounded-lg px-2 py-3 shadow-2xl'>
+    <footer className='flex flex-col px-2 py-3 shadow-2xl dark:bg-slate-900 dark:text-gray-100'>
       {/* open hours */}
       <section>
-        <div className='mb-3 flex flex-row justify-center text-lg text-slate-950 hover:text-slate-800'>
+        <div className='mb-3 flex flex-row justify-center text-lg text-slate-800 dark:text-white'>
           Every day 6:00 am - 6:00 pm
         </div>
       </section>
@@ -30,9 +30,13 @@ const Footer = () => {
               <h2 className='font-bold'>Aquaman Bali</h2>
               Batu Bolong, Canggu
               <br />
-              Email: <a href='mailto:canggu@gmail.com'>canggu@gmail.com</a>
+              <span className='text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+                Email: <a href='mailto:canggu@gmail.com'>canggu@gmail.com</a>
+              </span>
               <br />
-              Tel: <a href='tel:+6282289427321'>0822-8942-7321</a>
+              <span className='text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+                Tel: <a href='tel:+6282289427321'>0822-8942-7321</a>
+              </span>
             </address>
           </div>
 
@@ -72,24 +76,22 @@ const Footer = () => {
           </div>
         </div>
 
-        <h2 className='mt-3 text-center text-sm text-slate-800 hover:text-slate-700 dark:text-white dark:hover:text-gray-200'>
-          ©2023 SiegfriedBz & Aquaman Bali
+        <h2 className='my-3 text-center text-sm text-slate-800 dark:text-white'>
+          ©2023 Aquaman Bali
         </h2>
         {/* credits */}
-        {/* <span className='mt-1 flex items-center justify-center text-sm text-slate-800 hover:text-slate-700'>
-          <Image
-            src={SwissFlag}
-            alt='Swiss Flag'
-            width={16}
-            height={16}
-            className='me-1 rounded-full'
-          />
-          <span className='me-1'>Swiss-made with</span>
-          <span>
-            <FontAwesomeIcon icon={faHeart} className='text-red-500' />
+        <a href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'>
+          <span className='mt-1 flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+            <Image
+              src={SwissFlag}
+              alt='Swiss Flag'
+              width={16}
+              height={16}
+              className='me-1 rounded-full'
+            />
+            <span className='me-1'>Swiss-made by SiegfriedB</span>
           </span>
-          <span className='ms-1'>by SiegfriedBz</span>
-        </span> */}
+        </a>
       </section>
     </footer>
   )

@@ -31,8 +31,8 @@ export default function Home() {
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
       </Head>
-      <main className='mx-2 my-5'>
-        <section id='video'>
+      <main className='px-2 dark:bg-slate-900 dark:text-gray-200'>
+        <section id='video' className='py-5'>
           <div className='relative'>
             <div className='absolute left-5 top-5 z-20'>
               {!mobileMenuIsOpen && (
@@ -61,11 +61,12 @@ export default function Home() {
               autoPlay='always'
               loop={true}
               className='rounded-lg border-0 shadow-2xl'
+              posterOption={RendySurfCSmall}
             />
           </div>
         </section>
 
-        <hr className='mx-5 my-5 bg-slate-950' />
+        {/* <hr className='mx-5 my-5 bg-slate-950 dark:bg-slate-200' /> */}
 
         <section
           id='about-me-short'
@@ -114,8 +115,8 @@ export default function Home() {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='location' className='scroll-mt-20'>
-          <h2 className='mb-2 max-w-md text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl'>
+        <section id='location' className='scroll-mt-20 py-5 dark:bg-slate-900'>
+          <h2 className='mb-2 max-w-md text-center text-2xl font-bold text-slate-900  dark:text-white sm:text-left sm:text-5xl'>
             Visit Us
           </h2>
           <LocationMap />

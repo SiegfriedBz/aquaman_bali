@@ -32,7 +32,9 @@ export default function Layout(props) {
       </Head>
       <AppContextProvider>
         <Navbar />
+        <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
         <main>{children}</main>
+        <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
         <Footer />
       </AppContextProvider>
     </>
