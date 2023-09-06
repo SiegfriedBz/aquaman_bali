@@ -30,10 +30,6 @@ export default function Home() {
         <meta content={meta.description} name='description' />
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
-        <meta
-          property='og:image'
-          content={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/w_1200,h_630,c_fill,f_auto/w_630,h_450,c_fit,co_rgb:FFFFFF,g_west,x_750,y_275,l_text:arial_60_bold:Aquaman%20Bali/og_social_aquaman_bali`}
-        />
       </Head>
       <main className='mx-2 my-5'>
         <section id='video'>
