@@ -12,14 +12,32 @@ import RendySurfCSmall from '../../public/images/rendy/surf/rendy_surf_C_small.p
 import Carousel from '@/components/carousel'
 import styles from '@/components/carousel.module.css'
 import { useAppContext } from '@/context/appContext'
+import { useRouter } from 'next/router'
 
 const RENDY_SURF_IMAGES = [RendySurfBSmall, RendySurfCSmall]
 
-export default function Home() {
+export default function Home({ customMeta }) {
   const { mobileMenuIsOpen } = useAppContext()
+  const router = useRouter()
+
+  const meta = {
+    ...customMeta,
+    canonicalUrl: `https://aquaman-surf-bali.vercel.app/${router.asPath}`,
+  }
 
   return (
     <>
+      <Head>
+        <title>{meta.title}</title>
+        <meta name='robots' content='follow, index' />
+        <meta content={meta.description} name='description' />
+        <meta
+          property='og:url'
+          content={`https://aquaman-surf-bali.vercel.app${router.asPath}`}
+        />
+        <meta property='og:description' content={meta.description} />
+        <meta property='og:title' content={meta.title} />
+      </Head>
       <main className='mx-2 my-5'>
         <section id='video'>
           <div className='relative'>
