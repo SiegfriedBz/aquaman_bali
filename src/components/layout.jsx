@@ -17,9 +17,7 @@ export default function Layout(props) {
   return (
     <>
       <Head>
-        <title>{meta.title}</title>
         <meta name='robots' content='follow, index' />
-        <meta content={meta.description} name='description' />
         <meta
           name='keywords'
           content='Aquaman Bali Surf School Surf Trips'
@@ -30,8 +28,6 @@ export default function Layout(props) {
         />
         <link rel='canonical' href={meta.canonicalUrl} />
         <meta property='og:site_name' content='Aquaman Bali' />
-        <meta property='og:description' content={meta.description} />
-        <meta property='og:title' content={meta.title} />
         <meta property='og:image' content={meta.imageUrl} />
       </Head>
       <AppContextProvider>

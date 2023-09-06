@@ -5,18 +5,15 @@ config.autoAddCss = false
 import Layout from '@/components/layout'
 import generateSocialImage from '../utils/generateSocialImage'
 
-const TITLE = 'Aquaman Bali'
-const DESCRIPTION = '5 Stars Surf School & Surf Trips in Bali'
-
 const socialImageConf = generateSocialImage({
-  title: TITLE,
+  title: 'Aquaman Bali',
   cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
   imagePublicID: 'og_social_aquaman_bali',
 })
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout title={TITLE} description={DESCRIPTION} imageUrl={socialImageConf}>
+    <Layout imageUrl={socialImageConf}>
       <Component {...pageProps} />
     </Layout>
   )
