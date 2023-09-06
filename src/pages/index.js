@@ -23,6 +23,10 @@ export default function Home() {
       <Head>
         <title>Aquaman Bali | Surf School | Surf Trips | Home</title>
         <meta
+          property='og:url'
+          content='https://aquaman-surf-bali.vercel.app/'
+        />
+        <meta
           name='keywords'
           content='Aquaman Bali Surf School Surf Trips'
         ></meta>
@@ -32,7 +36,7 @@ export default function Home() {
         />
         <meta
           property='og:image'
-          content="'../../public/images/rendy/surf/rendy_surf_C_small.png'"
+          content='../../public/images/rendy/surf/rendy_surf_A_og.png'
         />
         <meta property='og:image:type' content='image/png' />
         <meta property='og:image:width' content='1024' />
