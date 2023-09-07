@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import Head from 'next/head'
-import { useAppContext } from '@/context/appContext'
 import { CldVideoPlayer } from 'next-cloudinary'
-import Typewriter from 'typewriter-effect'
 
 import RendySurfA from '../../../public/images/rendy/surf/rendy_surf_A.jpg'
 import RendySurfB from '../../../public/images/rendy/surf/rendy_surf_B.jpg'
@@ -37,8 +35,6 @@ const images = [
 ]
 
 const Gallery = () => {
-  const { mobileMenuIsOpen } = useAppContext()
-
   const meta = {
     title: 'Aquaman Bali | Surf School | Gallery',
     description: 'Best surf shots',

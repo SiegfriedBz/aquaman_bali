@@ -18,9 +18,15 @@ import RendySurf11 from '../../public/images/rendy/surf/rendy_surf_11.jpg'
 
 import WaterGirl01 from '../../public/images/photo_video/water-photo.jpg'
 import WaterGirl02 from '../../public/images/lessons/girl_surf.jpg'
+import WaterGirl03 from '../../public/images/lessons/rendy_girl_01.jpg'
 
-const TOP_IMAGES_A = [RendySurfA, RendySurf11]
-const TOP_IMAGES_B = [WaterGirl01, WaterGirl02]
+const TOP_IMAGES = [
+  RendySurfA,
+  RendySurf11,
+  WaterGirl03,
+  WaterGirl01,
+  WaterGirl02,
+]
 const ABOUT_ME_IMAGES = [RendySurfBSmall, RendySurfCSmall]
 
 export default function Home() {
@@ -48,18 +54,17 @@ export default function Home() {
             <h1 className='mb-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-left sm:text-5xl'>
               Upgrade
             </h1>
-            <h2 className='mb-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-left sm:text-5xl'>
+            <h2 className='mb-4 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-left sm:text-5xl'>
               Your Surfing Skills
             </h2>
             <h2 className='mb-2 max-w-md text-center text-2xl font-bold sm:text-left sm:text-5xl'>
               Beginner to Advanced
             </h2>
           </div>
-
           <Carousel>
-            {TOP_IMAGES_A.map((src, i) => {
+            {TOP_IMAGES.map((src, i) => {
               return (
-                <div key={i} className={`${styles.embla__slide} h-52 px-0`}>
+                <div key={i} className={`${styles.embla__slide} h-56 px-0`}>
                   <Image
                     src={src}
                     className='h-full rounded-lg object-cover shadow-lg'
@@ -69,24 +74,15 @@ export default function Home() {
               )
             })}
           </Carousel>
-
-          <h3 className='my-3 max-w-md text-center text-2xl font-extrabold sm:text-left sm:text-5xl'>
+          <h3 className='my-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-left sm:text-5xl'>
             Best Surf School in Bali
           </h3>
-
-          <Carousel>
-            {TOP_IMAGES_B.map((src, i) => {
-              return (
-                <div key={i} className={`${styles.embla__slide} h-52 px-0`}>
-                  <Image
-                    src={src}
-                    className='h-full rounded-lg object-cover shadow-lg'
-                    alt='surf-shots'
-                  />
-                </div>
-              )
-            })}
-          </Carousel>
+          <a
+            className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+            href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+          >
+            Book now
+          </a>
         </section>
 
         <hr className='mx-5 my-5 bg-slate-950' />
