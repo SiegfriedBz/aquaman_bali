@@ -116,7 +116,7 @@ const Navbar = () => {
           className='top-50 absolute flex w-full origin-top animate-open-menu flex-col justify-center bg-slate-50 text-4xl dark:bg-slate-900 md:hidden'
           onClick={() => setMobileMenuIsOpen(false)}
         >
-          <div className='flex w-full items-center justify-around pb-2 pt-5'>
+          <div className='flex w-full items-center justify-around pb-1 pt-5'>
             <a href='https://goo.gl/maps/iHPokm4Q943N2f2fA'>
               <FontAwesomeIcon
                 icon={faStreetView}
@@ -153,7 +153,7 @@ const Navbar = () => {
           </div>
 
           <nav
-            className='flex min-h-screen flex-col items-center py-8 dark:text-white'
+            className='flex min-h-screen flex-col items-center py-6 dark:text-white'
             aria-label='mobile'
           >
             <div className='flex w-full flex-col items-center gap-4'>
