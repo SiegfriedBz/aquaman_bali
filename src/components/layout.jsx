@@ -20,7 +20,7 @@ export default function Layout(props) {
         <meta name='robots' content='follow, index' />
         <meta
           name='keywords'
-          content='Aquaman Bali Surf School Surf Trips'
+          content='Aquaman Bali, AquamanBali, Surf, Surf Lessons, Surf School, Surf Trips, Surf Photos, Surf Videos, Surf Drone'
         ></meta>
         <meta
           property='og:url'

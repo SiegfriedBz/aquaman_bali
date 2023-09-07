@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import Head from 'next/head'
-import Carousel from '../../components/carousel'
-import styles from '../../components/carousel.module.css'
-import RendyKid01 from '../../../public/images/rendy/contests/rendy_kid_01.jpg'
-import RendyKid2 from '../../../public/images/rendy/contests/rendy_kid_02.jpg'
-import RendyKid03 from '../../../public/images/rendy/contests/rendy_kid_03.jpg'
+import { useAppContext } from '@/context/appContext'
+import { CldVideoPlayer } from 'next-cloudinary'
+import Typewriter from 'typewriter-effect'
+
 import RendySurfA from '../../../public/images/rendy/surf/rendy_surf_A.jpg'
 import RendySurfB from '../../../public/images/rendy/surf/rendy_surf_B.jpg'
 import RendySurfC from '../../../public/images/rendy/surf/rendy_surf_C.jpg'
@@ -19,14 +18,10 @@ import RendySurf07 from '../../../public/images/rendy/surf/rendy_surf_07.jpg'
 import RendySurf09 from '../../../public/images/rendy/surf/rendy_surf_09.jpg'
 import RendySurf11 from '../../../public/images/rendy/surf/rendy_surf_11.jpg'
 import RendySurf12 from '../../../public/images/rendy/surf/rendy_surf_12.jpg'
-import RendySurf13 from '../../../public/images/rendy/surf/rendy_surf_13.jpg'
 
 const images = [
   RendySurf06,
   RendySurfA,
-  RendyKid2,
-  RendyKid01,
-  RendyKid03,
   RendySurfB,
   RendySurfC,
   RendySurfD,
@@ -39,13 +34,14 @@ const images = [
   RendySurf09,
   RendySurf11,
   RendySurf12,
-  RendySurf13,
 ]
 
-const About = () => {
+const Gallery = () => {
+  const { mobileMenuIsOpen } = useAppContext()
+
   const meta = {
-    title: 'Aquaman Bali | Surf School | About me',
-    description: 'Discover My Story',
+    title: 'Aquaman Bali | Surf School | Gallery',
+    description: 'Best surf shots',
   }
 
   return (
@@ -58,56 +54,42 @@ const About = () => {
       </Head>
 
       <div
-        id='about-me'
+        id='gallery'
         className='justify-bewteen flex flex-col items-center p-5 dark:bg-slate-900 dark:text-gray-200'
       >
         <div className='mb-2'>
           <span className='text-center text-4xl font-bold dark:text-white'>
-            About me
+            Gallery
           </span>
         </div>
 
-        <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
+        <CldVideoPlayer
+          id='rendy-landing-page-video'
+          width='1920'
+          height='1080'
+          src='RendyLandingPageVideo'
+          colors={{ accent: '#38bdf8', base: '#fbbf24', text: '#fbbf24' }}
+          autoPlay='always'
+          loop={true}
+          className='my-2 rounded-lg border-0 shadow-2xl'
+        />
 
-        <Carousel>
+        <div class='grid grid-cols-1 gap-4 md:grid-cols-4'>
           {images.map((src, i) => {
             return (
-              <div key={i} className={`${styles.embla__slide} h-52`}>
+              <div key={i} className='h-52'>
                 <Image
                   src={src}
-                  alt='rendy'
+                  alt='surf-shots'
                   className='h-full rounded-lg object-cover shadow-2xl'
                 />
               </div>
             )
           })}
-        </Carousel>
-
-        <hr className='mx-5 my-2 bg-slate-950' />
-
-        <p className='my-3 text-justify'>
-          My name is Rendy and I am from Krui, South Sumatra. I started surfing
-          at the age of 8 and came to Bali in 2019 to work as a surf instructor
-          at Batu Bolong Beach in Canggu.
-        </p>
-        <p className='my-1 text-justify'>
-          Batu Bolong is an easy place to learn surfing as a beginner but is
-          also good for intermediate surfers.
-        </p>
-        <p className='my-1 text-justify'>
-          I really love surfing and want to share my experience, knowledge and
-          stoke of surfing with you. It is a lot of fun. Come join me and
-          let&apos;s enjoy the waves and make you reach your goals in surfing!
-        </p>
-        <a
-          className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
-          href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-        >
-          Contact me
-        </a>
+        </div>
       </div>
     </>
   )
 }
 
-export default About
+export default Gallery

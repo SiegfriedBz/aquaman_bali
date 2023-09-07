@@ -1,23 +1,29 @@
 import Head from 'next/head'
-import { CldVideoPlayer } from 'next-cloudinary'
-import Typewriter from 'typewriter-effect'
+import Image from 'next/image'
+import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import Testimonials from '../components/testimonials'
 import LocationMap from '../components/LocationMap'
-import Image from 'next/image'
-import Link from 'next/link'
+
 const inter = Inter({ subsets: ['latin'] })
-import RendySurfBSmall from '../../public/images/rendy/surf/rendy_surf_B_small.png'
-import RendySurfCSmall from '../../public/images/rendy/surf/rendy_surf_C_small.png'
 import Carousel from '@/components/carousel'
 import styles from '@/components/carousel.module.css'
-import { useAppContext } from '@/context/appContext'
+import RendySurf05 from '../../public/images/rendy/surf/rendy_surf_05.jpg'
+import RendySurfBSmall from '../../public/images/rendy/surf/rendy_surf_B_small.png'
 
-const RENDY_SURF_IMAGES = [RendySurfBSmall, RendySurfCSmall]
+import RendySurfCSmall from '../../public/images/rendy/surf/rendy_surf_C_small.png'
+
+import RendySurfA from '../../public/images/rendy/surf/rendy_surf_A.jpg'
+import RendySurf11 from '../../public/images/rendy/surf/rendy_surf_11.jpg'
+
+import WaterGirl01 from '../../public/images/photo_video/water-photo.jpg'
+import WaterGirl02 from '../../public/images/lessons/girl_surf.jpg'
+
+const TOP_IMAGES_A = [RendySurfA, RendySurf11]
+const TOP_IMAGES_B = [WaterGirl01, WaterGirl02]
+const ABOUT_ME_IMAGES = [RendySurfBSmall, RendySurfCSmall]
 
 export default function Home() {
-  const { mobileMenuIsOpen } = useAppContext()
-
   const meta = {
     title: 'Aquaman Bali | Surf School | Home',
     description: 'Aquaman Bali | Surf School & Surf Trips',
@@ -32,38 +38,55 @@ export default function Home() {
         <meta property='og:title' content={meta.title} />
       </Head>
       <main className='px-2 dark:bg-slate-900 dark:text-gray-200'>
-        <section id='video' className='py-5'>
-          <div className='relative'>
-            <div className='absolute left-5 top-5 z-20'>
-              {!mobileMenuIsOpen && (
-                <div className='text-2xl font-extrabold text-stone-100 drop-shadow-lg'>
-                  <Typewriter
-                    options={{
-                      strings: [
-                        'Surf lessons',
-                        'Water Photo & Video',
-                        'Video Analysis',
-                        'Drone Shots',
-                      ],
-                      autoStart: true,
-                      loop: true,
-                    }}
+        {/* <hr className='mx-5 my-5 bg-slate-950' /> */}
+
+        <section
+          id='hero'
+          className='justify-bewteen flex flex-col items-center p-5'
+        >
+          <div className='pb-3'>
+            <h1 className='mb-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-left sm:text-5xl'>
+              Upgrade
+            </h1>
+            <h2 className='mb-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-left sm:text-5xl'>
+              Your Surfing Skills
+            </h2>
+            <h2 className='mb-2 max-w-md text-center text-2xl font-bold sm:text-left sm:text-5xl'>
+              Beginner to Advanced
+            </h2>
+          </div>
+
+          <Carousel>
+            {TOP_IMAGES_A.map((src, i) => {
+              return (
+                <div key={i} className={`${styles.embla__slide} h-52 px-0`}>
+                  <Image
+                    src={src}
+                    className='h-full rounded-lg object-cover shadow-lg'
+                    alt='surf-shots'
                   />
                 </div>
-              )}
-            </div>
-            <CldVideoPlayer
-              id='rendy-landing-page-video'
-              width='1920'
-              height='1080'
-              src='RendyLandingPageVideo'
-              colors={{ accent: '#38bdf8', base: '#fbbf24', text: '#fbbf24' }}
-              autoPlay='always'
-              loop={true}
-              className='rounded-lg border-0 shadow-2xl'
-              posterOption={RendySurfCSmall}
-            />
-          </div>
+              )
+            })}
+          </Carousel>
+
+          <h3 className='my-3 max-w-md text-center text-2xl font-extrabold sm:text-left sm:text-5xl'>
+            Best Surf School in Bali
+          </h3>
+
+          <Carousel>
+            {TOP_IMAGES_B.map((src, i) => {
+              return (
+                <div key={i} className={`${styles.embla__slide} h-52 px-0`}>
+                  <Image
+                    src={src}
+                    className='h-full rounded-lg object-cover shadow-lg'
+                    alt='surf-shots'
+                  />
+                </div>
+              )
+            })}
+          </Carousel>
         </section>
 
         <hr className='mx-5 my-5 bg-slate-950' />
@@ -76,7 +99,7 @@ export default function Home() {
             About me
           </h2>
           <Carousel>
-            {RENDY_SURF_IMAGES.map((src, i) => {
+            {ABOUT_ME_IMAGES.map((src, i) => {
               return (
                 <div key={i} className={styles.embla__slide}>
                   <Image

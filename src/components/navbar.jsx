@@ -43,7 +43,7 @@ const Navbar = () => {
               alt='logo'
               width={45}
               height={45}
-              className='rounded-full border-4 object-contain shadow-2xl ring-2 ring-slate-950 hover:ring-slate-800 dark:ring-blue-600 dark:hover:ring-blue-500 dark:active:ring-blue-500'
+              className='rounded-full border-4 object-contain shadow-2xl ring-2 ring-slate-900'
             />
           </Link>
           <Link href='/' onClick={() => setMobileMenuIsOpen(false)}>
@@ -158,23 +158,6 @@ const Navbar = () => {
           >
             <div className='flex w-full flex-col items-center gap-4'>
               <Link
-                href='/about-me'
-                className='w-full py-2 text-center hover:opacity-90'
-              >
-                About me
-              </Link>
-
-              <button
-                onClick={() => {
-                  const route = isHomePage ? '#location' : '/#location'
-                  router.push(route)
-                }}
-                className='hover:opacity-90'
-              >
-                Visit Us
-              </button>
-
-              <Link
                 href='/surf-lessons'
                 className='w-full py-2 text-center hover:opacity-90'
               >
@@ -196,10 +179,34 @@ const Navbar = () => {
               </Link>
 
               <Link
+                href='/about-me'
+                className='w-full py-2 text-center hover:opacity-90'
+              >
+                About Me
+              </Link>
+
+              <button
+                onClick={() => {
+                  const route = isHomePage ? '#location' : '/#location'
+                  router.push(route)
+                }}
+                className='hover:opacity-90'
+              >
+                Visit Us
+              </button>
+
+              <Link
                 href='/#testimonials'
                 className='w-full py-2 text-center hover:opacity-90'
               >
                 Testimonials
+              </Link>
+
+              <Link
+                href='/gallery'
+                className='w-full py-2 text-center hover:opacity-90'
+              >
+                Gallery
               </Link>
             </div>
           </nav>
