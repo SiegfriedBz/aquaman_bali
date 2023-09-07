@@ -27,7 +27,7 @@ const QUOTES = [
 ]
 
 const renderStars = Array.from({ length: 5 }).map((_, i) => {
-  return <FontAwesomeIcon key={i} icon={faStar} className='my-auto' />
+  return <FontAwesomeIcon key={i} icon={faStar} />
 })
 
 const Testimonials = () => {
@@ -51,7 +51,8 @@ const Testimonials = () => {
                           src={GoogleIcon}
                           width={35}
                           height={35}
-                          alt='google'
+                          alt='google-icon'
+                          className='ms-2'
                         />
                       </a>
                     </p>
@@ -71,10 +72,17 @@ const Testimonials = () => {
           <h3 className='text-center text-xl'>Top-rated Surf School</h3>
           <div className='flex items-center'>
             <span className='me-1 text-3xl text-amber-400 hover:text-amber-500'>
-              <span className='my-auto text-4xl font-bold'>5</span>{' '}
-              {renderStars}
+              <span className='my-auto text-4xl font-bold'>
+                5 {renderStars}
+              </span>{' '}
             </span>{' '}
-            <Image src={GoogleIcon} width={55} height={55} alt='google' />
+            <Image
+              src={GoogleIcon}
+              width={55}
+              height={55}
+              alt='google-icon'
+              className='my-auto ms-2'
+            />
           </div>
         </a>
       </section>

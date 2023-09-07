@@ -43,7 +43,7 @@ const Navbar = () => {
               alt='logo'
               width={45}
               height={45}
-              className='rounded-full border-4 border-slate-950 object-contain shadow-2xl hover:border-slate-800 dark:border-gray-50'
+              className='rounded-full border-4 object-contain shadow-2xl ring-2 ring-slate-950 hover:ring-slate-800 dark:ring-blue-600 dark:hover:ring-blue-500 dark:active:ring-blue-500'
             />
           </Link>
           <Link href='/' onClick={() => setMobileMenuIsOpen(false)}>
@@ -161,7 +161,7 @@ const Navbar = () => {
                 href='/about-me'
                 className='w-full py-2 text-center hover:opacity-90'
               >
-                About Us
+                About me
               </Link>
 
               <button

@@ -70,9 +70,9 @@ const SurfTrips = () => {
           >
             <FontAwesomeIcon
               icon={faEye}
-              className='me-2 text-2xl font-bold text-amber-500'
+              className='me-2 text-2xl font-bold text-amber-400 hover:text-amber-500'
             />
-            <span className='text'>See on map</span>
+            <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
           <div className='h-52'>
             <Image
@@ -80,6 +80,23 @@ const SurfTrips = () => {
               alt='canggu'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
+          </div>
+          <div className='mt-2 flex flex-col items-center justify-center'>
+            <p className='mb-2 px-2 text-justify'>
+              I&#39;m baby distillery cliche messenger bag fingerstache franzen
+              flannel celiac tousled tacos edison bulb. Whatever humblebrag food
+              truck tbh, lyft edison bulb ennui blackbird spyplane knausgaard
+              green juice venmo. Sriracha crucifix enamel pin, street art
+              disrupt tousled vegan deep v truffaut pabst selvage helvetica.
+              Ramps fanny pack pok pok, palo santo chicharrones poutine
+              pinterest vice succulents.
+            </p>
+            <a
+              className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+            >
+              Book now
+            </a>
           </div>
         </section>
 
@@ -93,16 +110,33 @@ const SurfTrips = () => {
           >
             <FontAwesomeIcon
               icon={faEye}
-              className='me-2 text-2xl font-bold text-amber-500'
+              className='me-2 text-2xl font-bold text-amber-400 hover:text-amber-500'
             />
-            <span className='text'>See on map</span>
+            <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
-          <div className='h-52'>
+          <div className='my-3 h-52'>
             <Image
               src={MedewiImage}
-              alt='canggu'
+              alt='medewi'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
+          </div>
+          <div className='mt-2 flex flex-col items-center justify-center'>
+            <p className='mb-2 px-2 text-justify'>
+              I&#39;m baby distillery cliche messenger bag fingerstache franzen
+              flannel celiac tousled tacos edison bulb. Whatever humblebrag food
+              truck tbh, lyft edison bulb ennui blackbird spyplane knausgaard
+              green juice venmo. Sriracha crucifix enamel pin, street art
+              disrupt tousled vegan deep v truffaut pabst selvage helvetica.
+              Ramps fanny pack pok pok, palo santo chicharrones poutine
+              pinterest vice succulents.
+            </p>
+            <a
+              className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+            >
+              Book now
+            </a>
           </div>
         </section>
 
@@ -116,16 +150,33 @@ const SurfTrips = () => {
           >
             <FontAwesomeIcon
               icon={faEye}
-              className='me-2 text-2xl font-bold text-amber-500'
+              className='me-2 text-2xl font-bold text-amber-400 hover:text-amber-500'
             />
-            <span className='text'>See on map</span>
+            <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
           <div className='h-52'>
             <Image
               src={BalanganImage}
-              alt='canggu'
+              alt='balangan'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
+          </div>
+          <div className='mt-2 flex flex-col items-center justify-center'>
+            <p className='mb-2 px-2 text-justify'>
+              I&#39;m baby distillery cliche messenger bag fingerstache franzen
+              flannel celiac tousled tacos edison bulb. Whatever humblebrag food
+              truck tbh, lyft edison bulb ennui blackbird spyplane knausgaard
+              green juice venmo. Sriracha crucifix enamel pin, street art
+              disrupt tousled vegan deep v truffaut pabst selvage helvetica.
+              Ramps fanny pack pok pok, palo santo chicharrones poutine
+              pinterest vice succulents.
+            </p>
+            <a
+              className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+            >
+              Book now
+            </a>
           </div>
         </section>
 
@@ -139,16 +190,33 @@ const SurfTrips = () => {
           >
             <FontAwesomeIcon
               icon={faEye}
-              className='me-2 text-2xl font-bold text-amber-500'
+              className='me-2 text-2xl font-bold text-amber-400 hover:text-amber-500'
             />
-            <span className='text'>See on map</span>
+            <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
           <div className='h-52'>
             <Image
               src={UluwatuImage}
-              alt='canggu'
+              alt='uluwatu'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
+          </div>
+          <div className='mt-2 flex flex-col items-center justify-center'>
+            <p className='mb-2 px-2 text-justify'>
+              I&#39;m baby distillery cliche messenger bag fingerstache franzen
+              flannel celiac tousled tacos edison bulb. Whatever humblebrag food
+              truck tbh, lyft edison bulb ennui blackbird spyplane knausgaard
+              green juice venmo. Sriracha crucifix enamel pin, street art
+              disrupt tousled vegan deep v truffaut pabst selvage helvetica.
+              Ramps fanny pack pok pok, palo santo chicharrones poutine
+              pinterest vice succulents.
+            </p>
+            <a
+              className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+            >
+              Book now
+            </a>
           </div>
         </section>
 
@@ -162,16 +230,33 @@ const SurfTrips = () => {
           >
             <FontAwesomeIcon
               icon={faEye}
-              className='me-2 text-2xl font-bold text-amber-500'
+              className='me-2 text-2xl font-bold text-amber-400 hover:text-amber-500'
             />
-            <span className='text'>See on map</span>
+            <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
           <div className='h-52'>
             <Image
               src={SeranganImage}
-              alt='canggu'
-              className='h-full rounded-lg object-cover shadow-2xl'
+              alt='serangan'
+              className='h-full w-full rounded-lg object-cover shadow-2xl'
             />
+          </div>
+          <div className='mt-2 flex flex-col items-center justify-center'>
+            <p className='mb-2 px-2 text-justify'>
+              I&#39;m baby distillery cliche messenger bag fingerstache franzen
+              flannel celiac tousled tacos edison bulb. Whatever humblebrag food
+              truck tbh, lyft edison bulb ennui blackbird spyplane knausgaard
+              green juice venmo. Sriracha crucifix enamel pin, street art
+              disrupt tousled vegan deep v truffaut pabst selvage helvetica.
+              Ramps fanny pack pok pok, palo santo chicharrones poutine
+              pinterest vice succulents.
+            </p>
+            <a
+              className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+            >
+              Book now
+            </a>
           </div>
         </section>
 
@@ -185,16 +270,33 @@ const SurfTrips = () => {
           >
             <FontAwesomeIcon
               icon={faEye}
-              className='me-2 text-2xl font-bold text-amber-500'
+              className='me-2 text-2xl font-bold text-amber-400 hover:text-amber-500'
             />
-            <span className='text'>See on map</span>
+            <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
           <div className='h-52'>
             <Image
               src={NusaImage}
-              alt='canggu'
+              alt='nusa'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
+          </div>
+          <div className='mt-2 flex flex-col items-center justify-center'>
+            <p className='mb-2 px-2 text-justify'>
+              I&#39;m baby distillery cliche messenger bag fingerstache franzen
+              flannel celiac tousled tacos edison bulb. Whatever humblebrag food
+              truck tbh, lyft edison bulb ennui blackbird spyplane knausgaard
+              green juice venmo. Sriracha crucifix enamel pin, street art
+              disrupt tousled vegan deep v truffaut pabst selvage helvetica.
+              Ramps fanny pack pok pok, palo santo chicharrones poutine
+              pinterest vice succulents.
+            </p>
+            <a
+              className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+            >
+              Book now
+            </a>
           </div>
         </section>
 
@@ -208,16 +310,33 @@ const SurfTrips = () => {
           >
             <FontAwesomeIcon
               icon={faEye}
-              className='me-2 text-2xl font-bold text-amber-500'
+              className='me-2 text-2xl font-bold text-amber-400 hover:text-amber-500'
             />
-            <span className='text'>See on map</span>
+            <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
           <div className='h-52'>
             <Image
               src={LombokImage}
-              alt='canggu'
+              alt='lombok'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
+          </div>
+          <div className='mt-2 flex flex-col items-center justify-center'>
+            <p className='mb-2 px-2 text-justify'>
+              I&#39;m baby distillery cliche messenger bag fingerstache franzen
+              flannel celiac tousled tacos edison bulb. Whatever humblebrag food
+              truck tbh, lyft edison bulb ennui blackbird spyplane knausgaard
+              green juice venmo. Sriracha crucifix enamel pin, street art
+              disrupt tousled vegan deep v truffaut pabst selvage helvetica.
+              Ramps fanny pack pok pok, palo santo chicharrones poutine
+              pinterest vice succulents.
+            </p>
+            <a
+              className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+            >
+              Book now
+            </a>
           </div>
         </section>
       </div>

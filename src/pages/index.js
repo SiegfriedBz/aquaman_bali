@@ -66,7 +66,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <hr className='mx-5 my-5 bg-slate-950 dark:bg-slate-200' /> */}
+        <hr className='mx-5 my-5 bg-slate-950' />
 
         <section
           id='about-me-short'
@@ -97,7 +97,7 @@ export default function Home() {
             instructor at Batu Bolong Beach in Canggu.
           </p>
           <Link
-            className='my-1 w-48 self-center rounded-3xl bg-teal-500 px-4 py-2 text-center font-extrabold text-white outline-none hover:bg-teal-400 active:rounded-3xl active:bg-teal-300'
+            className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
             href='/about-me'
           >
             More about me

@@ -43,7 +43,7 @@ const SurfLessons = () => {
           </span>
         </h4>
 
-        <hr className='mx-5 my-3 bg-slate-950 dark:bg-slate-200' />
+        <hr className='mx-5 my-5 bg-slate-950' />
 
         <CldVideoPlayer
           id='rendy-teach-video-01'
@@ -56,7 +56,8 @@ const SurfLessons = () => {
           className='rounded-md border-0 shadow-2xl'
         />
 
-        <hr className='mx-5 my-3 bg-slate-950' />
+        {/* <hr className='mx-5 my-5 bg-slate-950' /> */}
+        <hr className='mx-5 my-5 bg-white' />
 
         <section id='beginner' className='my-2'>
           <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
@@ -111,7 +112,7 @@ const SurfLessons = () => {
               <p className='font-bold'>Package 3 * 2 hours: 1.1M IDR</p>
 
               <a
-                className='mb-3 mt-2 w-48 rounded-3xl bg-teal-500 px-8 py-4 text-center font-extrabold text-white outline-none hover:bg-teal-400 active:rounded-3xl active:bg-teal-300'
+                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               >
                 Book now
@@ -178,7 +179,7 @@ const SurfLessons = () => {
               <p className='font-bold'>Package 3 * 2 hours: 1.1M IDR</p>
 
               <a
-                className='mb-3 mt-2 w-48 rounded-3xl bg-teal-500 px-8 py-4 text-center font-extrabold text-white outline-none hover:bg-teal-400 active:rounded-3xl active:bg-teal-300'
+                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               >
                 Book now
@@ -245,7 +246,7 @@ const SurfLessons = () => {
               <p className='font-bold'>Package 3 * 2 hours: 1.1M IDR</p>
 
               <a
-                className='mb-3 mt-2 w-48 rounded-3xl bg-teal-500 px-8 py-4 text-center font-extrabold text-white outline-none hover:bg-teal-400 active:rounded-3xl active:bg-teal-300'
+                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               >
                 Book now

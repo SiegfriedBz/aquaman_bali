@@ -101,6 +101,12 @@ const About = () => {
           stoke of surfing with you. It is a lot of fun. Come join me and
           let&apos;s enjoy the waves and make you reach your goals in surfing!
         </p>
+        <a
+          className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+          href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+        >
+          Contact me
+        </a>
       </div>
     </>
   )
