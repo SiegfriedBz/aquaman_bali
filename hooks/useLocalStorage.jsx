@@ -5,14 +5,11 @@ export const useLocalStorage = (key, initialValue) => {
     if (typeof window !== 'undefined') {
       const jsonValue = localStorage.getItem(key)
       if (jsonValue == null) {
-        console.log('initialValue', initialValue)
         return initialValue
       } else {
-        console.log(jsonValue)
         return JSON.parse(jsonValue)
       }
     } else {
-      console.log('initialValue', initialValue)
       return initialValue
     }
   })
@@ -24,8 +21,6 @@ export const useLocalStorage = (key, initialValue) => {
       localStorage.setItem(key, JSON.stringify(value))
     }
   }, [key, value])
-
-  console.log('value', value)
 
   return [value, setValue]
 }

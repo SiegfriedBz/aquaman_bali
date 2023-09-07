@@ -158,29 +158,8 @@ const Navbar = () => {
           >
             <div className='flex w-full flex-col items-center gap-4'>
               <Link
-                href='/surf-lessons'
-                className='w-full py-2 text-center hover:opacity-90'
-              >
-                Surf Lessons
-              </Link>
-
-              <Link
-                href='/surf-trips'
-                className='w-full py-2 text-center hover:opacity-90'
-              >
-                Surf Trips
-              </Link>
-
-              <Link
-                href='/videos'
-                className='w-full py-2 text-center hover:opacity-90'
-              >
-                Photo & Video | Drone
-              </Link>
-
-              <Link
                 href='/about-me'
-                className='w-full py-2 text-center hover:opacity-90'
+                className='w-full pb-2 text-center hover:opacity-90'
               >
                 About Me
               </Link>
@@ -200,6 +179,27 @@ const Navbar = () => {
                 className='w-full py-2 text-center hover:opacity-90'
               >
                 Testimonials
+              </Link>
+
+              <Link
+                href='/surf-lessons'
+                className='w-full py-2 text-center hover:opacity-90'
+              >
+                Surf Lessons
+              </Link>
+
+              <Link
+                href='/surf-trips'
+                className='w-full py-2 text-center hover:opacity-90'
+              >
+                Surf Trips
+              </Link>
+
+              <Link
+                href='/videos'
+                className='w-full py-2 text-center hover:opacity-90'
+              >
+                Photo & Video | Drone
               </Link>
 
               <Link
