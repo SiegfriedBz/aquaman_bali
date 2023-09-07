@@ -67,10 +67,10 @@ const Gallery = () => {
           colors={{ accent: '#38bdf8', base: '#fbbf24', text: '#fbbf24' }}
           autoPlay='always'
           loop={true}
-          className='my-2 rounded-lg border-0 shadow-2xl'
+          className='rounded-lg border-0 shadow-2xl'
         />
 
-        <div class='grid grid-cols-1 gap-4 md:grid-cols-4'>
+        <div class='mt-2 grid grid-cols-1 gap-4 md:grid-cols-4'>
           {images.map((src, i) => {
             return (
               <div key={i} className='h-52'>
