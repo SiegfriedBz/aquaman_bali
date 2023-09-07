@@ -65,7 +65,7 @@ const SurfLessons = () => {
           </h3>
           <p className='text-center'>Level 1: Never surfed before</p>
 
-          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
+          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
             <Image
               src={LessonBeginner}
               width={325}
@@ -128,7 +128,7 @@ const SurfLessons = () => {
             Intermediate
           </h3>
           <p className='text-center'>Level 2: Already taken lessons before</p>
-          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
+          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
             <Image
               src={LessonIntermediate}
               width={325}
@@ -195,7 +195,7 @@ const SurfLessons = () => {
             Advanced
           </h3>
           <p className='text-center'>Level 3: Can surf and wants to improve</p>
-          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
+          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
             <Image
               src={LessonAdvanced}
               width={325}

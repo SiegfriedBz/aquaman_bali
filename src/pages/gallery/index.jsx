@@ -17,10 +17,8 @@ import RendySurf09 from '../../../public/images/rendy/surf/rendy_surf_09.jpg'
 import RendySurf11 from '../../../public/images/rendy/surf/rendy_surf_11.jpg'
 import RendySurf12 from '../../../public/images/rendy/surf/rendy_surf_12.jpg'
 
-const images = [
-  RendySurf06,
-  RendySurfA,
-  RendySurfB,
+const IMAGES_TOP = [RendySurf06, RendySurfA, RendySurfB]
+const IMAGES_BOTTOM = [
   RendySurfC,
   RendySurfD,
   RendySurf01,
@@ -59,6 +57,20 @@ const Gallery = () => {
           </span>
         </div>
 
+        <div className='my-2 grid grid-cols-1 gap-4 md:grid-cols-4'>
+          {IMAGES_TOP.map((src, i) => {
+            return (
+              <div key={i} className='h-52'>
+                <Image
+                  src={src}
+                  alt='surf-shots'
+                  className='h-full rounded-lg object-cover shadow-2xl'
+                />
+              </div>
+            )
+          })}
+        </div>
+
         <CldVideoPlayer
           id='rendy-landing-page-video'
           width='1920'
@@ -70,8 +82,8 @@ const Gallery = () => {
           className='rounded-lg border-0 shadow-2xl'
         />
 
-        <div class='mt-2 grid grid-cols-1 gap-4 md:grid-cols-4'>
-          {images.map((src, i) => {
+        <div className='my-2 grid grid-cols-1 gap-4 md:grid-cols-4'>
+          {IMAGES_BOTTOM.map((src, i) => {
             return (
               <div key={i} className='h-52'>
                 <Image
