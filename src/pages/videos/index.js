@@ -63,7 +63,7 @@ const Videos = () => {
           <h2 className='text-center text-3xl font-bold text-slate-900 dark:text-white'>
             Photo & Video
           </h2>
-          <div className='mx-2 my-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
+          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
             <Image
               src={PhotoVideo}
               width={325}
@@ -118,7 +118,7 @@ const Videos = () => {
           <h2 className='text-center text-3xl font-bold text-slate-900 dark:text-white'>
             Drone
           </h2>
-          <div className='mx-2 my-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
+          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
             <Image
               src={WaterPhoto}
               width={325}
@@ -171,7 +171,7 @@ const Videos = () => {
             Video Analysis
           </h2>
 
-          <div className='mx-2 my-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 dark:border-gray-200'>
+          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
             <Image
               src={VideoAnalysis}
               width={325}
