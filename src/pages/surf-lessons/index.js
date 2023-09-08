@@ -8,29 +8,7 @@ import LessonBeginner from '../../../public/images/lessons/surf-lesson-beginner.
 import LessonIntermediate from '../../../public/images/lessons/surf-lesson-intermediate.jpg'
 import LessonAdvanced from '../../../public/images/lessons/surf-lesson-advanced.jpg'
 
-import Teach01 from '../../../public/images/lessons/teach_01.jpg'
-import Teach02 from '../../../public/images/lessons/teach_02.jpg'
-import Teach03 from '../../../public/images/lessons/teach_03.jpg'
-import Teach04 from '../../../public/images/lessons/teach_04.jpg'
-import Teach05 from '../../../public/images/lessons/teach_05.jpg'
-import Teach06 from '../../../public/images/lessons/teach_06.jpg'
-import Teach07 from '../../../public/images/lessons/teach_07.jpg'
-import Teach08 from '../../../public/images/lessons/teach_08.jpg'
-import Teach09 from '../../../public/images/lessons/teach_09.jpg'
 import Teach10 from '../../../public/images/lessons/teach_10.jpg'
-
-const TEACH_IMAGES = [
-  Teach01,
-  Teach02,
-  Teach03,
-  Teach04,
-  Teach05,
-  Teach06,
-  Teach07,
-  Teach08,
-  Teach09,
-  Teach10,
-]
 
 const SurfLessons = () => {
   const meta = {
@@ -80,22 +58,6 @@ const SurfLessons = () => {
           loop={true}
           className='rounded-md border-0 shadow-2xl'
         />
-
-        <hr className='mx-5 my-5 bg-slate-950' />
-
-        <Carousel>
-          {TEACH_IMAGES.map((src, i) => {
-            return (
-              <div key={i} className={`${styles.embla__slide} h-52`}>
-                <Image
-                  src={src}
-                  alt='rendy'
-                  className='h-full rounded-lg object-cover shadow-2xl'
-                />
-              </div>
-            )
-          })}
-        </Carousel>
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
