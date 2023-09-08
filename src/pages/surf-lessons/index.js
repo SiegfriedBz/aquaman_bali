@@ -135,12 +135,12 @@ const SurfLessons = () => {
 
             <p className='my-2 w-full text-2xl font-bold'>1 Surf Lesson</p>
             <p className='w-full text-lg font-bold'>
-              2 hours: 750K IDR (USD 52) Total for 2 Guests
+              2 hours: 750K IDR (USD 52)
             </p>
             <br />
             <p className='my-2 w-full text-2xl font-bold'>5 Surf Lessons</p>
             <p className='w-full text-lg font-bold'>
-              5 * 2 hours: 1.75M IDR (USD 120) Total for 2 Guests
+              5 * 2 hours: 1.75M IDR (USD 120)
             </p>
             <p className='text-md my-2 w-full'>
               The 5 sessions can be splitted as you wish.
