@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
-import Layout from '@/components/layout'
+import RootLayout from '@/components/layouts/rootLayout'
 import generateSocialImage from '../utils/generateSocialImage'
 
 const socialImageConf = generateSocialImage({
@@ -12,9 +12,15 @@ const socialImageConf = generateSocialImage({
 })
 
 export default function App({ Component, pageProps }) {
+  const Layout = Component.Layout || EmptyLayout
+
   return (
-    <Layout imageUrl={socialImageConf}>
-      <Component {...pageProps} />
-    </Layout>
+    <RootLayout imageUrl={socialImageConf}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </RootLayout>
   )
 }
+
+const EmptyLayout = ({ children }) => <>{children}</>

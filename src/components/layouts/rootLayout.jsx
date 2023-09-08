@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { AppContextProvider } from '@/context/appContext'
 import { useRouter } from 'next/router'
-import Navbar from './navbar'
-import Footer from './footer'
+import Navbar from '../navbar'
+import Footer from '../footer'
 
-export default function Layout(props) {
+export default function RootLayout(props) {
   const { children, ...customMeta } = props
 
   const router = useRouter()
@@ -30,6 +30,7 @@ export default function Layout(props) {
         <meta property='og:site_name' content='Aquaman Bali' />
         <meta property='og:image' content={meta.imageUrl} />
       </Head>
+
       <AppContextProvider>
         <div className='dark:bg-slate-900 dark:text-gray-200'>
           <Navbar />
