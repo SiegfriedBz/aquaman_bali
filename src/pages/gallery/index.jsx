@@ -17,11 +17,11 @@ import RendySurf09 from '../../../public/images/rendy/surf/rendy_surf_09.jpg'
 import RendySurf11 from '../../../public/images/rendy/surf/rendy_surf_11.jpg'
 import RendySurf12 from '../../../public/images/rendy/surf/rendy_surf_12.jpg'
 
-import Teach01 from '../../../public/images/lessons/teach_01.JPG'
-import Teach02 from '../../../public/images/lessons/teach_02.JPG'
-import Teach08 from '../../../public/images/lessons/teach_08.JPG'
-import Teach09 from '../../../public/images/lessons/teach_09.JPG'
-import Teach10 from '../../../public/images/lessons/teach_10.JPG'
+import Teach01 from '../../../public/images/lessons/teach_01.jpg'
+import Teach02 from '../../../public/images/lessons/teach_02.jpg'
+import Teach08 from '../../../public/images/lessons/teach_08.jpg'
+import Teach09 from '../../../public/images/lessons/teach_09.jpg'
+import Teach10 from '../../../public/images/lessons/teach_10.jpg'
 
 const IMAGES_TOP = [RendySurf06, RendySurfA, RendySurfB]
 const IMAGES_BOTTOM = [
