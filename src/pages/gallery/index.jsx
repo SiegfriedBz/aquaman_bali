@@ -19,11 +19,6 @@ import RendySurf12 from '../../../public/images/rendy/surf/rendy_surf_12.jpg'
 
 import Teach01 from '../../../public/images/lessons/teach_01.JPG'
 import Teach02 from '../../../public/images/lessons/teach_02.JPG'
-import Teach03 from '../../../public/images/lessons/teach_03.JPG'
-import Teach04 from '../../../public/images/lessons/teach_04.JPG'
-import Teach05 from '../../../public/images/lessons/teach_05.JPG'
-import Teach06 from '../../../public/images/lessons/teach_06.JPG'
-import Teach07 from '../../../public/images/lessons/teach_07.JPG'
 import Teach08 from '../../../public/images/lessons/teach_08.JPG'
 import Teach09 from '../../../public/images/lessons/teach_09.JPG'
 import Teach10 from '../../../public/images/lessons/teach_10.JPG'
@@ -43,11 +38,6 @@ const IMAGES_BOTTOM = [
   RendySurf12,
   Teach01,
   Teach02,
-  Teach03,
-  Teach04,
-  Teach05,
-  Teach06,
-  Teach07,
   Teach08,
   Teach09,
   Teach10,
