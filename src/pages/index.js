@@ -40,7 +40,7 @@ export default function Home() {
       <main className='px-2'>
         <section id='hero' className='flex flex-col items-center md:mb-12'>
           <div className='flex flex-col pb-3 md:max-w-7xl md:flex-row md:items-center md:justify-between'>
-            <div className='w-full'>
+            <div className=''>
               <h1 className='mb-3 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text py-3 text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-7xl'>
                 Upgrade
               </h1>
@@ -128,10 +128,7 @@ export default function Home() {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section
-          id='testimonials'
-          className='my-5 flex scroll-mt-20 flex-col items-center justify-center md:mb-12'
-        >
+        <section id='testimonials' className='my-5 flex scroll-mt-20 flex-col'>
           <h2 className='mb-2 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
             Testimonials
           </h2>
