@@ -1,21 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Inter } from 'next/font/google'
 import Testimonials from '../components/testimonials'
 import LocationMap from '../components/LocationMap'
-
-const inter = Inter({ subsets: ['latin'] })
 import Carousel from '@/components/carousel'
 import styles from '@/components/carousel.module.css'
-import RendySurf05 from '../../public/images/rendy/surf/rendy_surf_05.jpg'
+
 import RendySurfBSmall from '../../public/images/rendy/surf/rendy_surf_B_small.png'
-
 import RendySurfCSmall from '../../public/images/rendy/surf/rendy_surf_C_small.png'
-
 import RendySurfA from '../../public/images/rendy/surf/rendy_surf_A.jpg'
 import RendySurf11 from '../../public/images/rendy/surf/rendy_surf_11.jpg'
-
 import WaterGirl01 from '../../public/images/photo_video/water-photo.jpg'
 import WaterGirl02 from '../../public/images/lessons/girl_surf.jpg'
 import WaterGirl03 from '../../public/images/lessons/rendy_girl_01.jpg'

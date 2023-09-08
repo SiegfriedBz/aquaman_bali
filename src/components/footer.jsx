@@ -1,5 +1,3 @@
-import React from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -8,7 +6,6 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons'
 import { faMugHot, faHeart } from '@fortawesome/free-solid-svg-icons'
-
 import SwissFlag from '../../public/logos/swiss-flag.svg'
 
 const Footer = () => {

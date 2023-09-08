@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useColorMode } from '../../hooks/useColorMode'
-import logo from '../../public/logos/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faWhatsapp,
@@ -12,6 +11,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faStreetView, faMugHot } from '@fortawesome/free-solid-svg-icons'
 import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
+import logo from '../../public/logos/logo.png'
 
 const Navbar = () => {
   const router = useRouter()

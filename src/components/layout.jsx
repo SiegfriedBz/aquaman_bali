@@ -1,8 +1,8 @@
-import Navbar from './navbar'
-import Footer from './footer'
+import Head from 'next/head'
 import { AppContextProvider } from '@/context/appContext'
 import { useRouter } from 'next/router'
-import Head from 'next/head'
+import Navbar from './navbar'
+import Footer from './footer'
 
 export default function Layout(props) {
   const { children, ...customMeta } = props

@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react'
 import Map, { Marker, Popup } from 'react-map-gl'
 import { useRouter } from 'next/router'
+import { useAppContext } from '@/context/appContext'
+import MapPopup from './MapPopup'
+import { MARKERS } from '@/data/markers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons'
 import 'mapbox-gl/dist/mapbox-gl.css'
-import { useAppContext } from '@/context/appContext'
-import { MARKERS } from '@/data/markers'
-import MapPopup from './MapPopup'
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN
 

@@ -1,5 +1,6 @@
 import { useState, createContext, useContext } from 'react'
 import { MARKERS } from '@/data/markers'
+
 const AppContext = createContext()
 export const useAppContext = () => {
   const value = useContext(AppContext)

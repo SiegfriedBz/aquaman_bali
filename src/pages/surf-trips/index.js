@@ -1,6 +1,10 @@
 import { useRef } from 'react'
-import LocationMap from '@/components/LocationMap'
 import { useAppContext } from '@/context/appContext'
+import Image from 'next/image'
+import Head from 'next/head'
+import LocationMap from '@/components/LocationMap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { MARKERS } from '@/data/markers'
 import CangguImage from '../../../public/images/lessons/girl_surf.jpg'
 import MedewiImage from '../../../public/images/spots/medewi_surf.jpg'
@@ -9,10 +13,6 @@ import UluwatuImage from '../../../public/images/spots/uluwatu_surf.jpg'
 import SeranganImage from '../../../public/images/spots/serangan_surf.jpg'
 import NusaImage from '../../../public/images/spots/nusa_lumboga_surf.jpg'
 import LombokImage from '../../../public/images/spots/lombok_surf.jpg'
-import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye } from '@fortawesome/free-solid-svg-icons'
-import Head from 'next/head'
 
 const SurfTrips = () => {
   const mapContainerRef = useRef(null)
@@ -291,7 +291,7 @@ const SurfTrips = () => {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='nusa'>
-          <h2 className='text-3xl font-semibold'>Nusa</h2>
+          <h2 className='text-3xl font-semibold'>Nusa Lumboga</h2>
           <div
             className='my-2 flex items-center'
             onClick={() => handleSelectTrip('nusa')}
@@ -305,7 +305,7 @@ const SurfTrips = () => {
           <div className='h-52'>
             <Image
               src={NusaImage}
-              alt='nusa'
+              alt='nusa-lumboga'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
           </div>

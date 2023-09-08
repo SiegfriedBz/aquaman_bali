@@ -1,11 +1,10 @@
-import { useRouter } from 'next/router'
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CldVideoPlayer } from 'next-cloudinary'
 import PhotoVideo from '../../../public/images/photo_video/photo-video.jpg'
 import WaterPhoto from '../../../public/images/photo_video/water-photo.jpg'
 import VideoAnalysis from '../../../public/images/photo_video/video-analysis.jpg'
-import Head from 'next/head'
 
 const Videos = () => {
   const meta = {

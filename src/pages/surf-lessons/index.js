@@ -1,11 +1,36 @@
-import React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import { CldVideoPlayer } from 'next-cloudinary'
+import Carousel from '@/components/carousel'
+import styles from '../../components/carousel.module.css'
 import LessonBeginner from '../../../public/images/lessons/surf-lesson-beginner.jpg'
 import LessonIntermediate from '../../../public/images/lessons/surf-lesson-intermediate.jpg'
 import LessonAdvanced from '../../../public/images/lessons/surf-lesson-advanced.jpg'
-import Link from 'next/link'
-import Head from 'next/head'
+
+import Teach01 from '../../../public/images/lessons/teach_01.JPG'
+import Teach02 from '../../../public/images/lessons/teach_02.JPG'
+import Teach03 from '../../../public/images/lessons/teach_03.JPG'
+import Teach04 from '../../../public/images/lessons/teach_04.JPG'
+import Teach05 from '../../../public/images/lessons/teach_05.JPG'
+import Teach06 from '../../../public/images/lessons/teach_06.JPG'
+import Teach07 from '../../../public/images/lessons/teach_07.JPG'
+import Teach08 from '../../../public/images/lessons/teach_08.JPG'
+import Teach09 from '../../../public/images/lessons/teach_09.JPG'
+import Teach10 from '../../../public/images/lessons/teach_10.JPG'
+
+const TEACH_IMAGES = [
+  Teach01,
+  Teach02,
+  Teach03,
+  Teach04,
+  Teach05,
+  Teach06,
+  Teach07,
+  Teach08,
+  Teach09,
+  Teach10,
+]
 
 const SurfLessons = () => {
   const meta = {
@@ -56,8 +81,23 @@ const SurfLessons = () => {
           className='rounded-md border-0 shadow-2xl'
         />
 
-        {/* <hr className='mx-5 my-5 bg-slate-950' /> */}
-        <hr className='mx-5 my-5 bg-white' />
+        <hr className='mx-5 my-5 bg-slate-950' />
+
+        <Carousel>
+          {TEACH_IMAGES.map((src, i) => {
+            return (
+              <div key={i} className={`${styles.embla__slide} h-52`}>
+                <Image
+                  src={src}
+                  alt='rendy'
+                  className='h-full rounded-lg object-cover shadow-2xl'
+                />
+              </div>
+            )
+          })}
+        </Carousel>
+
+        <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='beginner' className='my-2'>
           <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
@@ -66,13 +106,13 @@ const SurfLessons = () => {
           <p className='text-center'>Level 1: Never surfed before</p>
 
           <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-            <Image
-              src={LessonBeginner}
-              width={325}
-              height={325}
-              alt='lesson-beginner'
-              className='mx-auto mb-5 rounded-lg drop-shadow-xl'
-            />
+            <div className='mb-5 h-56'>
+              <Image
+                src={Teach10}
+                alt='lesson-beginner'
+                className='h-full rounded-lg object-cover shadow-2xl'
+              />
+            </div>
             <p className='text-justify'>
               On your very first lesson you will be given an introduction on the
               beach about the surfboard, safety in the water, how to paddle,
@@ -95,7 +135,8 @@ const SurfLessons = () => {
                 premium custom made beginner soft board with soft fins, leash,
                 rash guard and face sunscreen/zink
               </li>
-              <li className='list-disc'>Water</li>
+              <li className='list-disc'>Recovery water</li>
+              <li className='list-disc'>Shower</li>
             </ul>
 
             <br />
@@ -128,14 +169,16 @@ const SurfLessons = () => {
             Intermediate
           </h3>
           <p className='text-center'>Level 2: Already taken lessons before</p>
+
           <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-            <Image
-              src={LessonIntermediate}
-              width={325}
-              height={325}
-              alt='lesson-beginner'
-              className='mx-auto mb-5 rounded-lg drop-shadow-xl'
-            />
+            <div className='mb-5 h-56'>
+              <Image
+                src={LessonIntermediate}
+                alt='lesson-intermediate'
+                className='h-full rounded-lg object-cover shadow-2xl'
+              />
+            </div>
+
             <p className='text-justify'>
               Level 2: Already taken lessons before Beginner/ Intermediate You
               have already taken one or more surf lessons before and need help
@@ -162,7 +205,8 @@ const SurfLessons = () => {
                 premium custom made beginner soft board with soft fins, leash,
                 rash guard and face sunscreen/zink
               </li>
-              <li className='list-disc'>Water</li>
+              <li className='list-disc'>Recovery water</li>
+              <li className='list-disc'>Shower</li>
             </ul>
 
             <br />
@@ -195,14 +239,15 @@ const SurfLessons = () => {
             Advanced
           </h3>
           <p className='text-center'>Level 3: Can surf and wants to improve</p>
+
           <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-            <Image
-              src={LessonAdvanced}
-              width={325}
-              height={325}
-              alt='lesson-beginner'
-              className='mx-auto mb-5 rounded-lg drop-shadow-xl'
-            />
+            <div className='mb-5 h-56'>
+              <Image
+                src={LessonAdvanced}
+                alt='lesson-advanced'
+                className='h-full rounded-lg object-cover shadow-2xl'
+              />
+            </div>
             <p className='text-justify'>
               You are able to catch white water or green waves already and want
               to improve your surfing?
@@ -229,7 +274,8 @@ const SurfLessons = () => {
                 premium custom made beginner soft board with soft fins, leash,
                 rash guard and face sunscreen/zink
               </li>
-              <li className='list-disc'>Water</li>
+              <li className='list-disc'>Recovery water</li>
+              <li className='list-disc'>Shower</li>
             </ul>
 
             <br />

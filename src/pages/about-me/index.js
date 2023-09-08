@@ -21,7 +21,7 @@ import RendySurf11 from '../../../public/images/rendy/surf/rendy_surf_11.jpg'
 import RendySurf12 from '../../../public/images/rendy/surf/rendy_surf_12.jpg'
 import RendySurf13 from '../../../public/images/rendy/surf/rendy_surf_13.jpg'
 
-const images = [
+const RENDY_IMAGES = [
   RendySurf06,
   RendySurfA,
   RendyKid2,
@@ -70,7 +70,7 @@ const About = () => {
         <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
 
         <Carousel>
-          {images.map((src, i) => {
+          {RENDY_IMAGES.map((src, i) => {
             return (
               <div key={i} className={`${styles.embla__slide} h-52`}>
                 <Image
