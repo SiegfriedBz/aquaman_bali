@@ -27,7 +27,10 @@ const SurfLessons = () => {
           Surf lessons
         </h2>
         <h3 className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'>
-          Enjoy private & group surf lessons
+          Enjoy private & Semi-Private
+        </h3>
+        <h3 className='text-center text-2xl text-slate-900 dark:text-gray-200'>
+          Surf Lessons
         </h3>
         <h4 className='text-center text-xl text-slate-900 dark:text-gray-200'>
           in Canggu & during your{' '}
