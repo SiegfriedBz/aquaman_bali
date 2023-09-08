@@ -53,6 +53,34 @@ const SurfTrips = () => {
         <h4 className='mt-2 text-center text-xl text-slate-900 dark:text-gray-200'>
           Starting from 500K IDR
         </h4>
+        <p className='mx-2 mb-2 mt-4 text-center text-lg text-slate-900 dark:text-gray-200'>
+          🏄 Surf Bali: Where Dreams Meet Waves!
+        </p>
+        <p className='mx-2 my-2 text-center text-lg text-slate-900 dark:text-gray-200'>
+          🌴 Discover Bali&apos;s year-round surf paradise, with legendary waves
+          for pros at Uluwatu and gentle breaks for beginners at Batu Bolong
+          Beach.
+        </p>
+        <p className='mx-2 my-2 text-center text-lg text-slate-900 dark:text-gray-200'>
+          🏄‍♀️ Your Board or Ours: Bring your own surfboard or use one of our
+          top-quality boards. We cater to all skill levels.
+        </p>
+        <p className='mx-2 my-2 text-center text-lg text-slate-900 dark:text-gray-200'>
+          🏨 Stay Your Way: Choose your accommodation based on your budget and
+          preferences. Book your own hotel or let us assist you in finding the
+          perfect spot.
+        </p>
+        <p className='mx-2 my-2 text-center text-lg text-slate-900 dark:text-gray-200'>
+          🏄‍♂️ Flexible Departures: Start your surf adventure right from Canggu or
+          meet us at your chosen destination. We&apos;re here to make your
+          journey as convenient as possible.
+        </p>
+        <a
+          className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+          href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+        >
+          Book now
+        </a>
       </div>
 
       {/* <hr className='mx-5 my-5 bg-slate-950' /> */}

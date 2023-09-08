@@ -11,7 +11,6 @@ export const useAppContext = () => {
 }
 
 export const AppContextProvider = ({ children }) => {
-  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
   const [showPopup, setShowPopup] = useState(false)
   const [popup, setPopup] = useState(() => {
     return MARKERS.canggu
@@ -20,8 +19,6 @@ export const AppContextProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        mobileMenuIsOpen,
-        setMobileMenuIsOpen,
         showPopup,
         setShowPopup,
         popup,

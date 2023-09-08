@@ -1,5 +1,8 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
+import { useColorMode } from '../../hooks/useColorMode'
 import logo from '../../public/logos/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -9,13 +12,10 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faStreetView, faMugHot } from '@fortawesome/free-solid-svg-icons'
 import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
-import { useRouter } from 'next/router'
-import { useAppContext } from '@/context/appContext'
-import { useColorMode } from '../../hooks/useColorMode'
 
 const Navbar = () => {
   const router = useRouter()
-  const { mobileMenuIsOpen, setMobileMenuIsOpen } = useAppContext()
+  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
   const [colorMode, setColorMode] = useColorMode()
   const isHomePage = router.asPath === '/'
 
