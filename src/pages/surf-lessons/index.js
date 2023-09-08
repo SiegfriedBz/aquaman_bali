@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CldVideoPlayer } from 'next-cloudinary'
-import LessonIntermediate from '../../../public/images/lessons/surf-lesson-intermediate.jpg'
 import LessonAdvanced from '../../../public/images/lessons/surf-lesson-advanced.jpg'
 import Teach10 from '../../../public/images/lessons/teach_10.jpg'
 
@@ -128,7 +127,7 @@ const SurfLessons = () => {
           <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
             <div className='mb-5 h-56'>
               <Image
-                src={LessonAdvanced}
+                src={Teach10}
                 alt='lesson-group'
                 className='h-full rounded-lg object-cover shadow-2xl'
               />
