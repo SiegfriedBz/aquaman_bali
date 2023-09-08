@@ -57,180 +57,39 @@ const SurfLessons = () => {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='beginner' className='my-2'>
+        <section id='private' className='mb-2'>
           <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
-            Beginner
+            Private Surf Lessons
           </h3>
-          <p className='text-center'>Level 1: Never surfed before</p>
+          <p className='text-center'>1 Coach & 1 Guest</p>
 
-          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-            <div className='mb-5 h-56'>
-              <Image
-                src={Teach10}
-                alt='lesson-beginner'
-                className='h-full rounded-lg object-cover shadow-2xl'
-              />
-            </div>
-            <p className='text-justify'>
-              On your very first lesson you will be given an introduction on the
-              beach about the surfboard, safety in the water, how to paddle,
-              balance, stand up and surf the wave.
-            </p>
-            <br />
-            <p className='text-justify'>
-              <span className='font-bold'>Private</span> total of{' '}
-              <span className='font-bold'>2 hours</span> surfing lesson with a{' '}
-              <span className='font-bold'>professional instructor</span>{' '}
-              including 30 minutes of detailed surf basics, theory and safety on
-              the beach before jumping into the water to catch and surf your
-              first waves.
-            </p>
-            <br />
-            <p className='self-start'>What is included?</p>
-            <ul className='mx-5'>
-              <li className='list-disc'>
-                <span className='font-bold'>All equipment needed: </span>
-                premium custom made beginner soft board with soft fins, leash,
-                rash guard and face sunscreen/zink
-              </li>
-              <li className='list-disc'>Recovery water</li>
-              <li className='list-disc'>Shower</li>
-            </ul>
-
-            <br />
-
-            <p>Options</p>
-            <ul className='mx-5'>
-              <li className='list-disc'>Photos & Videos of your session</li>
-              <li className='list-disc'>Video analysis</li>
-            </ul>
-
-            <br />
-            <div className='mx-auto flex flex-col items-center'>
-              <p className='font-bold'>2 hours: 350k IDR</p>
-              <p className='font-bold'>Package 3 * 2 hours: 1.1M IDR</p>
-
-              <a
-                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
-                href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-              >
-                Book now
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <hr className='mx-5 my-5 bg-slate-950' />
-
-        <section id='intermediate' className='my-2'>
-          <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
-            Intermediate
-          </h3>
-          <p className='text-center'>Level 2: Already taken lessons before</p>
-
-          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-            <div className='mb-5 h-56'>
-              <Image
-                src={LessonIntermediate}
-                alt='lesson-intermediate'
-                className='h-full rounded-lg object-cover shadow-2xl'
-              />
-            </div>
-
-            <p className='text-justify'>
-              Level 2: Already taken lessons before Beginner/ Intermediate You
-              have already taken one or more surf lessons before and need help
-              to improve your surfing?
-            </p>
-            <br />
-            <p className='text-justify'>
-              If you don&apos;t need the basic and theory part, we can jump
-              straight into the water to surf and enjoy more time in the water.
-            </p>
-            <br />
-            <p className='text-justify'>
-              <span className='font-bold'>Private</span> total of{' '}
-              <span className='font-bold'>2 hours</span> surfing lesson with a{' '}
-              <span className='font-bold'>professional instructor.</span> You
-              will get help with wave selection and catching waves and tips on
-              your body position.
-            </p>
-            <br />
-            <p className='self-start'>What is included?</p>
-            <ul className='mx-5'>
-              <li className='list-disc'>
-                <span className='font-bold'>All equipment needed: </span>
-                premium custom made beginner soft board with soft fins, leash,
-                rash guard and face sunscreen/zink
-              </li>
-              <li className='list-disc'>Recovery water</li>
-              <li className='list-disc'>Shower</li>
-            </ul>
-
-            <br />
-
-            <p>Options</p>
-            <ul className='mx-5'>
-              <li className='list-disc'>Photos & Videos of your session</li>
-              <li className='list-disc'>Video analysis</li>
-            </ul>
-
-            <br />
-            <div className='mx-auto flex flex-col items-center'>
-              <p className='font-bold'>2 hours: 350k IDR</p>
-              <p className='font-bold'>Package 3 * 2 hours: 1.1M IDR</p>
-
-              <a
-                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
-                href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-              >
-                Book now
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <hr className='mx-5 my-5 bg-slate-950' />
-
-        <section id='advanced' className='my-2'>
-          <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
-            Advanced
-          </h3>
-          <p className='text-center'>Level 3: Can surf and wants to improve</p>
-
-          <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
+          <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
             <div className='mb-5 h-56'>
               <Image
                 src={LessonAdvanced}
-                alt='lesson-advanced'
+                alt='lesson-private'
                 className='h-full rounded-lg object-cover shadow-2xl'
               />
             </div>
-            <p className='text-justify'>
-              You are able to catch white water or green waves already and want
-              to improve your surfing?
+
+            <p className='my-2 w-full text-2xl font-bold'>1 Surf Lesson</p>
+            <p className='w-full text-lg font-bold'>
+              2 hours: 400K IDR (USD 28)
             </p>
             <br />
-            <p className='text-justify'>
-              <span className='font-bold'>Private</span> total of{' '}
-              <span className='font-bold'>2 hours</span> surfing lesson with a{' '}
-              <span className='font-bold'>professional instructor.</span> You
-              will get help with wave selection and catching green waves and
-              tips on your body position and surf maneuvers.
+            <p className='my-2 w-full text-2xl font-bold'>5 Surf Lessons</p>
+            <p className='w-full text-lg font-bold'>
+              5 * 2 hours: 1.25M IDR (USD 120)
+            </p>
+            <p className='text-md my-2 w-full'>
+              The 5 sessions can be splitted as you wish.
             </p>
             <br />
-            <p className='text-justify'>
-              It is highly recommended to add a video analysis option to your
-              lesson to see how you are doing and your mistakes and let your
-              instructor correct them afterwards.
-            </p>
-            <br />
-            <p className='self-start'>What is included?</p>
+            <p className='self-start font-bold'>What is included?</p>
             <ul className='mx-5'>
               <li className='list-disc'>
-                <span className='font-bold'>All equipment needed: </span>
-                premium custom made beginner soft board with soft fins, leash,
-                rash guard and face sunscreen/zink
+                <span className='block font-bold'>All equipment needed: </span>
+                Top-quality board, leash, surfing lycra and face sunscreen/zink
               </li>
               <li className='list-disc'>Recovery water</li>
               <li className='list-disc'>Shower</li>
@@ -238,17 +97,78 @@ const SurfLessons = () => {
 
             <br />
 
-            <p>Options</p>
-            <ul className='mx-5'>
-              <li className='list-disc'>Photos & Videos of your session</li>
-              <li className='list-disc'>Video analysis</li>
+            <p className='w-full self-start font-bold'>Options</p>
+            <ul className='w-full'>
+              <li className='mx-5 list-disc'>
+                Photos & Videos of your session
+              </li>
+              <li className='mx-5 list-disc'>Video analysis</li>
             </ul>
 
             <br />
             <div className='mx-auto flex flex-col items-center'>
-              <p className='font-bold'>2 hours: 350k IDR</p>
-              <p className='font-bold'>Package 3 * 2 hours: 1.1M IDR</p>
+              <a
+                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+                href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+              >
+                Book now
+              </a>
+            </div>
+          </div>
+        </section>
 
+        <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
+
+        <section id='group' className='my-2'>
+          <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
+            Semi Private Surf Lessons
+          </h3>
+          <p className='text-center'>1 Coach & 2 Guests</p>
+
+          <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
+            <div className='mb-5 h-56'>
+              <Image
+                src={LessonAdvanced}
+                alt='lesson-group'
+                className='h-full rounded-lg object-cover shadow-2xl'
+              />
+            </div>
+
+            <p className='my-2 w-full text-2xl font-bold'>1 Surf Lesson</p>
+            <p className='w-full text-lg font-bold'>
+              2 hours: 750K IDR (USD 52) Total for 2 Guests
+            </p>
+            <br />
+            <p className='my-2 w-full text-2xl font-bold'>5 Surf Lessons</p>
+            <p className='w-full text-lg font-bold'>
+              5 * 2 hours: 1.75M IDR (USD 120) Total for 2 Guests
+            </p>
+            <p className='text-md my-2 w-full'>
+              The 5 sessions can be splitted as you wish.
+            </p>
+            <br />
+            <p className='self-start font-bold'>What is included?</p>
+            <ul className='mx-5'>
+              <li className='list-disc'>
+                <span className='block font-bold'>All equipment needed: </span>
+                Top-quality board, leash, surfing lycra and face sunscreen/zink
+              </li>
+              <li className='list-disc'>Recovery water</li>
+              <li className='list-disc'>Shower</li>
+            </ul>
+
+            <br />
+
+            <p className='w-full self-start font-bold'>Options</p>
+            <ul className='w-full'>
+              <li className='mx-5 list-disc'>
+                Photos & Videos of your session
+              </li>
+              <li className='mx-5 list-disc'>Video analysis</li>
+            </ul>
+
+            <br />
+            <div className='mx-auto flex flex-col items-center'>
               <a
                 className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
