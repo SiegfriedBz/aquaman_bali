@@ -25,7 +25,7 @@ const GalleryLayout = ({ children }) => {
 
         <nav
           id='gallery-navigation'
-          className='my-2 flex items-center space-x-8 text-xl font-bold dark:text-white'
+          className='mb-5 flex items-center space-x-8 text-xl font-bold dark:text-white'
           aria-label='gallery-navigation'
         >
           <Link href='/gallery'>Images</Link>
