@@ -17,9 +17,8 @@ import RendySurf09 from '../../../public/images/rendy/surf/rendy_surf_09.jpg'
 import RendySurf11 from '../../../public/images/rendy/surf/rendy_surf_11.jpg'
 import RendySurf12 from '../../../public/images/rendy/surf/rendy_surf_12.jpg'
 
-const IMAGES_TOP = [RendySurf06, RendySurfA, RendySurfB]
+const IMAGES_TOP = [RendySurf06, RendySurfA, RendySurfB, RendySurfC]
 const IMAGES_BOTTOM = [
-  RendySurfC,
   RendySurfD,
   RendySurf01,
   RendySurf02,
@@ -47,10 +46,7 @@ const Gallery = () => {
         <meta property='og:title' content={meta.title} />
       </Head>
 
-      <div
-        id='gallery'
-        className='justify-bewteen flex flex-col items-center p-5 dark:bg-slate-900 dark:text-gray-200'
-      >
+      <div id='gallery' className='justify-bewteen flex flex-col items-center'>
         <div className='mb-2'>
           <span className='text-center text-4xl font-bold dark:text-white'>
             Gallery

@@ -5,12 +5,12 @@ import {
   faTwitter,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons'
-import { faMugHot, faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faMugHot } from '@fortawesome/free-solid-svg-icons'
 import SwissFlag from '../../public/logos/swiss-flag.svg'
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col px-2 py-3 shadow-2xl dark:bg-slate-900 dark:text-gray-100'>
+    <footer className='flex flex-col px-2 pb-3 pt-5 shadow-2xl'>
       {/* open hours */}
       <section>
         <div className='mb-3 flex flex-row justify-center text-lg text-slate-800 dark:text-white'>
@@ -76,6 +76,7 @@ const Footer = () => {
         <h2 className='my-3 text-center text-sm text-slate-800 dark:text-white'>
           ©2023 Aquaman Bali
         </h2>
+
         {/* credits */}
         <a href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'>
           <span className='mt-1 flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>

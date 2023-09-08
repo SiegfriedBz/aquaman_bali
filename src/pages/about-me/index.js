@@ -57,10 +57,7 @@ const About = () => {
         <meta property='og:title' content={meta.title} />
       </Head>
 
-      <div
-        id='about-me'
-        className='justify-bewteen flex flex-col items-center p-5 dark:bg-slate-900 dark:text-gray-200'
-      >
+      <div id='about-me' className='justify-bewteen flex flex-col items-center'>
         <div className='mb-2'>
           <span className='text-center text-4xl font-bold dark:text-white'>
             About me

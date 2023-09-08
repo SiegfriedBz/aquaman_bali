@@ -31,11 +31,13 @@ export default function Layout(props) {
         <meta property='og:image' content={meta.imageUrl} />
       </Head>
       <AppContextProvider>
-        <Navbar />
-        <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
-        <main>{children}</main>
-        <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
-        <Footer />
+        <div className=' dark:bg-slate-900 dark:text-gray-200'>
+          <Navbar />
+          <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
+          <main className='py-5'>{children}</main>
+          <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
+          <Footer />
+        </div>
       </AppContextProvider>
     </>
   )

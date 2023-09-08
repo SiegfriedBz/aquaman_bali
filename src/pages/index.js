@@ -37,90 +37,102 @@ export default function Home() {
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
       </Head>
-      <main className='px-2 dark:bg-slate-900 dark:text-gray-200'>
-        {/* <hr className='mx-5 my-5 bg-slate-950' /> */}
-
-        <section
-          id='hero'
-          className='justify-bewteen flex flex-col items-center p-5'
-        >
-          <div className='pb-3'>
-            <h1 className='mb-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-left sm:text-5xl'>
-              Upgrade
-            </h1>
-            <h2 className='mb-4 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-left sm:text-5xl'>
-              Your Surfing Skills
-            </h2>
-            <h2 className='mb-2 max-w-md text-center text-2xl font-bold sm:text-left sm:text-5xl'>
+      <main className='px-2'>
+        <section id='hero' className='flex flex-col items-center md:mb-12'>
+          <div className='flex flex-col pb-3 md:max-w-7xl md:flex-row md:items-center md:justify-between'>
+            <div className='w-full'>
+              <h1 className='mb-3 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text py-3 text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-7xl'>
+                Upgrade
+              </h1>
+              <h2 className='mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-6xl'>
+                Your Surfing Skills
+              </h2>
+            </div>
+            <h2 className='mb-2 max-w-md text-center text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl'>
               Beginner to Advanced
             </h2>
           </div>
-          <Carousel>
-            {TOP_IMAGES.map((src, i) => {
-              return (
-                <div key={i} className={`${styles.embla__slide} h-56 px-0`}>
-                  <Image
-                    src={src}
-                    className='h-full rounded-lg object-cover shadow-lg'
-                    alt='surf-shots'
-                  />
-                </div>
-              )
-            })}
-          </Carousel>
-          <h3 className='my-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-left sm:text-5xl'>
-            Best Surf School in Bali
-          </h3>
-          <a
-            className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
-            href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-          >
-            Book now
-          </a>
+
+          <div className='justify-bewteen md:max-w-8-xl flex flex-col items-center px-2 md:flex-row md:gap-5'>
+            <div className='md:max-w-md xl:max-w-xl'>
+              <Carousel>
+                {TOP_IMAGES.map((src, i) => {
+                  return (
+                    <div key={i} className={`${styles.embla__slide} h-56`}>
+                      <Image
+                        src={src}
+                        className='h-full rounded-lg object-cover shadow-lg'
+                        alt='surf-shots'
+                      />
+                    </div>
+                  )
+                })}
+              </Carousel>
+            </div>
+
+            <div className='justify-bewteen flex flex-col items-center md:p-5'>
+              <h3 className='my-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'>
+                Best Surf School in Bali
+              </h3>
+              <a
+                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
+                href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+              >
+                Book now
+              </a>
+            </div>
+          </div>
         </section>
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section
           id='about-me-short'
-          className='flex flex-col items-center justify-center'
+          className='my-5 flex flex-col items-center justify-center md:mb-12'
         >
-          <h2 className='mb-2 max-w-md text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl'>
+          <h2 className='mb-2 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
             About me
           </h2>
-          <Carousel>
-            {ABOUT_ME_IMAGES.map((src, i) => {
-              return (
-                <div key={i} className={styles.embla__slide}>
-                  <Image
-                    src={src}
-                    className='mx-auto rounded-full object-cover shadow-lg'
-                    width={225}
-                    height={225}
-                    alt='rendy'
-                  />
-                </div>
-              )
-            })}
-          </Carousel>
+          <div className='flex flex-col items-center justify-center md:flex-row'>
+            <div className='md:max-w-md xl:max-w-xl'>
+              <Carousel>
+                {ABOUT_ME_IMAGES.map((src, i) => {
+                  return (
+                    <div key={i} className={styles.embla__slide}>
+                      <Image
+                        src={src}
+                        className={`mx-auto h-[225px] w-[225px] rounded-full object-cover shadow-lg md:h-[265px] md:w-[265px] lg:h-[325px] lg:w-[325px]`}
+                        alt='rendy'
+                      />
+                    </div>
+                  )
+                })}
+              </Carousel>
+            </div>
 
-          <p className='px-2 py-5 text-justify'>
-            My name is Rendy and I am from Krui, South Sumatra. I started
-            surfing at the age of 8 and came to Bali in 2019 to work as a surf
-            instructor at Batu Bolong Beach in Canggu.
-          </p>
-          <Link
-            className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
-            href='/about-me'
-          >
-            More about me
-          </Link>
+            <div className='flex flex-col items-center md:max-w-md md:p-5'>
+              <p className='px-2 py-5 text-center text-lg'>
+                My name is Rendy and I am from Krui, South Sumatra. I started
+                surfing at the age of 8 and came to Bali in 2019 to work as a
+                surf instructor at Batu Bolong Beach in Canggu.
+              </p>
+              <Link
+                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:w-72 md:px-10 md:text-lg'
+                href='/about-me'
+              >
+                More about me
+              </Link>
+            </div>
+          </div>
         </section>
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='testimonials' className='scroll-mt-20'>
-          <h2 className='mb-2 max-w-md text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl'>
+        <section
+          id='testimonials'
+          className='my-5 flex scroll-mt-20 flex-col items-center justify-center md:mb-12'
+        >
+          <h2 className='mb-2 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
             Testimonials
           </h2>
           <Testimonials />
@@ -129,7 +141,7 @@ export default function Home() {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='location' className='scroll-mt-20 py-5 dark:bg-slate-900'>
-          <h2 className='mb-2 max-w-md text-center text-2xl font-bold text-slate-900  dark:text-white sm:text-left sm:text-5xl'>
+          <h2 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white sm:text-5xl'>
             Visit Us
           </h2>
           <LocationMap />

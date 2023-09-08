@@ -2,12 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CldVideoPlayer } from 'next-cloudinary'
-import Carousel from '@/components/carousel'
-import styles from '../../components/carousel.module.css'
-import LessonBeginner from '../../../public/images/lessons/surf-lesson-beginner.jpg'
 import LessonIntermediate from '../../../public/images/lessons/surf-lesson-intermediate.jpg'
 import LessonAdvanced from '../../../public/images/lessons/surf-lesson-advanced.jpg'
-
 import Teach10 from '../../../public/images/lessons/teach_10.jpg'
 
 const SurfLessons = () => {
@@ -26,7 +22,7 @@ const SurfLessons = () => {
       </Head>
       <div
         id='surf-lessons'
-        className='flex scroll-mt-20 flex-col items-center justify-center py-5 dark:bg-slate-900 dark:text-gray-200'
+        className='flex scroll-mt-20 flex-col items-center justify-center'
       >
         <h2 className='text-center text-4xl font-bold text-slate-900 dark:text-white'>
           Surf lessons

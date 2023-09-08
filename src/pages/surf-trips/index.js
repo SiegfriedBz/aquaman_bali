@@ -39,7 +39,7 @@ const SurfTrips = () => {
       </Head>
       <div
         id='surf-trips'
-        className='flex scroll-mt-20 flex-col items-center justify-center py-5 dark:bg-slate-900 dark:text-gray-200'
+        className='flex scroll-mt-20 flex-col items-center justify-center'
       >
         <h2 className='text-center text-4xl font-bold text-slate-900 dark:text-white'>
           Surf trips

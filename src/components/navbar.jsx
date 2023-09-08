@@ -33,9 +33,9 @@ const Navbar = () => {
   return (
     <header
       id='header'
-      className='sticky top-0 z-50 bg-gray-50 dark:bg-slate-900'
+      className='sticky top-0 z-50 bg-white dark:bg-slate-900 dark:text-gray-200'
     >
-      <section className='mx-auto flex max-w-xl items-center justify-between p-4'>
+      <section className='mx-auto flex items-center justify-between p-4'>
         <div className='flex items-center gap-2'>
           <Link href='/' onClick={() => setMobileMenuIsOpen(false)}>
             <Image
@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
 
         {/* mobile */}
-        <section id='mobile'>
+        <section id='mobile' className='md:hidden'>
           <div className='flex items-center'>
             <button
               onClick={toggleColorMode}
@@ -66,7 +66,7 @@ const Navbar = () => {
               id='hamburger-button'
               className={`${
                 mobileMenuIsOpen ? 'toggle-mobile-btn' : ''
-              } relative h-8 w-8 rounded-2xl text-3xl md:hidden`}
+              } relative h-8 w-8 rounded-2xl text-3xl`}
               onClick={() => setMobileMenuIsOpen((prev) => !prev)}
             >
               <div
@@ -80,33 +80,64 @@ const Navbar = () => {
 
         {/* desktop */}
         <nav
-          className='hidden space-x-8 text-xl md:block'
+          className='hidden items-center space-x-8 text-xl dark:text-white md:flex'
           aria-label='main-navigation'
         >
-          <Link href='/' className='hover:opacity-90 dark:bg-white'>
-            Home
+          <button
+            onClick={toggleColorMode}
+            className='text-2xl hover:opacity-90 dark:text-white'
+          >
+            {toggleIcon}
+          </button>
+          <Link href='/about-me' className='hover:opacity-90'>
+            About Me
           </Link>
 
-          <Link href='/offers' className='hover:opacity-90'>
-            Offers
+          <div className='hidden xl:flex xl:space-x-8'>
+            <button
+              onClick={() => {
+                const route = isHomePage ? '#location' : '/#location'
+                router.push(route)
+              }}
+              className='hover:opacity-90'
+            >
+              Visit Us
+            </button>
+            <Link href='/#testimonials' className='hover:opacity-90'>
+              Testimonials
+            </Link>
+          </div>
+
+          <Link href='/surf-lessons' className='hover:opacity-90'>
+            Surf Lessons
           </Link>
 
-          <button
-            onClick={() => {
-              const route = isHomePage ? '#testimonials' : '/#testimonials'
-              router.push(route)
-            }}
-            className='hover:opacity-90'
-          >
-            Testimonials
-          </button>
+          <div className='hidden 2xl:flex 2xl:space-x-8'>
+            <Link href='/surf-trips' className='hover:opacity-90'>
+              Surf Trips
+            </Link>
 
-          <button
-            onClick={() => router.push('#contact')}
-            className='hover:opacity-90'
-          >
-            Contact
-          </button>
+            <Link href='/videos' className='hover:opacity-90'>
+              Photo & Video | Drone
+            </Link>
+
+            <Link href='/gallery' className=' hover:opacity-90'>
+              Gallery
+            </Link>
+          </div>
+
+          <a href='https://goo.gl/maps/iHPokm4Q943N2f2fA'>
+            <FontAwesomeIcon
+              icon={faStreetView}
+              className='text-4xl text-amber-400 hover:text-amber-500'
+            />
+          </a>
+          <a href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'>
+            <FontAwesomeIcon
+              icon={faWhatsapp}
+              className='text-4xl font-bold text-teal-700 hover:text-teal-500'
+            />
+          </a>
         </nav>
       </section>
 
