@@ -48,7 +48,7 @@ const GalleryLayout = ({ children }) => {
           </div>
         </nav>
 
-        <hr className='mx-5 my-3 bg-slate-950' />
+        <hr className='mx-5 my-2 bg-slate-950' />
 
         {children}
       </div>
