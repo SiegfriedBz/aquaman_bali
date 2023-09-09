@@ -128,8 +128,8 @@ export default function Home() {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='testimonials' className='my-5 flex scroll-mt-20 flex-col'>
-          <h2 className='mb-2 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
+        <section id='testimonials' className='flex scroll-mt-20 flex-col'>
+          <h2 className='text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
             Testimonials
           </h2>
           <Testimonials />
@@ -137,7 +137,7 @@ export default function Home() {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='location' className='scroll-mt-20 py-5 dark:bg-slate-900'>
+        <section id='location' className='scroll-mt-20 dark:bg-slate-900'>
           <h2 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white sm:text-5xl'>
             Visit Us
           </h2>
