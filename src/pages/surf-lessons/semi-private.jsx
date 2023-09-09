@@ -50,7 +50,7 @@ const SemiPrivate = () => {
             balance, stand up and surf the wave.
           </p>
           <p className='text-justify'>
-            Surfing lesson with a professional instructor including 30 minutes
+            Surfing lessons with a professional instructor including 30 minutes
             of detailed surf basics, theory and safety on the beach before
             jumping into the water to catch and surf your first waves.
           </p>
@@ -67,9 +67,9 @@ const SemiPrivate = () => {
             time in the water.
           </p>
           <p className='text-justify'>
-            Surfing lesson in the water with a professional instructor. You will
-            get help with wave selection and catching waves and tips on your
-            body position.
+            Surfing lessons in the water with a professional instructor. You
+            will get help with wave selection and catching waves and tips on
+            your body position.
           </p>
         </div>
 
@@ -82,11 +82,11 @@ const SemiPrivate = () => {
             improve your surfing?
           </p>
           <p className='text-justify'>
-            Surfing lesson in the water with a professional instructor. You will
-            get help with wave selection, catching green waves and tips on your
-            body position and surf maneuvers. It is highly recommended to add a
-            video analysis option to your lesson to see how you are doing and
-            your mistakes and let your instructor correct them afterwards.
+            Surfing lessons in the water with a professional instructor. You
+            will get help with wave selection, catching green waves and tips on
+            your body position and surf maneuvers. It is highly recommended to
+            add a video analysis option to your lesson to see how you are doing
+            and your mistakes and let your instructor correct them afterwards.
           </p>
         </div>
 
