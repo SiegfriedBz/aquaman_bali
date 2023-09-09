@@ -1,9 +1,6 @@
-import Head from 'next/head'
-import Link from 'next/link'
 import Image from 'next/image'
-
-import LessonAdvanced from '../../../public/images/lessons/surf-lesson-advanced.jpg'
 import LessonsLayout from '@/components/layouts/lessonsLayout'
+import LessonAdvanced from '../../../public/images/lessons/surf-lesson-advanced.jpg'
 
 const SurfLessons = () => {
   return (

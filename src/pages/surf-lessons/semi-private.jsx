@@ -1,5 +1,5 @@
-import LessonsLayout from '@/components/layouts/lessonsLayout'
 import Image from 'next/image'
+import LessonsLayout from '@/components/layouts/lessonsLayout'
 import Teach10 from '../../../public/images/lessons/teach_10.jpg'
 
 const SemiPrivate = () => {

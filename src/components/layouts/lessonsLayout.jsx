@@ -59,8 +59,14 @@ const LessonsLayout = ({ children }) => {
           </div>
         </nav>
 
-        <hr className='mx-5 my-3 bg-slate-950' />
+        <hr className='mx-5 my-1 bg-slate-950' />
+      </div>
 
+      {children}
+
+      <hr className='mx-5 my-5 bg-slate-950' />
+
+      <div className='px-2'>
         <CldVideoPlayer
           id='rendy-teach-video-01'
           width='1920'
@@ -71,10 +77,7 @@ const LessonsLayout = ({ children }) => {
           loop={true}
           className='rounded-md border-0 shadow-2xl'
         />
-
-        <hr className='mx-5 my-3 bg-slate-950' />
       </div>
-      {children}
     </div>
   )
 }
