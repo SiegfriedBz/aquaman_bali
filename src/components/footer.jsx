@@ -1,12 +1,9 @@
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faWhatsapp,
-  faTwitter,
-  faInstagram,
-} from '@fortawesome/free-brands-svg-icons'
+import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faMugHot } from '@fortawesome/free-solid-svg-icons'
-import SwissFlag from '../../public/logos/swiss-flag.svg'
+import swissFlag from '../../public/logos/swiss-flag.svg'
+import tikTokLogo from '../../public/logos/tiktok-logo.png'
 
 const Footer = () => {
   return (
@@ -28,7 +25,8 @@ const Footer = () => {
               Batu Bolong, Canggu
               <br />
               <span className='text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
-                Email: <a href='mailto:canggu@gmail.com'>canggu@gmail.com</a>
+                Email:{' '}
+                <a href='mailto:rendy280720gmail.com'>aquamanbali@gmail.com</a>
               </span>
               <br />
               <span className='text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
@@ -38,35 +36,40 @@ const Footer = () => {
           </div>
 
           {/* icons */}
-          <div className='my-auto flex flex-col items-center justify-around'>
-            <div className='flex justify-between'>
+          <div className='my-auto flex flex-col items-center'>
+            <div className='flex items-center justify-between'>
               <a href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'>
                 <FontAwesomeIcon
                   icon={faWhatsapp}
-                  className='me-3 p-2 text-3xl font-bold text-teal-700 hover:text-teal-500'
+                  className='px-2 py-1  text-3xl text-teal-700 hover:text-teal-500'
                 />
               </a>
 
               <a href='https://www.instagram.com/aquaman_bali/'>
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className='p-2 text-3xl text-purple-600 hover:text-purple-500'
+                  className='px-2 py-1 text-3xl text-purple-600 hover:text-purple-500'
                 />
               </a>
             </div>
 
-            <div className='flex justify-between'>
-              <a href='http://www.google.com'>
-                <FontAwesomeIcon
-                  icon={faTwitter}
-                  className='me-3 p-2 text-3xl text-cyan-500 hover:text-cyan-400'
+            <div className='flex items-center justify-between'>
+              <a
+                href='https://www.tiktok.com/@aquamanbali'
+                className='flex items-center'
+              >
+                <Image
+                  src={tikTokLogo}
+                  width={35}
+                  height={35}
+                  alt='tiktok-logo'
                 />
               </a>
 
               <a href='https://www.buymeacoffee.com/aquamansurfbali'>
                 <FontAwesomeIcon
                   icon={faMugHot}
-                  className='p-2 text-3xl text-amber-400 hover:text-amber-500'
+                  className='px-2 py-1 text-3xl text-amber-400 hover:text-amber-500'
                 />
               </a>
             </div>
@@ -81,7 +84,7 @@ const Footer = () => {
         <a href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'>
           <span className='mt-1 flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
             <Image
-              src={SwissFlag}
+              src={swissFlag}
               alt='Swiss Flag'
               width={16}
               height={16}

@@ -4,14 +4,11 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useColorMode } from '../../hooks/useColorMode'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faWhatsapp,
-  faInstagram,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons'
+import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faStreetView, faMugHot } from '@fortawesome/free-solid-svg-icons'
 import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
 import logo from '../../public/logos/logo.png'
+import tikTokLogo from '../../public/logos/tiktok-logo.png'
 
 const Navbar = () => {
   const router = useRouter()
@@ -168,10 +165,12 @@ const Navbar = () => {
               />
             </a>
 
-            <a href='http://www.google.com'>
-              <FontAwesomeIcon
-                icon={faTwitter}
-                className='text-4xl text-cyan-500 hover:text-cyan-400'
+            <a href='https://www.tiktok.com/@aquamanbali'>
+              <Image
+                src={tikTokLogo}
+                width={45}
+                height={45}
+                alt='tiktok-logo'
               />
             </a>
 

@@ -20,21 +20,24 @@ const SurfLessons = () => {
         </div>
 
         <p className='my-2 w-full text-2xl font-bold'>1 Surf Lesson</p>
-        <p className='w-full text-lg font-bold'>2 hours: 400K IDR (USD 28)</p>
+        <p className='w-full text-lg font-bold'>2 hours: 400K IDR (USD 26)</p>
         <br />
-        <p className='my-2 w-full text-2xl font-bold'>5 Surf Lessons</p>
+        <p className='my-2 w-full text-2xl font-bold'>3 Surf Lessons</p>
         <p className='w-full text-lg font-bold'>
-          5 * 2 hours: 1.25M IDR (USD 120)
+          3 * 2 hours: 1.1M IDR (USD 72)
         </p>
         <p className='text-md my-2 w-full'>
-          The 5 sessions can be splitted as you wish.
+          The 3 sessions can be splitted as you wish, but must be completed
+          within 1 month.
         </p>
         <br />
         <p className='self-start font-bold'>What is included?</p>
         <ul className='mx-5'>
           <li className='list-disc'>
             <span className='block font-bold'>All equipment needed: </span>
-            Top-quality board, leash, surfing lycra and face sunscreen/zink
+            We provide premium custom made beginner soft boards with soft fins,
+            intermediate surf boards options, leash, rash guard and surf facial
+            sunscreen/zink
           </li>
           <li className='list-disc'>Recovery water</li>
           <li className='list-disc'>Shower</li>
