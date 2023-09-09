@@ -23,7 +23,7 @@ const Videos = () => {
         height='1080'
         src='RendyTeachVideo01'
         colors={{ accent: '#38bdf8', base: '#fbbf24', text: '#fbbf24' }}
-        autoPlay='always'
+        autoPlay='false'
         loop={true}
         className='rounded-md border-0 shadow-2xl'
       />
@@ -36,7 +36,7 @@ const Videos = () => {
         height='1080'
         src='RendyVideoDrone'
         colors={{ accent: '#38bdf8', base: '#fbbf24', text: '#fbbf24' }}
-        autoPlay='always'
+        autoPlay='false'
         loop={true}
         className='rounded-md border-0 shadow-2xl'
       />
