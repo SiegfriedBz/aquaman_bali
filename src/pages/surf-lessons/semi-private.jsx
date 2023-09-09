@@ -1,33 +1,30 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-
-import LessonAdvanced from '../../../public/images/lessons/surf-lesson-advanced.jpg'
 import LessonsLayout from '@/components/layouts/lessonsLayout'
+import Image from 'next/image'
+import Teach10 from '../../../public/images/lessons/teach_10.jpg'
 
-const SurfLessons = () => {
+const SemiPrivate = () => {
   return (
-    <section id='private' className='mb-2'>
+    <section id='semi-private' className='mb-2'>
       <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
-        Private Surf Lessons
+        Semi-Private Surf Lessons
       </h3>
-      <p className='mb-2 text-center'>1 Coach & 1 Guest</p>
+      <p className='mb-2 text-center'>1 Coach & 2 Guests</p>
 
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <div className='mb-5 h-56'>
           <Image
-            src={LessonAdvanced}
-            alt='lesson-private'
+            src={Teach10}
+            alt='lesson-group'
             className='h-full rounded-lg object-cover shadow-2xl'
           />
         </div>
 
         <p className='my-2 w-full text-2xl font-bold'>1 Surf Lesson</p>
-        <p className='w-full text-lg font-bold'>2 hours: 400K IDR (USD 28)</p>
+        <p className='w-full text-lg font-bold'>2 hours: 750K IDR (USD 52)</p>
         <br />
         <p className='my-2 w-full text-2xl font-bold'>5 Surf Lessons</p>
         <p className='w-full text-lg font-bold'>
-          5 * 2 hours: 1.25M IDR (USD 120)
+          5 * 2 hours: 3.25M IDR (USD 225)
         </p>
         <p className='text-md my-2 w-full'>
           The 5 sessions can be splitted as you wish.
@@ -65,6 +62,6 @@ const SurfLessons = () => {
   )
 }
 
-export default SurfLessons
+export default SemiPrivate
 
-SurfLessons.Layout = LessonsLayout
+SemiPrivate.Layout = LessonsLayout

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Gallery',
@@ -7,6 +8,9 @@ const meta = {
 }
 
 const GalleryLayout = ({ children }) => {
+  const router = useRouter()
+  const isVideoTab = router.asPath.includes('/gallery/videos')
+
   return (
     <>
       <Head>
@@ -25,13 +29,26 @@ const GalleryLayout = ({ children }) => {
 
         <nav
           id='gallery-navigation'
-          className='mb-5 flex items-center space-x-8 text-xl font-bold dark:text-white'
+          className=' flex w-11/12 items-center justify-around text-lg font-bold dark:text-white'
           aria-label='gallery-navigation'
         >
-          <Link href='/gallery'>Images</Link>
-
-          <Link href='/gallery/videos'>Videos</Link>
+          <div
+            className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500  py-1 text-center ${
+              isVideoTab ? 'font-bold' : 'font-extrabold ring-blue-500'
+            } text-white outline-none ring-2 hover:ring-blue-500`}
+          >
+            <Link href='/gallery'>Images</Link>
+          </div>
+          <div
+            className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500  py-1 text-center ${
+              isVideoTab ? 'font-extrabold ring-blue-500' : 'font-bold'
+            } text-white outline-none ring-2 hover:ring-blue-500`}
+          >
+            <Link href='/gallery/videos'>Videos</Link>
+          </div>
         </nav>
+
+        <hr className='mx-5 my-3 bg-slate-950' />
 
         {children}
       </div>
