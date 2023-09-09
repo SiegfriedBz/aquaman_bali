@@ -20,7 +20,10 @@ const GalleryLayout = ({ children }) => {
         <meta property='og:title' content={meta.title} />
       </Head>
 
-      <div id='gallery' className='justify-bewteen flex flex-col items-center'>
+      <section
+        id='gallery'
+        className='justify-bewteen mb-3 flex flex-col items-center'
+      >
         <div className='mb-2'>
           <span className='text-center text-4xl font-bold dark:text-white'>
             Gallery
@@ -47,11 +50,9 @@ const GalleryLayout = ({ children }) => {
             <Link href='/gallery/videos'>Videos</Link>
           </div>
         </nav>
+      </section>
 
-        <hr className='mx-5 my-2 bg-slate-950' />
-
-        {children}
-      </div>
+      {children}
     </>
   )
 }

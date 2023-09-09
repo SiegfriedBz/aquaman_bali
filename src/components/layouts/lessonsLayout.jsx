@@ -19,9 +19,10 @@ const LessonsLayout = ({ children }) => {
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
       </Head>
-      <div
+
+      <section
         id='surf-lessons'
-        className='flex scroll-mt-20 flex-col items-center justify-center'
+        className='mb-3 flex scroll-mt-20 flex-col items-center justify-center'
       >
         <h3 className='mb-2 text-center text-4xl font-bold dark:text-white'>
           Surf Lessons
@@ -40,7 +41,7 @@ const LessonsLayout = ({ children }) => {
 
         <nav
           id='lessons-navigation'
-          className='mt-5 flex w-11/12 items-center justify-around text-lg font-bold dark:text-white'
+          className='mt-5 flex w-full items-center justify-around text-lg font-bold dark:text-white'
           aria-label='lessons-navigation'
         >
           <div
@@ -58,15 +59,11 @@ const LessonsLayout = ({ children }) => {
             <Link href='/surf-lessons/semi-private'>Semi-Private</Link>
           </div>
         </nav>
-
-        <hr className='mx-5 my-1 bg-slate-950' />
-      </div>
+      </section>
 
       {children}
 
-      <hr className='mx-5 my-5 bg-slate-950' />
-
-      <div className='px-2'>
+      <div className='px-2 pb-2 pt-3'>
         <CldVideoPlayer
           id='rendy-teach-video-01'
           width='1920'

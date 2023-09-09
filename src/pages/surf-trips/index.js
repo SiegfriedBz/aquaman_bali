@@ -100,7 +100,7 @@ const SurfTrips = () => {
         <LocationMap />
       </div>
 
-      <div className='p-2 dark:bg-slate-900 dark:text-gray-200'>
+      <div className='px-2 dark:bg-slate-900 dark:text-gray-200'>
         <section id='canggu'>
           <h2 className='text-3xl font-semibold'>Canggu</h2>
           <div
@@ -371,7 +371,7 @@ const SurfTrips = () => {
               pinterest vice succulents.
             </p>
             <a
-              className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+              className='mt-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
             >
               Book now
