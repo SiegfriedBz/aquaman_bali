@@ -32,7 +32,59 @@ const SemiPrivate = () => {
           The 3 sessions can be splitted as you wish, but must be completed
           within 1 month.
         </p>
+
         <br />
+
+        <div id='semi-private--beginner'>
+          <h2 className='self-start text-lg font-bold'>Beginner</h2>
+          <p className='mb-2 text-justify'>
+            On your very first lesson you will be given an introduction on the
+            beach about the surfboard, safety in the water, how to paddle,
+            balance, stand up and surf the wave.
+          </p>
+          <p className='text-justify'>
+            Surfing lesson with a professional instructor including 30 minutes
+            of detailed surf basics, theory and safety on the beach before
+            jumping into the water to catch and surf your first waves.
+          </p>
+        </div>
+
+        <br />
+
+        <div id='semi-private--intermediate'>
+          <h2 className='self-start text-lg font-bold'>Intermediate</h2>
+          <p className='mb-2 text-justify'>
+            You have already taken one or more surf lessons before and need help
+            to improve your surfing? If you don&apos;t need the basic and theory
+            part, we can jump straight into the water to surf and enjoy more
+            time in the water.
+          </p>
+          <p className='text-justify'>
+            Surfing lesson in the water with a professional instructor. You will
+            get help with wave selection and catching waves and tips on your
+            body position.
+          </p>
+        </div>
+
+        <br />
+
+        <div id='semi-private-advanced'>
+          <h2 className='self-start text-lg font-bold'>Advanced</h2>
+          <p className='mb-2 text-justify'>
+            You are able to catch white water or green waves already and want to
+            improve your surfing?
+          </p>
+          <p className='text-justify'>
+            Surfing lesson in the water with a professional instructor. You will
+            get help with wave selection, catching green waves and tips on your
+            body position and surf maneuvers. It is highly recommended to add a
+            video analysis option to your lesson to see how you are doing and
+            your mistakes and let your instructor correct them afterwards.
+          </p>
+        </div>
+
+        <br />
+
         <p className='self-start font-bold'>What is included?</p>
         <ul className='mx-5'>
           <li className='list-disc'>
