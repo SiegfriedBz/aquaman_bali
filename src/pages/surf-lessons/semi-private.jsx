@@ -33,7 +33,14 @@ const SemiPrivate = () => {
           within 1 month.
         </p>
 
-        <br />
+        <div className='mx-auto mb-5 mt-4 flex flex-col items-center'>
+          <a
+            className='w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+            href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+          >
+            Book now
+          </a>
+        </div>
 
         <div id='semi-private--beginner'>
           <h2 className='self-start text-lg font-bold'>Beginner</h2>
@@ -105,10 +112,9 @@ const SemiPrivate = () => {
           <li className='mx-5 list-disc'>Video analysis</li>
         </ul>
 
-        <br />
-        <div className='mx-auto flex flex-col items-center'>
+        <div className='mx-auto mb-4 mt-5 flex flex-col items-center'>
           <a
-            className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+            className='w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
             href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
           >
             Book now
