@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import LessonsLayout from '@/components/layouts/lessonsLayout'
-import LessonAdvanced from '../../../public/images/lessons/surf-lesson-advanced.jpg'
+import teach01 from '../../../public/images/lessons/teach_01.jpg'
 
 const SurfLessons = () => {
   return (
@@ -13,7 +13,7 @@ const SurfLessons = () => {
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <div className='mb-5 h-56'>
           <Image
-            src={LessonAdvanced}
+            src={teach01}
             alt='lesson-private'
             className='h-full rounded-lg object-cover shadow-2xl'
           />
