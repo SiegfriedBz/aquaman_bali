@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import LessonsLayout from '@/components/layouts/lessonsLayout'
-import teach04 from '../../../public/images/lessons/teach_04.jpg'
+import lessonI from '../../../public/images/lessons/surf-lesson-intermediate.jpg'
 
 const SemiPrivate = () => {
   return (
@@ -13,7 +13,7 @@ const SemiPrivate = () => {
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <div className='mb-5 h-56'>
           <Image
-            src={teach04}
+            src={lessonI}
             alt='lesson-group'
             className='h-full rounded-lg object-cover shadow-2xl'
           />
