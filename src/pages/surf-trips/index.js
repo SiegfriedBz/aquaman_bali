@@ -48,12 +48,12 @@ const SurfTrips = () => {
           From Lombok to Sumatra
         </h3>
         <h4 className='text-center text-xl text-slate-900 dark:text-gray-200'>
-          enjoy an amazing surf trip with Rendy
+          enjoy an amazing surf trip with Us
         </h4>
-        <h4 className='my-2 text-center text-xl font-bold text-slate-900 dark:text-gray-200'>
+        <h4 className='my-5 text-center text-xl font-bold text-slate-900 dark:text-gray-200'>
           Starting from 500K IDR
         </h4>
-        <p className='mx-2 mt-4 text-center text-lg font-bold text-slate-900 dark:text-gray-200'>
+        <p className='mx-2 mt-2 text-center text-lg font-bold text-slate-900 dark:text-gray-200'>
           🏄 Surf Bali 🌴
         </p>
         <p className='mx-2 mb-2 text-center text-lg text-slate-900 dark:text-gray-200'>
@@ -67,24 +67,28 @@ const SurfTrips = () => {
         <p className='mx-2 mt-4 text-center text-lg font-bold text-slate-900 dark:text-gray-200'>
           🏄‍♀️ Your Board or Ours
         </p>
+        <p className='mx-2 text-center text-lg text-slate-900 dark:text-gray-200'>
+          Bring your own board or use one of our{' '}
+          <span className='block'>top-quality boards.</span>
+        </p>
         <p className='mx-2 mb-2 text-center text-lg text-slate-900 dark:text-gray-200'>
-          Bring your own surfboard or use one of our top-quality boards. We
-          cater to all skill levels.
+          We cater to all skill levels.
         </p>
         <p className='mx-2 mt-4 text-center text-lg font-bold text-slate-900 dark:text-gray-200'>
           🏨 Stay Your Way
         </p>
         <p className='mx-2 mb-2 text-center text-lg text-slate-900 dark:text-gray-200'>
-          Choose your accommodation based on your budget and preferences. Book
-          your own hotel or let us assist you in finding the perfect spot.
+          Book your own hotel or let us assist you in finding the perfect spot.
         </p>
         <p className='mx-2 mt-4 text-center text-lg font-bold text-slate-900 dark:text-gray-200'>
           🏄‍♂️ Flexible Departures
         </p>
-        <p className='mx-2 mb-2 text-center text-lg text-slate-900 dark:text-gray-200'>
+        <p className='mx-2 text-center text-lg text-slate-900 dark:text-gray-200'>
           Start your surf adventure right from Canggu or meet us at your chosen
-          destination. We&apos;re here to make your journey as convenient as
-          possible.
+          destination.
+        </p>
+        <p className='mx-2 mb-2 text-center text-lg text-slate-900 dark:text-gray-200'>
+          We&apos;re here to make your journey as convenient as possible.
         </p>
         <a
           className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
@@ -94,11 +98,13 @@ const SurfTrips = () => {
         </a>
       </div>
 
-      {/* <hr className='mx-5 my-5 bg-slate-950' /> */}
+      <hr className='mx-5 my-5 bg-slate-950' />
 
       <div ref={mapContainerRef} className='scroll-mt-20 p-2 dark:bg-slate-900'>
         <LocationMap />
       </div>
+
+      <hr className='mx-5 my-5 bg-slate-950' />
 
       <div className='px-2 dark:bg-slate-900 dark:text-gray-200'>
         <section id='canggu' className='scroll-mt-20'>
