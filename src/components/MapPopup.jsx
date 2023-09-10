@@ -6,12 +6,13 @@ import {
   faHandPointRight,
   faVanShuttle,
 } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
-const MapPopup = ({ popup }) => {
+const MapPopup = ({ popup, isSurfTripsRoute }) => {
   return (
     <div className='h-50 flex w-auto flex-col items-center justify-center text-slate-800 dark:text-white'>
       <Image className='w-full rounded-t-lg' src={popup.image} alt='surf' />
-      <Footer location={popup.location}>
+      <Footer location={popup.location} isSurfTripsRoute={isSurfTripsRoute}>
         <span className='text-lg text-slate-950 dark:text-white'>
           {popup.location}
         </span>
@@ -22,7 +23,7 @@ const MapPopup = ({ popup }) => {
 
 export default MapPopup
 
-const Footer = ({ location, children }) => {
+const Footer = ({ location, isSurfTripsRoute, children }) => {
   return (
     <div className='w-full rounded-b-lg dark:bg-slate-900'>
       {location === 'Canggu' ? (
@@ -48,15 +49,33 @@ const Footer = ({ location, children }) => {
       ) : (
         <>
           <div className='text-center'>{children}</div>
-          <div className='mb-3 flex items-center justify-center gap-2'>
-            <FontAwesomeIcon
-              icon={faVanShuttle}
-              className='text-2xl text-amber-400 hover:text-amber-500'
-            />
-            <span className='block text-center text-xl text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
-              Surf Trip
-            </span>
-          </div>
+          {isSurfTripsRoute ? (
+            <div className='mb-3 flex items-center justify-center gap-2'>
+              <FontAwesomeIcon
+                icon={faVanShuttle}
+                className='text-2xl text-amber-400 hover:text-amber-500'
+              />
+              <span className='block text-center text-xl text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+                Surf Trip
+              </span>
+            </div>
+          ) : (
+            <Link
+              href={`/surf-trips/#${decodeURIComponent(
+                location
+              ).toLowerCase()}`}
+              className='mb-3 flex items-center justify-center gap-2'
+            >
+              <FontAwesomeIcon
+                icon={faVanShuttle}
+                className='text-2xl text-amber-400 hover:text-amber-500'
+              />
+
+              <span className='block text-center text-xl text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+                Surf Trip
+              </span>
+            </Link>
+          )}
         </>
       )}
     </div>

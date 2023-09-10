@@ -56,7 +56,7 @@ export default function LocationMap() {
           closeButton={false}
           offsetTop={-30}
         >
-          <MapPopup popup={popup} />
+          <MapPopup popup={popup} isSurfTripsRoute={isSurfTripsRoute} />
         </Popup>
       )}
 

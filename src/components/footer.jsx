@@ -76,21 +76,21 @@ const Footer = () => {
           </div>
         </div>
 
-        <h2 className='my-3 text-center text-sm text-slate-800 dark:text-white'>
+        <h2 className='mb-2 mt-5 text-center text-sm text-slate-800 dark:text-white'>
           ©2023 Aquaman Bali
         </h2>
 
         {/* credits */}
         <a href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'>
-          <span className='mt-1 flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+          <span className='flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
             <Image
               src={swissFlag}
               alt='Swiss Flag'
               width={16}
               height={16}
-              className='me-1 rounded-full'
+              className='me-2 rounded-full'
             />
-            <span className='me-1'>Swiss-made by SiegfriedB</span>
+            <span>Swiss-made by SiegfriedB</span>
           </span>
         </a>
       </section>

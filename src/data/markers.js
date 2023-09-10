@@ -41,7 +41,7 @@ export const MARKERS = {
   nusa: {
     latitude: -8.677877151151367,
     longitude: 115.45591486406514,
-    location: 'Nusa Lumboga',
+    location: 'Nusa-Lumboga',
     image: NusaImage,
   },
   lombok: {

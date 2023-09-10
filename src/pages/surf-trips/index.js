@@ -101,7 +101,7 @@ const SurfTrips = () => {
       </div>
 
       <div className='px-2 dark:bg-slate-900 dark:text-gray-200'>
-        <section id='canggu'>
+        <section id='canggu' className='scroll-mt-20'>
           <h2 className='text-3xl font-semibold'>Canggu</h2>
           <div
             className='my-2 flex items-center'
@@ -141,7 +141,7 @@ const SurfTrips = () => {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='medewi'>
+        <section id='medewi' className='scroll-mt-20'>
           <h2 className='text-3xl font-semibold'>Medewi</h2>{' '}
           <div
             className='my-2 flex items-center'
@@ -181,7 +181,7 @@ const SurfTrips = () => {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='balangan'>
+        <section id='balangan' className='scroll-mt-20'>
           <h2 className='text-3xl font-semibold'>Balangan</h2>
           <div
             className='my-2 flex items-center'
@@ -221,7 +221,7 @@ const SurfTrips = () => {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='uluwatu'>
+        <section id='uluwatu' className='scroll-mt-20'>
           <h2 className='text-3xl font-semibold'>Uluwatu</h2>{' '}
           <div
             className='my-2 flex items-center'
@@ -261,7 +261,7 @@ const SurfTrips = () => {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='serangan'>
+        <section id='serangan' className='scroll-mt-20'>
           <h2 className='text-3xl font-semibold'>Serangan</h2>
           <div
             className='my-2 flex items-center'
@@ -301,7 +301,7 @@ const SurfTrips = () => {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='nusa'>
+        <section id='nusa-lumboga' className='scroll-mt-20'>
           <h2 className='text-3xl font-semibold'>Nusa Lumboga</h2>
           <div
             className='my-2 flex items-center'
@@ -341,7 +341,7 @@ const SurfTrips = () => {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='lombok' className='pb-5'>
+        <section id='lombok' className='scroll-mt-20 pb-5'>
           <h2 className='text-3xl font-semibold'>Lombok</h2>{' '}
           <div
             className='my-2 flex items-center'
