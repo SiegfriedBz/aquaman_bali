@@ -39,43 +39,39 @@ export default function Home() {
       </Head>
       <main className='px-2'>
         <section id='hero' className='flex flex-col items-center md:mb-12'>
-          <div className='flex flex-col pb-3 md:max-w-7xl md:flex-row md:items-center md:justify-between'>
-            <div className=''>
-              <h1 className='mb-3 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text py-3 text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-7xl'>
-                Upgrade
-              </h1>
-              <h2 className='mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-6xl'>
-                Your Surfing Skills
-              </h2>
-            </div>
-            <h2 className='mb-2 max-w-md text-center text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl'>
+          <div className='flex flex-col md:max-w-7xl md:flex-row md:items-center md:justify-between'>
+            <h1 className='bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text pb-2 pt-3 text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-7xl'>
+              Upgrade
+            </h1>
+            <h2 className='mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-6xl'>
+              Your Surfing Skills
+            </h2>
+            <h2 className='max-w-md text-center text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl'>
               Beginner to Advanced
             </h2>
           </div>
 
-          <div className='justify-bewteen md:max-w-8-xl flex flex-col items-center px-2 md:flex-row md:gap-5'>
-            <div className='md:max-w-md xl:max-w-xl'>
-              <Carousel>
-                {TOP_IMAGES.map((src, i) => {
-                  return (
-                    <div key={i} className={`${styles.embla__slide} h-56`}>
-                      <Image
-                        src={src}
-                        className='h-full rounded-lg object-cover shadow-lg'
-                        alt='surf-shots'
-                      />
-                    </div>
-                  )
-                })}
-              </Carousel>
-            </div>
+          <div className='my-5 flex flex-col items-center justify-between px-2 md:max-w-7xl md:flex-row md:gap-5 xl:max-w-xl'>
+            <Carousel>
+              {TOP_IMAGES.map((src, i) => {
+                return (
+                  <div key={i} className={`${styles.embla__slide} h-56`}>
+                    <Image
+                      src={src}
+                      className='h-full rounded-lg object-cover shadow-lg'
+                      alt='surf-shots'
+                    />
+                  </div>
+                )
+              })}
+            </Carousel>
 
-            <div className='justify-bewteen flex flex-col items-center md:p-5'>
-              <h3 className='my-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'>
+            <div className='mt-5 flex flex-col items-center justify-between md:p-5'>
+              <h3 className='mb-5 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'>
                 Best Surf School in Bali
               </h3>
               <a
-                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
+                className='w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               >
                 Book now
