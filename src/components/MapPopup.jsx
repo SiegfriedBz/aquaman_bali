@@ -49,8 +49,9 @@ const Footer = ({ location, isSurfTripsRoute, children }) => {
       ) : (
         <>
           <div className='text-center'>{children}</div>
+
           {isSurfTripsRoute ? (
-            <div className='mb-3 flex items-center justify-center gap-2'>
+            <span className='mb-3 flex items-center justify-center gap-2'>
               <FontAwesomeIcon
                 icon={faVanShuttle}
                 className='text-2xl text-amber-400 hover:text-amber-500'
@@ -58,13 +59,13 @@ const Footer = ({ location, isSurfTripsRoute, children }) => {
               <span className='block text-center text-xl text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
                 Surf Trip
               </span>
-            </div>
+            </span>
           ) : (
             <Link
               href={`/surf-trips/#${decodeURIComponent(
                 location
               ).toLowerCase()}`}
-              className='mb-3 flex items-center justify-center gap-2'
+              className='mb-3 flex items-center justify-center gap-2 outline-none'
             >
               <FontAwesomeIcon
                 icon={faVanShuttle}

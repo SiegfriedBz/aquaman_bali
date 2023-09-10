@@ -40,7 +40,7 @@ export default function LocationMap() {
       initialViewState={{
         latitude: MARKERS.canggu.latitude,
         longitude: MARKERS.canggu.longitude,
-        zoom: isSurfTripsRoute ? 6 : 11,
+        zoom: isSurfTripsRoute ? 6 : 10,
       }}
       style={{ width: 'auto', height: 400 }}
       mapStyle='mapbox://styles/mapbox/streets-v9'
