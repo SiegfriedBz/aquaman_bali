@@ -51,7 +51,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className='my-5 flex flex-col items-center justify-between px-2 md:max-w-7xl md:flex-row md:gap-5 xl:max-w-xl'>
+          <div className='mt-5 flex flex-col items-center justify-between px-2 md:max-w-7xl md:flex-row md:gap-5 xl:max-w-xl'>
             <Carousel>
               {TOP_IMAGES.map((src, i) => {
                 return (
@@ -67,11 +67,11 @@ export default function Home() {
             </Carousel>
 
             <div className='mt-5 flex flex-col items-center justify-between md:p-5'>
-              <h3 className='mb-5 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'>
+              <h3 className='mb-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'>
                 Best Surf School in Bali
               </h3>
               <a
-                className='w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
+                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               >
                 Book now
@@ -86,7 +86,7 @@ export default function Home() {
           id='about-me-short'
           className='my-5 flex flex-col items-center justify-center md:mb-12'
         >
-          <h2 className='mb-2 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
+          <h2 className='mb-3 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
             About me
           </h2>
           <div className='flex flex-col items-center justify-center md:flex-row'>
@@ -107,7 +107,7 @@ export default function Home() {
             </div>
 
             <div className='flex flex-col items-center md:max-w-md md:p-5'>
-              <p className='px-2 py-5 text-center text-lg'>
+              <p className='my-3 px-2 text-center text-lg'>
                 My name is Rendy and I am from Krui, South Sumatra. I started
                 surfing at the age of 8 and came to Bali in 2019 to work as a
                 surf instructor at Batu Bolong Beach in Canggu.
@@ -129,12 +129,19 @@ export default function Home() {
             Testimonials
           </h2>
           <Testimonials />
+
+          <a
+            className='my-3 w-48 self-center rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
+            href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+          >
+            Book now
+          </a>
         </section>
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='location' className='scroll-mt-20 dark:bg-slate-900'>
-          <h2 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white sm:text-5xl'>
+          <h2 className='mb-3 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
             Visit Us
           </h2>
           <LocationMap />
