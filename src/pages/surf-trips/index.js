@@ -145,9 +145,9 @@ const SurfTrips = () => {
             </p>
 
             <ul className='mb-3 self-start'>
-              <li className='ms-5 list-disc'>Beginner</li>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+              <li className='ms-5 list-disc'>🏄‍♀️ Beginner</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
             <a
@@ -192,9 +192,9 @@ const SurfTrips = () => {
             </p>
 
             <ul className='my-2 self-start'>
-              <li className='ms-5 list-disc'>Beginner</li>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+              <li className='ms-5 list-disc'>🏄‍♀️ Beginner</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
             <p className='mb-3 px-2 text-justify'>
@@ -247,8 +247,8 @@ const SurfTrips = () => {
             </p>
 
             <ul className='mb-3 self-start'>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
             <a
@@ -298,8 +298,8 @@ const SurfTrips = () => {
             </p>
 
             <ul className='mb-3 self-start'>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
             <p className='my-2 px-2 text-justify'>
@@ -350,20 +350,19 @@ const SurfTrips = () => {
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
             <p className='mb-2 px-2 text-justify'>
-              serangan is one of the surfing spots in Bali where you have to use
+              Serangan is one of the surfing spots in Bali where you have to use
               a boat to get to the surfing spot, with an extended boat ride of
               15 minutes we have arrived.
             </p>
 
             <p className='my-2 px-2 text-justify'>
               With sharp coral beach conditions and strong waves, this place is
-              not recommended for people who are just learning to
-              surf(beginners).
+              not recommended for beginners.
             </p>
 
             <ul className='mb-3 self-start'>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
             <p className='my-2 px-2 text-justify'>
@@ -419,18 +418,17 @@ const SurfTrips = () => {
             </ul>
 
             <ul className='mb-3 self-start'>
-              Nusa lambongan is great for surfers with level
-              <li className='ms-5 list-disc'>Beginner</li>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+              Nusa lambongan is great for every surfers
+              <li className='ms-5 list-disc'>🏄‍♀️ Beginner</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
             <p className='mb-2 px-2 text-justify'>
               To get to Nusa Penida we have to use a fast boat with a journey
-              time of around 1 hour depending on the weather starting from Sanur
-              to Nusa Lambongan, Nusa Penida is very good for surfing and
-              holidays because there are many beautiful beaches and they are not
-              too crowded.
+              time of around 1 hour starting from Sanur to Nusa Lambongan, Nusa
+              Penida is very good for surfing and holidays because there are
+              many beautiful beaches and they are not too crowded.
             </p>
 
             <a
@@ -464,49 +462,48 @@ const SurfTrips = () => {
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
-            <p className='mb-2 px-2 text-justify'>
-              Lombok surf trip is one of the furthest surf trips because to get
-              there we can only use 2 transportation.
+            <p className='my-2 px-2 text-justify'>
+              Lombok surf trip is one of the furthest surf trips from Canggu, as
+              boat or aiplane is required to get there.
             </p>
+
             <ul className='self-start px-2'>
               <li className='ms-5 list-disc'>
                 Ferry boat
                 <span className='block'>
-                  To arrive in Lombok by boat, it takes 4-5 hours to travel from
-                  Padang Bai port to Lember port After arriving at Lember
-                  Harbor, we still have to drive for about 1 hour using a
-                  motorbike or car to arrive at Kuta, Lombok.
+                  4-5 hours boat trip from Padang Bai port to Lember port. From
+                  there, 1 hour drive with a motorbike or car will get us to
+                  Kuta, Lombok.
                 </span>
               </li>
               <li className='ms-5 list-disc'>
-                By plane
+                Airplane
                 <span className='block'>
-                  Airplanes Traveling to Lombok by plane is very fast, only
-                  takes 1 hour but the price is much more expensive, Departure
-                  from Ngurah Rai Airport to Lombok International Airport
+                  Very fast flight, only 1 hour from Ngurah Rai Airport to
+                  Lombok International Airport.
                 </span>
               </li>
             </ul>
 
-            <ul className='mb-3 self-start'>
+            <ul className='my-3 self-start px-2'>
               Lombok has several surfing spots close to each other such as
-              <li className='ms-5 list-disc'>Kuta Lombok</li>
-              <li className='ms-5 list-disc'>Tanjung Aan </li>
-              <li className='ms-5 list-disc'>Dom Dom</li>
-              <li className='ms-5 list-disc'>Grupuk Inside </li>
-              <li className='ms-5 list-disc'>Grupuk Outside </li>
+              <li className='list-disc'>Kuta Lombok</li>
+              <li className='list-disc'>Tanjung Aan </li>
+              <li className='list-disc'>Dom Dom</li>
+              <li className='list-disc'>Grupuk Inside </li>
+              <li className='list-disc'>Grupuk Outside </li>
             </ul>
 
-            <ul className='mb-3 self-start'>
-              <li className='ms-5 list-disc'>Beginner</li>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+            <ul className='my-3 self-start px-2'>
+              <li className='ms-5 list-disc'>🏄‍♀️ Beginner</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
-            <p className='mb-2 px-2 text-justify'>
-              Every place to surf MUST use a boat because the distance is very
-              far to swim, to travel by boat only takes 8-10 minutes to each
-              place.
+            <p className='my-2 px-2 text-justify'>
+              Every spot to surf MUST be reached by boat, because the distance
+              is very far to swim. Getting to the line up by boat only takes
+              8-10 minutes for every spot.
             </p>
 
             <a
