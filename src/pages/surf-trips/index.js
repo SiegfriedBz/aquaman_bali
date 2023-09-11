@@ -128,14 +128,28 @@ const SurfTrips = () => {
           </div>
           <div className='mt-2 flex flex-col items-center justify-center'>
             <p className='mb-2 px-2 text-justify'>
-              I&#39;m baby distillery cliche messenger bag fingerstache franzen
-              flannel celiac tousled tacos edison bulb. Whatever humblebrag food
-              truck tbh, lyft edison bulb ennui blackbird spyplane knausgaard
-              green juice venmo. Sriracha crucifix enamel pin, street art
-              disrupt tousled vegan deep v truffaut pabst selvage helvetica.
-              Ramps fanny pack pok pok, palo santo chicharrones poutine
-              pinterest vice succulents.
+              Canggu will be the best place for beginners to learn surfing,
+              because the waves are really chill and not too big.
             </p>
+            <ul className='self-start px-2'>
+              At Canggu we have 4 main surf breaks
+              <li className='ms-5 list-disc'>Boto Bolong</li>
+              <li className='ms-5 list-disc'>Nelayan</li>
+              <li className='ms-5 list-disc'>The Lawn</li>
+              <li className='ms-5 list-disc'>Old&apos;s man</li>
+            </ul>
+
+            <p className='my-2 px-2 text-justify'>
+              But Canggu is reaaly good for all levels,with the condition of the
+              coral and sand beaches it becomes too dangerous.
+            </p>
+
+            <ul className='self-start'>
+              <li className='ms-5 list-disc'>Beginner</li>
+              <li className='ms-5 list-disc'>Intermediate</li>
+              <li className='ms-5 list-disc'>Advanced</li>
+            </ul>
+
             <a
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
