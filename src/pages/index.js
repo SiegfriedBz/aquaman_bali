@@ -49,8 +49,8 @@ export default function Home() {
             </h2>
             <motion.h2
               className='max-w-md text-center text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl'
-              initial={{ opacity: 0.25 }}
-              transition={{ delay: 0.5, duration: 3 }}
+              initial={{ opacity: 0.1 }}
+              transition={{ delay: 1, duration: 3 }}
               animate={{ opacity: 1 }}
             >
               Beginner to Advanced
