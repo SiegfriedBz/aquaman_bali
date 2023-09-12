@@ -46,15 +46,15 @@ export default function Home() {
             </h1>
             <motion.h2
               className='mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-6xl'
-              initial={{ opacity: 0.25 }}
-              transition={{ delay: 0.5, duration: 3 }}
+              initial={{ opacity: 0 }}
+              transition={{ delay: 0.1, duration: 3 }}
               animate={{ opacity: 1 }}
             >
               Your Surfing Skills
             </motion.h2>
             <motion.h2
               className='max-w-md text-center text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl'
-              initial={{ opacity: 0.1 }}
+              initial={{ opacity: 0 }}
               transition={{ delay: 1, duration: 3 }}
               animate={{ opacity: 1 }}
             >
