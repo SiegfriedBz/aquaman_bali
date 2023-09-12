@@ -63,35 +63,44 @@ export default function Home() {
           </div>
 
           <div className='mt-5 flex flex-col items-center justify-between px-2 md:max-w-7xl md:flex-row md:gap-5 xl:max-w-xl'>
-            <Carousel>
-              {TOP_IMAGES.map((src, i) => {
-                return (
-                  <div key={i} className={`${styles.embla__slide} h-56`}>
-                    <Image
-                      src={src}
-                      className='h-full rounded-lg object-cover shadow-lg'
-                      alt='surf-shots'
-                    />
-                  </div>
-                )
-              })}
-            </Carousel>
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ delay: 1.25, duration: 3 }}
+              animate={{ opacity: 1 }}
+            >
+              <Carousel>
+                {TOP_IMAGES.map((src, i) => {
+                  return (
+                    <div key={i} className={`${styles.embla__slide} h-56`}>
+                      <Image
+                        src={src}
+                        className='h-full rounded-lg object-cover shadow-lg'
+                        alt='surf-shots'
+                      />
+                    </div>
+                  )
+                })}
+              </Carousel>
+            </motion.div>
 
             <div className='mt-5 flex flex-col items-center justify-between md:p-5'>
               <motion.h3
                 className='mb-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'
                 initial={{ opacity: 0 }}
-                transition={{ delay: 1.25, duration: 3 }}
+                transition={{ delay: 1.5, duration: 3 }}
                 animate={{ opacity: 1 }}
               >
                 Best Surf School in Bali
               </motion.h3>
-              <a
+              <motion.a
                 className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+                initial={{ opacity: 0 }}
+                transition={{ delay: 2.75, duration: 3 }}
+                animate={{ opacity: 1 }}
               >
                 Book now
-              </a>
+              </motion.a>
             </div>
           </div>
         </section>
