@@ -55,7 +55,7 @@ export default function Home() {
             <motion.h2
               className='max-w-md text-center text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl'
               initial={{ opacity: 0 }}
-              transition={{ delay: 1, duration: 3 }}
+              transition={{ delay: 0.5, duration: 3 }}
               animate={{ opacity: 1 }}
             >
               Beginner to Advanced
@@ -78,9 +78,14 @@ export default function Home() {
             </Carousel>
 
             <div className='mt-5 flex flex-col items-center justify-between md:p-5'>
-              <h3 className='mb-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'>
+              <motion.h3
+                className='mb-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'
+                initial={{ opacity: 0 }}
+                transition={{ delay: 1.25, duration: 3 }}
+                animate={{ opacity: 1 }}
+              >
                 Best Surf School in Bali
-              </h3>
+              </motion.h3>
               <a
                 className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
