@@ -49,8 +49,8 @@ const Testimonials = () => {
                         Read full review on{' '}
                         <Image
                           src={GoogleIcon}
-                          width={35}
-                          height={35}
+                          width={40}
+                          height={40}
                           alt='google-icon'
                           className='ms-2'
                         />
@@ -70,19 +70,10 @@ const Testimonials = () => {
       <section id='all-reviews-link' className='mx-auto mb-3 mt-2'>
         <a href='https://goo.gl/maps/iHPokm4Q943N2f2fA' className=''>
           <h3 className='text-center text-xl'>Top-rated Surf School</h3>
-          <div className='flex items-center'>
-            <span className='me-1 text-3xl text-amber-400 hover:text-amber-500'>
-              <span className='my-auto text-4xl font-bold'>
-                5 {renderStars}
-              </span>{' '}
-            </span>{' '}
-            <Image
-              src={GoogleIcon}
-              width={55}
-              height={55}
-              alt='google-icon'
-              className='my-auto ms-2'
-            />
+          <div className='mt-2 flex items-center'>
+            <span className='my-auto text-4xl font-bold text-amber-400 hover:text-amber-500'>
+              5 {renderStars}
+            </span>
           </div>
         </a>
       </section>
