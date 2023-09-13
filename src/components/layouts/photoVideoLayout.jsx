@@ -74,8 +74,8 @@ const PhotoVideoLayout = ({ children }) => {
             variants={linkVariants}
             className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
               !isWaterDroneTab || !isVideoAnalysisTab
-                ? 'font-bold'
-                : 'font-extrabold ring-blue-500'
+                ? 'font-extrabold ring-blue-500'
+                : 'font-bold'
             } text-white outline-none ring-2 hover:ring-blue-500`}
           >
             <Link href='/videos' className='px-1'>
@@ -95,7 +95,7 @@ const PhotoVideoLayout = ({ children }) => {
           <motion.div
             variants={linkVariants}
             className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
-              isVideoAnalysisTab ? 'font-bold' : 'font-extrabold ring-blue-500'
+              isVideoAnalysisTab ? 'font-extrabold ring-blue-500' : 'font-bold'
             } text-white outline-none ring-2 hover:ring-blue-500`}
           >
             <Link href='/videos/video-analysis' className='px-1'>
