@@ -18,6 +18,7 @@ const WaterDrone = () => {
           height={325}
           alt='photos-videos-drone'
           className='mb-5 rounded-lg drop-shadow-xl'
+          quality={100}
         />
 
         <p className='self-start font-bold dark:text-white'>Who is it for?</p>

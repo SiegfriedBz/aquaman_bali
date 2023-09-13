@@ -76,7 +76,7 @@ export default function Home() {
                         src={src}
                         className='h-full rounded-lg object-cover shadow-lg'
                         alt='surf-shots'
-                        priority={i <= 4}
+                        priority={i <= 2}
                         quality={100}
                       />
                     </div>

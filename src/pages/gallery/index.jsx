@@ -64,7 +64,7 @@ const Gallery = () => {
                 src={src}
                 alt='surf-shots'
                 className='h-full rounded-lg object-cover shadow-2xl'
-                priority={i <= 4}
+                priority={i <= 2}
                 quality={100}
               />
             </div>

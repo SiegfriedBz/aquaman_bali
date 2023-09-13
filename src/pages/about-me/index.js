@@ -75,7 +75,7 @@ const About = () => {
                     src={src}
                     alt='rendy'
                     className='h-full rounded-lg object-cover shadow-2xl'
-                    priority={i <= 4}
+                    priority={i <= 2}
                     quality={100}
                   />
                 </div>
