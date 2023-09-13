@@ -76,7 +76,7 @@ export default function Home() {
                         src={src}
                         className='h-full rounded-lg object-cover shadow-lg'
                         alt='surf-shots'
-                        priority
+                        priority={i <= 4}
                         quality={100}
                       />
                     </div>
@@ -126,7 +126,6 @@ export default function Home() {
                         src={src}
                         className={`mx-auto h-[225px] w-[225px] rounded-full object-cover shadow-lg md:h-[265px] md:w-[265px] lg:h-[325px] lg:w-[325px]`}
                         alt='rendy-surf'
-                        priority
                         quality={100}
                       />
                     </div>

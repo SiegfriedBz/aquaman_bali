@@ -16,7 +16,6 @@ const SemiPrivate = () => {
             src={lessonI}
             alt='lesson-group'
             className='h-full rounded-lg object-cover shadow-2xl'
-            priority
             quality={100}
           />
         </div>

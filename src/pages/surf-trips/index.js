@@ -122,6 +122,8 @@ const SurfTrips = () => {
               src={CangguImage}
               alt='canggu'
               className='h-full rounded-lg object-cover shadow-2xl'
+              priority
+              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -190,6 +192,8 @@ const SurfTrips = () => {
               src={MedewiImage}
               alt='medewi'
               className='h-full rounded-lg object-cover shadow-2xl'
+              priority
+              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -245,6 +249,7 @@ const SurfTrips = () => {
               src={BalanganImage}
               alt='balangan'
               className='h-full rounded-lg object-cover shadow-2xl'
+              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -299,6 +304,7 @@ const SurfTrips = () => {
               src={UluwatuImage}
               alt='uluwatu'
               className='h-full rounded-lg object-cover shadow-2xl'
+              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -363,6 +369,7 @@ const SurfTrips = () => {
               src={SeranganImage}
               alt='serangan'
               className='h-full w-full rounded-lg object-cover shadow-2xl'
+              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -420,6 +427,7 @@ const SurfTrips = () => {
               src={NusaImage}
               alt='nusa-lumboga'
               className='h-full rounded-lg object-cover shadow-2xl'
+              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -484,6 +492,7 @@ const SurfTrips = () => {
               src={LombokImage}
               alt='lombok'
               className='h-full rounded-lg object-cover shadow-2xl'
+              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
