@@ -4,7 +4,7 @@ import { useLocalStorage } from './useLocalStorage'
 export const useColorMode = () => {
   const [colorMode, setColorMode] = useLocalStorage(
     'aquaman-color-mode',
-    'dark'
+    'light'
   )
 
   useEffect(() => {
