@@ -2,6 +2,27 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { CldVideoPlayer } from 'next-cloudinary'
+import { motion } from 'framer-motion'
+
+const navVariants = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const linkVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+}
 
 const LessonsLayout = ({ children }) => {
   const router = useRouter()
@@ -39,26 +60,31 @@ const LessonsLayout = ({ children }) => {
           </span>
         </h4>
 
-        <nav
+        <motion.nav
           id='lessons-navigation'
           className='mt-5 flex w-full items-center justify-around text-lg font-bold dark:text-white'
           aria-label='lessons-navigation'
+          variants={navVariants}
+          initial='hidden'
+          animate='visible'
         >
-          <div
+          <motion.div
+            variants={linkVariants}
             className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500  py-1 text-center ${
-              isSemiPrivateTab ? 'font-bold' : 'font-extrabold ring-blue-500'
+              !isSemiPrivateTab ? 'font-bold' : 'font-extrabold ring-blue-500'
             } text-white outline-none ring-2 hover:ring-blue-500`}
           >
             <Link href='/surf-lessons'>Private</Link>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            variants={linkVariants}
             className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500  py-1 text-center ${
               isSemiPrivateTab ? 'font-extrabold ring-blue-500' : 'font-bold'
             } text-white outline-none ring-2 hover:ring-blue-500`}
           >
             <Link href='/surf-lessons/semi-private'>Semi-Private</Link>
-          </div>
-        </nav>
+          </motion.div>
+        </motion.nav>
       </section>
 
       {children}

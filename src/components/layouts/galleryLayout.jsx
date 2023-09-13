@@ -1,10 +1,31 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Gallery',
   description: 'Best surf shots',
+}
+
+const navVariants = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const linkVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
 }
 
 const GalleryLayout = ({ children }) => {
@@ -30,26 +51,31 @@ const GalleryLayout = ({ children }) => {
           </span>
         </div>
 
-        <nav
+        <motion.nav
+          variants={navVariants}
+          initial='hidden'
+          animate='visible'
           id='gallery-navigation'
           className=' flex w-11/12 items-center justify-around text-lg font-bold dark:text-white'
           aria-label='gallery-navigation'
         >
-          <div
+          <motion.div
+            variants={linkVariants}
             className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500  py-1 text-center ${
               isVideoTab ? 'font-bold' : 'font-extrabold ring-blue-500'
             } text-white outline-none ring-2 hover:ring-blue-500`}
           >
             <Link href='/gallery'>Images</Link>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            variants={linkVariants}
             className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500  py-1 text-center ${
               isVideoTab ? 'font-extrabold ring-blue-500' : 'font-bold'
             } text-white outline-none ring-2 hover:ring-blue-500`}
           >
             <Link href='/gallery/videos'>Videos</Link>
-          </div>
-        </nav>
+          </motion.div>
+        </motion.nav>
       </section>
 
       {children}

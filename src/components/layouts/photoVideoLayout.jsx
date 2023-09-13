@@ -2,10 +2,31 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { CldVideoPlayer } from 'next-cloudinary'
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Photo & Video | Drone',
   description: 'Discover Our Photo & Video Packages',
+}
+
+const navVariants = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+}
+
+const linkVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
 }
 
 const PhotoVideoLayout = ({ children }) => {
@@ -43,12 +64,16 @@ const PhotoVideoLayout = ({ children }) => {
             </Link>
           </span>
         </h4>
-        <nav
+        <motion.nav
+          variants={navVariants}
+          initial='hidden'
+          animate='visible'
           id='videos-navigation'
           className='my-5 flex w-full items-center justify-around text-sm font-bold dark:text-white'
           aria-label='gallery-navigation'
         >
-          <div
+          <motion.div
+            variants={linkVariants}
             className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
               !isWaterDroneTab || !isVideoAnalysisTab
                 ? 'font-bold'
@@ -58,8 +83,9 @@ const PhotoVideoLayout = ({ children }) => {
             <Link href='/videos' className='px-1'>
               Photos & Videos
             </Link>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            variants={linkVariants}
             className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
               isWaterDroneTab ? 'font-extrabold ring-blue-500' : 'font-bold'
             } text-white outline-none ring-2 hover:ring-blue-500`}
@@ -67,8 +93,9 @@ const PhotoVideoLayout = ({ children }) => {
             <Link href='/videos/water-drone' className='px-1'>
               Water & Drone
             </Link>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            variants={linkVariants}
             className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
               isVideoAnalysisTab ? 'font-bold' : 'font-extrabold ring-blue-500'
             } text-white outline-none ring-2 hover:ring-blue-500`}
@@ -76,8 +103,8 @@ const PhotoVideoLayout = ({ children }) => {
             <Link href='/videos/video-analysis' className='px-1'>
               Video Analysis
             </Link>
-          </div>
-        </nav>
+          </motion.div>
+        </motion.nav>
       </section>
 
       {children}

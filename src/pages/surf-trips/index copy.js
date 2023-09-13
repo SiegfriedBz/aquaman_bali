@@ -67,11 +67,13 @@ const SurfTrips = () => {
         <p className='mx-2 mt-4 text-center text-lg font-bold text-slate-900 dark:text-gray-200'>
           🏄‍♀️ Your Board or Ours
         </p>
-        <p className='mx-2 mb-2 text-center text-lg text-slate-900 dark:text-gray-200'>
+        <p className='mx-2 text-center text-lg text-slate-900 dark:text-gray-200'>
           Bring your own board or use one of our{' '}
           <span className='block'>top-quality boards.</span>
         </p>
-
+        <p className='mx-2 mb-2 text-center text-lg text-slate-900 dark:text-gray-200'>
+          We cater to all skill levels.
+        </p>
         <p className='mx-2 mt-4 text-center text-lg font-bold text-slate-900 dark:text-gray-200'>
           🏨 Stay Your Way
         </p>
@@ -85,7 +87,7 @@ const SurfTrips = () => {
           Start your surf adventure right from Canggu or meet us at your chosen
           destination.
         </p>
-        <p className='mx-2 my-2 text-center text-lg text-slate-900 dark:text-gray-200'>
+        <p className='mx-2 mb-2 text-center text-lg text-slate-900 dark:text-gray-200'>
           We&apos;re here to make your journey as convenient as possible.
         </p>
         <a
@@ -106,7 +108,7 @@ const SurfTrips = () => {
 
       <div className='px-2 dark:bg-slate-900 dark:text-gray-200'>
         <section id='canggu' className='scroll-mt-20'>
-          <h2 className='text-3xl font-semibold'>Canggu, Bali</h2>
+          <h2 className='text-3xl font-semibold'>Canggu</h2>
           <div
             className='my-2 flex items-center'
             onClick={() => handleSelectTrip('canggu')}
@@ -125,43 +127,29 @@ const SurfTrips = () => {
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
-            <p className='mb-2 self-start px-2'>
-              Canggu is <span className='font-bold'>our base</span>, at{' '}
-              <span className='font-bold'>Boto Bolong Beach</span>.
+            <p className='mb-2 px-2 text-justify'>
+              Canggu will be the best place for beginners to learn surfing,
+              because the waves are really chill and not too big.
             </p>
-
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Wave Type: </span>Gentle and ideal for
-              beginners
-            </p>
-
-            <ul className='mb-2 self-start px-2'>
-              <span className='font-bold'>Main Surf Breaks:</span>
+            <ul className='self-start px-2'>
+              At Canggu we have 4 main surf breaks
               <li className='ms-5 list-disc'>Boto Bolong</li>
               <li className='ms-5 list-disc'>Nelayan</li>
               <li className='ms-5 list-disc'>The Lawn</li>
               <li className='ms-5 list-disc'>Old&apos;s man</li>
             </ul>
 
-            <p className='mb-2 px-2 text-justify'>
-              <span className='font-bold'>Beach Conditions: </span>
-              Safe with coral and sand beaches, suitable for all levels except
-              during high surf conditions.
+            <p className='my-2 px-2 text-justify'>
+              But Canggu is reaaly good for all levels,with the condition of the
+              coral and sand beaches it becomes too dangerous.
             </p>
 
-            <ul className='mb-2 self-start px-2'>
-              <span className='font-bold'>Best for: </span>
-              <li className='ms-5 list-disc'>Beginner</li>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+            <ul className='mb-3 self-start'>
+              <li className='ms-5 list-disc'>🏄‍♀️ Beginner</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
-            <p className='mb-2 px-2 text-justify'>
-              Canggu is a paradise for beginners with its calm, manageable
-              waves. It offers four main surf breaks and caters to surfers of
-              all levels. However, during high surf conditions, the coral and
-              sand beaches can become hazardous.
-            </p>
             <a
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -174,7 +162,7 @@ const SurfTrips = () => {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='medewi' className='scroll-mt-20'>
-          <h2 className='text-3xl font-semibold'>Medewi, Bali</h2>{' '}
+          <h2 className='text-3xl font-semibold'>Medewi</h2>{' '}
           <div
             className='my-2 flex items-center'
             onClick={() => handleSelectTrip('medewi')}
@@ -193,30 +181,26 @@ const SurfTrips = () => {
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Wave Type: </span>Long left waves,
-              around 100 meters
-            </p>
-
             <p className='mb-2 px-2 text-justify'>
-              <span className='font-bold'>Beach Conditions: </span>
-              Rocky with sandy patches, suitable for all levels
+              medewi is one of the most famous surf breaks in bali, with long
+              left waves of around 100 meters riding.{' '}
             </p>
 
-            <ul className='mb-2 self-start px-2'>
-              <span className='font-bold'>Best for: </span>
-              <li className='ms-5 list-disc'>Beginner</li>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+            <p className='my-2 px-2 text-justify'>
+              with rocky beach conditions with sand but still good for all
+              levels
+            </p>
+
+            <ul className='my-2 self-start'>
+              <li className='ms-5 list-disc'>🏄‍♀️ Beginner</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
-            <p className='mb-2 px-2 text-justify'>
-              Medewi is renowned for its iconic long left waves, making it a
-              must-visit surf spot in Bali. Despite the rocky beach conditions,
-              it accommodates surfers of all levels, including beginners,
-              intermediates, and those seeking expert advice. The journey from
-              Canggu takes a maximum of 2 hours by car or motorbike.
+            <p className='mb-3 px-2 text-justify'>
+              Driving from canggu will take max 2 hours with car/motorbike
             </p>
+
             <a
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -229,7 +213,7 @@ const SurfTrips = () => {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='balangan' className='scroll-mt-20'>
-          <h2 className='text-3xl font-semibold'>Balangan Beach, Bali</h2>
+          <h2 className='text-3xl font-semibold'>Balangan</h2>
           <div
             className='my-2 flex items-center'
             onClick={() => handleSelectTrip('balangan')}
@@ -248,29 +232,25 @@ const SurfTrips = () => {
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Wave Type: </span>Big and powerful
-              left waves
+            <p className='mb-2 px-2 text-justify'>
+              Balangan Beach is one of the beautiful beaches in Bali with left
+              waves and beautiful coral reefs, The long journey from Canggu to
+              Balangan takes an hour and a half depending on traffic jams.
+            </p>
+            <p className='mb-2 px-2 text-justify'>
+              Balangan is one of the best waves in Bali because it has very big
+              and perfecr left waves.
             </p>
 
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Beach Conditions: </span>
-              Pristine coral reefs
+            <p className='my-2 px-2 text-justify'>
+              Not recommended for beginners because sharp coral with big waves.
             </p>
 
-            <ul className='mb-2 self-start px-2'>
-              <span className='font-bold'>Best for: </span>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+            <ul className='mb-3 self-start'>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
-            <p className='mb-2 px-2 text-justify'>
-              Balangan Beach boasts some of the best waves in Bali, making it a
-              favorite for intermediate surfers. However, it&apos;s not
-              recommended for beginners due to sharp coral and large waves. The
-              journey from Canggu to Balangan takes approximately 1.5 hour,
-              depending on traffic.
-            </p>
             <a
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -283,7 +263,7 @@ const SurfTrips = () => {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='uluwatu' className='scroll-mt-20'>
-          <h2 className='text-3xl font-semibold'>Uluwatu, Bali</h2>{' '}
+          <h2 className='text-3xl font-semibold'>Uluwatu</h2>{' '}
           <div
             className='my-2 flex items-center'
             onClick={() => handleSelectTrip('uluwatu')}
@@ -302,39 +282,42 @@ const SurfTrips = () => {
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Wave Type: </span>Challenging and
-              prestigious
-            </p>
-
             <p className='mb-2 px-2 text-justify'>
-              <span className='font-bold'>Beach Conditions: </span>
-              Sharp coral and strong waves, not suitable for beginners
+              Uluwatu is one of the best surfing spots in Bali because the waves
+              are big and challenging, sometimes it is also used as a place for
+              prestigious competitions.
+            </p>
+            <p className='mb-2 px-2 text-justify'>
+              With sharp coral beach conditions and strong waves, this place is
+              not recommended for people who are just learning to surf
             </p>
 
-            <ul className='mb-2 self-start px-2'>
-              Several famous surfing spots close from Uluwatu:
+            <p className='my-2 px-2 text-justify'>
+              But Canggu is reaaly good for all levels,with the condition of the
+              coral and sand beaches it becomes too dangerous.
+            </p>
+
+            <ul className='mb-3 self-start'>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
+            </ul>
+
+            <p className='my-2 px-2 text-justify'>
+              With several famous surfing spots which are also not far from
+              Uluwatu, namely
+            </p>
+            <ul className='mb-3 self-start'>
               <li className='ms-5 list-disc'>Padang Padang </li>
               <li className='ms-5 list-disc'>Bingin Beach </li>
               <li className='ms-5 list-disc'>Dreamland Beach</li>
               <li className='ms-5 list-disc'>Balangan Beach </li>
             </ul>
 
-            <ul className='mb-2 self-start px-2'>
-              <span className='font-bold'>Best for: </span>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
-            </ul>
-
-            <p className='mb-2 px-2 text-justify'>
-              Uluwatu is a haven for experienced surfers, known for its big and
-              challenging waves. This spot has even hosted prestigious
-              competitions. However, it&apos;s not recommended for beginners due
-              to the sharp coral and strong waves. Several famous surf spots are
-              nearby, including Padang Padang, Bingin Beach, Dreamland Beach,
-              and Balangan Beach. The journey from Canggu can take up to 1.5
-              hours.
+            <p className='my-2 px-2 text-justify'>
+              The journey time from Canggu can be up to 1.5 hours depending on
+              traffic jams or what did use a car/ motorbike when going there.
             </p>
+
             <a
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -347,7 +330,7 @@ const SurfTrips = () => {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='serangan' className='scroll-mt-20'>
-          <h2 className='text-3xl font-semibold'>Serangan, Bali</h2>
+          <h2 className='text-3xl font-semibold'>Serangan</h2>
           <div
             className='my-2 flex items-center'
             onClick={() => handleSelectTrip('serangan')}
@@ -366,32 +349,27 @@ const SurfTrips = () => {
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Wave Type: </span>XXX
+            <p className='mb-2 px-2 text-justify'>
+              Serangan is one of the surfing spots in Bali where you have to use
+              a boat to get to the surfing spot, with an extended boat ride of
+              15 minutes we have arrived.
             </p>
 
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Beach Conditions: </span>Sharp coral
-              and strong waves, not suitable for beginners
+            <p className='my-2 px-2 text-justify'>
+              With sharp coral beach conditions and strong waves, this place is
+              not recommended for beginners.
             </p>
 
-            <ul className='mb-2 self-start px-2'>
-              <span className='font-bold'>Best for: </span>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+            <ul className='mb-3 self-start'>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Access to waves: </span>Serangan
-              requires a short boat ride (15 minutes) to reach the surf spot.
+            <p className='my-2 px-2 text-justify'>
+              The journey time from Canggu can be up to 1.5 hours depending on
+              traffic jams or what did use a car/ motorbike when going there.
             </p>
 
-            <p className='mb-2 px-2 text-justify'>
-              Serangan is a challenging spot with sharp coral and strong waves,
-              making it unsuitable for beginners. Intermediate surfers seeking
-              an adventure will enjoy Serangan. The journey from Canggu takes
-              about 1.5 hours, depending on traffic.
-            </p>
             <a
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -404,7 +382,7 @@ const SurfTrips = () => {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='nusa-lumboga' className='scroll-mt-20'>
-          <h2 className='text-3xl font-semibold'>Nusa Lembongan (near Bali)</h2>
+          <h2 className='text-3xl font-semibold'>Nusa Lumboga</h2>
           <div
             className='my-2 flex items-center'
             onClick={() => handleSelectTrip('nusa')}
@@ -423,18 +401,15 @@ const SurfTrips = () => {
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Wave Type: </span>XXX
+            <p className='mb-2 px-2 text-justify'>
+              Nusa Lembongan is outside the island of Bali, which is adjacent to
+              the island of Nisa Penida, to get here we have to take a fast boat
+              from Sanur.
             </p>
 
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Beach Conditions: </span>
-              XXX
-            </p>
-
-            <ul className='mb-2 self-start px-2'>
+            <ul className='self-start px-2'>
               Nusa Lambongan has several surfing spots close to each other such
-              as:
+              as
               <li className='ms-5 list-disc'>Crane Shipwreck </li>
               <li className='ms-5 list-disc'>Isolation</li>
               <li className='ms-5 list-disc'>Play Ground</li>
@@ -442,20 +417,20 @@ const SurfTrips = () => {
               <li className='ms-5 list-disc'>Ceningan</li>
             </ul>
 
-            <ul className='mb-2 self-start px-2'>
-              <span className='font-bold'>Best for: </span>
-              <li className='ms-5 list-disc'>Beginner</li>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+            <ul className='mb-3 self-start'>
+              Nusa lambongan is great for every surfers
+              <li className='ms-5 list-disc'>🏄‍♀️ Beginner</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
             </ul>
 
             <p className='mb-2 px-2 text-justify'>
-              Nusa Lembongan offers a variety of surf spots close to each other.
-              It&apos;s an excellent destination for surfers of all levels. The
-              journey from Sanur to Nusa Lembongan takes about an hour by fast
-              boat. Nusa Penida, nearby, is also fantastic for surfing and
-              relaxation.
+              To get to Nusa Penida we have to use a fast boat with a journey
+              time of around 1 hour starting from Sanur to Nusa Lambongan, Nusa
+              Penida is very good for surfing and holidays because there are
+              many beautiful beaches and they are not too crowded.
             </p>
+
             <a
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -467,8 +442,8 @@ const SurfTrips = () => {
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
-        <section id='lombok' className='scroll-mt-20'>
-          <h2 className='text-3xl font-semibold'>Lombok Island (near Bali)</h2>{' '}
+        <section id='lombok' className='scroll-mt-20 pb-5'>
+          <h2 className='text-3xl font-semibold'>Lombok</h2>{' '}
           <div
             className='my-2 flex items-center'
             onClick={() => handleSelectTrip('lombok')}
@@ -487,42 +462,52 @@ const SurfTrips = () => {
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Wave Type: </span>XXX
+            <p className='my-2 px-2 text-justify'>
+              Lombok surf trip is one of the furthest surf trips from Canggu, as
+              boat or aiplane is required to get there.
             </p>
 
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Beach Conditions: </span>
-              XXX
-            </p>
-
-            <ul className='mb-2 self-start px-2'>
-              Lombok has several surfing spots close to each other such as:
-              <li className='ms-5 list-disc'>Kuta Lombok</li>
-              <li className='ms-5 list-disc'>Tanjung Aan</li>
-              <li className='ms-5 list-disc'>Dom Dom</li>
-              <li className='ms-5 list-disc'>Grupuk Inside</li>
-              <li className='ms-5 list-disc'>Grupuk Outside</li>
+            <ul className='self-start px-2'>
+              <li className='ms-5 list-disc'>
+                Ferry boat
+                <span className='block'>
+                  4-5 hours boat trip from Padang Bai port to Lember port. From
+                  there, 1 hour drive with a motorbike or car will get us to
+                  Kuta, Lombok.
+                </span>
+              </li>
+              <li className='ms-5 list-disc'>
+                Airplane
+                <span className='block'>
+                  Very fast flight, only 1 hour from Ngurah Rai Airport to
+                  Lombok International Airport.
+                </span>
+              </li>
             </ul>
 
-            <ul className='mb-2 self-start px-2'>
-              <span className='font-bold'>Best for: </span>
-              <li className='ms-5 list-disc'>Beginner</li>
-              <li className='ms-5 list-disc'>Intermediate</li>
-              <li className='ms-5 list-disc'>Advanced</li>
+            <ul className='my-3 self-start px-2'>
+              Lombok has several surfing spots close to each other such as
+              <li className='list-disc'>Kuta Lombok</li>
+              <li className='list-disc'>Tanjung Aan </li>
+              <li className='list-disc'>Dom Dom</li>
+              <li className='list-disc'>Grupuk Inside </li>
+              <li className='list-disc'>Grupuk Outside </li>
             </ul>
 
-            <p className='mb-2 px-2 text-justify'>
-              Lombok offers an array of surf spots close to each other. To reach
-              them, you must use a boat due to the considerable distance. The
-              boat ride takes only 8-10 minutes to each spot. You can choose
-              between a scenic ferry boat journey (4-5 hours) from Padang Bai or
-              a quick flight (1 hour) from Ngurah Rai Airport to Lombok
-              International Airport. Lombok is an excellent choice for surfers
-              of all levels.
+            <ul className='my-3 self-start px-2'>
+              <li className='ms-5 list-disc'>🏄‍♀️ Beginner</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️ Intermediate</li>
+              <li className='ms-5 list-disc'>🏄‍♀️🏄‍♀️🏄‍♀️ Advanced</li>
+            </ul>
+
+            <p className='my-2 px-2 text-justify'>
+              Every spot to surf MUST be reached by boat, because the distance
+              is very far to swim. Getting to the line up by boat only takes
+              8-10 minutes for every spot.
             </p>
+
             <a
-              className='mt-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+              className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
             >
               Book now
