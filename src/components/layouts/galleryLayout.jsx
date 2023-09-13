@@ -21,9 +21,8 @@ const navVariants = {
 }
 
 const linkVariants = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { opacity: 0 },
   visible: {
-    y: 0,
     opacity: 1,
   },
 }
