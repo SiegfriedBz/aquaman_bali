@@ -17,6 +17,8 @@ const SurfLessons = () => {
             src={lessonI}
             alt='lesson-private'
             className='h-full rounded-lg object-cover shadow-2xl'
+            priority
+            quality={100}
           />
         </div>
 
