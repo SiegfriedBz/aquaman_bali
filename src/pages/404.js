@@ -11,7 +11,11 @@ export default function Custom404() {
 
       <hr className='mx-5 my-2 bg-slate-950' />
 
-      <Image src={errorImage} className='h-96 object-cover' alt='error image' />
+      <Image
+        src={errorImage}
+        className='h-96 rounded-lg object-cover shadow-2xl'
+        alt='error image'
+      />
 
       <hr className='mx-5 my-2 bg-slate-950' />
 
