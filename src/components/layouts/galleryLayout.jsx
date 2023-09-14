@@ -54,7 +54,7 @@ const GalleryLayout = ({ children }) => {
           initial='hidden'
           animate='visible'
           id='gallery-navigation'
-          className=' flex w-11/12 items-center justify-around text-lg font-bold dark:text-white'
+          className='flex w-full items-center justify-around text-lg font-bold dark:text-white'
           aria-label='gallery-navigation'
         >
           <motion.div
