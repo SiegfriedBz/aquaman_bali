@@ -40,7 +40,7 @@ const Navbar = () => {
               alt='logo'
               width={45}
               height={45}
-              className='rounded-full border-4 object-contain shadow-2xl ring-2 ring-slate-900'
+              className='rounded-full object-contain shadow-2xl ring-2 ring-slate-900'
             />
           </Link>
           <Link href='/' onClick={() => setMobileMenuIsOpen(false)}>
