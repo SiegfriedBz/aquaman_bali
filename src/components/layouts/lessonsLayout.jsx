@@ -22,14 +22,15 @@ const linkVariants = {
   },
 }
 
+const meta = {
+  title: 'Aquaman Bali | Surf School | Surf Lessons',
+  description: 'Aquaman Bali | Discover Our Surf Lessons Packages',
+}
+
 const LessonsLayout = ({ children }) => {
   const router = useRouter()
   const isSemiPrivateTab = router.asPath.includes('/surf-lessons/semi-private')
 
-  const meta = {
-    title: 'Aquaman Bali | Surf School | Surf Lessons',
-    description: 'Aquaman Bali | Discover Our Surf Lessons Packages',
-  }
   return (
     <div>
       <Head>

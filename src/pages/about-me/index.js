@@ -42,12 +42,12 @@ const RENDY_IMAGES = [
   RendySurf13,
 ]
 
-const About = () => {
-  const meta = {
-    title: 'Aquaman Bali | Surf School | About me',
-    description: 'Discover My Story',
-  }
+const meta = {
+  title: 'Aquaman Bali | Surf School | About me',
+  description: 'Discover My Story',
+}
 
+const About = () => {
   return (
     <>
       <Head>

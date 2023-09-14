@@ -14,6 +14,11 @@ import SeranganImage from '../../../public/images/spots/serangan_surf.jpg'
 import NusaImage from '../../../public/images/spots/nusa_lumboga_surf.jpg'
 import LombokImage from '../../../public/images/spots/lombok_surf.jpg'
 
+const meta = {
+  title: 'Aquaman Bali | Surf School | Surf Trips',
+  description: 'Discover Our Surf Trips in Indonesia',
+}
+
 const SurfTrips = () => {
   const mapContainerRef = useRef(null)
   const { setShowPopup, setPopup } = useAppContext()
@@ -22,11 +27,6 @@ const SurfTrips = () => {
     setShowPopup(true)
     setPopup(MARKERS[spot])
     mapContainerRef?.current?.scrollIntoView()
-  }
-
-  const meta = {
-    title: 'Aquaman Bali | Surf School | Surf Trips',
-    description: 'Discover Our Surf Trips in Indonesia',
   }
 
   return (

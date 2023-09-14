@@ -25,6 +25,11 @@ const TOP_IMAGES = [
 ]
 const ABOUT_ME_IMAGES = [RendySurfBSmall, RendySurfCSmall]
 
+const meta = {
+  title: 'Aquaman Bali | Surf School | Home',
+  description: 'Aquaman Bali | Surf School & Surf Trips',
+}
+
 const titlesVariants = {
   hidden: {
     x: '-100vw',
@@ -42,15 +47,11 @@ const titlesVariants = {
   },
 }
 
-const meta = {
-  title: 'Aquaman Bali | Surf School | Home',
-  description: 'Aquaman Bali | Surf School & Surf Trips',
-}
-
 export default function Home() {
   const aboutRef = useRef(null)
   const testimonialsRef = useRef(null)
   const visitRef = useRef(null)
+  const bookBtnRef = useRef(null)
 
   const aboutIsInView = useInView(aboutRef, { once: true, amount: 0.1 })
   const testimonialsIsInView = useInView(testimonialsRef, {
@@ -58,6 +59,7 @@ export default function Home() {
     amount: 0.1,
   })
   const visitIsInView = useInView(visitRef, { once: true, amount: 0.1 })
+  const bookBtnIsInView = useInView(bookBtnRef, { once: true, amount: 0.1 })
 
   return (
     <>
