@@ -38,14 +38,20 @@ const Footer = () => {
           {/* icons */}
           <div className='my-auto flex flex-col items-center'>
             <div className='flex items-center justify-between'>
-              <a href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'>
+              <a
+                href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+                target={'_blank'}
+              >
                 <FontAwesomeIcon
                   icon={faWhatsapp}
                   className='px-2 py-1  text-3xl text-teal-700 hover:text-teal-500'
                 />
               </a>
 
-              <a href='https://www.instagram.com/aquaman_bali/'>
+              <a
+                href='https://www.instagram.com/aquaman_bali/'
+                target={'_blank'}
+              >
                 <FontAwesomeIcon
                   icon={faInstagram}
                   className='px-2 py-1 text-3xl text-purple-600 hover:text-purple-500'
@@ -56,6 +62,7 @@ const Footer = () => {
             <div className='flex items-center justify-between'>
               <a
                 href='https://www.tiktok.com/@aquamanbali'
+                target={'_blank'}
                 className='flex items-center'
               >
                 <Image
@@ -66,7 +73,10 @@ const Footer = () => {
                 />
               </a>
 
-              <a href='https://www.buymeacoffee.com/aquamansurfbali'>
+              <a
+                href='https://www.buymeacoffee.com/aquamansurfbali'
+                target={'_blank'}
+              >
                 <FontAwesomeIcon
                   icon={faMugHot}
                   className='px-2 py-1 text-3xl text-amber-400 hover:text-amber-500'
@@ -81,7 +91,10 @@ const Footer = () => {
         </h2>
 
         {/* credits */}
-        <a href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'>
+        <a
+          href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'
+          target={'_blank'}
+        >
           <span className='flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
             <Image
               src={swissFlag}

@@ -145,27 +145,30 @@ const Navbar = () => {
           onClick={() => setMobileMenuIsOpen(false)}
         >
           <div className='flex w-full items-center justify-around pb-1 pt-5'>
-            <a href='https://goo.gl/maps/iHPokm4Q943N2f2fA'>
+            <a href='https://goo.gl/maps/iHPokm4Q943N2f2fA' target={'_blank'}>
               <FontAwesomeIcon
                 icon={faStreetView}
                 className='me-2 text-4xl text-amber-400 hover:text-amber-500'
               />
             </a>
-            <a href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'>
+            <a
+              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+              target={'_blank'}
+            >
               <FontAwesomeIcon
                 icon={faWhatsapp}
                 className='text-4xl font-bold text-teal-700 hover:text-teal-500'
               />
             </a>
 
-            <a href='https://www.instagram.com/aquaman_bali/'>
+            <a href='https://www.instagram.com/aquaman_bali/' target={'_blank'}>
               <FontAwesomeIcon
                 icon={faInstagram}
                 className='text-4xl text-purple-600 hover:text-purple-500'
               />
             </a>
 
-            <a href='https://www.tiktok.com/@aquamanbali'>
+            <a href='https://www.tiktok.com/@aquamanbali' target={'_blank'}>
               <Image
                 src={tikTokLogo}
                 width={45}
@@ -174,7 +177,10 @@ const Navbar = () => {
               />
             </a>
 
-            <a href='https://www.buymeacoffee.com/aquamansurfbali'>
+            <a
+              href='https://www.buymeacoffee.com/aquamansurfbali'
+              target={'_blank'}
+            >
               <FontAwesomeIcon
                 icon={faMugHot}
                 className='text-4xl text-amber-400 hover:text-amber-500'

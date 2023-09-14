@@ -29,6 +29,7 @@ const Footer = ({ location, isSurfTripsRoute, children }) => {
       {location === 'Canggu' ? (
         <a
           href='https://goo.gl/maps/iHPokm4Q943N2f2fA'
+          target={'_blank'}
           className='flex flex-col items-center justify-center outline-none'
         >
           {children}

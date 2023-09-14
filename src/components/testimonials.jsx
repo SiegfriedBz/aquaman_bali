@@ -44,6 +44,7 @@ const Testimonials = () => {
                       {quote.message}{' '}
                       <a
                         href='https://goo.gl/maps/iHPokm4Q943N2f2fA'
+                        target={'_blank'}
                         className='ms-4 mt-2 flex items-center text-xl italic text-slate-500 outline-none sm:text-2xl'
                       >
                         Read full review on{' '}
@@ -68,7 +69,11 @@ const Testimonials = () => {
       </section>
 
       <section id='all-reviews-link' className='mx-auto mb-3 mt-2'>
-        <a href='https://goo.gl/maps/iHPokm4Q943N2f2fA' className=''>
+        <a
+          href='https://goo.gl/maps/iHPokm4Q943N2f2fA'
+          target={'_blank'}
+          className=''
+        >
           <h3 className='text-center text-xl'>Top-rated Surf School</h3>
           <div className='mt-2 flex items-center'>
             <span className='my-auto text-4xl font-bold text-amber-400 hover:text-amber-500'>
