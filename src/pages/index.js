@@ -1,7 +1,8 @@
+import { useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import Testimonials from '../components/testimonials'
 import LocationMap from '../components/LocationMap'
 import Carousel from '@/components/carousel'
@@ -24,11 +25,39 @@ const TOP_IMAGES = [
 ]
 const ABOUT_ME_IMAGES = [RendySurfBSmall, RendySurfCSmall]
 
+const titlesVariants = {
+  hidden: {
+    x: '-100vw',
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.25,
+      duration: 0.5,
+      type: 'spring',
+      stiffness: 100,
+    },
+  },
+}
+
+const meta = {
+  title: 'Aquaman Bali | Surf School | Home',
+  description: 'Aquaman Bali | Surf School & Surf Trips',
+}
+
 export default function Home() {
-  const meta = {
-    title: 'Aquaman Bali | Surf School | Home',
-    description: 'Aquaman Bali | Surf School & Surf Trips',
-  }
+  const aboutRef = useRef(null)
+  const testimonialsRef = useRef(null)
+  const visitRef = useRef(null)
+
+  const aboutIsInView = useInView(aboutRef, { once: true, amount: 0.1 })
+  const testimonialsIsInView = useInView(testimonialsRef, {
+    once: true,
+    amount: 0.1,
+  })
+  const visitIsInView = useInView(visitRef, { once: true, amount: 0.1 })
 
   return (
     <>
@@ -65,7 +94,7 @@ export default function Home() {
           <div className='mt-5 flex flex-col items-center justify-between px-2 md:max-w-7xl md:flex-row md:gap-5 xl:max-w-xl'>
             <motion.div
               initial={{ opacity: 0 }}
-              transition={{ delay: 1.25, duration: 3 }}
+              transition={{ delay: 1.25, duration: 1.5 }}
               animate={{ opacity: 1 }}
             >
               <Carousel>
@@ -89,7 +118,7 @@ export default function Home() {
               <motion.h3
                 className='mb-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'
                 initial={{ opacity: 0 }}
-                transition={{ delay: 1.5, duration: 3 }}
+                transition={{ delay: 1.5, duration: 2 }}
                 animate={{ opacity: 1 }}
               >
                 Best Surf School in Bali
@@ -98,7 +127,7 @@ export default function Home() {
                 className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
                 initial={{ opacity: 0 }}
-                transition={{ delay: 2.75, duration: 3 }}
+                transition={{ delay: 2, duration: 2 }}
                 animate={{ opacity: 1 }}
               >
                 Book now
@@ -113,9 +142,16 @@ export default function Home() {
           id='about-me-short'
           className='my-5 flex flex-col items-center justify-center md:mb-12'
         >
-          <h2 className='mb-3 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
-            About me
-          </h2>
+          <span ref={aboutRef}>
+            <motion.h2
+              variants={titlesVariants}
+              initial={!aboutIsInView && 'hidden'}
+              animate={aboutIsInView && 'visible'}
+              className='mb-3 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'
+            >
+              About me
+            </motion.h2>
+          </span>
           <div className='flex flex-col items-center justify-center md:flex-row'>
             <div className='md:max-w-md xl:max-w-xl'>
               <Carousel>
@@ -153,10 +189,17 @@ export default function Home() {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='testimonials' className='flex scroll-mt-20 flex-col'>
-          <h2 className='text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
-            Testimonials
-          </h2>
-          <Testimonials />
+          <span ref={testimonialsRef}>
+            <motion.h2
+              variants={titlesVariants}
+              initial={!testimonialsIsInView && 'hidden'}
+              animate={testimonialsIsInView && 'visible'}
+              className='text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'
+            >
+              Testimonials
+            </motion.h2>
+            <Testimonials />
+          </span>
 
           <a
             className='my-3 w-48 self-center rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
@@ -169,9 +212,16 @@ export default function Home() {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='location' className='scroll-mt-20 dark:bg-slate-900'>
-          <h2 className='mb-3 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'>
-            Visit Us
-          </h2>
+          <span ref={visitRef}>
+            <motion.h2
+              variants={titlesVariants}
+              initial={!visitIsInView && 'hidden'}
+              animate={visitIsInView && 'visible'}
+              className='mb-3 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'
+            >
+              Visit Us
+            </motion.h2>
+          </span>
           <LocationMap />
         </section>
       </main>
