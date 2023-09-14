@@ -18,17 +18,12 @@ module.exports = {
       },
       animation: {
         'open-menu': 'open-menu 0.5s ease-in-out forwards',
-        shimmer: 'shimmer 1.5s infinite',
       },
       keyframes: {
         'open-menu': {
           '0%': { transform: 'scaleY(0)' },
           '80%': { transform: 'scaleY(1.2)' },
           '100%': { transform: 'scaleY(1)' },
-        },
-        shimmer: {
-          '0%': { 'background-position': '-200% 0' },
-          '100%': { 'background-position': '200% 0' },
         },
       },
     },
