@@ -40,7 +40,7 @@ const Footer = () => {
             <div className='flex items-center justify-between'>
               <a
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-                target={'_blank'}
+                target='_blank'
               >
                 <FontAwesomeIcon
                   icon={faWhatsapp}
@@ -48,10 +48,7 @@ const Footer = () => {
                 />
               </a>
 
-              <a
-                href='https://www.instagram.com/aquaman_bali/'
-                target={'_blank'}
-              >
+              <a href='https://www.instagram.com/aquaman_bali/' target='_blank'>
                 <FontAwesomeIcon
                   icon={faInstagram}
                   className='px-2 py-1 text-3xl text-purple-600 hover:text-purple-500'
@@ -62,7 +59,7 @@ const Footer = () => {
             <div className='flex items-center justify-between'>
               <a
                 href='https://www.tiktok.com/@aquamanbali'
-                target={'_blank'}
+                target='_blank'
                 className='flex items-center'
               >
                 <Image
@@ -75,7 +72,7 @@ const Footer = () => {
 
               <a
                 href='https://www.buymeacoffee.com/aquamansurfbali'
-                target={'_blank'}
+                target='_blank'
               >
                 <FontAwesomeIcon
                   icon={faMugHot}
@@ -93,7 +90,7 @@ const Footer = () => {
         {/* credits */}
         <a
           href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'
-          target={'_blank'}
+          target='_blank'
         >
           <span className='flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
             <Image

@@ -128,7 +128,7 @@ export default function Home() {
               <motion.a
                 className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-                target={'_blank'}
+                target='_blank'
                 initial={{ opacity: 0 }}
                 transition={{ delay: 2, duration: 2 }}
                 animate={{ opacity: 1 }}
@@ -207,7 +207,7 @@ export default function Home() {
           <a
             className='my-3 w-48 self-center rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
             href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-            target={'_blank'}
+            target='_blank'
           >
             Book now
           </a>
