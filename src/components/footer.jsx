@@ -84,7 +84,9 @@ const Footer = () => {
         </div>
 
         <h2 className='mb-2 mt-5 text-center text-sm text-slate-800 dark:text-white'>
-          ©2023 Aquaman Bali
+          <span>
+            {new Date().getFullYear()} Aquaman Bali &copy;All Rights Reserved
+          </span>
         </h2>
 
         {/* credits */}
