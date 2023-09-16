@@ -417,7 +417,8 @@ const SurfTrips = () => {
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
             <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Wave Type: </span>XXX
+              <span className='font-bold'>Wave Type: </span>Challenging and
+              prestigious
             </p>
 
             <p className='mb-2 self-start px-2'>
@@ -475,15 +476,6 @@ const SurfTrips = () => {
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Wave Type: </span>XXX
-            </p>
-
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Beach Conditions: </span>
-              XXX
-            </p>
-
             <ul className='mb-2 self-start px-2'>
               Nusa Lambongan has several surfing spots close to each other such
               as:
@@ -541,15 +533,6 @@ const SurfTrips = () => {
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Wave Type: </span>XXX
-            </p>
-
-            <p className='mb-2 self-start px-2'>
-              <span className='font-bold'>Beach Conditions: </span>
-              XXX
-            </p>
-
             <ul className='mb-2 self-start px-2'>
               Lombok has several surfing spots close to each other such as:
               <li className='ms-5 list-disc'>Kuta Lombok</li>
