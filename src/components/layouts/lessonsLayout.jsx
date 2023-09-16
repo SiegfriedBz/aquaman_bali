@@ -4,8 +4,30 @@ import { useRouter } from 'next/router'
 import { CldVideoPlayer } from 'next-cloudinary'
 import { motion } from 'framer-motion'
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.75,
+    },
+  },
+}
+
+const elementVariants = {
+  hidden: { opacity: 0, y: '16px' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.25,
+    },
+  },
+}
+
 const navVariants = {
-  hidden: { opacity: 1 },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
@@ -15,10 +37,23 @@ const navVariants = {
   },
 }
 
-const linkVariants = {
-  hidden: { opacity: 0 },
+const leftLinkVariants = {
+  hidden: { opacity: 0, x: -100 },
   visible: {
     opacity: 1,
+    x: 0,
+    type: 'spring',
+    stiffness: 180,
+  },
+}
+
+const rightLinkVariants = {
+  hidden: { opacity: 0, x: 100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    type: 'spring',
+    stiffness: 120,
   },
 }
 
@@ -40,24 +75,34 @@ const LessonsLayout = ({ children }) => {
         <meta property='og:title' content={meta.title} />
       </Head>
 
-      <section
+      <motion.section
+        variants={containerVariants}
+        initial='hidden'
+        animate='visible'
         id='surf-lessons'
         className='mb-3 flex scroll-mt-20 flex-col items-center justify-center'
       >
-        <h3 className='mb-2 text-center text-4xl font-bold dark:text-white'>
+        <motion.h3
+          variants={elementVariants}
+          className='mb-2 text-center text-4xl font-bold dark:text-white'
+        >
           Surf Lessons
-        </h3>
-        <h4 className='text-center text-xl text-slate-900 dark:text-gray-200'>
+        </motion.h3>
+
+        <motion.h4
+          variants={elementVariants}
+          className='text-center text-xl text-slate-900 dark:text-gray-200'
+        >
           in Canggu & during your{' '}
           <span>
             <Link
               href='/surf-trips'
-              className='text-slate-900 underline  underline-offset-4 dark:text-gray-200'
+              className='text-slate-900 underline underline-offset-4 dark:text-gray-200'
             >
               Surf Trips
             </Link>
           </span>
-        </h4>
+        </motion.h4>
 
         <motion.nav
           id='lessons-navigation'
@@ -68,7 +113,7 @@ const LessonsLayout = ({ children }) => {
           animate='visible'
         >
           <motion.div
-            variants={linkVariants}
+            variants={leftLinkVariants}
             className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500  py-1 text-center ${
               !isSemiPrivateTab ? 'font-bold' : 'font-extrabold ring-blue-500'
             } text-white outline-none ring-2 hover:ring-blue-500`}
@@ -76,7 +121,7 @@ const LessonsLayout = ({ children }) => {
             <Link href='/surf-lessons'>Private</Link>
           </motion.div>
           <motion.div
-            variants={linkVariants}
+            variants={rightLinkVariants}
             className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500  py-1 text-center ${
               isSemiPrivateTab ? 'font-extrabold ring-blue-500' : 'font-bold'
             } text-white outline-none ring-2 hover:ring-blue-500`}
@@ -84,7 +129,7 @@ const LessonsLayout = ({ children }) => {
             <Link href='/surf-lessons/semi-private'>Semi-Private</Link>
           </motion.div>
         </motion.nav>
-      </section>
+      </motion.section>
 
       {children}
 

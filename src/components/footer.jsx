@@ -1,19 +1,48 @@
+import { useRef } from 'react'
 import Image from 'next/image'
+import { motion, useInView } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faMugHot } from '@fortawesome/free-solid-svg-icons'
 import swissFlag from '../../public/logos/swiss-flag.svg'
 import tikTokLogo from '../../public/logos/tiktok-logo.png'
 
+const operatingHoursVariants = {
+  initial: {
+    scale: 0.8,
+    opacity: 1,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      delay: 0.25,
+      duration: 0.5,
+      type: 'spring',
+      stiffness: 100,
+    },
+  },
+}
+
 const Footer = () => {
+  const operatingHoursRef = useRef(null)
+  const operatingHoursInInView = useInView(operatingHoursRef, {
+    once: true,
+    amount: 0.1,
+  })
   return (
     <footer className='flex flex-col px-2 pb-3 pt-5 shadow-2xl'>
       {/* open hours */}
-      <section>
-        <div className='mb-3 flex flex-row justify-center text-lg text-slate-800 dark:text-white'>
-          Every day 6:00 am - 6:00 pm
-        </div>
-      </section>
+
+      <motion.div
+        ref={operatingHoursRef}
+        variants={operatingHoursVariants}
+        initial='initial'
+        animate={operatingHoursInInView ? 'animate' : 'initial'}
+        className='mb-4 flex flex-row justify-center text-lg text-slate-800 dark:text-white'
+      >
+        Every day 6:00 am - 6:00 pm
+      </motion.div>
 
       {/* links */}
       <section id='contact'>

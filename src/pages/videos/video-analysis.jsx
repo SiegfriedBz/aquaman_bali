@@ -8,7 +8,7 @@ const VideoAnalysis = () => {
       id='video-analysis'
       className='flex scroll-mt-20 flex-col items-center justify-center'
     >
-      <h2 className='text-center text-3xl font-bold text-slate-900 dark:text-white'>
+      <h2 className='mb-2 text-center text-3xl font-bold text-slate-900 dark:text-white'>
         Video Analysis
       </h2>
 

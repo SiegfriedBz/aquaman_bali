@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { useAppContext } from '@/context/appContext'
 import Image from 'next/image'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
 import LocationMap from '@/components/LocationMap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
@@ -17,6 +18,28 @@ import LombokImage from '../../../public/images/spots/lombok_surf.jpg'
 const meta = {
   title: 'Aquaman Bali | Surf School | Surf Trips',
   description: 'Discover Our Surf Trips in Indonesia',
+}
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.75,
+    },
+  },
+}
+
+const elementVariants = {
+  hidden: { opacity: 0, y: '16px' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.25,
+    },
+  },
 }
 
 const SurfTrips = () => {
@@ -37,22 +60,37 @@ const SurfTrips = () => {
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
       </Head>
-      <div
+      <motion.section
+        variants={containerVariants}
+        initial='hidden'
+        animate='visible'
         id='surf-trips'
         className='flex scroll-mt-20 flex-col items-center justify-center'
       >
-        <h2 className='text-center text-4xl font-bold text-slate-900 dark:text-white'>
+        <motion.h2
+          variants={elementVariants}
+          className='text-center text-4xl font-bold text-slate-900 dark:text-white'
+        >
           Surf trips
-        </h2>
-        <h3 className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'>
+        </motion.h2>
+        <motion.h3
+          variants={elementVariants}
+          className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'
+        >
           From Lombok to Sumatra
-        </h3>
-        <h4 className='text-center text-xl text-slate-900 dark:text-gray-200'>
+        </motion.h3>
+        <motion.h4
+          variants={elementVariants}
+          className='text-center text-xl text-slate-900 dark:text-gray-200'
+        >
           enjoy an amazing surf trip with Us
-        </h4>
-        <h4 className='my-5 text-center text-xl font-bold text-slate-900 dark:text-gray-200'>
+        </motion.h4>
+        <motion.h4
+          variants={elementVariants}
+          className='my-5 text-center text-xl font-bold text-slate-900 dark:text-gray-200'
+        >
           Starting from 500K IDR
-        </h4>
+        </motion.h4>
         <p className='mx-2 mt-2 text-center text-lg font-bold text-slate-900 dark:text-gray-200'>
           🏄 Surf Bali 🌴
         </p>
@@ -95,7 +133,7 @@ const SurfTrips = () => {
         >
           Book now
         </a>
-      </div>
+      </motion.section>
 
       <hr className='mx-5 my-5 bg-slate-950' />
 

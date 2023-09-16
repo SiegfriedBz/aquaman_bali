@@ -9,6 +9,28 @@ const meta = {
   description: 'Discover Our Photo & Video Packages',
 }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.75,
+    },
+  },
+}
+
+const elementVariants = {
+  hidden: { opacity: 0, y: '16px' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.25,
+    },
+  },
+}
+
 const navVariants = {
   hidden: { opacity: 1 },
   visible: {
@@ -20,10 +42,23 @@ const navVariants = {
   },
 }
 
-const linkVariants = {
-  hidden: { opacity: 0 },
+const leftLinkVariants = {
+  hidden: { opacity: 0, x: -100 },
   visible: {
     opacity: 1,
+    x: 0,
+    type: 'spring',
+    stiffness: 180,
+  },
+}
+
+const rightLinkVariants = {
+  hidden: { opacity: 0, x: 100 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    type: 'spring',
+    stiffness: 120,
   },
 }
 
@@ -41,27 +76,43 @@ const PhotoVideoLayout = ({ children }) => {
         <meta property='og:title' content={meta.title} />
       </Head>
 
-      <section
+      <motion.section
+        variants={containerVariants}
+        initial='hidden'
+        animate='visible'
         id='videos'
         className='flex scroll-mt-20 flex-col items-center justify-center'
       >
-        <h2 className='text-center text-3xl font-bold text-slate-900 dark:text-white'>
+        <motion.h2
+          variants={elementVariants}
+          className='text-center text-3xl font-bold text-slate-900 dark:text-white'
+        >
           Photo & Video | Drone
-        </h2>
-        <h3 className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'>
+        </motion.h2>
+        <motion.h3
+          variants={elementVariants}
+          className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'
+        >
           Get an amazing souvenir
-        </h3>
-        <h3 className='text-center text-2xl text-slate-900 dark:text-gray-200'>
+        </motion.h3>
+        <motion.h3
+          variants={elementVariants}
+          className='text-center text-2xl text-slate-900 dark:text-gray-200'
+        >
           from your surf session
-        </h3>
-        <h4 className='text-center text-xl text-slate-900 dark:text-gray-200'>
+        </motion.h3>
+        <motion.h4
+          variants={elementVariants}
+          className='text-center text-xl text-slate-900 dark:text-gray-200'
+        >
           in Canggu & during your{' '}
           <span>
             <Link href='/surf-trips' className='underline underline-offset-4'>
               Surf Trips
             </Link>
           </span>
-        </h4>
+        </motion.h4>
+
         <motion.nav
           variants={navVariants}
           initial='hidden'
@@ -71,7 +122,7 @@ const PhotoVideoLayout = ({ children }) => {
           aria-label='gallery-navigation'
         >
           <motion.div
-            variants={linkVariants}
+            variants={leftLinkVariants}
             className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
               !isWaterDroneTab || !isVideoAnalysisTab
                 ? 'font-extrabold ring-blue-500'
@@ -83,7 +134,7 @@ const PhotoVideoLayout = ({ children }) => {
             </Link>
           </motion.div>
           <motion.div
-            variants={linkVariants}
+            variants={leftLinkVariants}
             className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
               isWaterDroneTab ? 'font-extrabold ring-blue-500' : 'font-bold'
             } text-white outline-none ring-2 hover:ring-blue-500`}
@@ -93,7 +144,7 @@ const PhotoVideoLayout = ({ children }) => {
             </Link>
           </motion.div>
           <motion.div
-            variants={linkVariants}
+            variants={rightLinkVariants}
             className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
               isVideoAnalysisTab ? 'font-extrabold ring-blue-500' : 'font-bold'
             } text-white outline-none ring-2 hover:ring-blue-500`}
@@ -103,7 +154,7 @@ const PhotoVideoLayout = ({ children }) => {
             </Link>
           </motion.div>
         </motion.nav>
-      </section>
+      </motion.section>
 
       {children}
 

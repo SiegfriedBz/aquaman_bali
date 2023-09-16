@@ -51,7 +51,6 @@ export default function Home() {
   const aboutRef = useRef(null)
   const testimonialsRef = useRef(null)
   const visitRef = useRef(null)
-  const bookBtnRef = useRef(null)
 
   const aboutIsInView = useInView(aboutRef, { once: true, amount: 0.1 })
   const testimonialsIsInView = useInView(testimonialsRef, {
@@ -59,7 +58,28 @@ export default function Home() {
     amount: 0.1,
   })
   const visitIsInView = useInView(visitRef, { once: true, amount: 0.1 })
-  const bookBtnIsInView = useInView(bookBtnRef, { once: true, amount: 0.1 })
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.75,
+      },
+    },
+  }
+
+  const elementVariants = {
+    hidden: { opacity: 0, y: '24px' },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.25,
+      },
+    },
+  }
 
   return (
     <>
@@ -70,35 +90,36 @@ export default function Home() {
         <meta property='og:title' content={meta.title} />
       </Head>
       <main className='px-2'>
-        <section id='hero' className='flex flex-col items-center md:mb-12'>
+        <motion.section
+          variants={containerVariants}
+          initial='hidden'
+          animate='visible'
+          id='hero'
+          className='flex flex-col items-center md:mb-12'
+        >
           <div className='flex flex-col md:max-w-7xl md:flex-row md:items-center md:justify-between'>
-            <h1 className='bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text pb-2 pt-3 text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-7xl'>
+            <motion.h1
+              variants={elementVariants}
+              className='bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text pb-2 pt-3 text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-7xl'
+            >
               Upgrade
-            </h1>
+            </motion.h1>
             <motion.h2
               className='mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-6xl'
-              initial={{ opacity: 0 }}
-              transition={{ delay: 0.1, duration: 3 }}
-              animate={{ opacity: 1 }}
+              variants={elementVariants}
             >
               Your Surfing Skills
             </motion.h2>
             <motion.h2
               className='max-w-md text-center text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl'
-              initial={{ opacity: 0 }}
-              transition={{ delay: 0.5, duration: 3 }}
-              animate={{ opacity: 1 }}
+              variants={elementVariants}
             >
               Beginner to Advanced
             </motion.h2>
           </div>
 
           <div className='mt-5 flex flex-col items-center justify-between px-2 md:max-w-7xl md:flex-row md:gap-5 xl:max-w-xl'>
-            <motion.div
-              initial={{ opacity: 0 }}
-              transition={{ delay: 1.25, duration: 1.5 }}
-              animate={{ opacity: 1 }}
-            >
+            <motion.div variants={elementVariants}>
               <Carousel>
                 {TOP_IMAGES.map((src, i) => {
                   return (
@@ -119,9 +140,7 @@ export default function Home() {
             <div className='mt-5 flex flex-col items-center justify-between md:p-5'>
               <motion.h3
                 className='mb-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'
-                initial={{ opacity: 0 }}
-                transition={{ delay: 1.5, duration: 2 }}
-                animate={{ opacity: 1 }}
+                variants={elementVariants}
               >
                 Best Surf School in Bali
               </motion.h3>
@@ -129,15 +148,13 @@ export default function Home() {
                 className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
                 target='_blank'
-                initial={{ opacity: 0 }}
-                transition={{ delay: 2, duration: 2 }}
-                animate={{ opacity: 1 }}
+                variants={elementVariants}
               >
                 Book now
               </motion.a>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         <hr className='mx-5 my-5 bg-slate-950' />
 
