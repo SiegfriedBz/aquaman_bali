@@ -4,6 +4,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import RootLayout from '@/components/layouts/rootLayout'
 import generateSocialImage from '../utils/generateSocialImage'
+import Head from 'next/head'
 
 const socialImageConf = generateSocialImage({
   title: 'Aquaman Bali',
@@ -15,11 +16,17 @@ export default function App({ Component, pageProps }) {
   const Layout = Component.Layout || EmptyLayout
 
   return (
-    <RootLayout imageUrl={socialImageConf}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </RootLayout>
+    <>
+      <Head>
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <RootLayout imageUrl={socialImageConf}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </RootLayout>
+    </>
   )
 }
 

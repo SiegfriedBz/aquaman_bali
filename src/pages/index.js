@@ -30,7 +30,39 @@ const meta = {
   description: 'Aquaman Bali | Surf School & Surf Trips',
 }
 
-const titlesVariants = {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.75,
+    },
+  },
+}
+
+const childVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1.25,
+    },
+  },
+}
+
+const textVariants = {
+  hidden: { opacity: 0, y: '24px' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.25,
+    },
+  },
+}
+
+const sideSlideVariants = {
   hidden: {
     x: '-100vw',
     opacity: 0,
@@ -59,28 +91,6 @@ export default function Home() {
   })
   const visitIsInView = useInView(visitRef, { once: true, amount: 0.1 })
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1,
-        staggerChildren: 0.75,
-      },
-    },
-  }
-
-  const elementVariants = {
-    hidden: { opacity: 0, y: '24px' },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1.25,
-      },
-    },
-  }
-
   return (
     <>
       <Head>
@@ -99,31 +109,31 @@ export default function Home() {
         >
           <div className='flex flex-col md:max-w-7xl md:flex-row md:items-center md:justify-between'>
             <motion.h1
-              variants={elementVariants}
+              variants={textVariants}
               className='bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text pb-2 pt-3 text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-7xl'
             >
               Upgrade
             </motion.h1>
             <motion.h2
               className='mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-6xl'
-              variants={elementVariants}
+              variants={textVariants}
             >
               Your Surfing Skills
             </motion.h2>
             <motion.h2
               className='max-w-md text-center text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl'
-              variants={elementVariants}
+              variants={textVariants}
             >
               Beginner to Advanced
             </motion.h2>
           </div>
 
           <div className='mt-5 flex flex-col items-center justify-between px-2 md:max-w-7xl md:flex-row md:gap-5 xl:max-w-xl'>
-            <motion.div variants={elementVariants}>
+            <motion.div variants={childVariants}>
               <Carousel>
                 {TOP_IMAGES.map((src, i) => {
                   return (
-                    <div key={i} className={`${styles.embla__slide} h-56`}>
+                    <div key={i} className={`${styles.embla__slide} h-60`}>
                       <Image
                         src={src}
                         className='h-full rounded-lg object-cover shadow-lg'
@@ -140,7 +150,7 @@ export default function Home() {
             <div className='mt-5 flex flex-col items-center justify-between md:p-5'>
               <motion.h3
                 className='mb-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'
-                variants={elementVariants}
+                variants={textVariants}
               >
                 Best Surf School in Bali
               </motion.h3>
@@ -148,7 +158,7 @@ export default function Home() {
                 className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
                 target='_blank'
-                variants={elementVariants}
+                variants={textVariants}
               >
                 Book now
               </motion.a>
@@ -164,7 +174,7 @@ export default function Home() {
         >
           <span ref={aboutRef}>
             <motion.h2
-              variants={titlesVariants}
+              variants={sideSlideVariants}
               initial={!aboutIsInView && 'hidden'}
               animate={aboutIsInView && 'visible'}
               className='mb-3 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'
@@ -211,7 +221,7 @@ export default function Home() {
         <section id='testimonials' className='flex scroll-mt-20 flex-col'>
           <span ref={testimonialsRef}>
             <motion.h2
-              variants={titlesVariants}
+              variants={sideSlideVariants}
               initial={!testimonialsIsInView && 'hidden'}
               animate={testimonialsIsInView && 'visible'}
               className='text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'
@@ -235,7 +245,7 @@ export default function Home() {
         <section id='location' className='scroll-mt-20 dark:bg-slate-900'>
           <span ref={visitRef}>
             <motion.h2
-              variants={titlesVariants}
+              variants={sideSlideVariants}
               initial={!visitIsInView && 'hidden'}
               animate={visitIsInView && 'visible'}
               className='mb-3 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'

@@ -11,7 +11,7 @@ const SemiPrivate = () => {
       <p className='mb-2 text-center'>1 Coach & 2 Guests</p>
 
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-        <div className='mb-5 h-56'>
+        <div className='mb-5 h-60'>
           <Image
             src={lessonI}
             alt='lesson-group'

@@ -32,7 +32,7 @@ export default function RootLayout(props) {
       </Head>
 
       <AppContextProvider>
-        <div className='dark:bg-slate-900 dark:text-gray-200'>
+        <div className='min-w-full dark:bg-slate-900 dark:text-gray-200'>
           <Navbar />
           <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
           <main className='py-5'>{children}</main>
