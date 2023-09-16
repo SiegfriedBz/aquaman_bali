@@ -115,7 +115,7 @@ const Navbar = () => {
             </Link>
 
             <Link href='/videos' className='hover:opacity-90'>
-              Photo & Video | Drone
+              Photo | Video | Drone
             </Link>
 
             <Link href='/gallery' className=' hover:opacity-90'>
@@ -235,7 +235,7 @@ const Navbar = () => {
                 href='/videos'
                 className='w-full py-2 text-center hover:opacity-90'
               >
-                Photo & Video | Drone
+                Photo | Video | Drone
               </Link>
 
               <Link

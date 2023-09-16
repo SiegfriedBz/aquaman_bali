@@ -7,7 +7,6 @@ const meta = {
   title: 'Aquaman Bali | Surf School | Gallery',
   description: 'Best surf shots',
 }
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -91,12 +90,12 @@ const GalleryLayout = ({ children }) => {
         id='gallery'
         className='mb-3 flex w-full scroll-mt-20 flex-col items-center justify-center'
       >
-        <motion.h3
+        <motion.h2
           variants={textVariants}
           className='mb-2 text-center text-4xl font-bold dark:text-white'
         >
           Gallery
-        </motion.h3>
+        </motion.h2>
 
         <motion.h4
           variants={textVariants}
@@ -105,19 +104,12 @@ const GalleryLayout = ({ children }) => {
           Explore our best Photos & Videos
         </motion.h4>
 
-        <motion.div
-          variants={childVariants}
-          initial='hidden'
-          animate='visible'
-          className='mt-5 w-full'
-        >
+        <motion.div variants={childVariants} className='mt-5 w-full'>
           <motion.nav
             id='gallery-navigation'
             className='flex w-full items-center justify-around text-lg font-bold dark:text-white'
             aria-label='gallery-navigation'
             variants={navVariants}
-            initial='hidden'
-            animate='visible'
           >
             <motion.div
               variants={leftLinkVariants}
@@ -127,6 +119,7 @@ const GalleryLayout = ({ children }) => {
             >
               <Link href='/gallery'>Images</Link>
             </motion.div>
+
             <motion.div
               variants={rightLinkVariants}
               className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
@@ -138,14 +131,14 @@ const GalleryLayout = ({ children }) => {
           </motion.nav>
         </motion.div>
 
-        {!isVideoTab && (
-          <motion.div variants={childVariants} className='mx-2 mb-5 mt-3'>
-            {children}
-          </motion.div>
-        )}
+        <hr className='mb-3'></hr>
+
+        <motion.div variants={childVariants} className='mx-2'>
+          {!isVideoTab ? children : null}
+        </motion.div>
       </motion.section>
 
-      {isVideoTab && <div className='mx-2 mb-5 mt-3'>{children}</div>}
+      {isVideoTab && <div className='mx-2'>{children}</div>}
     </>
   )
 }

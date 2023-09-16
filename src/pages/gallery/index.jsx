@@ -55,7 +55,7 @@ const IMAGES = [
 
 const Gallery = () => {
   return (
-    <div className='grid grid-cols-1 gap-4 md:grid-cols-4'>
+    <div className='mt-3 grid grid-cols-1 gap-4 md:grid-cols-4'>
       {IMAGES.map((src, i) => {
         return (
           <div key={i} className='h-52'>

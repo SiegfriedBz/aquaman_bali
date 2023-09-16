@@ -5,9 +5,9 @@ import photoVideoImage from '../../../public/images/photo_video/photo-video.jpg'
 const Videos = () => {
   return (
     <section id='photo-video'>
-      <h2 className='mb-2 text-center text-3xl font-bold text-slate-900 dark:text-white'>
+      <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
         Photo & Video
-      </h2>
+      </h3>
       <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <Image
           src={photoVideoImage}

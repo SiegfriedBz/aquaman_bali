@@ -4,6 +4,11 @@ import { useRouter } from 'next/router'
 import { CldVideoPlayer } from 'next-cloudinary'
 import { motion } from 'framer-motion'
 
+const meta = {
+  title: 'Aquaman Bali | Surf School | Surf Lessons',
+  description: 'Aquaman Bali | Discover Our Surf Lessons Packages',
+}
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -67,11 +72,6 @@ const rightLinkVariants = {
   },
 }
 
-const meta = {
-  title: 'Aquaman Bali | Surf School | Surf Lessons',
-  description: 'Aquaman Bali | Discover Our Surf Lessons Packages',
-}
-
 const LessonsLayout = ({ children }) => {
   const router = useRouter()
   const isSemiPrivateTab = router.asPath.includes('/surf-lessons/semi-private')
@@ -92,12 +92,12 @@ const LessonsLayout = ({ children }) => {
         id='surf-lessons'
         className='mb-3 flex w-full scroll-mt-20 flex-col items-center justify-center'
       >
-        <motion.h3
+        <motion.h2
           variants={textVariants}
           className='mb-2 text-center text-4xl font-bold dark:text-white'
         >
           Surf Lessons
-        </motion.h3>
+        </motion.h2>
 
         <motion.h4
           variants={textVariants}
@@ -123,15 +123,16 @@ const LessonsLayout = ({ children }) => {
           >
             <motion.div
               variants={leftLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500  py-1 text-center ${
+              className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
                 !isSemiPrivateTab ? 'font-bold' : 'font-extrabold ring-blue-500'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
               <Link href='/surf-lessons'>Private</Link>
             </motion.div>
+
             <motion.div
               variants={rightLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500  py-1 text-center ${
+              className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
                 isSemiPrivateTab ? 'font-extrabold ring-blue-500' : 'font-bold'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
@@ -145,7 +146,7 @@ const LessonsLayout = ({ children }) => {
         </motion.div>
       </motion.section>
 
-      <div className='mb-3 px-2'>
+      <div className='mb-5 px-2'>
         <CldVideoPlayer
           id='rendy-teach-video-01'
           width='1920'

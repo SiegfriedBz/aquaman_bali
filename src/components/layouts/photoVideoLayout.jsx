@@ -20,7 +20,17 @@ const containerVariants = {
   },
 }
 
-const elementVariants = {
+const childVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1.25,
+    },
+  },
+}
+
+const textVariants = {
   hidden: { opacity: 0, y: '16px' },
   visible: {
     opacity: 1,
@@ -32,11 +42,11 @@ const elementVariants = {
 }
 
 const navVariants = {
-  hidden: { opacity: 1 },
+  hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.3,
+      delayChildren: 1.5,
       staggerChildren: 0.2,
     },
   },
@@ -81,28 +91,28 @@ const PhotoVideoLayout = ({ children }) => {
         initial='hidden'
         animate='visible'
         id='videos'
-        className='flex scroll-mt-20 flex-col items-center justify-center'
+        className='mb-3 flex w-full scroll-mt-20 flex-col items-center justify-center'
       >
         <motion.h2
-          variants={elementVariants}
-          className='text-center text-3xl font-bold text-slate-900 dark:text-white'
+          variants={textVariants}
+          className='mb-2 text-center text-4xl font-bold dark:text-white'
         >
-          Photo & Video | Drone
+          Photo | Video | Drone
         </motion.h2>
         <motion.h3
-          variants={elementVariants}
+          variants={textVariants}
           className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'
         >
           Get an amazing souvenir
         </motion.h3>
         <motion.h3
-          variants={elementVariants}
+          variants={textVariants}
           className='text-center text-2xl text-slate-900 dark:text-gray-200'
         >
           from your surf session
         </motion.h3>
         <motion.h4
-          variants={elementVariants}
+          variants={textVariants}
           className='text-center text-xl text-slate-900 dark:text-gray-200'
         >
           in Canggu & during your{' '}
@@ -113,52 +123,56 @@ const PhotoVideoLayout = ({ children }) => {
           </span>
         </motion.h4>
 
-        <motion.nav
-          variants={navVariants}
-          initial='hidden'
-          animate='visible'
-          id='videos-navigation'
-          className='my-5 flex w-full items-center justify-around text-sm font-bold dark:text-white'
-          aria-label='gallery-navigation'
-        >
-          <motion.div
-            variants={leftLinkVariants}
-            className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
-              !isWaterDroneTab || !isVideoAnalysisTab
-                ? 'font-extrabold ring-blue-500'
-                : 'font-bold'
-            } text-white outline-none ring-2 hover:ring-blue-500`}
+        <motion.div variants={childVariants} className='mt-5 w-full'>
+          <motion.nav
+            variants={navVariants}
+            id='videos-navigation'
+            className='flex w-full items-center justify-around text-sm font-bold dark:text-white'
+            aria-label='gallery-navigation'
           >
-            <Link href='/videos' className='px-1'>
-              Photos & Videos
-            </Link>
-          </motion.div>
-          <motion.div
-            variants={leftLinkVariants}
-            className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
-              isWaterDroneTab ? 'font-extrabold ring-blue-500' : 'font-bold'
-            } text-white outline-none ring-2 hover:ring-blue-500`}
-          >
-            <Link href='/videos/water-drone' className='px-1'>
-              Water & Drone
-            </Link>
-          </motion.div>
-          <motion.div
-            variants={rightLinkVariants}
-            className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-2 text-center ${
-              isVideoAnalysisTab ? 'font-extrabold ring-blue-500' : 'font-bold'
-            } text-white outline-none ring-2 hover:ring-blue-500`}
-          >
-            <Link href='/videos/video-analysis' className='px-1'>
-              Video Analysis
-            </Link>
-          </motion.div>
-        </motion.nav>
+            <motion.div
+              variants={leftLinkVariants}
+              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
+                !isWaterDroneTab || !isVideoAnalysisTab
+                  ? 'font-extrabold ring-blue-500'
+                  : 'font-bold'
+              } text-white outline-none ring-2 hover:ring-blue-500`}
+            >
+              <Link href='/videos' className='px-1'>
+                Photos & Videos
+              </Link>
+            </motion.div>
+            <motion.div
+              variants={leftLinkVariants}
+              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
+                isWaterDroneTab ? 'font-extrabold ring-blue-500' : 'font-bold'
+              } text-white outline-none ring-2 hover:ring-blue-500`}
+            >
+              <Link href='/videos/water-drone' className='px-1'>
+                Water & Drone
+              </Link>
+            </motion.div>
+            <motion.div
+              variants={rightLinkVariants}
+              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
+                isVideoAnalysisTab
+                  ? 'font-extrabold ring-blue-500'
+                  : 'font-bold'
+              } text-white outline-none ring-2 hover:ring-blue-500`}
+            >
+              <Link href='/videos/video-analysis' className='px-1'>
+                Video Analysis
+              </Link>
+            </motion.div>
+          </motion.nav>
+        </motion.div>
+
+        <motion.div variants={childVariants} className='my-3'>
+          {children}
+        </motion.div>
       </motion.section>
 
-      {children}
-
-      <div className='px-2 pb-2 pt-3'>
+      <div className='mb-5 px-2'>
         <CldVideoPlayer
           id='rendy-teach-video-01'
           width='1920'
