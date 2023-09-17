@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import LocationMap from '@/components/LocationMap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { mapMarkers } from '@/data/mapMarkers'
 import rendyTeach from '@/data/rendyTeach.json'
 import surfTrips from '@/data/surfTrips.json'
 const [_, cangguImg] = rendyTeach
