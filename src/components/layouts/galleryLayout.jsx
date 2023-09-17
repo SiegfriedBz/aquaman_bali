@@ -90,19 +90,19 @@ const GalleryLayout = ({ children }) => {
         id='gallery'
         className='mb-3 flex w-full scroll-mt-20 flex-col items-center justify-center'
       >
-        <motion.h2
+        <motion.h1
           variants={textVariants}
           className='mb-2 text-center text-4xl font-bold dark:text-white'
         >
           Gallery
-        </motion.h2>
+        </motion.h1>
 
-        <motion.h4
+        <motion.h2
           variants={textVariants}
           className='text-center text-xl text-slate-900 dark:text-gray-200'
         >
           Explore our best Photos & Videos
-        </motion.h4>
+        </motion.h2>
 
         <motion.div variants={childVariants} className='mt-5 w-full'>
           <motion.nav

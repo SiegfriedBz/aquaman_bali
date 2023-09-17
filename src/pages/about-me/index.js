@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
-import Carousel from '../../components/carousel'
+import Carousel from '../../components/Carousel'
 import styles from '../../components/carousel.module.css'
 import rendySurf from '@/data/rendySurf.json'
 import rendyKid from '@/data/rendyKid.json'
@@ -104,12 +104,12 @@ const About = () => {
         id='about-me'
         className='flex flex-col items-center justify-center'
       >
-        <motion.h3
+        <motion.h1
           variants={textVariants}
           className='mb-2 text-center text-4xl font-bold dark:text-white'
         >
           About Me
-        </motion.h3>
+        </motion.h1>
 
         <motion.div variants={childVariants} className='mx-2'>
           <Carousel>

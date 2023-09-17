@@ -44,9 +44,9 @@ const Navbar = () => {
             />
           </Link>
           <Link href='/' onClick={() => setMobileMenuIsOpen(false)}>
-            <h1 className='text-2xl font-extrabold text-slate-950 hover:text-slate-600 dark:text-white dark:hover:text-slate-200 md:text-3xl'>
+            <span className='text-2xl font-extrabold text-slate-950 hover:text-slate-600 dark:text-white dark:hover:text-slate-200 md:text-3xl'>
               Aquaman Bali
-            </h1>
+            </span>
           </Link>
         </div>
 

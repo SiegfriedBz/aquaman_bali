@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import LessonsLayout from '@/components/layouts/lessonsLayout'
-import Carousel from '@/components/carousel'
+import Carousel from '@/components/Carousel'
 import styles from '../../components/carousel.module.css'
 import rendyTeach from '@/data/rendyTeach.json'
 const [_, rendyTeach02, rendyTeach03] = rendyTeach
@@ -10,9 +10,9 @@ const privateLessonsImg = [rendyTeach02, rendyTeach03]
 const SurfLessons = () => {
   return (
     <section id='private' className='mb-2'>
-      <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
+      <h2 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
         Private Surf Lessons
-      </h3>
+      </h2>
       <p className='mb-2 text-center'>1 Coach & 1 Guest</p>
 
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>

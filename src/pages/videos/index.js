@@ -8,9 +8,9 @@ const [photoVideo, ,] = photoVideoDrone
 const Videos = () => {
   return (
     <section id='photo-video'>
-      <h3 className='mb-1 text-center text-2xl font-bold text-slate-900 dark:text-white'>
+      <h2 className='mb-1 text-center text-2xl font-bold text-slate-900 dark:text-white'>
         Photo & Video
-      </h3>
+      </h2>
 
       <p className='mb-2 text-center'>
         <Link href='/gallery/videos' className='underline underline-offset-4'>
@@ -25,7 +25,7 @@ const Videos = () => {
             height='600'
             src={photoVideo.image}
             alt={photoVideo.alt}
-            loading='lazy'
+            // loading='lazy'
             // sizes='100vw'
             className='h-full rounded-lg object-cover shadow-2xl'
           />

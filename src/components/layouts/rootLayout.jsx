@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { AppContextProvider } from '@/context/appContext'
 import { useRouter } from 'next/router'
-import Navbar from '../navbar'
-import Footer from '../footer'
+import Navbar from '../Navbar'
+import Footer from '../Footer'
 
 export default function RootLayout(props) {
   const { children, ...customMeta } = props

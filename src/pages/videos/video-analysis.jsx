@@ -10,9 +10,9 @@ const VideoAnalysis = () => {
       id='video-analysis'
       className='flex scroll-mt-20 flex-col items-center justify-center'
     >
-      <h3 className='mb-2 text-center text-2xl font-bold text-slate-900 dark:text-white'>
+      <h2 className='mb-2 text-center text-2xl font-bold text-slate-900 dark:text-white'>
         Video Analysis
-      </h3>
+      </h2>
 
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <div className='h-70 mb-5'>
@@ -21,7 +21,7 @@ const VideoAnalysis = () => {
             height='600'
             src={videoAnalysis.image}
             alt={videoAnalysis.alt}
-            loading='lazy'
+            // loading='lazy'
             // sizes='100vw'
             className='h-full rounded-lg object-cover shadow-2xl'
           />

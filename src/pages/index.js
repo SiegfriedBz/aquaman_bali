@@ -3,9 +3,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
-import Testimonials from '../components/testimonials'
+import Testimonials from '../components/Testimonials'
 import LocationMap from '../components/LocationMap'
-import Carousel from '@/components/carousel'
+import Carousel from '@/components/Carousel'
 import styles from '@/components/carousel.module.css'
 import rendyTeach from '@/data/rendyTeach.json'
 import rendySurf from '@/data/rendySurf.json'
@@ -180,7 +180,8 @@ export default function Home() {
                         height='600'
                         src={image.image}
                         alt={image.alt}
-                        loading='lazy'
+                        // loading='lazy'
+                        priority={true}
                         // sizes='100vw'
                         className='h-full rounded-lg object-cover shadow-2xl'
                       />
@@ -239,7 +240,8 @@ export default function Home() {
                         height='600'
                         src={image.image}
                         alt={image.alt}
-                        loading='lazy'
+                        priority={true}
+                        // loading='lazy'
                         // sizes='100vw'
                         className={`mx-auto h-[225px] w-[225px] rounded-full object-cover shadow-lg md:h-[265px] md:w-[265px] lg:h-[325px] lg:w-[325px]`}
                       />

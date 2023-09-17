@@ -93,25 +93,25 @@ const PhotoVideoLayout = ({ children }) => {
         id='videos'
         className='mb-3 flex w-full scroll-mt-20 flex-col items-center justify-center'
       >
-        <motion.h2
+        <motion.h1
           variants={textVariants}
           className='mb-2 text-center text-4xl font-bold dark:text-white'
         >
           Photo | Video | Drone
-        </motion.h2>
-        <motion.h3
+        </motion.h1>
+        <motion.h2
           variants={textVariants}
           className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'
         >
           Get an amazing souvenir
-        </motion.h3>
-        <motion.h3
+        </motion.h2>
+        <motion.h2
           variants={textVariants}
           className='text-center text-2xl text-slate-900 dark:text-gray-200'
         >
           from your surf session
-        </motion.h3>
-        <motion.h4
+        </motion.h2>
+        <motion.h3
           variants={textVariants}
           className='text-center text-xl text-slate-900 dark:text-gray-200'
         >
@@ -121,7 +121,7 @@ const PhotoVideoLayout = ({ children }) => {
               Surf Trips
             </Link>
           </span>
-        </motion.h4>
+        </motion.h3>
 
         <motion.div variants={childVariants} className='mt-5 w-full'>
           <motion.nav

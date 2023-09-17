@@ -54,7 +54,6 @@ const galleryImg = [
   rendySurf08,
   rendySurf09,
   rendySurf10,
-
   rendySurf12,
   rendySurf13,
   rendySurf14,

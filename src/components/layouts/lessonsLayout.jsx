@@ -92,14 +92,14 @@ const LessonsLayout = ({ children }) => {
         id='surf-lessons'
         className='mb-3 flex w-full scroll-mt-20 flex-col items-center justify-center'
       >
-        <motion.h2
+        <motion.h1
           variants={textVariants}
           className='mb-2 text-center text-4xl font-bold dark:text-white'
         >
           Surf Lessons
-        </motion.h2>
+        </motion.h1>
 
-        <motion.h4
+        <motion.h2
           variants={textVariants}
           className='text-center text-xl text-slate-900 dark:text-gray-200'
         >
@@ -112,7 +112,7 @@ const LessonsLayout = ({ children }) => {
               Surf Trips
             </Link>
           </span>
-        </motion.h4>
+        </motion.h2>
 
         <motion.div variants={childVariants} className='mt-5 w-full'>
           <motion.nav
