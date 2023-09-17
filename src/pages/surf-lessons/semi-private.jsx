@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import LessonsLayout from '@/components/layouts/lessonsLayout'
-import Carousel from '@/components/Carousel'
+import Carousel from '@/components/carousel'
 import styles from '../../components/carousel.module.css'
 import rendyTeach from '@/data/rendyTeach.json'
 const [

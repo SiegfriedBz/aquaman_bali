@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
-import Carousel from '../../components/Carousel'
+import Carousel from '../../components/carousel'
 import styles from '../../components/carousel.module.css'
 import rendySurf from '@/data/rendySurf.json'
 import rendyKid from '@/data/rendyKid.json'

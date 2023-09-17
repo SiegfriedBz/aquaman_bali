@@ -10,14 +10,14 @@ import Link from 'next/link'
 
 const MapPopup = ({ popup, isSurfTripsRoute }) => {
   return (
-    <div className='h-50 flex w-auto flex-col items-center justify-center text-slate-800 dark:text-white'>
+    <div className='flex h-64 w-auto flex-col items-center justify-center text-slate-800 dark:text-white'>
       <Image
-        width='400'
-        height='400'
+        width='600'
+        height='600'
         src={popup.image}
         alt={popup.alt}
         // loading='lazy'
-        className='w-full rounded-t-lg object-cover shadow-2xl'
+        className='h-full rounded-t-lg object-cover shadow-2xl'
       />
       <Footer location={popup.location} isSurfTripsRoute={isSurfTripsRoute}>
         <span className='text-lg text-slate-950 dark:text-white'>

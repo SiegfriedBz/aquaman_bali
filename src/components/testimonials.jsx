@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
-import Carousel from './Carousel'
+import Carousel from './carousel'
 import styles from './carousel.module.css'
 import GoogleIcon from '../../public/logos/google_g_icon.png'
 
