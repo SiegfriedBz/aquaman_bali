@@ -41,6 +41,13 @@ const textVariants = {
   },
 }
 
+const buttonVariants = {
+  inView: {
+    scale: 1.1,
+    transition: { duration: 3, type: 'spring', stiffness: 180 },
+  },
+}
+
 const SurfTrips = () => {
   const mapContainerRef = useRef(null)
   const { setShowPopup, setPopup } = useAppContext()
@@ -126,7 +133,8 @@ const SurfTrips = () => {
           We&apos;re here to make your journey as convenient as possible.
         </p>
         <motion.a
-          whileInView={{ scale: 1.1 }}
+          variants={buttonVariants}
+          whileInView='inView'
           viewport={{ margin: '-75px' }}
           className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
           href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -206,7 +214,8 @@ const SurfTrips = () => {
               sand beaches can become hazardous.
             </p>
             <motion.a
-              whileInView={{ scale: 1.1 }}
+              variants={buttonVariants}
+              whileInView='inView'
               viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -267,7 +276,8 @@ const SurfTrips = () => {
               Canggu takes a maximum of 2 hours by car or motorbike.
             </p>
             <motion.a
-              whileInView={{ scale: 1.1 }}
+              variants={buttonVariants}
+              whileInView='inView'
               viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -327,7 +337,8 @@ const SurfTrips = () => {
               depending on traffic.
             </p>
             <motion.a
-              whileInView={{ scale: 1.1 }}
+              variants={buttonVariants}
+              whileInView='inView'
               viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -397,7 +408,8 @@ const SurfTrips = () => {
               hours.
             </p>
             <motion.a
-              whileInView={{ scale: 1.1 }}
+              variants={buttonVariants}
+              whileInView='inView'
               viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -461,7 +473,8 @@ const SurfTrips = () => {
               about 1.5 hours, depending on traffic.
             </p>
             <motion.a
-              whileInView={{ scale: 1.1 }}
+              variants={buttonVariants}
+              whileInView='inView'
               viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -522,7 +535,8 @@ const SurfTrips = () => {
               relaxation.
             </p>
             <motion.a
-              whileInView={{ scale: 1.1 }}
+              variants={buttonVariants}
+              whileInView='inView'
               viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -584,7 +598,8 @@ const SurfTrips = () => {
               of all levels.
             </p>
             <motion.a
-              whileInView={{ scale: 1.1 }}
+              variants={buttonVariants}
+              whileInView='inView'
               viewport={{ margin: '-75px' }}
               className='mt-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'

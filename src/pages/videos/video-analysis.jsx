@@ -4,6 +4,13 @@ import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
 import photoVideoDrone from '@/data/photoVideoDrone.json'
 const [_, videoAnalysis] = photoVideoDrone
 
+const buttonVariants = {
+  inView: {
+    scale: 1.1,
+    transition: { duration: 3, type: 'spring', stiffness: 180 },
+  },
+}
+
 const VideoAnalysis = () => {
   return (
     <section
@@ -56,7 +63,8 @@ const VideoAnalysis = () => {
         </p>
 
         <motion.a
-          whileInView={{ scale: 1.1 }}
+          variants={buttonVariants}
+          whileInView='inView'
           viewport={{ margin: '-75px' }}
           className='mx-auto my-5 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
           href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'

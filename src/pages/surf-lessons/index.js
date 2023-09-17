@@ -7,6 +7,13 @@ import rendyTeach from '@/data/rendyTeach.json'
 const [_, rendyTeach02, rendyTeach03] = rendyTeach
 const privateLessonsImg = [rendyTeach02, rendyTeach03]
 
+const buttonVariants = {
+  inView: {
+    scale: 1.1,
+    transition: { duration: 3, type: 'spring', stiffness: 180 },
+  },
+}
+
 const SurfLessons = () => {
   return (
     <section id='private' className='mb-2'>
@@ -28,7 +35,6 @@ const SurfLessons = () => {
                   height='600'
                   src={image.image}
                   alt={image.alt}
-                  // loading='lazy'
                   className='h-full rounded-lg object-cover shadow-2xl'
                 />
               </div>
@@ -50,7 +56,8 @@ const SurfLessons = () => {
 
         <div className='mx-auto mb-5 mt-4 flex flex-col items-center'>
           <motion.a
-            whileInView={{ scale: 1.1 }}
+            variants={buttonVariants}
+            whileInView='inView'
             viewport={{ margin: '-75px' }}
             className='w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
             href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
@@ -132,7 +139,8 @@ const SurfLessons = () => {
 
         <div className='mx-auto mb-4 mt-5 flex flex-col items-center'>
           <motion.a
-            whileInView={{ scale: 1.1 }}
+            variants={buttonVariants}
+            whileInView='inView'
             viewport={{ margin: '-75px' }}
             className='w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
             href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'

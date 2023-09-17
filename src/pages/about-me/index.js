@@ -56,6 +56,13 @@ const meta = {
     'Discover the story of Rendy, a passionate surfer from Krui, South Sumatra. Join him to learn and improve your surfing skills!',
 }
 
+const buttonVariants = {
+  inView: {
+    scale: 1.1,
+    transition: { duration: 3, type: 'spring', stiffness: 180 },
+  },
+}
+
 const About = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -152,7 +159,8 @@ const About = () => {
             className='flex flex-col items-center'
           >
             <motion.a
-              whileInView={{ scale: 1.1 }}
+              variants={buttonVariants}
+              whileInView='inView'
               viewport={{ margin: '-75px' }}
               className='my-3 w-48 self-center rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'

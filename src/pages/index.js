@@ -114,6 +114,13 @@ const sideSlideVariants = {
   },
 }
 
+const buttonVariants = {
+  inView: {
+    scale: 1.1,
+    transition: { duration: 3, type: 'spring', stiffness: 180 },
+  },
+}
+
 const MotionLink = motion(Link)
 
 export default function Home() {
@@ -181,9 +188,7 @@ export default function Home() {
                         height='600'
                         src={image.image}
                         alt={image.alt}
-                        // loading='lazy'
                         priority={true}
-                        // sizes='100vw'
                         className='h-full rounded-lg object-cover shadow-2xl'
                       />
                     </div>
@@ -259,7 +264,8 @@ export default function Home() {
                 surf instructor at Batu Bolong Beach in Canggu.
               </p>
               <MotionLink
-                whileInView={{ scale: 1.1 }}
+                variants={buttonVariants}
+                whileInView='inView'
                 viewport={{ margin: '-75px' }}
                 className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:w-72 md:px-10 md:text-lg'
                 href='/about-me'
@@ -286,7 +292,8 @@ export default function Home() {
           </span>
 
           <motion.a
-            whileInView={{ scale: 1.1 }}
+            variants={buttonVariants}
+            whileInView='inView'
             viewport={{ margin: '-75px' }}
             className='my-3 w-48 self-center rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
             href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
