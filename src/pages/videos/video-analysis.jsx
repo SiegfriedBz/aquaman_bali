@@ -1,6 +1,8 @@
-import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
 import Image from 'next/image'
-import videoAnalysis from '../../../public/images/photo_video/video-analysis.jpg'
+import { motion } from 'framer-motion'
+import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
+import videosImg from '@/data/images/videosImg'
+const { videoAnalysisImg } = videosImg
 
 const VideoAnalysis = () => {
   return (
@@ -8,19 +10,20 @@ const VideoAnalysis = () => {
       id='video-analysis'
       className='flex scroll-mt-20 flex-col items-center justify-center'
     >
-      <h3 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
+      <h3 className='mb-2 text-center text-2xl font-bold text-slate-900 dark:text-white'>
         Video Analysis
       </h3>
 
-      <div className='mx-2 mb-3 flex flex-col items-start justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-        <Image
-          src={videoAnalysis}
-          width={325}
-          height={325}
-          alt='lesson-beginner'
-          className='mb-5 rounded-lg drop-shadow-xl'
-          quality={100}
-        />
+      <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
+        <div className='h-70 mb-5'>
+          <Image
+            src={videoAnalysisImg}
+            alt='lesson-beginner'
+            className='h-full rounded-lg object-cover shadow-2xl'
+            priority
+            quality={100}
+          />
+        </div>
 
         <p className='self-start font-bold dark:text-white'>Who is it for?</p>
         <p className='text-justify'>
@@ -50,13 +53,15 @@ const VideoAnalysis = () => {
           uploaded on WeTransfer for you to download on the same day
         </p>
 
-        <a
-          className='mx-auto my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+        <motion.a
+          whileInView={{ scale: 1.1 }}
+          viewport={{ margin: '-75px' }}
+          className='mx-auto my-5 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
           href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
           target='_blank'
         >
           Book now
-        </a>
+        </motion.a>
       </div>
     </section>
   )

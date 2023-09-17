@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+// import { Image } from 'next-cloudinary'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
 import Testimonials from '../components/testimonials'
@@ -8,22 +9,7 @@ import LocationMap from '../components/LocationMap'
 import Carousel from '@/components/carousel'
 import styles from '@/components/carousel.module.css'
 
-import RendySurfBSmall from '../../public/images/rendy/surf/rendy_surf_B_small.png'
-import RendySurfCSmall from '../../public/images/rendy/surf/rendy_surf_C_small.png'
-import RendySurfA from '../../public/images/rendy/surf/rendy_surf_A.jpg'
-import RendySurf11 from '../../public/images/rendy/surf/rendy_surf_11.jpg'
-import WaterGirl01 from '../../public/images/photo_video/water-photo.jpg'
-import WaterGirl02 from '../../public/images/lessons/girl_surf.jpg'
-import WaterGirl03 from '../../public/images/lessons/rendy_girl_01.jpg'
-
-const TOP_IMAGES = [
-  RendySurfA,
-  RendySurf11,
-  WaterGirl03,
-  WaterGirl01,
-  WaterGirl02,
-]
-const ABOUT_ME_IMAGES = [RendySurfBSmall, RendySurfCSmall]
+import { homeTopImg, homeAboutImg } from '@/data/images/homeImg'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Home',
@@ -79,6 +65,8 @@ const sideSlideVariants = {
   },
 }
 
+const MotionLink = motion(Link)
+
 export default function Home() {
   const aboutRef = useRef(null)
   const testimonialsRef = useRef(null)
@@ -131,15 +119,16 @@ export default function Home() {
           <div className='mt-5 flex flex-col items-center justify-between px-2 md:max-w-7xl md:flex-row md:gap-5 xl:max-w-xl'>
             <motion.div variants={childVariants}>
               <Carousel>
-                {TOP_IMAGES.map((src, i) => {
+                {homeTopImg.map((src, i) => {
                   return (
                     <div key={i} className={`${styles.embla__slide} h-60`}>
                       <Image
                         src={src}
+                        sizes='100vw'
                         className='h-full rounded-lg object-cover shadow-lg'
                         alt='surf-shots'
-                        priority={i <= 2}
-                        quality={100}
+                        // priority={i <= 2}
+                        // quality={100}
                       />
                     </div>
                   )
@@ -185,7 +174,7 @@ export default function Home() {
           <div className='flex flex-col items-center justify-center md:flex-row'>
             <div className='md:max-w-md xl:max-w-xl'>
               <Carousel>
-                {ABOUT_ME_IMAGES.map((src, i) => {
+                {homeAboutImg.map((src, i) => {
                   return (
                     <div key={i} className={styles.embla__slide}>
                       <Image
@@ -206,12 +195,14 @@ export default function Home() {
                 surfing at the age of 8 and came to Bali in 2019 to work as a
                 surf instructor at Batu Bolong Beach in Canggu.
               </p>
-              <Link
+              <MotionLink
+                whileInView={{ scale: 1.1 }}
+                viewport={{ margin: '-75px' }}
                 className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:w-72 md:px-10 md:text-lg'
                 href='/about-me'
               >
                 More about me
-              </Link>
+              </MotionLink>
             </div>
           </div>
         </section>
@@ -231,13 +222,15 @@ export default function Home() {
             <Testimonials />
           </span>
 
-          <a
+          <motion.a
+            whileInView={{ scale: 1.1 }}
+            viewport={{ margin: '-75px' }}
             className='my-3 w-48 self-center rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
             href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
             target='_blank'
           >
             Book now
-          </a>
+          </motion.a>
         </section>
 
         <hr className='mx-5 my-5 bg-slate-950' />

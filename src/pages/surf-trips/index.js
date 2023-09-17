@@ -6,14 +6,16 @@ import { motion } from 'framer-motion'
 import LocationMap from '@/components/LocationMap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
-import { MARKERS } from '@/data/markers'
-import CangguImage from '../../../public/images/lessons/girl_surf.jpg'
-import MedewiImage from '../../../public/images/spots/medewi_surf.jpg'
-import BalanganImage from '../../../public/images/spots/balangan_surf.jpg'
-import UluwatuImage from '../../../public/images/spots/uluwatu_surf.jpg'
-import SeranganImage from '../../../public/images/spots/serangan_surf.jpg'
-import NusaImage from '../../../public/images/spots/nusa_lumboga_surf.jpg'
-import LombokImage from '../../../public/images/spots/lombok_surf.jpg'
+import surfTripsImg from '@/data/images/surfTripsImg'
+const {
+  cangguImg,
+  medewiImg,
+  balanganImg,
+  uluwatuImg,
+  seranganImg,
+  nusaImg,
+  lombokImg,
+} = surfTripsImg
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Surf Trips',
@@ -31,7 +33,7 @@ const containerVariants = {
   },
 }
 
-const elementVariants = {
+const textVariants = {
   hidden: { opacity: 0, y: '16px' },
   visible: {
     opacity: 1,
@@ -48,7 +50,7 @@ const SurfTrips = () => {
 
   const handleSelectTrip = (spot) => {
     setShowPopup(true)
-    setPopup(MARKERS[spot])
+    setPopup(mapMarkers[spot])
     mapContainerRef?.current?.scrollIntoView()
   }
 
@@ -68,25 +70,25 @@ const SurfTrips = () => {
         className='flex scroll-mt-20 flex-col items-center justify-center'
       >
         <motion.h2
-          variants={elementVariants}
+          variants={textVariants}
           className='text-center text-4xl font-bold text-slate-900 dark:text-white'
         >
           Surf trips
         </motion.h2>
         <motion.h3
-          variants={elementVariants}
+          variants={textVariants}
           className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'
         >
           From Lombok to Sumatra
         </motion.h3>
         <motion.h4
-          variants={elementVariants}
+          variants={textVariants}
           className='text-center text-xl text-slate-900 dark:text-gray-200'
         >
           enjoy an amazing surf trip with Us
         </motion.h4>
         <motion.h4
-          variants={elementVariants}
+          variants={textVariants}
           className='my-5 text-center text-xl font-bold text-slate-900 dark:text-gray-200'
         >
           Starting from 500K IDR
@@ -126,13 +128,15 @@ const SurfTrips = () => {
         <p className='mx-2 my-2 text-center text-lg text-slate-900 dark:text-gray-200'>
           We&apos;re here to make your journey as convenient as possible.
         </p>
-        <a
+        <motion.a
+          whileInView={{ scale: 1.1 }}
+          viewport={{ margin: '-75px' }}
           className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
           href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
           target='_blank'
         >
           Book now
-        </a>
+        </motion.a>
       </motion.section>
 
       <hr className='mx-5 my-5 bg-slate-950' />
@@ -156,9 +160,9 @@ const SurfTrips = () => {
             />
             <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
-          <div className='h-52'>
+          <div className='my-3 h-52'>
             <Image
-              src={CangguImage}
+              src={cangguImg}
               alt='canggu'
               className='h-full rounded-lg object-cover shadow-2xl'
               priority
@@ -203,13 +207,15 @@ const SurfTrips = () => {
               all levels. However, during high surf conditions, the coral and
               sand beaches can become hazardous.
             </p>
-            <a
+            <motion.a
+              whileInView={{ scale: 1.1 }}
+              viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               target='_blank'
             >
               Book now
-            </a>
+            </motion.a>
           </div>
         </section>
 
@@ -227,9 +233,9 @@ const SurfTrips = () => {
             />
             <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
-          <div className='my-3 h-52'>
+          <div className='my-3 my-3 h-52'>
             <Image
-              src={MedewiImage}
+              src={medewiImg}
               alt='medewi'
               className='h-full rounded-lg object-cover shadow-2xl'
               priority
@@ -261,13 +267,15 @@ const SurfTrips = () => {
               intermediates, and those seeking expert advice. The journey from
               Canggu takes a maximum of 2 hours by car or motorbike.
             </p>
-            <a
+            <motion.a
+              whileInView={{ scale: 1.1 }}
+              viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               target='_blank'
             >
               Book now
-            </a>
+            </motion.a>
           </div>
         </section>
 
@@ -285,9 +293,9 @@ const SurfTrips = () => {
             />
             <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
-          <div className='h-52'>
+          <div className='my-3 h-52'>
             <Image
-              src={BalanganImage}
+              src={balanganImg}
               alt='balangan'
               className='h-full rounded-lg object-cover shadow-2xl'
               quality={100}
@@ -317,13 +325,15 @@ const SurfTrips = () => {
               journey from Canggu to Balangan takes approximately 1.5 hour,
               depending on traffic.
             </p>
-            <a
+            <motion.a
+              whileInView={{ scale: 1.1 }}
+              viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               target='_blank'
             >
               Book now
-            </a>
+            </motion.a>
           </div>
         </section>
 
@@ -341,9 +351,9 @@ const SurfTrips = () => {
             />
             <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
-          <div className='h-52'>
+          <div className='my-3 h-52'>
             <Image
-              src={UluwatuImage}
+              src={uluwatuImg}
               alt='uluwatu'
               className='h-full rounded-lg object-cover shadow-2xl'
               quality={100}
@@ -383,13 +393,15 @@ const SurfTrips = () => {
               and Balangan Beach. The journey from Canggu can take up to 1.5
               hours.
             </p>
-            <a
+            <motion.a
+              whileInView={{ scale: 1.1 }}
+              viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               target='_blank'
             >
               Book now
-            </a>
+            </motion.a>
           </div>
         </section>
 
@@ -407,9 +419,9 @@ const SurfTrips = () => {
             />
             <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
-          <div className='h-52'>
+          <div className='my-3 h-52'>
             <Image
-              src={SeranganImage}
+              src={seranganImg}
               alt='serangan'
               className='h-full w-full rounded-lg object-cover shadow-2xl'
               quality={100}
@@ -443,13 +455,15 @@ const SurfTrips = () => {
               an adventure will enjoy Serangan. The journey from Canggu takes
               about 1.5 hours, depending on traffic.
             </p>
-            <a
+            <motion.a
+              whileInView={{ scale: 1.1 }}
+              viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               target='_blank'
             >
               Book now
-            </a>
+            </motion.a>
           </div>
         </section>
 
@@ -467,9 +481,9 @@ const SurfTrips = () => {
             />
             <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
-          <div className='h-52'>
+          <div className='my-3 h-52'>
             <Image
-              src={NusaImage}
+              src={nusaImg}
               alt='nusa-lumboga'
               className='h-full rounded-lg object-cover shadow-2xl'
               quality={100}
@@ -500,13 +514,15 @@ const SurfTrips = () => {
               boat. Nusa Penida, nearby, is also fantastic for surfing and
               relaxation.
             </p>
-            <a
+            <motion.a
+              whileInView={{ scale: 1.1 }}
+              viewport={{ margin: '-75px' }}
               className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               target='_blank'
             >
               Book now
-            </a>
+            </motion.a>
           </div>
         </section>
 
@@ -524,9 +540,9 @@ const SurfTrips = () => {
             />
             <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
-          <div className='h-52'>
+          <div className='my-3 h-52'>
             <Image
-              src={LombokImage}
+              src={lombokImg}
               alt='lombok'
               className='h-full rounded-lg object-cover shadow-2xl'
               quality={100}
@@ -558,13 +574,15 @@ const SurfTrips = () => {
               International Airport. Lombok is an excellent choice for surfers
               of all levels.
             </p>
-            <a
+            <motion.a
+              whileInView={{ scale: 1.1 }}
+              viewport={{ margin: '-75px' }}
               className='mt-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               target='_blank'
             >
               Book now
-            </a>
+            </motion.a>
           </div>
         </section>
       </div>

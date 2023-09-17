@@ -3,7 +3,7 @@ import Map, { Marker, Popup } from 'react-map-gl'
 import { useRouter } from 'next/router'
 import { useAppContext } from '@/context/appContext'
 import MapPopup from './MapPopup'
-import { MARKERS } from '@/data/markers'
+import { mapMarkers } from '@/data/mapMarkers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons'
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -27,7 +27,7 @@ export default function LocationMap() {
   }, [showPopup, popup])
 
   const handleSetPopup = (spot) => {
-    setPopup(MARKERS[spot])
+    setPopup(mapMarkers[spot])
     setShowPopup(true)
   }
 
@@ -38,8 +38,8 @@ export default function LocationMap() {
       ref={mapRef}
       mapboxAccessToken={MAPBOX_TOKEN}
       initialViewState={{
-        latitude: MARKERS.canggu.latitude,
-        longitude: MARKERS.canggu.longitude,
+        latitude: mapMarkers.canggu.latitude,
+        longitude: mapMarkers.canggu.longitude,
         zoom: isSurfTripsRoute ? 6 : 10,
       }}
       style={{ width: 'auto', height: 400 }}
@@ -60,7 +60,7 @@ export default function LocationMap() {
         </Popup>
       )}
 
-      {Object.entries(MARKERS).map(([spot, values]) => {
+      {Object.entries(mapMarkers).map(([spot, values]) => {
         return (
           <div key={spot} id={spot} onMouseEnter={() => handleSetPopup(spot)}>
             <Marker

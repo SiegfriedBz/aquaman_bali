@@ -1,7 +1,9 @@
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import LessonsLayout from '@/components/layouts/lessonsLayout'
-// import teach01 from '../../../public/images/lessons/teach_01.jpg'
-import lessonI from '../../../public/images/lessons/surf-lesson-intermediate.jpg'
+import { privateLessonsImg } from '@/data/images/surfLessonsImg'
+import Carousel from '@/components/carousel'
+import styles from '../../components/carousel.module.css'
 
 const SurfLessons = () => {
   return (
@@ -12,15 +14,21 @@ const SurfLessons = () => {
       <p className='mb-2 text-center'>1 Coach & 1 Guest</p>
 
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-        <div className='mb-5 h-60'>
-          <Image
-            src={lessonI}
-            alt='lesson-private'
-            className='h-full rounded-lg object-cover shadow-2xl'
-            priority
-            quality={100}
-          />
-        </div>
+        <Carousel>
+          {privateLessonsImg.map((src, i) => {
+            return (
+              <div key={i} className={`${styles.embla__slide} mb-2 mt-1 h-72`}>
+                <Image
+                  src={src}
+                  alt='lesson-private'
+                  className='h-full rounded-lg object-cover shadow-2xl'
+                  priority
+                  quality={100}
+                />
+              </div>
+            )
+          })}
+        </Carousel>
 
         <p className='my-2 w-full text-2xl font-bold'>1 Surf Lesson</p>
         <p className='w-full text-lg font-bold'>2 hours: 400K IDR (USD 26)</p>
@@ -35,13 +43,15 @@ const SurfLessons = () => {
         </p>
 
         <div className='mx-auto mb-5 mt-4 flex flex-col items-center'>
-          <a
+          <motion.a
+            whileInView={{ scale: 1.1 }}
+            viewport={{ margin: '-75px' }}
             className='w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
             href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
             target='_blank'
           >
             Book now
-          </a>
+          </motion.a>
         </div>
 
         <div id='private-beginner'>
@@ -115,13 +125,15 @@ const SurfLessons = () => {
         </ul>
 
         <div className='mx-auto mb-4 mt-5 flex flex-col items-center'>
-          <a
+          <motion.a
+            whileInView={{ scale: 1.1 }}
+            viewport={{ margin: '-75px' }}
             className='w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
             href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
             target='_blank'
           >
             Book now
-          </a>
+          </motion.a>
         </div>
       </div>
     </section>
