@@ -52,7 +52,8 @@ const aboutMeImg = [
 
 const meta = {
   title: 'Aquaman Bali | Surf School | About me',
-  description: 'Discover My Story',
+  description:
+    'Discover the story of Rendy, a passionate surfer from Krui, South Sumatra. Join him to learn and improve your surfing skills!',
 }
 
 const About = () => {

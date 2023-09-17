@@ -6,7 +6,8 @@ import { motion } from 'framer-motion'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Surf Lessons',
-  description: 'Aquaman Bali | Discover Our Surf Lessons Packages',
+  description:
+    'Discover our Private and Semi-Private Surf Lessons with experienced instructors. Learn to ride the waves, from beginner basics to advanced techniques. Book your session now!',
 }
 
 const containerVariants = {

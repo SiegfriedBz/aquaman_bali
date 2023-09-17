@@ -5,8 +5,9 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
 const meta = {
-  title: 'Aquaman Bali | Surf School | Photo & Video | Drone',
-  description: 'Discover Our Photo & Video Packages',
+  title: 'Aquaman Bali | Surf School | Photo | Video | Drone',
+  description:
+    'Capture the thrill of your surf sessions with our professional photo and video services. From beginners to experts, preserve your surf memories. Book now!',
 }
 
 const containerVariants = {

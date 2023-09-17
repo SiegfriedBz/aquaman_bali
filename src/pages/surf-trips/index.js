@@ -15,7 +15,8 @@ const [medewiImg, lombokImg, nusaImg, seranganImg, uluwatuImg, balanganImg] =
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Surf Trips',
-  description: 'Discover Our Surf Trips in Indonesia',
+  description:
+    'Explore Exciting Surf Journeys in Indonesia with Aquaman Bali - Book Now!"',
 }
 
 const containerVariants = {
