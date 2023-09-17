@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
-import videosImg from '@/data/images/videosImg'
-const { waterPhotoImg } = videosImg
+import photoVideoDrone from '@/data/photoVideoDrone.json'
+const [, , waterPhoto] = photoVideoDrone
 
 const WaterDrone = () => {
   return (
@@ -16,11 +16,12 @@ const WaterDrone = () => {
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <div className='h-70 mb-5'>
           <Image
-            src={waterPhotoImg}
-            alt='photos-videos-drone'
+            width='600'
+            height='600'
+            src={waterPhoto.image}
+            alt={waterPhoto.alt}
+            // loading='lazy'
             className='h-full rounded-lg object-cover shadow-2xl'
-            priority
-            quality={100}
           />
         </div>
 

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "alt": "Medewi",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946301/rendy/spots/medewi.jpg"
+  },
+  {
+    "id": 2,
+    "alt": "Lombok",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946278/rendy/spots/lombok.gif"
+  },
+  {
+    "id": 3,
+    "alt": "Nuasa Lumboga",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946265/rendy/spots/nusa_lumboga.jpg"
+  },
+  {
+    "id": 4,
+    "alt": "Serangan",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946263/rendy/spots/serangan.jpg"
+  },
+  {
+    "id": 5,
+    "alt": "Uluwatu",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946262/rendy/spots/uluwatu.webp"
+  },
+  {
+    "id": 6,
+    "alt": "Balangan",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946261/rendy/spots/balangan.jpg"
+  }
+]

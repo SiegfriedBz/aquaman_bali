@@ -1,21 +1,16 @@
 import { useRef } from 'react'
-import { useAppContext } from '@/context/appContext'
 import Image from 'next/image'
 import Head from 'next/head'
+import { useAppContext } from '@/context/appContext'
 import { motion } from 'framer-motion'
 import LocationMap from '@/components/LocationMap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
-import surfTripsImg from '@/data/images/surfTripsImg'
-const {
-  cangguImg,
-  medewiImg,
-  balanganImg,
-  uluwatuImg,
-  seranganImg,
-  nusaImg,
-  lombokImg,
-} = surfTripsImg
+import rendyTeach from '@/data/rendyTeach.json'
+import surfTrips from '@/data/surfTrips.json'
+const [_, cangguImg] = rendyTeach
+const [medewiImg, lombokImg, nusaImg, seranganImg, uluwatuImg, balanganImg] =
+  surfTrips
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Surf Trips',
@@ -162,11 +157,12 @@ const SurfTrips = () => {
           </div>
           <div className='my-3 h-52'>
             <Image
-              src={cangguImg}
-              alt='canggu'
+              width='600'
+              height='600'
+              src={cangguImg.image}
+              alt={cangguImg.alt}
+              // loading='lazy'
               className='h-full rounded-lg object-cover shadow-2xl'
-              priority
-              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -233,13 +229,14 @@ const SurfTrips = () => {
             />
             <span className='text-lg hover:text-gray-300'>See on map</span>
           </div>
-          <div className='my-3 my-3 h-52'>
+          <div className='my-3 h-52'>
             <Image
-              src={medewiImg}
-              alt='medewi'
+              width='600'
+              height='600'
+              src={medewiImg.image}
+              alt={medewiImg.alt}
+              // loading='lazy'
               className='h-full rounded-lg object-cover shadow-2xl'
-              priority
-              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -295,10 +292,12 @@ const SurfTrips = () => {
           </div>
           <div className='my-3 h-52'>
             <Image
-              src={balanganImg}
-              alt='balangan'
+              width='600'
+              height='600'
+              src={balanganImg.image}
+              alt={balanganImg.alt}
+              // loading='lazy'
               className='h-full rounded-lg object-cover shadow-2xl'
-              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -353,10 +352,12 @@ const SurfTrips = () => {
           </div>
           <div className='my-3 h-52'>
             <Image
-              src={uluwatuImg}
-              alt='uluwatu'
+              width='600'
+              height='600'
+              src={uluwatuImg.image}
+              alt={uluwatuImg.alt}
+              // loading='lazy'
               className='h-full rounded-lg object-cover shadow-2xl'
-              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -421,10 +422,12 @@ const SurfTrips = () => {
           </div>
           <div className='my-3 h-52'>
             <Image
-              src={seranganImg}
-              alt='serangan'
-              className='h-full w-full rounded-lg object-cover shadow-2xl'
-              quality={100}
+              width='600'
+              height='600'
+              src={seranganImg.image}
+              alt={seranganImg.alt}
+              // loading='lazy'
+              className='h-full rounded-lg object-cover shadow-2xl'
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -470,7 +473,7 @@ const SurfTrips = () => {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='nusa-lumboga' className='scroll-mt-20'>
-          <h2 className='text-3xl font-semibold'>Nusa Lembongan (near Bali)</h2>
+          <h2 className='text-3xl font-semibold'>Nusa Lembongan</h2>
           <div
             className='my-2 flex items-center'
             onClick={() => handleSelectTrip('nusa')}
@@ -483,10 +486,12 @@ const SurfTrips = () => {
           </div>
           <div className='my-3 h-52'>
             <Image
-              src={nusaImg}
-              alt='nusa-lumboga'
+              width='600'
+              height='600'
+              src={nusaImg.image}
+              alt={nusaImg.alt}
+              // loading='lazy'
               className='h-full rounded-lg object-cover shadow-2xl'
-              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>
@@ -529,7 +534,7 @@ const SurfTrips = () => {
         <hr className='mx-5 my-5 bg-slate-950' />
 
         <section id='lombok' className='scroll-mt-20'>
-          <h2 className='text-3xl font-semibold'>Lombok Island (near Bali)</h2>{' '}
+          <h2 className='text-3xl font-semibold'>Lombok Island</h2>
           <div
             className='my-2 flex items-center'
             onClick={() => handleSelectTrip('lombok')}
@@ -542,10 +547,12 @@ const SurfTrips = () => {
           </div>
           <div className='my-3 h-52'>
             <Image
-              src={lombokImg}
-              alt='lombok'
+              width='600'
+              height='600'
+              src={lombokImg.image}
+              alt={lombokImg.alt}
+              // loading='lazy'
               className='h-full rounded-lg object-cover shadow-2xl'
-              quality={100}
             />
           </div>
           <div className='my-5 flex flex-col items-center justify-center'>

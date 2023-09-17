@@ -1,15 +1,63 @@
-import { useRef } from 'react'
+import { useRef, useId } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
 import Testimonials from '../components/testimonials'
 import LocationMap from '../components/LocationMap'
 import Carousel from '@/components/carousel'
 import styles from '@/components/carousel.module.css'
+import rendyTeach from '@/data/rendyTeach.json'
+import rendySurf from '@/data/rendySurf.json'
+const [
+  rendyTeach01,
+  rendyTeach02,
+  rendyTeach03,
+  rendyTeach04,
+  rendyTeach05,
+  rendyTeach06,
+  rendyTeach07,
+] = rendyTeach
 
-import { homeTopImg, homeAboutImg } from '@/data/images/homeImg'
+const [
+  rendySurf01,
+  rendySurf01Small,
+  rendySurf02,
+  rendySurf02Small,
+  rendySurf03,
+  rendySurf03Small,
+  rendySurf04,
+  rendySurf04Small,
+  rendySurf05,
+  rendySurf06,
+  rendySurf07,
+  rendySurf08,
+  rendySurf09,
+  rendySurf10,
+  rendySurf10Small,
+  rendySurf11,
+  rendySurf12,
+  rendySurf13,
+  rendySurf14,
+] = rendySurf
+
+const heroImg = [
+  rendySurf01,
+  rendyTeach04,
+  rendySurf05,
+  rendyTeach07,
+  rendySurf11,
+  rendyTeach03,
+  rendySurf02,
+]
+
+const aboutMeImg = [
+  rendySurf01Small,
+  rendySurf02Small,
+  rendySurf03Small,
+  rendySurf04Small,
+  rendySurf10Small,
+]
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Home',
@@ -68,6 +116,8 @@ const sideSlideVariants = {
 const MotionLink = motion(Link)
 
 export default function Home() {
+  const topId = useId()
+  const aboutId = useId()
   const aboutRef = useRef(null)
   const testimonialsRef = useRef(null)
   const visitRef = useRef(null)
@@ -119,16 +169,20 @@ export default function Home() {
           <div className='mt-5 flex flex-col items-center justify-between px-2 md:max-w-7xl md:flex-row md:gap-5 xl:max-w-xl'>
             <motion.div variants={childVariants}>
               <Carousel>
-                {homeTopImg.map((src, i) => {
+                {heroImg.map((image) => {
                   return (
-                    <div key={i} className={`${styles.embla__slide} h-60`}>
+                    <div
+                      key={`${topId}-top-${image.image}`}
+                      className={`${styles.embla__slide} h-60`}
+                    >
                       <Image
-                        src={src}
-                        sizes='100vw'
-                        className='h-full rounded-lg object-cover shadow-lg'
-                        alt='surf-shots'
-                        // priority={i <= 2}
-                        // quality={100}
+                        width='600'
+                        height='600'
+                        src={image.image}
+                        alt={image.alt}
+                        loading='lazy'
+                        // sizes='100vw'
+                        className='h-full rounded-lg object-cover shadow-2xl'
                       />
                     </div>
                   )
@@ -174,14 +228,20 @@ export default function Home() {
           <div className='flex flex-col items-center justify-center md:flex-row'>
             <div className='md:max-w-md xl:max-w-xl'>
               <Carousel>
-                {homeAboutImg.map((src, i) => {
+                {aboutMeImg.map((image) => {
                   return (
-                    <div key={i} className={styles.embla__slide}>
+                    <div
+                      key={`${aboutId}-about-${image.image}`}
+                      className={styles.embla__slide}
+                    >
                       <Image
-                        src={src}
+                        width='600'
+                        height='600'
+                        src={image.image}
+                        alt={image.alt}
+                        loading='lazy'
+                        // sizes='100vw'
                         className={`mx-auto h-[225px] w-[225px] rounded-full object-cover shadow-lg md:h-[265px] md:w-[265px] lg:h-[325px] lg:w-[325px]`}
-                        alt='rendy-surf'
-                        quality={100}
                       />
                     </div>
                   )

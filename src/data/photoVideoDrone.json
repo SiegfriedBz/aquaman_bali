@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "alt": "photo-video",
+    "tag": "photo-video",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946611/rendy/photo_video/photo-video.webp"
+  },
+  {
+    "id": 2,
+    "alt": "Video-analysis",
+    "tag": "Video-analysis",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946610/rendy/photo_video/video-analysis.webp"
+  },
+  {
+    "id": 3,
+    "alt": "Water-photo",
+    "tag": "Water-photo",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946608/rendy/photo_video/water-photo.webp"
+  }
+]

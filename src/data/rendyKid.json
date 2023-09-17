@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "alt": "Rendy kid",
+    "tag": "Rendy kid 01",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946644/rendy/rendy_surf/rendy_surf_kid_01.jpg"
+  },
+  {
+    "id": 2,
+    "alt": "Rendy kid",
+    "tag": "Rendy kid 02",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946642/rendy/rendy_surf/rendy_surf_kid_02.jpg"
+  },
+  {
+    "id": 3,
+    "alt": "Rendy kid",
+    "tag": "Rendy kid 03",
+    "image": "https://res.cloudinary.com/dygpd9pkl/image/upload/v1694946640/rendy/rendy_surf/rendy_surf_kid_03.jpg"
+  }
+]

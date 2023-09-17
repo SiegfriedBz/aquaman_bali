@@ -1,9 +1,54 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
-import aboutMeImg from '@/data/images/aboutMeImg'
 import Carousel from '../../components/carousel'
 import styles from '../../components/carousel.module.css'
+import rendySurf from '@/data/rendySurf.json'
+import rendyKid from '@/data/rendyKid.json'
+
+const [rendyKid01, rendyKid02, rendyKid03] = rendyKid
+
+const [
+  rendySurf01,
+  rendySurf01Small,
+  rendySurf02,
+  rendySurf02Small,
+  rendySurf03,
+  rendySurf03Small,
+  rendySurf04,
+  rendySurf04Small,
+  rendySurf05,
+  rendySurf06,
+  rendySurf07,
+  rendySurf08,
+  rendySurf09,
+  rendySurf10,
+  rendySurf10Small,
+  rendySurf11,
+  rendySurf12,
+  rendySurf13,
+  rendySurf14,
+] = rendySurf
+
+const aboutMeImg = [
+  rendySurf14,
+  rendySurf01,
+  rendySurf03,
+  rendyKid01,
+  rendyKid02,
+  rendyKid03,
+  rendySurf02,
+  rendySurf04,
+  rendySurf05,
+  rendySurf06,
+  rendySurf07,
+  rendySurf08,
+  rendySurf09,
+  rendySurf10,
+  rendySurf11,
+  rendySurf12,
+  rendySurf13,
+]
 
 const meta = {
   title: 'Aquaman Bali | Surf School | About me',
@@ -68,31 +113,35 @@ const About = () => {
 
         <motion.div variants={childVariants} className='mx-2'>
           <Carousel>
-            {aboutMeImg.map((src, i) => {
+            {aboutMeImg.map((image) => {
               return (
-                <div key={i} className={`${styles.embla__slide} my-3 h-80`}>
+                <div
+                  key={image.id}
+                  className={`${styles.embla__slide} my-3 h-80`}
+                >
                   <Image
-                    src={src}
-                    alt='rendy'
-                    className='h-full rounded-md object-cover shadow-2xl'
-                    priority={i <= 2}
-                    quality={100}
+                    width='600'
+                    height='600'
+                    src={image.image}
+                    alt={image.alt}
+                    // loading='lazy'
+                    className='h-full rounded-lg object-cover shadow-2xl'
                   />
                 </div>
               )
             })}
           </Carousel>
 
-          <motion.p variants={childVariants} className='my-3 px-2 text-justify'>
+          <motion.p variants={childVariants} className='my-3 px-1 text-justify'>
             My name is Rendy and I am from Krui, South Sumatra. I started
             surfing at the age of 8 and came to Bali in 2019 to work as a surf
             instructor at Batu Bolong Beach in Canggu.
           </motion.p>
-          <motion.p variants={childVariants} className='my-3 px-2 text-justify'>
+          <motion.p variants={childVariants} className='my-3 px-1 text-justify'>
             Batu Bolong is an easy place to learn surfing as a beginner but is
             also good for intermediate surfers.
           </motion.p>
-          <motion.p variants={childVariants} className='my-3 px-2 text-justify'>
+          <motion.p variants={childVariants} className='my-3 px-1 text-justify'>
             I really love surfing and want to share my experience, knowledge and
             stoke of surfing with you. It is a lot of fun. Come join me and
             let&apos;s enjoy the waves and make you reach your goals in surfing!

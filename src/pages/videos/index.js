@@ -1,21 +1,19 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
-import videosImg from '@/data/images/videosImg'
-import Link from 'next/link'
-const { photoVideoImg } = videosImg
+import photoVideoDrone from '@/data/photoVideoDrone.json'
+const [photoVideo, ,] = photoVideoDrone
 
 const Videos = () => {
   return (
     <section id='photo-video'>
-      <h3 className='mb-2 text-center text-2xl font-bold text-slate-900 dark:text-white'>
+      <h3 className='mb-1 text-center text-2xl font-bold text-slate-900 dark:text-white'>
         Photo & Video
       </h3>
+
       <p className='mb-2 text-center'>
-        <Link
-          href='/gallery/videos'
-          className='mb-2 underline underline-offset-4'
-        >
+        <Link href='/gallery/videos' className='underline underline-offset-4'>
           Check our Videos
         </Link>
       </p>
@@ -23,11 +21,13 @@ const Videos = () => {
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <div className='h-70 mb-5'>
           <Image
-            src={photoVideoImg}
-            alt='photos-videos-drone'
+            width='600'
+            height='600'
+            src={photoVideo.image}
+            alt={photoVideo.alt}
+            loading='lazy'
+            // sizes='100vw'
             className='h-full rounded-lg object-cover shadow-2xl'
-            priority
-            quality={100}
           />
         </div>
 

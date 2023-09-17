@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import LessonsLayout from '@/components/layouts/lessonsLayout'
-import { privateLessonsImg } from '@/data/images/surfLessonsImg'
 import Carousel from '@/components/carousel'
 import styles from '../../components/carousel.module.css'
+import rendyTeach from '@/data/rendyTeach.json'
+const [_, rendyTeach02, rendyTeach03] = rendyTeach
+const privateLessonsImg = [rendyTeach02, rendyTeach03]
 
 const SurfLessons = () => {
   return (
@@ -15,15 +17,19 @@ const SurfLessons = () => {
 
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <Carousel>
-          {privateLessonsImg.map((src, i) => {
+          {privateLessonsImg.map((image) => {
             return (
-              <div key={i} className={`${styles.embla__slide} mb-2 mt-1 h-72`}>
+              <div
+                key={image.id}
+                className={`${styles.embla__slide} mb-2 mt-1 h-72`}
+              >
                 <Image
-                  src={src}
-                  alt='lesson-private'
+                  width='600'
+                  height='600'
+                  src={image.image}
+                  alt={image.alt}
+                  // loading='lazy'
                   className='h-full rounded-lg object-cover shadow-2xl'
-                  priority
-                  quality={100}
                 />
               </div>
             )

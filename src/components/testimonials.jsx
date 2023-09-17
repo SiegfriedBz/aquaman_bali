@@ -27,7 +27,7 @@ const QUOTES = [
 ]
 
 const renderStars = Array.from({ length: 5 }).map((_, i) => {
-  return <FontAwesomeIcon key={i} icon={faStar} />
+  return <FontAwesomeIcon key={`star-${i}`} icon={faStar} />
 })
 
 const Testimonials = () => {
@@ -37,7 +37,7 @@ const Testimonials = () => {
         <Carousel>
           {QUOTES.map((quote, i) => {
             return (
-              <div key={i} className={styles.embla__slide}>
+              <div key={`quote-${i}`} className={styles.embla__slide}>
                 <figure className='mb-4'>
                   <blockquote className='relative rounded-3xl py-6 pl-12 pr-8 '>
                     <p className='mx-2 mt-2 px-2 text-left text-2xl text-slate-900 before:absolute before:left-0 before:top-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-slate-600 before:opacity-25 before:content-["\201C"] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-slate-600 after:opacity-25 after:content-["\201D"] dark:text-slate-400 sm:text-3xl'>
