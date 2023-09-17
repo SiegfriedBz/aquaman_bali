@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-// import { Image } from 'next-cloudinary'
+import { CldImage } from 'next-cloudinary'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
 import Testimonials from '../components/testimonials'

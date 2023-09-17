@@ -10,18 +10,17 @@ const {
 } = rendySurfImg
 const {
   teach01,
-  teach02,
   teach03,
   teach04,
   teach05,
-  teach06,
+  // teach06,
   teach07,
   teach08,
 } = teachAllImg
 
 const homeTopImg = [
   rendySurfA,
-  teach06,
+  // teach06,
   rendySurf11,
   teach08,
   rendySurfC,
