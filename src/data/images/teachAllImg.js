@@ -9,11 +9,11 @@ import teach08 from '../../../public/images/teach/teach_08.jpg'
 
 const teachAllImg = {
   teach01,
-  teach02,
+  // teach02,
   teach03,
   teach04,
   teach05,
-  teach06,
+  // teach06,
   teach07,
   teach08,
 }
