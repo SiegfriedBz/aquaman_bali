@@ -20,7 +20,7 @@ export default function RootLayout(props) {
         <meta name='robots' content='follow, index' />
         <meta
           name='keywords'
-          content='Aquaman Bali, AquamanBali, Surf, Surf Lessons, Surf School, Surf Trips, Surf Photos, Surf Videos, Surf Drone'
+          content='Aquaman Bali, Surf Aquaman Bali, Aquaman Surf Bali, AquamanBali, Canggu Surf, Canggu Surf School, Canggu Surf Lessons, Bali Surf, Bali Surf Lessons, Bali Surf School, Bali Surf Trips, Bali Surf Photos, Canggu Surf Photos, Bali Surf Videos, Bali Surf Drone'
         ></meta>
         <meta
           property='og:url'
