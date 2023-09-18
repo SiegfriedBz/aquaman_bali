@@ -69,7 +69,7 @@ const aboutMeImg = [
 const meta = {
   title: 'Aquaman Bali | Surf School | Home',
   description:
-    'Discover Aquaman Bali, your premier surf school and surf trip destination. Learn to surf from beginner to advanced with our expert instructors. Book now to elevate your surfing skills!',
+    'Discover Aquaman Bali, your Premier Surf School and Surf Trip destination. Grow your surfing skills from beginner to advanced with our expert instructors. Book now!',
 }
 
 const MotionLink = motion(Link)
