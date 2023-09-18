@@ -7,6 +7,11 @@ import LocationMap from '@/components/LocationMap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { mapMarkers } from '@/data/mapMarkers'
+import {
+  containerVariants,
+  textVariants,
+  buttonVariants,
+} from '@/utils/framerVariants'
 import rendyTeach from '@/data/rendyTeach.json'
 import surfTrips from '@/data/surfTrips.json'
 const [_, cangguImg] = rendyTeach
@@ -17,35 +22,6 @@ const meta = {
   title: 'Aquaman Bali | Surf School | Surf Trips',
   description:
     'Explore Exciting Surf Journeys in Indonesia with Aquaman Bali - Book Now!"',
-}
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.75,
-    },
-  },
-}
-
-const textVariants = {
-  hidden: { opacity: 0, y: '16px' },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1.25,
-    },
-  },
-}
-
-const buttonVariants = {
-  inView: {
-    scale: 1.1,
-    transition: { duration: 3, type: 'spring', stiffness: 180 },
-  },
 }
 
 const SurfTrips = () => {

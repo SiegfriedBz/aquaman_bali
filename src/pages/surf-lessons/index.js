@@ -3,16 +3,10 @@ import { motion } from 'framer-motion'
 import LessonsLayout from '@/components/layouts/lessonsLayout'
 import Carousel from '@/components/carousel'
 import styles from '../../components/carousel.module.css'
+import { buttonVariants } from '@/utils/framerVariants'
 import rendyTeach from '@/data/rendyTeach.json'
 const [_, rendyTeach02, rendyTeach03] = rendyTeach
 const privateLessonsImg = [rendyTeach02, rendyTeach03]
-
-const buttonVariants = {
-  inView: {
-    scale: 1.1,
-    transition: { duration: 3, type: 'spring', stiffness: 180 },
-  },
-}
 
 const SurfLessons = () => {
   return (

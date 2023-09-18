@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Carousel from './carousel'
 import styles from './carousel.module.css'
-import GoogleIcon from '../../public/logos/google_g_icon.png'
+import googleIcon from '../../public/logos/google_g_icon.png'
 
 const QUOTES = [
   {
@@ -49,7 +49,7 @@ const Testimonials = () => {
                       >
                         Read full review on{' '}
                         <Image
-                          src={GoogleIcon}
+                          src={googleIcon}
                           width={40}
                           height={40}
                           alt='google-icon'

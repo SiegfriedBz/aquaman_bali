@@ -2,15 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
+import { buttonVariants } from '@/utils/framerVariants'
 import photoVideoDrone from '@/data/photoVideoDrone.json'
 const [photoVideo, ,] = photoVideoDrone
-
-const buttonVariants = {
-  inView: {
-    scale: 1.1,
-    transition: { duration: 3, type: 'spring', stiffness: 180 },
-  },
-}
 
 const Videos = () => {
   return (

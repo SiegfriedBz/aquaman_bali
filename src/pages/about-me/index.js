@@ -3,6 +3,12 @@ import Head from 'next/head'
 import { motion } from 'framer-motion'
 import Carousel from '../../components/carousel'
 import styles from '../../components/carousel.module.css'
+import {
+  containerVariants,
+  childVariants,
+  textVariants,
+  buttonVariants,
+} from '@/utils/framerVariants'
 import rendySurf from '@/data/rendySurf.json'
 import rendyKid from '@/data/rendyKid.json'
 
@@ -56,46 +62,7 @@ const meta = {
     'Discover the story of Rendy, a passionate surfer from Krui, South Sumatra. Join him to learn and improve your surfing skills!',
 }
 
-const buttonVariants = {
-  inView: {
-    scale: 1.1,
-    transition: { duration: 3, type: 'spring', stiffness: 180 },
-  },
-}
-
 const About = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1,
-        staggerChildren: 0.75,
-      },
-    },
-  }
-
-  const childVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 1.25,
-      },
-    },
-  }
-
-  const textVariants = {
-    hidden: { opacity: 0, y: '16px' },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1.25,
-      },
-    },
-  }
-
   return (
     <>
       <Head>

@@ -7,6 +7,13 @@ import Testimonials from '../components/testimonials'
 import LocationMap from '../components/LocationMap'
 import Carousel from '@/components/carousel'
 import styles from '@/components/carousel.module.css'
+import {
+  containerVariants,
+  childVariants,
+  textVariants,
+  sideSlideVariants,
+  buttonVariants,
+} from '@/utils/framerVariants'
 import rendyTeach from '@/data/rendyTeach.json'
 import rendySurf from '@/data/rendySurf.json'
 const [
@@ -63,62 +70,6 @@ const meta = {
   title: 'Aquaman Bali | Surf School | Home',
   description:
     'Discover Aquaman Bali, your premier surf school and surf trip destination. Learn to surf from beginner to advanced with our expert instructors. Book now to elevate your surfing skills!',
-}
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.75,
-    },
-  },
-}
-
-const childVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1.25,
-    },
-  },
-}
-
-const textVariants = {
-  hidden: { opacity: 0, y: '24px' },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1.25,
-    },
-  },
-}
-
-const sideSlideVariants = {
-  hidden: {
-    x: '-100vw',
-    opacity: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.25,
-      duration: 0.5,
-      type: 'spring',
-      stiffness: 100,
-    },
-  },
-}
-
-const buttonVariants = {
-  inView: {
-    scale: 1.1,
-    transition: { duration: 3, type: 'spring', stiffness: 180 },
-  },
 }
 
 const MotionLink = motion(Link)

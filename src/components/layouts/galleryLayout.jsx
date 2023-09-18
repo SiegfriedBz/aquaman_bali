@@ -2,72 +2,18 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
+import {
+  containerVariants,
+  childVariants,
+  textVariants,
+  navVariants,
+  leftLinkVariants,
+  rightLinkVariants,
+} from '@/utils/framerVariants'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Gallery',
   description: 'Best surf shots',
-}
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.75,
-    },
-  },
-}
-
-const childVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 1.25,
-    },
-  },
-}
-
-const textVariants = {
-  hidden: { opacity: 0, y: '16px' },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1.25,
-    },
-  },
-}
-
-const navVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delayChildren: 1.5,
-      staggerChildren: 0.2,
-    },
-  },
-}
-
-const leftLinkVariants = {
-  hidden: { opacity: 0, x: '-100vw' },
-  visible: {
-    opacity: 1,
-    x: 0,
-    type: 'spring',
-    stiffness: 120,
-  },
-}
-
-const rightLinkVariants = {
-  hidden: { opacity: 0, x: '50vw' },
-  visible: {
-    opacity: 1,
-    x: 0,
-    type: 'spring',
-    stiffness: 100,
-  },
 }
 
 const GalleryLayout = ({ children }) => {
