@@ -63,7 +63,7 @@ const GalleryLayout = ({ children }) => {
                 !isVideoTab ? 'font-bold' : 'font-extrabold ring-blue-500'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
-              <Link href='/gallery'>Images</Link>
+              <Link href='/gallery'>Photos</Link>
             </motion.div>
 
             <motion.div
