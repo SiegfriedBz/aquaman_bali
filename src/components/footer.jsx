@@ -55,7 +55,7 @@ const Footer = () => {
               <br />
               <span className='text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
                 Email:{' '}
-                <a href='mailto:rendy280720gmail.com?subject=Aquaman Bali - Inquiry About Surf Lessons and Surf Trips 🏄‍♂️🌊'>
+                <a href='mailto:rendy280720gmail.com?subject=Inquiry About Surf Lessons and Surf Trips 🏄‍♂️🌊'>
                   aquamanbali@gmail.com
                 </a>
               </span>
@@ -125,7 +125,7 @@ const Footer = () => {
           href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'
           target='_blank'
         >
-          <span className='flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+          <span className='mb-2 flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
             <Image
               src={swissFlag}
               alt='Swiss Flag'
