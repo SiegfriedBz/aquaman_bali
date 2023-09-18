@@ -14,8 +14,8 @@ const Videos = () => {
       </h2>
 
       <p className='mb-2 text-center'>
-        <Link href='/gallery/videos' className='underline underline-offset-4'>
-          Check our Videos
+        <Link href='/gallery' className='underline underline-offset-4'>
+          Check our Photos & Videos
         </Link>
       </p>
 

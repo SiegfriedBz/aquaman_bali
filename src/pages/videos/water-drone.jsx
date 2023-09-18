@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
 import { buttonVariants } from '@/utils/framerVariants'
 import photoVideoDrone from '@/data/photoVideoDrone.json'
+import Link from 'next/link'
 const [, , waterPhoto] = photoVideoDrone
 
 const WaterDrone = () => {
@@ -14,6 +15,12 @@ const WaterDrone = () => {
       <h2 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
         Water & Drone
       </h2>
+
+      <p className='mb-2 text-center'>
+        <Link href='/gallery' className='underline underline-offset-4'>
+          Check our Photos & Videos
+        </Link>
+      </p>
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <div className='h-70 mb-5'>
           <Image
