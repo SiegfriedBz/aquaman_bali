@@ -67,7 +67,7 @@ const Navbar = () => {
           <div className='flex items-center'>
             <button
               onClick={toggleColorMode}
-              className='me-5 mt-1 text-2xl dark:text-white'
+              className='me-5 text-2xl dark:text-white'
             >
               {toggleIcon}
             </button>
@@ -79,7 +79,7 @@ const Navbar = () => {
               onClick={() => setMobileMenuIsOpen((prev) => !prev)}
             >
               <div
-                className={`absolute top-4 h-1 w-4 ${
+                className={`absolute top-3.5 h-1 w-4 ${
                   !mobileMenuIsOpen ? 'animate-pulse' : ''
                 } rounded bg-amber-500 transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-slate-950 before:transition-all before:duration-500 before:content-[""] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-slate-950 after:transition-all after:duration-500 after:content-[""] before:dark:bg-white after:dark:bg-white`}
               ></div>
