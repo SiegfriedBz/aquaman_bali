@@ -3,20 +3,21 @@ import { useLocalStorage } from './useLocalStorage'
 
 export const useColorMode = () => {
   const [colorMode, setColorMode] = useLocalStorage(
-    'aquaman-color-mode',
-    () => {
-      if (typeof window !== 'undefined') {
-        return window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'dark'
-          : 'light'
-      }
-      return 'light'
-    }
+    'aquaman-theme-color',
+    'light'
   )
 
   useEffect(() => {
-    const bodyClasses = window.document.body.classList
-    bodyClasses.toggle('dark', colorMode === 'dark')
+    setColorMode(() => {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+    })
+  }, [setColorMode])
+
+  useEffect(() => {
+    const documentElementClasses = window.document.documentElement.classList
+    documentElementClasses.toggle('dark', colorMode === 'dark')
   }, [colorMode])
 
   return [colorMode, setColorMode]

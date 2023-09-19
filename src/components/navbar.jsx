@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -6,26 +6,38 @@ import { useColorMode } from '../hooks/useColorMode'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faStreetView, faMugHot } from '@fortawesome/free-solid-svg-icons'
-import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
 import logo from '../../public/logos/logo.png'
 import tikTokLogo from '../../public/logos/tiktok-logo.png'
+import { MoonIcon, SunIcon } from './Icons'
 
 const Navbar = () => {
   const router = useRouter()
+  const [isClient, setIsClient] = useState(false)
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false)
   const [colorMode, setColorMode] = useColorMode()
   const isHomePage = router.asPath === '/'
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const toggleColorMode = () => {
     setColorMode(colorMode === 'dark' ? 'light' : 'dark')
   }
 
-  const toggleIcon =
-    colorMode === 'dark' ? (
-      <FontAwesomeIcon icon={faSun} />
-    ) : (
-      <FontAwesomeIcon icon={faMoon} />
-    )
+  const toggleIcon = (
+    <>
+      {isClient ? (
+        colorMode === 'light' ? (
+          <MoonIcon className='fill-dark dark:fill-light w-[33px]' />
+        ) : (
+          <SunIcon className='fill-dark dark:fill-light w-[33px]' />
+        )
+      ) : (
+        ''
+      )}
+    </>
+  )
 
   return (
     <header
