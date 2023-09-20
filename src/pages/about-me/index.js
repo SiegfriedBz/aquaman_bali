@@ -109,8 +109,8 @@ const About = () => {
 
           <motion.p variants={childVariants} className='my-3 px-1 text-justify'>
             My name is Rendy and I am from Krui, South Sumatra. I started
-            surfing at the age of 8 and came to Bali in 2019 to work as a surf
-            instructor at Batu Bolong Beach in Canggu.
+            surfing at the age of 8 and came to Bali in 2019 to work as a Surf
+            Instructor at Batu Bolong Beach in Canggu.
           </motion.p>
           <motion.p variants={childVariants} className='my-3 px-1 text-justify'>
             Batu Bolong is an easy place to learn surfing as a beginner but is
