@@ -5,6 +5,7 @@ config.autoAddCss = false
 import RootLayout from '@/components/layouts/rootLayout'
 import generateSocialImage from '../utils/generateSocialImage'
 import Head from 'next/head'
+import { Analytics } from '@vercel/analytics/react'
 
 const socialImageConf = generateSocialImage({
   title: 'Aquaman Bali',
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }) {
       <RootLayout imageUrl={socialImageConf}>
         <Layout>
           <Component {...pageProps} />
+          <Analytics />
         </Layout>
       </RootLayout>
     </>
