@@ -116,7 +116,7 @@ const Footer = () => {
 
         <h2 className='mb-2 mt-5 text-center text-sm text-slate-800 dark:text-white'>
           <span>
-            &copy;{new Date().getFullYear()} Aquaman Bali All Rights Reserved
+            &copy;{new Date().getFullYear()} Aquaman Bali All Rights Reserved.
           </span>
         </h2>
 
@@ -133,7 +133,10 @@ const Footer = () => {
               height={16}
               className='me-2 rounded-full'
             />
-            <span>Swiss-made by SiegfriedB</span>
+            <span>
+              Swiss-made by{' '}
+              <span className='underline underline-offset-2'>SiegfriedB</span>
+            </span>
           </span>
         </a>
       </section>
