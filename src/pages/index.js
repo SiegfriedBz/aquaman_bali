@@ -132,7 +132,7 @@ export default function Home() {
                   return (
                     <div
                       key={`${topId}-top-${image.image}`}
-                      className={`${styles.embla__slide} h-60`}
+                      className={`${styles.embla__slide} h-72`}
                     >
                       <Image
                         width='600'
@@ -148,21 +148,13 @@ export default function Home() {
               </Carousel>
             </motion.div>
 
-            <div className='mt-5 flex flex-col items-center justify-between md:p-5'>
+            <div className='my-5 flex flex-col items-center justify-between md:p-5'>
               <motion.h3
-                className='mb-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'
+                className='mt-4 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'
                 variants={textVariants}
               >
                 Best Surf School in Bali
               </motion.h3>
-              <motion.a
-                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
-                href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-                target='_blank'
-                variants={textVariants}
-              >
-                Book now
-              </motion.a>
             </div>
           </div>
         </motion.section>

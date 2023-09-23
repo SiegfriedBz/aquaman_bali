@@ -36,19 +36,21 @@ const SurfLessons = () => {
           })}
         </Carousel>
 
-        <p className='my-2 w-full text-2xl font-bold'>1 Surf Lesson</p>
-        <p className='w-full text-lg font-bold'>2 hours: 400K IDR (USD 26)</p>
-        <br />
-        <p className='my-2 w-full text-2xl font-bold'>3 Surf Lessons</p>
-        <p className='w-full text-lg font-bold'>
-          3 * 2 hours: 1.1M IDR (USD 72)
-        </p>
-        <p className='text-md my-2 w-full'>
-          The 3 sessions can be splitted as you wish, but must be completed
-          within 1 month.
-        </p>
+        <div className='my-2 w-full'>
+          <p className='my-2 text-2xl font-bold'>1 Surf Lesson</p>
+          <p className='text-lg font-bold'>2 hours: 400K IDR (USD 26)</p>
+        </div>
 
-        <div className='mx-auto mb-5 mt-4 flex flex-col items-center'>
+        <div className='my-2 w-full'>
+          <p className='my-2 text-2xl font-bold'>3 Surf Lessons</p>
+          <p className='text-lg font-bold'>3 * 2 hours: 1.1M IDR (USD 72)</p>
+          <p className='my-2 text-base'>
+            The 3 sessions can be splitted as you wish, but must be completed
+            within 1 month.
+          </p>
+        </div>
+
+        <div className='mx-auto my-5 flex flex-col items-center'>
           <motion.a
             variants={buttonVariants}
             whileInView='inView'
@@ -61,7 +63,7 @@ const SurfLessons = () => {
           </motion.a>
         </div>
 
-        <div id='private-beginner'>
+        <div className='mt-3' id='private-beginner'>
           <h2 className='self-start text-lg font-bold'>Beginner</h2>
           <p className='mb-2 text-justify'>
             On your very first lesson you will be given an introduction on the
@@ -126,12 +128,12 @@ const SurfLessons = () => {
         <br />
 
         <p className='w-full self-start font-bold'>Options</p>
-        <ul className='w-full'>
+        <ul className='mb-1 w-full'>
           <li className='mx-5 list-disc'>Photos & Videos of your session</li>
           <li className='mx-5 list-disc'>Video analysis</li>
         </ul>
 
-        <div className='mx-auto mb-4 mt-5 flex flex-col items-center'>
+        <div className='mx-auto my-5 flex flex-col items-center'>
           <motion.a
             variants={buttonVariants}
             whileInView='inView'
