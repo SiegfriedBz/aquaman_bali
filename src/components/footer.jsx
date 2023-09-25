@@ -55,8 +55,8 @@ const Footer = () => {
               <br />
               <span className='text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
                 Email:{' '}
-                <a href='mailto:rendy280720gmail.com?subject=Inquiry About Surf Lessons and Surf Trips 🏄‍♂️🌊'>
-                  aquamanbali@gmail.com
+                <a href='mailto:rendy280720@gmail.com?subject=Inquiry About Surf Lessons and Surf Trips 🏄‍♂️🌊'>
+                  rendy280720@gmail.com
                 </a>
               </span>
               <br />
