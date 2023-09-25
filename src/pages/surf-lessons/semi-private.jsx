@@ -53,12 +53,12 @@ const SemiPrivate = () => {
 
         <p className='my-2 w-full text-2xl font-bold'>1 Surf Lesson</p>
         <p className='w-full text-lg font-bold'>Total for 2 Guests</p>
-        <p className='w-full text-lg font-bold'>2 hours: 750K IDR (USD 48)</p>
+        <p className='w-full text-lg font-bold'>2 hours: 650K IDR (USD 42)</p>
         <br />
         <p className='my-2 w-full text-2xl font-bold'>3 Surf Lessons</p>
         <p className='w-full text-lg font-bold'>Total for 2 Guests</p>
         <p className='w-full text-lg font-bold'>
-          3 * 2 hours: 2.1M IDR (USD 136)
+          3 * 2 hours: 1.9M IDR (USD 123)
         </p>
         <p className='text-md my-2 w-full'>
           The 3 sessions can be splitted as you wish, but must be completed

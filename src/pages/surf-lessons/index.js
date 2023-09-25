@@ -37,12 +37,10 @@ const SurfLessons = () => {
         </Carousel>
 
         <p className='my-2 w-full text-2xl font-bold'>1 Surf Lesson</p>
-        <p className='w-full text-lg font-bold'>2 hours: 400K IDR (USD 26)</p>
+        <p className='w-full text-lg font-bold'>2 hours: 350K IDR (USD 22)</p>
         <br />
         <p className='my-2 w-full text-2xl font-bold'>3 Surf Lessons</p>
-        <p className='w-full text-lg font-bold'>
-          3 * 2 hours: 1.1M IDR (USD 72)
-        </p>
+        <p className='w-full text-lg font-bold'>3 * 2 hours: 1M IDR (USD 64)</p>
         <p className='text-md my-2 w-full'>
           The 3 sessions can be splitted as you wish, but must be completed
           within 1 month.
