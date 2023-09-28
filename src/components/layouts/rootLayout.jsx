@@ -34,9 +34,9 @@ export default function RootLayout(props) {
       <AppContextProvider>
         <div className='min-w-full dark:bg-slate-900 dark:text-gray-200'>
           <Navbar />
-          <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
-          <main className='py-5'>{children}</main>
-          <hr className='mx-5 bg-slate-950 dark:bg-slate-200' />
+          <main className='px-4 py-8 sm:p-16 md:px-24 xl:px-32'>
+            {children}
+          </main>
           <Footer />
         </div>
       </AppContextProvider>
