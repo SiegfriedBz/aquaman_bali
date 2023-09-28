@@ -3,20 +3,17 @@ import Image from 'next/image'
 import Head from 'next/head'
 import { useAppContext } from '@/context/appContext'
 import { motion } from 'framer-motion'
-import LocationMap from '@/components/LocationMap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
-import { mapMarkers } from '@/data/mapMarkers'
+import LocationMap from '@/components/LocationMap'
+import { surfTripsPageImages } from '@/data/surfTripsPageImages'
+import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
+import getMapMarkers from '@/utils/getMapMarkers'
 import {
   containerVariants,
   textVariants,
   buttonVariants,
 } from '@/utils/framerVariants'
-import rendyTeach from '@/data/rendyTeach.json'
-import surfTrips from '@/data/surfTrips.json'
-const [_, cangguImg] = rendyTeach
-const [medewiImg, lombokImg, nusaImg, seranganImg, uluwatuImg, balanganImg] =
-  surfTrips
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Surf Trips',
@@ -24,7 +21,16 @@ const meta = {
     'Explore Exciting Surf Journeys in Indonesia with Aquaman Bali - Book Now!"',
 }
 
-const SurfTrips = () => {
+const SurfTrips = ({ surfTripImg, mapMarkers }) => {
+  const [
+    cangguImg,
+    medewiImg,
+    lombokImg,
+    nusaImg,
+    seranganImg,
+    uluwatuImg,
+    balanganImg,
+  ] = surfTripImg
   const mapContainerRef = useRef(null)
   const { setShowPopup, setPopup } = useAppContext()
 
@@ -123,7 +129,7 @@ const SurfTrips = () => {
       <hr className='mx-5 my-5 bg-slate-950' />
 
       <div ref={mapContainerRef} className='scroll-mt-20 p-2 dark:bg-slate-900'>
-        <LocationMap />
+        <LocationMap mapMarkers={mapMarkers} />
       </div>
 
       <hr className='mx-5 my-5 bg-slate-950' />
@@ -145,9 +151,12 @@ const SurfTrips = () => {
             <Image
               width='600'
               height='600'
-              src={cangguImg.image}
+              src={cangguImg.src}
               alt={cangguImg.alt}
-              // loading='lazy'
+              loading='lazy'
+              placeholder='blur'
+              blurDataURL={cangguImg.blurDataUrl}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
           </div>
@@ -220,9 +229,12 @@ const SurfTrips = () => {
             <Image
               width='600'
               height='600'
-              src={medewiImg.image}
+              src={medewiImg.src}
               alt={medewiImg.alt}
-              // loading='lazy'
+              loading='lazy'
+              placeholder='blur'
+              blurDataURL={medewiImg.blurDataUrl}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
           </div>
@@ -282,9 +294,12 @@ const SurfTrips = () => {
             <Image
               width='600'
               height='600'
-              src={balanganImg.image}
+              src={balanganImg.src}
               alt={balanganImg.alt}
-              // loading='lazy'
+              loading='lazy'
+              placeholder='blur'
+              blurDataURL={balanganImg.blurDataUrl}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
           </div>
@@ -343,9 +358,12 @@ const SurfTrips = () => {
             <Image
               width='600'
               height='600'
-              src={uluwatuImg.image}
+              src={uluwatuImg.src}
               alt={uluwatuImg.alt}
-              // loading='lazy'
+              loading='lazy'
+              placeholder='blur'
+              blurDataURL={uluwatuImg.blurDataUrl}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
           </div>
@@ -414,9 +432,12 @@ const SurfTrips = () => {
             <Image
               width='600'
               height='600'
-              src={seranganImg.image}
+              src={seranganImg.src}
               alt={seranganImg.alt}
-              // loading='lazy'
+              loading='lazy'
+              placeholder='blur'
+              blurDataURL={seranganImg.blurDataUrl}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
           </div>
@@ -479,9 +500,12 @@ const SurfTrips = () => {
             <Image
               width='600'
               height='600'
-              src={nusaImg.image}
+              src={nusaImg.src}
               alt={nusaImg.alt}
-              // loading='lazy'
+              loading='lazy'
+              placeholder='blur'
+              blurDataURL={nusaImg.blurDataUrl}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
           </div>
@@ -541,9 +565,12 @@ const SurfTrips = () => {
             <Image
               width='600'
               height='600'
-              src={lombokImg.image}
+              src={lombokImg.src}
               alt={lombokImg.alt}
-              // loading='lazy'
+              loading='lazy'
+              placeholder='blur'
+              blurDataURL={lombokImg.blurDataUrl}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
           </div>
@@ -591,3 +618,26 @@ const SurfTrips = () => {
 }
 
 export default SurfTrips
+
+export async function getStaticProps() {
+  const surfTripImgPromises = surfTripsPageImages.map(async (image) => {
+    const src = getImageUrl(image.image)
+    const blurDataUrl = await getBase64ImageUrl(image.image)
+    return {
+      src,
+      blurDataUrl,
+      id: image.id,
+      alt: image.alt,
+    }
+  })
+
+  const surfTripImg = await Promise.all(surfTripImgPromises)
+  const mapMarkers = getMapMarkers(surfTripImg)
+
+  return {
+    props: {
+      surfTripImg,
+      mapMarkers,
+    },
+  }
+}

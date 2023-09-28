@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import LessonsLayout from '@/components/layouts/lessonsLayout'
 import Carousel from '@/components/carousel'
 import styles from '../../components/carousel.module.css'
+import LessonsLayout from '@/components/layouts/lessonsLayout'
+import { privateLessonsImages } from '@/data/surfLessonsPageImages'
+import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import { buttonVariants } from '@/utils/framerVariants'
-import rendyTeach from '@/data/rendyTeach.json'
-const [_, rendyTeach02, rendyTeach03] = rendyTeach
-const privateLessonsImg = [rendyTeach02, rendyTeach03]
 
-const SurfLessons = () => {
+const SurfLessons = ({ privateLessonsImg }) => {
   return (
     <section id='private' className='mb-2'>
       <h2 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
@@ -27,8 +26,11 @@ const SurfLessons = () => {
                 <Image
                   width='600'
                   height='600'
-                  src={image.image}
+                  src={image.src}
                   alt={image.alt}
+                  placeholder='blur'
+                  blurDataURL={image.blurDataUrl}
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                   className='h-full rounded-lg object-cover shadow-2xl'
                 />
               </div>
@@ -149,3 +151,24 @@ const SurfLessons = () => {
 export default SurfLessons
 
 SurfLessons.Layout = LessonsLayout
+
+export async function getStaticProps() {
+  const privateLessonsImgPromises = privateLessonsImages.map(async (image) => {
+    const src = getImageUrl(image.image)
+    const blurDataUrl = await getBase64ImageUrl(image.image)
+    return {
+      src,
+      blurDataUrl,
+      id: image.id,
+      alt: image.alt,
+    }
+  })
+
+  const privateLessonsImg = await Promise.all(privateLessonsImgPromises)
+
+  return {
+    props: {
+      privateLessonsImg,
+    },
+  }
+}

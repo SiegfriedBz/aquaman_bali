@@ -3,58 +3,14 @@ import Head from 'next/head'
 import { motion } from 'framer-motion'
 import Carousel from '../../components/carousel'
 import styles from '../../components/carousel.module.css'
+import { aboutMeImages } from '@/data/aboutMePageImages'
+import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import {
   containerVariants,
   childVariants,
   textVariants,
   buttonVariants,
 } from '@/utils/framerVariants'
-import rendySurf from '@/data/rendySurf.json'
-import rendyKid from '@/data/rendyKid.json'
-
-const [rendyKid01, rendyKid02, rendyKid03] = rendyKid
-
-const [
-  rendySurf01,
-  rendySurf01Small,
-  rendySurf02,
-  rendySurf02Small,
-  rendySurf03,
-  rendySurf03Small,
-  rendySurf04,
-  rendySurf04Small,
-  rendySurf05,
-  rendySurf06,
-  rendySurf07,
-  rendySurf08,
-  rendySurf09,
-  rendySurf10,
-  rendySurf10Small,
-  rendySurf11,
-  rendySurf12,
-  rendySurf13,
-  rendySurf14,
-] = rendySurf
-
-const aboutMeImg = [
-  rendySurf14,
-  rendySurf01,
-  rendySurf03,
-  rendyKid01,
-  rendyKid02,
-  rendyKid03,
-  rendySurf02,
-  rendySurf04,
-  rendySurf05,
-  rendySurf06,
-  rendySurf07,
-  rendySurf08,
-  rendySurf09,
-  rendySurf10,
-  rendySurf11,
-  rendySurf12,
-  rendySurf13,
-]
 
 const meta = {
   title: 'Aquaman Bali | Surf School | About me',
@@ -62,7 +18,7 @@ const meta = {
     'Discover the story of Rendy, a passionate surfer from Krui, South Sumatra. Join him to learn and improve your surfing skills!',
 }
 
-const About = () => {
+const About = ({ aboutMeImg }) => {
   return (
     <>
       <Head>
@@ -88,7 +44,7 @@ const About = () => {
 
         <motion.div variants={childVariants} className='mx-2'>
           <Carousel>
-            {aboutMeImg.map((image) => {
+            {aboutMeImg.map((image, index) => {
               return (
                 <div
                   key={image.id}
@@ -97,9 +53,13 @@ const About = () => {
                   <Image
                     width='600'
                     height='600'
-                    src={image.image}
+                    src={image.src}
                     alt={image.alt}
-                    // loading='lazy'
+                    priority={index < 2}
+                    loading={index > 2 ? 'lazy' : 'eager'}
+                    placeholder='blur'
+                    blurDataURL={image.blurDataUrl}
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     className='h-full rounded-lg object-cover shadow-2xl'
                   />
                 </div>
@@ -143,3 +103,24 @@ const About = () => {
 }
 
 export default About
+
+export async function getStaticProps() {
+  const aboutMeImgPromises = aboutMeImages.map(async (image) => {
+    const src = getImageUrl(image.image)
+    const blurDataUrl = await getBase64ImageUrl(image.image)
+    return {
+      src,
+      blurDataUrl,
+      id: image.id,
+      alt: image.alt,
+    }
+  })
+
+  const aboutMeImg = await Promise.all(aboutMeImgPromises)
+
+  return {
+    props: {
+      aboutMeImg,
+    },
+  }
+}
