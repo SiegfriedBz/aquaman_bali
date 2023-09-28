@@ -1,5 +1,4 @@
 import { useState, createContext, useContext } from 'react'
-import { mapMarkers } from '@/data/mapMarkers'
 
 const AppContext = createContext()
 export const useAppContext = () => {
@@ -13,9 +12,7 @@ export const useAppContext = () => {
 
 export const AppContextProvider = ({ children }) => {
   const [showPopup, setShowPopup] = useState(false)
-  const [popup, setPopup] = useState(() => {
-    return mapMarkers.canggu
-  })
+  const [popup, setPopup] = useState(undefined)
 
   return (
     <AppContext.Provider
