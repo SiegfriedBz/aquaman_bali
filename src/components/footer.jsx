@@ -31,9 +31,17 @@ const Footer = () => {
     amount: 0.1,
   })
   return (
-    <footer className='flex flex-col px-2 pb-3 pt-5 shadow-2xl'>
+    <footer
+      className='flex min-w-full flex-col
+       border-t border-t-slate-900
+      bg-white
+        px-4 py-6
+        shadow-2xl
+      dark:border-t-white dark:bg-slate-900
+      dark:text-gray-200
+        sm:px-16 sm:py-8 md:px-24 lg:px-12 xl:px-32'
+    >
       {/* open hours */}
-
       <motion.div
         ref={operatingHoursRef}
         variants={operatingHoursVariants}
@@ -54,14 +62,13 @@ const Footer = () => {
               Batu Bolong, Canggu
               <br />
               <span className='text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
-                Email:{' '}
                 <a href='mailto:rendy280720@gmail.com?subject=Inquiry About Surf Lessons and Surf Trips 🏄‍♂️🌊'>
                   rendy280720@gmail.com
                 </a>
               </span>
               <br />
               <span className='text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
-                Tel: <a href='tel:+6282289427321'>0822-8942-7321</a>
+                <a href='tel:+6282289427321'>0822-8942-7321</a>
               </span>
             </address>
           </div>
@@ -125,7 +132,7 @@ const Footer = () => {
           href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'
           target='_blank'
         >
-          <span className='mb-2 flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+          <span className='flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
             <Image
               src={swissFlag}
               alt='Swiss Flag'

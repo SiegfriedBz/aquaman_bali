@@ -26,7 +26,7 @@ const Testimonials = () => {
                     <a
                       href='https://goo.gl/maps/iHPokm4Q943N2f2fA'
                       target='_blank'
-                      className='ms-5 mt-2 flex items-center text-xl italic text-slate-500 outline-none sm:text-2xl'
+                      className='ms-4 mt-2 flex items-center text-xl italic text-slate-500 outline-none sm:text-2xl'
                     >
                       Read full review on{' '}
                       <Image
@@ -34,7 +34,7 @@ const Testimonials = () => {
                         width={40}
                         height={40}
                         alt='google-icon'
-                        className='ms-2'
+                        className='ml-2'
                       />
                     </a>
                   </blockquote>

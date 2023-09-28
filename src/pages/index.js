@@ -52,43 +52,28 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
         <meta property='og:description' content={meta.description} />
         <meta property='og:title' content={meta.title} />
       </Head>
-      <main className='px-2'>
+      <main>
         <motion.section
+          id='hero'
           variants={containerVariants}
           initial='hidden'
           animate='visible'
-          id='hero'
-          className='flex flex-col items-center md:mb-12'
+          className='md:mb-20 md:grid md:grid-flow-col md:grid-rows-2 md:gap-y-8'
         >
-          <div className='flex flex-col md:max-w-7xl md:flex-row md:items-center md:justify-between'>
-            <motion.h1
-              variants={textVariants}
-              className='bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text pb-2 pt-3 text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-7xl'
-            >
-              Upgrade
-            </motion.h1>
-            <motion.h2
-              className='mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-3xl font-extrabold text-transparent sm:text-4xl md:text-5xl lg:text-6xl'
-              variants={textVariants}
-            >
-              Your Surfing Skills
-            </motion.h2>
-            <motion.h2
-              className='max-w-md text-center text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl'
-              variants={textVariants}
-            >
-              Beginner to Advanced
-            </motion.h2>
+          <div class='md:order-2 md:col-span-2 md:row-span-1 md:mt-8'>
+            <HeroTextTop />
           </div>
-
-          <div className='mt-5 flex flex-col items-center justify-between px-2 md:max-w-7xl md:flex-row md:gap-5 xl:max-w-xl'>
-            <motion.div variants={childVariants}>
+          <div class='md:order-1 md:col-span-1 md:row-span-2'>
+            <motion.div
+              variants={childVariants}
+              className='flex flex-col items-center justify-center md:h-full'
+            >
               <Carousel>
                 {heroImg.map((image) => {
                   return (
                     <div
                       key={`${topId}-top-${image.src}`}
-                      className={`${styles.embla__slide} h-60`}
+                      className={`${styles.embla__slide} h-60 md:h-[30rem]`}
                     >
                       <Image
                         width='600'
@@ -99,30 +84,16 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
                         placeholder='blur'
                         blurDataURL={image.blurDataUrl}
                         sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                        className='h-full rounded-lg object-cover shadow-2xl'
+                        className='mx-auto h-full w-11/12 rounded-xl border-none object-cover shadow-2xl md:shadow-none'
                       />
                     </div>
                   )
                 })}
               </Carousel>
             </motion.div>
-
-            <div className='mt-5 flex flex-col items-center justify-between md:p-5'>
-              <motion.h3
-                className='mb-3 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-center text-2xl font-extrabold text-transparent sm:text-4xl md:text-5xl'
-                variants={textVariants}
-              >
-                Best Surf School in Bali
-              </motion.h3>
-              <motion.a
-                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
-                href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-                target='_blank'
-                variants={textVariants}
-              >
-                Book now
-              </motion.a>
-            </div>
+          </div>
+          <div class='md:order-3 md:col-span-2'>
+            <HeroTextBottom />
           </div>
         </motion.section>
 
@@ -137,7 +108,9 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               variants={sideSlideVariants}
               initial={!aboutIsInView && 'hidden'}
               animate={aboutIsInView && 'visible'}
-              className='mb-3 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'
+              className='mb-3 text-center text-2xl font-bold
+              text-slate-900 dark:text-white
+                sm:text-5xl'
             >
               About me
             </motion.h2>
@@ -168,7 +141,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             </div>
 
             <div className='flex flex-col items-center md:max-w-md md:p-5'>
-              <p className='my-3 px-2 text-center text-lg'>
+              <p className='my-3 text-center text-lg'>
                 My name is Rendy and I am from Krui, South Sumatra. I started
                 surfing at the age of 8 and came to Bali in 2019 to work as a
                 surf instructor at Batu Bolong Beach in Canggu.
@@ -177,7 +150,9 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
                 variants={buttonVariants}
                 whileInView='inView'
                 viewport={{ margin: '-75px' }}
-                className='my-3 w-48 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:w-72 md:px-10 md:text-lg'
+                className='my-3 w-48 rounded-3xl
+                  bg-gradient-to-r from-cyan-500 to-blue-500
+                  px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:w-72 md:px-10 md:text-lg'
                 href='/about-me'
               >
                 More about me
@@ -194,7 +169,9 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               variants={sideSlideVariants}
               initial={!testimonialsIsInView && 'hidden'}
               animate={testimonialsIsInView && 'visible'}
-              className='text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'
+              className='text-center text-2xl font-bold
+              text-slate-900 dark:text-white
+                sm:text-5xl'
             >
               Testimonials
             </motion.h2>
@@ -205,7 +182,14 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             variants={buttonVariants}
             whileInView='inView'
             viewport={{ margin: '-75px' }}
-            className='my-3 w-48 self-center rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:px-12 md:py-6 md:text-xl'
+            className='my-3 w-48 self-center rounded-3xl
+              bg-gradient-to-r from-cyan-500 to-blue-500
+              px-8 py-4
+              text-center font-extrabold text-white
+              outline-none
+              ring-2 hover:ring-blue-500 active:ring-blue-500
+              md:px-12 md:py-6
+              md:text-xl'
             href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
             target='_blank'
           >
@@ -221,7 +205,9 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               variants={sideSlideVariants}
               initial={!visitIsInView && 'hidden'}
               animate={visitIsInView && 'visible'}
-              className='mb-3 text-center text-2xl font-bold text-slate-900 dark:text-white sm:text-5xl'
+              className='mb-3 text-center text-2xl font-bold
+              text-slate-900 dark:text-white
+              sm:text-5xl'
             >
               Visit Us
             </motion.h2>
@@ -280,4 +266,64 @@ export async function getStaticProps() {
       mapMarkers,
     },
   }
+}
+
+const HeroTextTop = () => {
+  return (
+    <div className={`flex flex-col items-center justify-center md:gap-y-4`}>
+      <motion.h1
+        variants={textVariants}
+        className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text
+          py-1 text-center text-3xl font-extrabold text-transparent
+          sm:text-4xl md:mb-0 md:text-5xl lg:text-7xl'
+      >
+        Upgrade
+      </motion.h1>
+      <motion.h2
+        className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text py-1
+          text-center text-3xl font-extrabold text-transparent
+          sm:text-4xl md:mb-0 md:text-5xl lg:text-6xl'
+        variants={textVariants}
+      >
+        Your Surfing Skills
+      </motion.h2>
+      <motion.h2
+        className='mb-2 py-1 text-center text-2xl font-bold
+          sm:text-3xl md:mb-0 md:text-4xl lg:text-5xl'
+        variants={textVariants}
+      >
+        Beginner to Advanced
+      </motion.h2>
+    </div>
+  )
+}
+
+const HeroTextBottom = () => {
+  return (
+    <div className={`flex flex-col items-center justify-center md:gap-y-6`}>
+      <motion.h3
+        className='my-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500
+          bg-clip-text py-1 text-center
+          text-2xl font-extrabold text-transparent sm:text-4xl 
+          md:my-0 md:text-5xl'
+        variants={textVariants}
+      >
+        Best Surf School in Bali
+      </motion.h3>
+      <motion.a
+        className='w-48 rounded-3xl bg-gradient-to-r from-cyan-500
+        to-blue-500 px-8
+          py-4 text-center font-extrabold text-white
+          outline-none ring-2
+          hover:ring-blue-500 active:ring-blue-500
+          md:w-2/3 md:py-6
+          md:text-xl'
+        href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+        target='_blank'
+        variants={textVariants}
+      >
+        Book now
+      </motion.a>
+    </div>
+  )
 }
