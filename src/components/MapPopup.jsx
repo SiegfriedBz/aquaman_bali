@@ -13,9 +13,11 @@ const MapPopup = ({ popup, isSurfTripsRoute }) => {
       <Image
         width='600'
         height='600'
-        src={popup.image}
-        alt={popup.alt}
-        // loading='lazy'
+        src={popup.image.src}
+        alt={popup.image.alt}
+        placeholder='blur'
+        blurDataURL={popup.image.blurDataUrl}
+        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         className='h-full rounded-t-lg object-cover shadow-2xl'
       />
       <Footer location={popup.location} isSurfTripsRoute={isSurfTripsRoute}>

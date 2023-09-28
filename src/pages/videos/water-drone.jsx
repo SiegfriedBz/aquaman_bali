@@ -1,12 +1,12 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
+import { waterPhoto } from '@/data/videoPageImages'
+import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import { buttonVariants } from '@/utils/framerVariants'
-import photoVideoDrone from '@/data/photoVideoDrone.json'
-import Link from 'next/link'
-const [, , waterPhoto] = photoVideoDrone
 
-const WaterDrone = () => {
+const WaterDrone = ({ waterPhotoImg }) => {
   return (
     <section
       id='water-shots-drone'
@@ -22,13 +22,15 @@ const WaterDrone = () => {
         </Link>
       </p>
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-        <div className='h-70 mb-5'>
+        <div className='mb-5 h-72'>
           <Image
             width='600'
             height='600'
-            src={waterPhoto.image}
-            alt={waterPhoto.alt}
-            // loading='lazy'
+            src={waterPhotoImg.src}
+            alt={waterPhotoImg.alt}
+            placeholder='blur'
+            blurDataURL={waterPhotoImg.blurDataUrl}
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
             className='h-full rounded-lg object-cover shadow-2xl'
           />
         </div>
@@ -74,3 +76,20 @@ const WaterDrone = () => {
 export default WaterDrone
 
 WaterDrone.Layout = PhotoVideoLayout
+
+export async function getStaticProps() {
+  const blurDataUrl = await getBase64ImageUrl(waterPhoto.image)
+
+  const waterPhotoImg = {
+    src: getImageUrl(waterPhoto.image),
+    blurDataUrl: blurDataUrl,
+    id: waterPhoto.id,
+    alt: waterPhoto.alt,
+  }
+
+  return {
+    props: {
+      waterPhotoImg,
+    },
+  }
+}

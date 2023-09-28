@@ -3,14 +3,13 @@ import Map, { Marker, Popup } from 'react-map-gl'
 import { useRouter } from 'next/router'
 import { useAppContext } from '@/context/appContext'
 import MapPopup from './MapPopup'
-import { mapMarkers } from '@/data/mapMarkers'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN
 
-export default function LocationMap() {
+export default function LocationMap({ mapMarkers }) {
   const router = useRouter()
   const mapRef = useRef(null)
   const { showPopup, setShowPopup, popup, setPopup } = useAppContext()

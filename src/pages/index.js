@@ -3,10 +3,17 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
-import Testimonials from '../components/testimonials'
-import LocationMap from '../components/LocationMap'
 import Carousel from '@/components/carousel'
 import styles from '@/components/carousel.module.css'
+import Testimonials from '../components/testimonials'
+import LocationMap from '../components/LocationMap'
+import {
+  heroImages,
+  aboutMeImages,
+  surfTripImages,
+} from '@/data/homePageImages'
+import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
+import getMapMarkers from '@/utils/getMapMarkers'
 import {
   containerVariants,
   childVariants,
@@ -14,57 +21,6 @@ import {
   sideSlideVariants,
   buttonVariants,
 } from '@/utils/framerVariants'
-import rendyTeach from '@/data/rendyTeach.json'
-import rendySurf from '@/data/rendySurf.json'
-const [
-  rendyTeach01,
-  rendyTeach02,
-  rendyTeach03,
-  rendyTeach04,
-  rendyTeach05,
-  rendyTeach06,
-  rendyTeach07,
-] = rendyTeach
-
-const [
-  rendySurf01,
-  rendySurf01Small,
-  rendySurf02,
-  rendySurf02Small,
-  rendySurf03,
-  rendySurf03Small,
-  rendySurf04,
-  rendySurf04Small,
-  rendySurf05,
-  rendySurf06,
-  rendySurf07,
-  rendySurf08,
-  rendySurf09,
-  rendySurf10,
-  rendySurf10Small,
-  rendySurf11,
-  rendySurf12,
-  rendySurf13,
-  rendySurf14,
-] = rendySurf
-
-const heroImg = [
-  rendySurf01,
-  rendyTeach04,
-  rendySurf05,
-  rendyTeach07,
-  rendySurf11,
-  rendyTeach03,
-  rendySurf02,
-]
-
-const aboutMeImg = [
-  rendySurf01Small,
-  rendySurf02Small,
-  rendySurf03Small,
-  rendySurf04Small,
-  rendySurf10Small,
-]
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Home',
@@ -74,7 +30,7 @@ const meta = {
 
 const MotionLink = motion(Link)
 
-export default function Home() {
+export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
   const topId = useId()
   const aboutId = useId()
   const aboutRef = useRef(null)
@@ -131,15 +87,18 @@ export default function Home() {
                 {heroImg.map((image) => {
                   return (
                     <div
-                      key={`${topId}-top-${image.image}`}
+                      key={`${topId}-top-${image.src}`}
                       className={`${styles.embla__slide} h-60`}
                     >
                       <Image
                         width='600'
                         height='600'
-                        src={image.image}
+                        src={image.src}
                         alt={image.alt}
                         priority={true}
+                        placeholder='blur'
+                        blurDataURL={image.blurDataUrl}
+                        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                         className='h-full rounded-lg object-cover shadow-2xl'
                       />
                     </div>
@@ -189,17 +148,17 @@ export default function Home() {
                 {aboutMeImg.map((image) => {
                   return (
                     <div
-                      key={`${aboutId}-about-${image.image}`}
+                      key={`${aboutId}-about-${image.src}`}
                       className={styles.embla__slide}
                     >
                       <Image
                         width='600'
                         height='600'
-                        src={image.image}
+                        src={image.src}
                         alt={image.alt}
-                        priority={true}
-                        // loading='lazy'
-                        // sizes='100vw'
+                        placeholder='blur'
+                        blurDataURL={image.blurDataUrl}
+                        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                         className={`mx-auto h-[225px] w-[225px] rounded-full object-cover shadow-lg md:h-[265px] md:w-[265px] lg:h-[325px] lg:w-[325px]`}
                       />
                     </div>
@@ -267,9 +226,58 @@ export default function Home() {
               Visit Us
             </motion.h2>
           </span>
-          <LocationMap />
+          <LocationMap mapMarkers={mapMarkers} />
         </section>
       </main>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const heroImgPromises = heroImages.map(async (image) => {
+    const src = getImageUrl(image.image)
+    const blurDataUrl = await getBase64ImageUrl(image.image)
+    return {
+      src,
+      blurDataUrl,
+      id: image.id,
+      alt: image.alt,
+    }
+  })
+
+  const aboutMeImgPromises = aboutMeImages.map(async (image) => {
+    const src = getImageUrl(image.image)
+    const blurDataUrl = await getBase64ImageUrl(image.image)
+    return {
+      src,
+      blurDataUrl,
+      id: image.id,
+      alt: image.alt,
+    }
+  })
+
+  const surfTripImgPromises = surfTripImages.map(async (image) => {
+    const src = getImageUrl(image.image)
+    const blurDataUrl = await getBase64ImageUrl(image.image)
+    return {
+      src,
+      blurDataUrl,
+      id: image.id,
+      alt: image.alt,
+    }
+  })
+
+  const heroImg = await Promise.all(heroImgPromises)
+  const aboutMeImg = await Promise.all(aboutMeImgPromises)
+  const surfTripImg = await Promise.all(surfTripImgPromises)
+
+  const mapMarkers = getMapMarkers(surfTripImg)
+
+  return {
+    props: {
+      heroImg,
+      aboutMeImg,
+      mapMarkers,
+    },
+  }
 }

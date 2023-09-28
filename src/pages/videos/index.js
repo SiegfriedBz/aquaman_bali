@@ -2,11 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
+import { photoVideo } from '@/data/videoPageImages'
+import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import { buttonVariants } from '@/utils/framerVariants'
-import photoVideoDrone from '@/data/photoVideoDrone.json'
-const [photoVideo, ,] = photoVideoDrone
 
-const Videos = () => {
+const Videos = ({ photoVideoImg }) => {
   return (
     <section id='photo-video'>
       <h2 className='mb-1 text-center text-2xl font-bold text-slate-900 dark:text-white'>
@@ -20,14 +20,15 @@ const Videos = () => {
       </p>
 
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-        <div className='h-70 mb-5'>
+        <div className='mb-5 h-72'>
           <Image
             width='600'
             height='600'
-            src={photoVideo.image}
-            alt={photoVideo.alt}
-            // loading='lazy'
-            // sizes='100vw'
+            src={photoVideoImg.src}
+            alt={photoVideoImg.alt}
+            placeholder='blur'
+            blurDataURL={photoVideoImg.blurDataUrl}
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
             className='h-full rounded-lg object-cover shadow-2xl'
           />
         </div>
@@ -73,3 +74,20 @@ const Videos = () => {
 export default Videos
 
 Videos.Layout = PhotoVideoLayout
+
+export async function getStaticProps() {
+  const blurDataUrl = await getBase64ImageUrl(photoVideo.image)
+
+  const photoVideoImg = {
+    src: getImageUrl(photoVideo.image),
+    blurDataUrl: blurDataUrl,
+    id: photoVideo.id,
+    alt: photoVideo.alt,
+  }
+
+  return {
+    props: {
+      photoVideoImg,
+    },
+  }
+}

@@ -1,29 +1,13 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import LessonsLayout from '@/components/layouts/lessonsLayout'
 import Carousel from '@/components/carousel'
 import styles from '../../components/carousel.module.css'
+import LessonsLayout from '@/components/layouts/lessonsLayout'
+import { groupLessonsImages } from '@/data/surfLessonsPageImages'
+import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import { buttonVariants } from '@/utils/framerVariants'
-import rendyTeach from '@/data/rendyTeach.json'
-const [
-  rendyTeach01,
-  ,
-  ,
-  rendyTeach04,
-  rendyTeach05,
-  rendyTeach06,
-  rendyTeach07,
-] = rendyTeach
 
-const groupLessonsImg = [
-  rendyTeach01,
-  rendyTeach04,
-  rendyTeach05,
-  rendyTeach06,
-  rendyTeach07,
-]
-
-const SemiPrivate = () => {
+const SemiPrivate = ({ groupLessonsImg }) => {
   return (
     <section id='semi-private' className='mb-2'>
       <h2 className='mb-2 text-center text-2xl font-bold text-slate-900  dark:text-white'>
@@ -42,8 +26,11 @@ const SemiPrivate = () => {
                 <Image
                   width='600'
                   height='600'
-                  src={image.image}
+                  src={image.src}
                   alt={image.alt}
+                  placeholder='blur'
+                  blurDataURL={image.blurDataUrl}
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                   className='h-full rounded-lg object-cover shadow-2xl'
                 />
               </div>
@@ -168,3 +155,24 @@ const SemiPrivate = () => {
 export default SemiPrivate
 
 SemiPrivate.Layout = LessonsLayout
+
+export async function getStaticProps() {
+  const groupLessonsImgPromises = groupLessonsImages.map(async (image) => {
+    const src = getImageUrl(image.image)
+    const blurDataUrl = await getBase64ImageUrl(image.image)
+    return {
+      src,
+      blurDataUrl,
+      id: image.id,
+      alt: image.alt,
+    }
+  })
+
+  const groupLessonsImg = await Promise.all(groupLessonsImgPromises)
+
+  return {
+    props: {
+      groupLessonsImg,
+    },
+  }
+}

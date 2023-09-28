@@ -1,12 +1,12 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
+import { videoAnalysis } from '@/data/videoPageImages'
+import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import { buttonVariants } from '@/utils/framerVariants'
-import photoVideoDrone from '@/data/photoVideoDrone.json'
-import Link from 'next/link'
-const [_, videoAnalysis] = photoVideoDrone
 
-const VideoAnalysis = () => {
+const VideoAnalysis = ({ videoAnalysisImg }) => {
   return (
     <section
       id='video-analysis'
@@ -23,14 +23,15 @@ const VideoAnalysis = () => {
       </p>
 
       <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
-        <div className='h-70 mb-5'>
+        <div className='mb-5 h-72'>
           <Image
             width='600'
             height='600'
-            src={videoAnalysis.image}
-            alt={videoAnalysis.alt}
-            // loading='lazy'
-            // sizes='100vw'
+            src={videoAnalysisImg.src}
+            alt={videoAnalysisImg.alt}
+            placeholder='blur'
+            blurDataURL={videoAnalysisImg.blurDataUrl}
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
             className='h-full rounded-lg object-cover shadow-2xl'
           />
         </div>
@@ -81,3 +82,20 @@ const VideoAnalysis = () => {
 export default VideoAnalysis
 
 VideoAnalysis.Layout = PhotoVideoLayout
+
+export async function getStaticProps() {
+  const blurDataUrl = await getBase64ImageUrl(videoAnalysis.image)
+
+  const videoAnalysisImg = {
+    src: getImageUrl(videoAnalysis.image),
+    blurDataUrl: blurDataUrl,
+    id: videoAnalysis.id,
+    alt: videoAnalysis.alt,
+  }
+
+  return {
+    props: {
+      videoAnalysisImg,
+    },
+  }
+}

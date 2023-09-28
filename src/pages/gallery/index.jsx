@@ -1,79 +1,27 @@
 import { useId } from 'react'
 import Image from 'next/image'
 import GalleryLayout from '@/components/layouts/galleryLayout'
-import rendyTeach from '@/data/rendyTeach.json'
-import rendySurf from '@/data/rendySurf.json'
-const [
-  rendyTeach01,
-  rendyTeach02,
-  rendyTeach03,
-  rendyTeach04,
-  rendyTeach05,
-  rendyTeach06,
-  rendyTeach07,
-] = rendyTeach
+import { galleryImages } from '@/data/galleryPageImages'
+import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 
-const [
-  rendySurf01,
-  rendySurf01Small,
-  rendySurf02,
-  rendySurf02Small,
-  rendySurf03,
-  rendySurf03Small,
-  rendySurf04,
-  rendySurf04Small,
-  rendySurf05,
-  rendySurf06,
-  rendySurf07,
-  rendySurf08,
-  rendySurf09,
-  rendySurf10,
-  rendySurf10Small,
-  rendySurf11,
-  rendySurf12,
-  rendySurf13,
-  rendySurf14,
-] = rendySurf
-
-const galleryImg = [
-  rendySurf01,
-  rendyTeach04,
-  rendySurf05,
-  rendyTeach07,
-  rendySurf11,
-  rendyTeach03,
-  rendySurf02,
-  rendyTeach01,
-  rendySurf03,
-  rendyTeach02,
-  rendySurf04,
-  rendyTeach05,
-  rendySurf06,
-  rendyTeach06,
-  rendySurf07,
-  rendySurf08,
-  rendySurf09,
-  rendySurf10,
-  rendySurf12,
-  rendySurf13,
-  rendySurf14,
-]
-
-const Gallery = () => {
+const Gallery = ({ galleryImg }) => {
   const imageId = useId()
 
   return (
     <div className='mt-3 grid grid-cols-1 gap-4 md:grid-cols-4'>
-      {galleryImg.map((image) => {
+      {galleryImg.map((image, index) => {
         return (
-          <div key={`${imageId}-${image.image}`} className='h-70'>
+          <div key={`${imageId}-${image.src}`} className='h-72'>
             <Image
               width='600'
               height='600'
-              src={image.image}
+              src={image.src}
               alt={image.alt}
-              loading='lazy'
-              // sizes='100vw'
+              priority={index < 4}
+              loading={index > 3 ? 'lazy' : 'eager'}
+              placeholder='blur'
+              blurDataURL={image.blurDataUrl}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               className='h-full rounded-lg object-cover shadow-2xl'
             />
           </div>
@@ -86,3 +34,24 @@ const Gallery = () => {
 export default Gallery
 
 Gallery.Layout = GalleryLayout
+
+export async function getStaticProps() {
+  const galleryImgPromises = galleryImages.map(async (image) => {
+    const src = getImageUrl(image.image)
+    const blurDataUrl = await getBase64ImageUrl(image.image)
+    return {
+      src,
+      blurDataUrl,
+      id: image.id,
+      alt: image.alt,
+    }
+  })
+
+  const galleryImg = await Promise.all(galleryImgPromises)
+
+  return {
+    props: {
+      galleryImg,
+    },
+  }
+}
