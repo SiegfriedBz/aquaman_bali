@@ -25,32 +25,27 @@ export const CustomCarousel = ({
   ...rest
 }) => {
   return (
-    <motion.div
-      variants={childVariants}
-      className='flex w-full flex-col items-center justify-center md:h-full'
-    >
-      <Carousel>
-        {images.map((image) => {
-          return (
-            <div
-              key={`${carouselId}-${carouselKey}-${image.src}`}
-              className={`${styles.embla__slide} ${carouselClasses}`}
-            >
-              <Image
-                width='600'
-                height='600'
-                src={image.src}
-                alt={image.alt}
-                placeholder='blur'
-                blurDataURL={image.blurDataUrl}
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                className={imageClasses}
-                {...rest}
-              />
-            </div>
-          )
-        })}
-      </Carousel>
-    </motion.div>
+    <Carousel>
+      {images.map((image) => {
+        return (
+          <div
+            key={`${carouselId}-${carouselKey}-${image.src}`}
+            className={`${styles.embla__slide} ${carouselClasses}`}
+          >
+            <Image
+              width='600'
+              height='600'
+              src={image.src}
+              alt={image.alt}
+              placeholder='blur'
+              blurDataURL={image.blurDataUrl}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              className={imageClasses}
+              {...rest}
+            />
+          </div>
+        )
+      })}
+    </Carousel>
   )
 }

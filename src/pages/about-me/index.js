@@ -1,8 +1,6 @@
-import Image from 'next/image'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
-import Carousel, { CustomCarousel } from '../../components/carousel'
-import styles from '../../components/carousel.module.css'
+import { CustomCarousel } from '../../components/carousel'
 import { aboutMeImages } from '@/data/aboutMePageImages'
 import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import {
@@ -47,13 +45,18 @@ const About = ({ aboutMeImg }) => {
         </div>
 
         <div className='my-5 md:order-3 md:col-span-2 md:row-span-2'>
-          <CustomCarousel
-            images={aboutMeImg}
-            carouselKey='about-me'
-            carouselClasses='h-60 md:h-[30rem]'
-            imageClasses='h-full w-full md:w-11/12 rounded-xl object-cover shadow-2xl mx-auto'
-            priority={true}
-          />
+          <motion.div
+            variants={childVariants}
+            className='flex w-full flex-col items-center justify-center md:h-full'
+          >
+            <CustomCarousel
+              images={aboutMeImg}
+              carouselKey='about-me'
+              carouselClasses='h-60 md:h-[30rem]'
+              imageClasses='h-full w-full md:w-11/12 rounded-xl object-cover shadow-2xl mx-auto'
+              priority={true}
+            />
+          </motion.div>
         </div>
 
         <div
