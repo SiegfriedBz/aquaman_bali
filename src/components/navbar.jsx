@@ -50,20 +50,23 @@ const Navbar = () => {
         sm:px-16 sm:py-8 md:px-24 lg:px-12 xl:px-32'
     >
       <section className='mx-auto flex items-center justify-between'>
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-2 md:gap-4'>
           <Link href='/' onClick={() => setMobileMenuIsOpen(false)}>
             <Image
               src={logo}
               alt='logo'
               width={45}
               height={45}
-              className='rounded-full object-contain shadow-2xl ring-2 ring-slate-900'
+              className='rounded-full object-contain
+                shadow-2xl ring-2
+               ring-slate-900 transition duration-300
+               hover:scale-125 md:h-14 md:w-14'
             />
           </Link>
           <Link href='/' onClick={() => setMobileMenuIsOpen(false)}>
             <span
-              className='text-2xl font-extrabold
-              text-slate-950 hover:text-slate-600
+              className='text-2xl font-extrabold text-slate-950 transition duration-300
+               hover:scale-110 hover:text-slate-600
               dark:text-white dark:hover:text-slate-200
                md:text-3xl'
             >
@@ -108,7 +111,10 @@ const Navbar = () => {
           >
             {toggleIcon}
           </button>
-          <Link href='/about-me' className='hover:opacity-90'>
+          <Link
+            href='/about-me'
+            className='transition duration-300 hover:scale-110 hover:opacity-90'
+          >
             About Me
           </Link>
 
@@ -118,29 +124,44 @@ const Navbar = () => {
                 const route = isHomePage ? '#location' : '/#location'
                 router.push(route)
               }}
-              className='hover:opacity-90'
+              className='transition duration-300 hover:scale-110 hover:opacity-90'
             >
               Visit Us
             </button>
-            <Link href='/#testimonials' className='hover:opacity-90'>
+            <Link
+              href='/#testimonials'
+              className='transition duration-300 hover:scale-110 hover:opacity-90'
+            >
               Testimonials
             </Link>
           </div>
 
-          <Link href='/surf-lessons' className='hover:opacity-90'>
+          <Link
+            href='/surf-lessons'
+            className='transition duration-300 hover:scale-110 hover:opacity-90'
+          >
             Surf Lessons
           </Link>
 
           <div className='hidden 2xl:flex 2xl:space-x-8'>
-            <Link href='/surf-trips' className='hover:opacity-90'>
+            <Link
+              href='/surf-trips'
+              className='transition duration-300 hover:scale-110 hover:opacity-90'
+            >
               Surf Trips
             </Link>
 
-            <Link href='/videos' className='hover:opacity-90'>
+            <Link
+              href='/videos'
+              className='transition duration-300 hover:scale-110 hover:opacity-90'
+            >
               Photo | Video | Drone
             </Link>
 
-            <Link href='/gallery' className=' hover:opacity-90'>
+            <Link
+              href='/gallery'
+              className='transition duration-300 hover:scale-110 hover:opacity-90'
+            >
               Gallery
             </Link>
           </div>
@@ -148,13 +169,13 @@ const Navbar = () => {
           <a href='https://goo.gl/maps/iHPokm4Q943N2f2fA'>
             <FontAwesomeIcon
               icon={faStreetView}
-              className='text-3xl text-amber-400 hover:text-amber-500'
+              className='text-3xl text-amber-400 transition duration-300 hover:scale-125 hover:text-amber-500 md:text-5xl'
             />
           </a>
           <a href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'>
             <FontAwesomeIcon
               icon={faWhatsapp}
-              className='text-3xl font-bold text-teal-700 hover:text-teal-500'
+              className='text-3xl font-bold text-teal-700 transition duration-300 hover:scale-125 hover:text-teal-500 md:text-5xl'
             />
           </a>
         </nav>
@@ -232,7 +253,7 @@ const Navbar = () => {
           </nav>
 
           {/* mobile social icons */}
-          <div className='flex w-full items-center justify-between px-2'>
+          <div className='flex w-full items-center justify-between px-2 pt-5'>
             <a href='https://goo.gl/maps/iHPokm4Q943N2f2fA' target='_blank'>
               <FontAwesomeIcon
                 icon={faStreetView}

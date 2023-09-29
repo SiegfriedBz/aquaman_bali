@@ -41,7 +41,7 @@ export default function LocationMap({ mapMarkers }) {
         longitude: mapMarkers.canggu.longitude,
         zoom: isSurfTripsRoute ? 6 : 10,
       }}
-      style={{ width: 'auto', height: 400 }}
+      style={{ width: 'auto', height: 450 }}
       mapStyle='mapbox://styles/mapbox/streets-v9'
     >
       {showPopup && (

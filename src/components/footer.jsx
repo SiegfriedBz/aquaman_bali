@@ -47,7 +47,8 @@ const Footer = () => {
         variants={operatingHoursVariants}
         initial='initial'
         animate={operatingHoursInInView ? 'animate' : 'initial'}
-        className='mb-4 flex flex-row justify-center text-lg text-slate-800 dark:text-white'
+        className='mb-4 flex flex-row justify-center
+         text-lg text-slate-800 dark:text-white md:text-2xl'
       >
         Every day 6:00 am - 6:00 pm
       </motion.div>
@@ -56,45 +57,58 @@ const Footer = () => {
       <section id='contact'>
         <div className='flex flex-row justify-between'>
           {/* contact */}
-          <div className='flex-start flex flex-col items-start'>
+          <div
+            className='flex-start flex flex-col items-start
+              md:py-5 md:text-xl'
+          >
             <address>
-              <h2 className='font-bold'>Aquaman Bali</h2>
+              <h2 className='font-bold md:text-2xl'>Aquaman Bali</h2>
               Batu Bolong, Canggu
               <br />
-              <span className='text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+              <span
+                className='text-slate-800
+                hover:text-slate-500
+                dark:text-white dark:hover:text-gray-200
+                  md:py-5 md:text-xl'
+              >
                 <a href='mailto:rendy280720@gmail.com?subject=Inquiry About Surf Lessons and Surf Trips 🏄‍♂️🌊'>
                   rendy280720@gmail.com
                 </a>
               </span>
               <br />
-              <span className='text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+              <span
+                className='text-slate-800
+                hover:text-slate-500
+                dark:text-white dark:hover:text-gray-200
+                  md:py-5 md:text-xl'
+              >
                 <a href='tel:+6282289427321'>0822-8942-7321</a>
               </span>
             </address>
           </div>
 
           {/* icons */}
-          <div className='my-auto flex flex-col items-center'>
-            <div className='flex items-center justify-between'>
+          <div className='my-auto flex flex-col items-center md:gap-6'>
+            <div className='flex items-center justify-between md:gap-6'>
               <a
                 href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
                 target='_blank'
               >
                 <FontAwesomeIcon
                   icon={faWhatsapp}
-                  className='px-2 py-1  text-3xl text-teal-700 hover:text-teal-500'
+                  className='px-2 py-1 text-3xl text-teal-700 transition duration-300 hover:scale-125 hover:text-teal-500 md:text-5xl'
                 />
               </a>
 
               <a href='https://www.instagram.com/aquaman_bali/' target='_blank'>
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  className='px-2 py-1 text-3xl text-purple-600 hover:text-purple-500'
+                  className='px-2 py-1 text-3xl text-purple-600 transition duration-300 hover:scale-125 hover:text-purple-500 md:text-5xl'
                 />
               </a>
             </div>
 
-            <div className='flex items-center justify-between'>
+            <div className='flex items-center justify-between md:gap-6'>
               <a
                 href='https://www.tiktok.com/@aquamanbali'
                 target='_blank'
@@ -104,6 +118,7 @@ const Footer = () => {
                   src={tikTokLogo}
                   width={35}
                   height={35}
+                  className='transition duration-300 hover:scale-125 md:h-16 md:w-16'
                   alt='tiktok-logo'
                 />
               </a>
@@ -114,7 +129,7 @@ const Footer = () => {
               >
                 <FontAwesomeIcon
                   icon={faMugHot}
-                  className='px-2 py-1 text-3xl text-amber-400 hover:text-amber-500'
+                  className='px-2 py-1 text-3xl text-amber-400 transition duration-300 hover:scale-125 hover:text-amber-500 md:text-5xl'
                 />
               </a>
             </div>
