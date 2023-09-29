@@ -44,7 +44,7 @@ export default function getMapMarkers(surfTripImg) {
     nusa: {
       latitude: -8.677877151151367,
       longitude: 115.45591486406514,
-      location: 'Nusa-Lumboga',
+      location: 'Nusa-Lembongan',
       image: nusaImg,
     },
     lombok: {
