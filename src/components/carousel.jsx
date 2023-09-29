@@ -1,6 +1,9 @@
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import styles from './carousel.module.css'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { childVariants } from '@/utils/framerVariants'
 
 const Carousel = ({ children }) => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])
@@ -12,3 +15,42 @@ const Carousel = ({ children }) => {
   )
 }
 export default Carousel
+
+export const CustomCarousel = ({
+  images,
+  carouselId = '',
+  carouselKey = '',
+  carouselClasses = '',
+  imageClasses = '',
+  ...rest
+}) => {
+  return (
+    <motion.div
+      variants={childVariants}
+      className='flex w-full flex-col items-center justify-center md:h-full'
+    >
+      <Carousel>
+        {images.map((image) => {
+          return (
+            <div
+              key={`${carouselId}-${carouselKey}-${image.src}`}
+              className={`${styles.embla__slide} ${carouselClasses}`}
+            >
+              <Image
+                width='600'
+                height='600'
+                src={image.src}
+                alt={image.alt}
+                placeholder='blur'
+                blurDataURL={image.blurDataUrl}
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                className={imageClasses}
+                {...rest}
+              />
+            </div>
+          )
+        })}
+      </Carousel>
+    </motion.div>
+  )
+}

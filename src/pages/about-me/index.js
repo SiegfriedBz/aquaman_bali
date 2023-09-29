@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import { motion } from 'framer-motion'
-import Carousel from '../../components/carousel'
+import Carousel, { CustomCarousel } from '../../components/carousel'
 import styles from '../../components/carousel.module.css'
 import { aboutMeImages } from '@/data/aboutMePageImages'
 import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
@@ -33,50 +33,44 @@ const About = ({ aboutMeImg }) => {
         initial='hidden'
         animate='visible'
         id='about-me'
-        className='flex flex-col items-center justify-center'
+        className='md:grid md:grid-flow-col md:grid-rows-1 md:gap-8'
       >
-        <motion.h1
-          variants={textVariants}
-          className='mb-2 text-center text-4xl font-bold dark:text-white'
+        <div className='md:mt-8'>
+          <motion.h1
+            variants={textVariants}
+            className='text-center text-2xl font-bold text-slate-900
+          dark:text-white md:my-0
+            md:text-5xl'
+          >
+            About Me
+          </motion.h1>
+        </div>
+
+        <div className='my-5 md:order-3 md:col-span-2 md:row-span-2'>
+          <CustomCarousel
+            images={aboutMeImg}
+            carouselKey='about-me'
+            carouselClasses='h-60 md:h-[30rem]'
+            imageClasses='h-full w-full md:w-11/12 rounded-xl object-cover shadow-2xl mx-auto'
+            priority={true}
+          />
+        </div>
+
+        <div
+          className='flex flex-col items-center justify-center
+            text-xl md:order-2 md:col-span-2 md:row-span-1
+            md:py-5 md:text-2xl'
         >
-          About Me
-        </motion.h1>
-
-        <motion.div variants={childVariants} className='mx-2'>
-          <Carousel>
-            {aboutMeImg.map((image, index) => {
-              return (
-                <div
-                  key={image.id}
-                  className={`${styles.embla__slide} my-3 h-80`}
-                >
-                  <Image
-                    width='600'
-                    height='600'
-                    src={image.src}
-                    alt={image.alt}
-                    priority={index < 2}
-                    loading={index > 2 ? 'lazy' : 'eager'}
-                    placeholder='blur'
-                    blurDataURL={image.blurDataUrl}
-                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                    className='h-full rounded-lg object-cover shadow-2xl'
-                  />
-                </div>
-              )
-            })}
-          </Carousel>
-
-          <motion.p variants={childVariants} className='my-3 px-1 text-justify'>
+          <motion.p variants={childVariants} className='text-justify'>
             My name is Rendy and I am from Krui, South Sumatra. I started
             surfing at the age of 8 and came to Bali in 2019 to work as a Surf
             Instructor at Batu Bolong Beach in Canggu.
           </motion.p>
-          <motion.p variants={childVariants} className='my-3 px-1 text-justify'>
+          <motion.p variants={childVariants} className='my-3 text-justify'>
             Batu Bolong is an easy place to learn surfing as a beginner but is
             also good for intermediate surfers.
           </motion.p>
-          <motion.p variants={childVariants} className='my-3 px-1 text-justify'>
+          <motion.p variants={childVariants} className='text-justify'>
             I really love surfing and want to share my experience, knowledge and
             stoke of surfing with you. It is a lot of fun. Come join me and
             let&apos;s enjoy the waves and make you reach your goals in surfing!
@@ -88,15 +82,22 @@ const About = ({ aboutMeImg }) => {
             <motion.a
               variants={buttonVariants}
               whileInView='inView'
+              whileHover='hover'
               viewport={{ margin: '-75px' }}
-              className='my-3 w-48 self-center rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:rounded-3xl active:ring-blue-500'
+              className='mt-8 w-48
+                rounded-3xl bg-gradient-to-r from-cyan-500
+                to-blue-500 px-8 py-4
+                text-center font-extrabold
+                text-white outline-none
+                ring-2 hover:ring-blue-500 active:ring-blue-500
+                md:mt-8 md:w-72 md:text-lg'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               target='_blank'
             >
               Contact me
             </motion.a>
           </motion.div>
-        </motion.div>
+        </div>
       </motion.section>
     </>
   )
