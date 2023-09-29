@@ -1,6 +1,6 @@
 import CustomButton from './CustomButton'
 
-export const LessonsDetails = () => {
+export const LessonsPageDetails = () => {
   return (
     <>
       <div className='w-full md:mb-4 md:mt-8'>

@@ -2,8 +2,6 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import styles from './carousel.module.css'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { childVariants } from '@/utils/framerVariants'
 
 const Carousel = ({ children }) => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])

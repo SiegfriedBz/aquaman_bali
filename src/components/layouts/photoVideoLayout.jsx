@@ -71,11 +71,13 @@ const PhotoVideoLayout = ({ children }) => {
           </span>
         </motion.h3>
 
-        <motion.div variants={childVariants} className='mt-5 w-full'>
+        <motion.div variants={childVariants} className='mt-5 w-full md:my-8'>
           <motion.nav
             variants={navVariants}
             id='videos-navigation'
-            className='flex w-full flex-col items-center justify-around text-lg font-bold dark:text-white'
+            className='flex w-full
+              flex-col items-center justify-center
+              text-lg font-bold dark:text-white'
             aria-label='gallery-navigation'
           >
             <MotionLink
@@ -83,15 +85,15 @@ const PhotoVideoLayout = ({ children }) => {
               variants={leftLinkVariants}
               className={`my-3 min-w-[45%] rounded-3xl
               bg-gradient-to-r from-cyan-500 to-blue-500
-              py-1
-              text-center font-bold md:py-3
-              md:text-2xl md:font-extrabold ${
+              py-1 text-center
+              font-bold md:w-1/4 md:min-w-[25%]
+              md:py-3 md:text-2xl md:font-extrabold ${
                 (!isWaterDroneTab || !isVideoAnalysisTab) && 'ring-blue-500'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
               Photos & Videos
             </MotionLink>
-            <div className='flex w-full items-center justify-around'>
+            <div className='flex w-full items-center justify-around md:w-2/3'>
               <MotionLink
                 href='/videos/water-drone#water-drone'
                 variants={leftLinkVariants}

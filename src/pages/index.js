@@ -115,7 +115,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             >
               Best Surf School in Bali
             </h3>
-            <CustomButton className='!mt-4' />
+            <CustomButton className='!mt-3' />
           </motion.div>
         </motion.section>
 
@@ -166,7 +166,10 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
 
         <hr className='mx-5 my-12 bg-slate-950' />
 
-        <section id='testimonials' className='my-8 scroll-mt-[8rem] md:my-16'>
+        <section
+          id='testimonials'
+          className='my-8 scroll-mt-[8rem] md:my-16 md:scroll-mt-[10rem]'
+        >
           <div ref={testimonialsRef} className='md:mt-8'>
             <motion.h2
               variants={sideSlideVariants}
@@ -195,7 +198,10 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
 
         <hr className='mx-5 my-12 bg-slate-950' />
 
-        <section id='location' className='my-8 scroll-mt-[8rem] md:my-16'>
+        <section
+          id='location'
+          className='my-8 scroll-mt-[8rem] md:my-16 md:scroll-mt-[10rem]'
+        >
           <div ref={visitRef} className='md:mt-8'>
             <motion.h2
               variants={sideSlideVariants}

@@ -1,8 +1,8 @@
 import LessonsLayout from '@/components/layouts/lessonsLayout'
 import { groupLessonsImages } from '@/data/surfLessonsPageImages'
 import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
-import { LessonsMain } from '@/components/LessonsMain'
-import { LessonsDetails } from '@/components/LessonsDetails'
+import { LessonsPageMain } from '@/components/LessonsPageMain'
+import { LessonsPageDetails } from '@/components/LessonsPageDetails'
 
 const SemiPrivate = ({ groupLessonsImg }) => {
   return (
@@ -25,8 +25,8 @@ const SemiPrivate = ({ groupLessonsImg }) => {
           p-3
         hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'
       >
-        <LessonsMain images={groupLessonsImg}>
-          <LessonsMain.Prices>
+        <LessonsPageMain images={groupLessonsImg}>
+          <LessonsPageMain.Prices>
             <p className='mt-8 w-full text-2xl font-bold md:mt-0 md:text-center md:text-3xl'>
               🏄‍♀️ <span className='mt-2 block'> 1 Surf Lesson</span>
             </p>
@@ -54,10 +54,10 @@ const SemiPrivate = ({ groupLessonsImg }) => {
               The 3 sessions can be splitted as you wish, but must be completed
               within 1 month.
             </p>
-          </LessonsMain.Prices>
-        </LessonsMain>
+          </LessonsPageMain.Prices>
+        </LessonsPageMain>
         <br />
-        <LessonsDetails />
+        <LessonsPageDetails />
       </div>
     </section>
   )
