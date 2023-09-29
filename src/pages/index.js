@@ -1,10 +1,15 @@
 import { useRef, useId } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
-import Carousel, { CustomCarousel } from '@/components/carousel'
-import styles from '@/components/carousel.module.css'
+import {
+  containerVariants,
+  childVariants,
+  textVariants,
+  sideSlideVariants,
+  buttonVariants,
+} from '@/utils/framerVariants'
+import { CustomCarousel } from '@/components/carousel'
 import { Testimonials, TestimonialsLinks } from '../components/testimonials'
 import LocationMap from '../components/LocationMap'
 import {
@@ -14,12 +19,6 @@ import {
 } from '@/data/homePageImages'
 import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import getMapMarkers from '@/utils/getMapMarkers'
-import {
-  containerVariants,
-  textVariants,
-  sideSlideVariants,
-  buttonVariants,
-} from '@/utils/framerVariants'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Home',
@@ -59,24 +58,77 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           animate='visible'
           className='md:mb-20 md:grid md:grid-flow-col md:grid-rows-2 md:gap-y-8'
         >
-          <div className='md:order-2 md:col-span-2 md:row-span-1 md:mt-8'>
-            <HeroTextTop />
+          <div
+            className={`md:mt-8flex flex-col items-center justify-center md:order-2 md:col-span-2 md:row-span-1 md:gap-y-4`}
+          >
+            <motion.h1
+              variants={textVariants}
+              className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text
+          py-1 text-center text-3xl font-extrabold text-transparent
+          md:mb-0  md:text-5xl lg:text-7xl'
+            >
+              Upgrade
+            </motion.h1>
+            <motion.h2
+              className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text py-1
+          text-center text-3xl font-extrabold text-transparent
+          md:mb-0  md:text-5xl lg:text-6xl'
+              variants={textVariants}
+            >
+              Your Surfing Skills
+            </motion.h2>
+            <motion.h2
+              className='mb-2 py-1 text-center text-2xl font-bold
+          md:mb-0  md:text-4xl lg:text-5xl'
+              variants={textVariants}
+            >
+              Beginner to Advanced
+            </motion.h2>
           </div>
 
           <div className='w-full md:order-1 md:col-span-1 md:row-span-2'>
-            <CustomCarousel
-              carouselId={topId}
-              images={heroImg}
-              carouselKey='hero'
-              carouselClasses='h-60 md:h-[30rem]'
-              priority={true}
-              imageClasses='w-full mx-auto h-full md:w-11/12 rounded-xl border-none object-cover shadow-2xl md:shadow-none'
-            />
+            <motion.div
+              variants={childVariants}
+              className='flex w-full flex-col items-center justify-center md:h-full'
+            >
+              <CustomCarousel
+                carouselId={topId}
+                images={heroImg}
+                carouselKey='hero'
+                carouselClasses='h-60 md:h-[30rem]'
+                priority={true}
+                imageClasses='w-full mx-auto h-full md:w-11/12 rounded-xl border-none object-cover shadow-2xl md:shadow-none'
+              />
+            </motion.div>
           </div>
 
-          <div className='md:order-3 md:col-span-2'>
-            <HeroTextBottom />
-          </div>
+          <motion.div
+            variants={childVariants}
+            className='flex flex-col items-center justify-center md:order-3 md:col-span-2 md:gap-y-6'
+          >
+            <h3
+              className='my-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500
+                bg-clip-text py-1 text-center
+                text-2xl font-extrabold text-transparent md:my-0 
+                md:text-5xl'
+            >
+              Best Surf School in Bali
+            </h3>
+            <a
+              className='w-48 
+                rounded-3xl
+              bg-gradient-to-r from-cyan-500
+                to-blue-500 px-8
+                py-4 text-center
+              font-extrabold text-white
+                outline-none ring-2 ring-transparent
+              hover:ring-blue-500 active:ring-blue-500 md:my-8 md:w-72 md:text-xl'
+              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+              target='_blank'
+            >
+              Book now
+            </a>
+          </motion.div>
         </motion.section>
 
         <hr className='mx-5 my-12 bg-slate-950' />
@@ -99,14 +151,19 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           </div>
 
           <div className='my-5 md:order-3 md:col-span-3 md:row-span-2'>
-            <CustomCarousel
-              carouselId={aboutId}
-              images={aboutMeImg}
-              carouselKey='about'
-              carouselClasses=''
-              imageClasses='mx-auto h-[225px] w-[225px] rounded-full object-cover shadow-lg md:h-[265px] md:w-[265px] lg:h-[325px] lg:w-[325px]'
-              loading='lazy'
-            />
+            <motion.div
+              variants={childVariants}
+              className='flex w-full flex-col items-center justify-center md:h-full'
+            >
+              <CustomCarousel
+                carouselId={aboutId}
+                images={aboutMeImg}
+                carouselKey='about'
+                carouselClasses=''
+                imageClasses='mx-auto h-[225px] w-[225px] rounded-full object-cover shadow-lg md:h-[265px] md:w-[265px] lg:h-[325px] lg:w-[325px]'
+                loading='lazy'
+              />
+            </motion.div>
           </div>
 
           <div className='flex flex-col items-center justify-center md:order-2 md:col-span-1 md:row-span-1'>
@@ -200,68 +257,6 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
         </section>
       </main>
     </>
-  )
-}
-
-const HeroTextTop = () => {
-  return (
-    <div className={`flex flex-col items-center justify-center md:gap-y-4`}>
-      <motion.h1
-        variants={textVariants}
-        className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text
-          py-1 text-center text-3xl font-extrabold text-transparent
-          md:mb-0 md:text-4xl md:text-5xl lg:text-7xl'
-      >
-        Upgrade
-      </motion.h1>
-      <motion.h2
-        className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text py-1
-          text-center text-3xl font-extrabold text-transparent
-          md:mb-0 md:text-4xl md:text-5xl lg:text-6xl'
-        variants={textVariants}
-      >
-        Your Surfing Skills
-      </motion.h2>
-      <motion.h2
-        className='mb-2 py-1 text-center text-2xl font-bold
-          md:mb-0 md:text-3xl md:text-4xl lg:text-5xl'
-        variants={textVariants}
-      >
-        Beginner to Advanced
-      </motion.h2>
-    </div>
-  )
-}
-
-const HeroTextBottom = () => {
-  return (
-    <div className={`flex flex-col items-center justify-center md:gap-y-6`}>
-      <motion.h3
-        className='my-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500
-          bg-clip-text py-1 text-center
-          text-2xl font-extrabold text-transparent md:my-0 
-          md:text-5xl'
-        variants={textVariants}
-      >
-        Best Surf School in Bali
-      </motion.h3>
-      <motion.a
-        className='w-48 transform
-          rounded-3xl
-        bg-gradient-to-r from-cyan-500
-          to-blue-500 px-8
-          py-4 text-center
-        font-extrabold text-white
-          outline-none ring-2 ring-transparent
-          transition duration-300 ease-in-out hover:shadow-xl
-        hover:ring-blue-500 active:ring-blue-500 md:my-8 md:w-72 md:text-xl'
-        href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-        target='_blank'
-        variants={textVariants}
-      >
-        Book now
-      </motion.a>
-    </div>
   )
 }
 
