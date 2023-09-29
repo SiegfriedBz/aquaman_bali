@@ -75,7 +75,7 @@ const LessonsLayout = ({ children }) => {
             variants={navVariants}
           >
             <MotionLink
-              href='/surf-lessons'
+              href='/surf-lessons#private'
               variants={leftLinkVariants}
               className={`my-3 min-w-[45%] rounded-3xl
                 bg-gradient-to-r from-cyan-500 to-blue-500
@@ -89,7 +89,7 @@ const LessonsLayout = ({ children }) => {
             </MotionLink>
 
             <MotionLink
-              href='/surf-lessons/semi-private'
+              href='/surf-lessons/semi-private#semi-private'
               variants={rightLinkVariants}
               className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r
                 from-cyan-500 to-blue-500 py-1

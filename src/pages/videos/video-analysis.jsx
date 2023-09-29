@@ -10,7 +10,7 @@ const VideoAnalysis = ({ videoAnalysisImg }) => {
   return (
     <section
       id='video-analysis'
-      className='flex scroll-mt-20 flex-col items-center justify-center'
+      className='flex  scroll-mt-[14rem] flex-col items-center justify-center md:scroll-mt-[19rem]'
     >
       <h2 className='mb-1 text-center text-2xl font-bold text-slate-900 dark:text-white'>
         Video Analysis
