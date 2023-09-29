@@ -18,6 +18,8 @@ const meta = {
     'Capture the thrill of your surf sessions with our professional photo and video services. From beginners to experts, preserve your surf memories. Book now!',
 }
 
+const MotionLink = motion(Link)
+
 const PhotoVideoLayout = ({ children }) => {
   const router = useRouter()
   const isVideoAnalysisTab = router.asPath.includes('/videos/video-analysis')
@@ -73,39 +75,50 @@ const PhotoVideoLayout = ({ children }) => {
           <motion.nav
             variants={navVariants}
             id='videos-navigation'
-            className='flex w-full items-center justify-around text-sm font-bold dark:text-white'
+            className='flex w-full flex-col items-center justify-around text-lg font-bold dark:text-white'
             aria-label='gallery-navigation'
           >
-            <motion.div
+            <MotionLink
+              href='/videos#photo-video'
               variants={leftLinkVariants}
-              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center font-bold ${
+              className={`my-3 min-w-[45%] rounded-3xl
+              bg-gradient-to-r from-cyan-500 to-blue-500
+              py-1
+              text-center font-bold md:py-3
+              md:text-2xl md:font-extrabold ${
                 (!isWaterDroneTab || !isVideoAnalysisTab) && 'ring-blue-500'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
-              <Link href='/videos' className='px-1'>
-                Photos & Videos
-              </Link>
-            </motion.div>
-            <motion.div
-              variants={leftLinkVariants}
-              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center font-bold ${
-                isWaterDroneTab && 'ring-blue-500'
-              } text-white outline-none ring-2 hover:ring-blue-500`}
-            >
-              <Link href='/videos/water-drone' className='px-1'>
+              Photos & Videos
+            </MotionLink>
+            <div className='flex w-full items-center justify-around'>
+              <MotionLink
+                href='/videos/water-drone#water-drone'
+                variants={leftLinkVariants}
+                className={`my-3 min-w-[45%] rounded-3xl
+                bg-gradient-to-r from-cyan-500 to-blue-500
+                py-1
+                text-center font-bold md:py-3
+                md:text-2xl md:font-extrabold ${
+                  isWaterDroneTab && 'ring-blue-500'
+                } text-white outline-none ring-2 hover:ring-blue-500`}
+              >
                 Water & Drone
-              </Link>
-            </motion.div>
-            <motion.div
-              variants={rightLinkVariants}
-              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center font-bold ${
-                isVideoAnalysisTab && 'ring-blue-500'
-              } text-white outline-none ring-2 hover:ring-blue-500`}
-            >
-              <Link href='/videos/video-analysis' className='px-1'>
+              </MotionLink>
+              <MotionLink
+                href='/videos/video-analysis#video-analysis'
+                variants={rightLinkVariants}
+                className={`my-3 min-w-[45%] rounded-3xl
+                bg-gradient-to-r from-cyan-500 to-blue-500
+                py-1
+                text-center font-bold md:py-3
+                md:text-2xl md:font-extrabold ${
+                  isVideoAnalysisTab && 'ring-blue-500'
+                } text-white outline-none ring-2 hover:ring-blue-500`}
+              >
                 Video Analysis
-              </Link>
-            </motion.div>
+              </MotionLink>
+            </div>
           </motion.nav>
         </motion.div>
 

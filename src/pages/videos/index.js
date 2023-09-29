@@ -8,7 +8,10 @@ import { buttonVariants } from '@/utils/framerVariants'
 
 const Videos = ({ photoVideoImg }) => {
   return (
-    <section id='photo-video'>
+    <section
+      id='photo-video'
+      className='mb-2 scroll-mt-[14rem] md:scroll-mt-[19rem]'
+    >
       <h2 className='mb-1 text-center text-2xl font-bold text-slate-900 dark:text-white'>
         Photo & Video
       </h2>

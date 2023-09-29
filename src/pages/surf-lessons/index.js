@@ -6,7 +6,10 @@ import { LessonsMain } from '@/components/LessonsMain'
 
 const SurfLessons = ({ privateLessonsImg }) => {
   return (
-    <section id='private' className='mb-2'>
+    <section
+      id='private'
+      className='mb-2 scroll-mt-[11rem] md:scroll-mt-[16rem]'
+    >
       <h2
         className='mb-2 text-center text-2xl font-bold 
           text-slate-900  dark:text-white
