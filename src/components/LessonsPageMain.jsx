@@ -1,7 +1,7 @@
 import { CustomCarousel } from '@/components/carousel'
 import CustomButton from '@/components/CustomButton'
 
-export const LessonsMain = ({ images, children }) => {
+export const LessonsPageMain = ({ images, children }) => {
   return (
     <div className='md:grid md:grid-flow-col md:grid-rows-1 md:gap-8'>
       <div className='md:order-2 md:col-span-4 md:row-span-2 md:my-5'>
@@ -16,17 +16,17 @@ export const LessonsMain = ({ images, children }) => {
         </div>
       </div>
 
-      <LessonsMain.Prices>
+      <LessonsPageMain.Prices>
         <div className='flex flex-col-reverse items-center justify-center'>
           {children}
           <CustomButton />
         </div>
-      </LessonsMain.Prices>
+      </LessonsPageMain.Prices>
     </div>
   )
 }
 
-LessonsMain.Prices = Prices
+LessonsPageMain.Prices = Prices
 
 export function Prices({ children }) {
   return (

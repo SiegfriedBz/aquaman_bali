@@ -197,7 +197,7 @@ const Navbar = () => {
             className='flex flex-col items-center pb-8 dark:text-white'
             aria-label='mobile'
           >
-            <div className='flex w-full flex-col items-center gap-y-4'>
+            <div className='mt-8 flex w-full flex-col items-center gap-y-4'>
               <Link
                 href='/about-me'
                 className='w-full pb-2 text-center hover:opacity-90'
@@ -253,7 +253,7 @@ const Navbar = () => {
           </nav>
 
           {/* mobile social icons */}
-          <div className='flex w-full items-center justify-between px-2 pt-5'>
+          <div className='flex w-full items-center justify-between px-2 pt-3'>
             <a href='https://goo.gl/maps/iHPokm4Q943N2f2fA' target='_blank'>
               <FontAwesomeIcon
                 icon={faStreetView}

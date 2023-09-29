@@ -16,6 +16,8 @@ const meta = {
   description: 'Best surf shots',
 }
 
+const MotionLink = motion(Link)
+
 const GalleryLayout = ({ children }) => {
   const router = useRouter()
   const isVideoTab = router.asPath.includes('/gallery/videos')
@@ -50,30 +52,43 @@ const GalleryLayout = ({ children }) => {
           Explore our best Photos & Videos
         </motion.h2>
 
-        <motion.div variants={childVariants} className='mt-5 w-full'>
+        <motion.div
+          variants={childVariants}
+          className='mt-5 w-full md:my-5 md:w-2/3'
+        >
           <motion.nav
             id='gallery-navigation'
             className='flex w-full items-center justify-around text-lg font-bold dark:text-white'
             aria-label='gallery-navigation'
             variants={navVariants}
           >
-            <motion.div
+            <MotionLink
+              href='/gallery'
               variants={leftLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
+              className={`my-3 min-w-[45%] rounded-3xl
+              bg-gradient-to-r from-cyan-500 to-blue-500
+              py-1
+              text-center font-bold md:py-3
+              md:text-2xl md:font-extrabold ${
                 !isVideoTab ? 'font-bold' : 'font-extrabold ring-blue-500'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
-              <Link href='/gallery'>Photos</Link>
-            </motion.div>
+              Photos
+            </MotionLink>
 
-            <motion.div
+            <MotionLink
+              href='/gallery/videos'
               variants={rightLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
+              className={`my-3 min-w-[45%] rounded-3xl
+              bg-gradient-to-r from-cyan-500 to-blue-500
+              py-1
+              text-center font-bold md:py-3
+              md:text-2xl md:font-extrabold ${
                 isVideoTab ? 'font-extrabold ring-blue-500' : 'font-bold'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
-              <Link href='/gallery/videos'>Videos</Link>
-            </motion.div>
+              Videos
+            </MotionLink>
           </motion.nav>
         </motion.div>
 

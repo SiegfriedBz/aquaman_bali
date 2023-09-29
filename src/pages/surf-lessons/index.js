@@ -1,8 +1,8 @@
 import LessonsLayout from '@/components/layouts/lessonsLayout'
 import { privateLessonsImages } from '@/data/surfLessonsPageImages'
 import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
-import { LessonsDetails } from '@/components/LessonsDetails'
-import { LessonsMain } from '@/components/LessonsMain'
+import { LessonsPageDetails } from '@/components/LessonsPageDetails'
+import { LessonsPageMain } from '@/components/LessonsPageMain'
 
 const SurfLessons = ({ privateLessonsImg }) => {
   return (
@@ -25,8 +25,8 @@ const SurfLessons = ({ privateLessonsImg }) => {
           p-3
         hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'
       >
-        <LessonsMain images={privateLessonsImg}>
-          <LessonsMain.Prices>
+        <LessonsPageMain images={privateLessonsImg}>
+          <LessonsPageMain.Prices>
             <p className='mt-8 w-full text-2xl font-bold md:mt-0 md:text-center md:text-3xl'>
               🏄‍♀️ <span className='mt-2 block'> 1 Surf Lesson</span>
             </p>
@@ -48,10 +48,10 @@ const SurfLessons = ({ privateLessonsImg }) => {
               The 3 sessions can be splitted as you wish, but must be completed
               within 1 month.
             </p>
-          </LessonsMain.Prices>
-        </LessonsMain>
+          </LessonsPageMain.Prices>
+        </LessonsPageMain>
         <br />
-        <LessonsDetails />
+        <LessonsPageDetails />
       </div>
     </section>
   )
