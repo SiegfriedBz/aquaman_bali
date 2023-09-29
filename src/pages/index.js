@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
 import Carousel from '@/components/carousel'
 import styles from '@/components/carousel.module.css'
-import Testimonials from '../components/testimonials'
+import { Testimonials, TestimonialsLinks } from '../components/testimonials'
 import LocationMap from '../components/LocationMap'
 import {
   heroImages,
@@ -60,147 +60,127 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           animate='visible'
           className='md:mb-20 md:grid md:grid-flow-col md:grid-rows-2 md:gap-y-8'
         >
-          <div class='md:order-2 md:col-span-2 md:row-span-1 md:mt-8'>
+          <div className='md:order-2 md:col-span-2 md:row-span-1 md:mt-8'>
             <HeroTextTop />
           </div>
-          <div class='md:order-1 md:col-span-1 md:row-span-2'>
-            <motion.div
-              variants={childVariants}
-              className='flex flex-col items-center justify-center md:h-full'
-            >
-              <Carousel>
-                {heroImg.map((image) => {
-                  return (
-                    <div
-                      key={`${topId}-top-${image.src}`}
-                      className={`${styles.embla__slide} h-60 md:h-[30rem]`}
-                    >
-                      <Image
-                        width='600'
-                        height='600'
-                        src={image.src}
-                        alt={image.alt}
-                        priority={true}
-                        placeholder='blur'
-                        blurDataURL={image.blurDataUrl}
-                        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                        className='mx-auto h-full w-11/12 rounded-xl border-none object-cover shadow-2xl md:shadow-none'
-                      />
-                    </div>
-                  )
-                })}
-              </Carousel>
-            </motion.div>
+
+          <div className='w-full md:order-1 md:col-span-1 md:row-span-2'>
+            <CustomCarousel
+              carouselId={topId}
+              images={heroImg}
+              carouselKey='hero'
+              carouselClasses='h-60 md:h-[30rem]'
+              imageClasses='w-full mx-auto h-full md:w-11/12 rounded-xl border-none object-cover shadow-2xl md:shadow-none'
+            />
           </div>
-          <div class='md:order-3 md:col-span-2'>
+
+          <div className='md:order-3 md:col-span-2'>
             <HeroTextBottom />
           </div>
         </motion.section>
 
-        <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-12 bg-slate-950' />
 
         <section
           id='about-me-short'
-          className='my-5 flex flex-col items-center justify-center md:mb-12'
+          className='my-8 md:my-16 md:grid md:grid-flow-col md:grid-rows-1 md:gap-y-8'
         >
-          <span ref={aboutRef}>
+          <div ref={aboutRef} className='md:mt-8'>
             <motion.h2
               variants={sideSlideVariants}
               initial={!aboutIsInView && 'hidden'}
               animate={aboutIsInView && 'visible'}
-              className='mb-3 text-center text-2xl font-bold
-              text-slate-900 dark:text-white
-                sm:text-5xl'
+              className='text-center text-2xl font-bold text-slate-900
+              dark:text-white sm:text-5xl
+                md:mb-0'
             >
               About me
             </motion.h2>
-          </span>
-          <div className='flex flex-col items-center justify-center md:flex-row'>
-            <div className='md:max-w-md xl:max-w-xl'>
-              <Carousel>
-                {aboutMeImg.map((image) => {
-                  return (
-                    <div
-                      key={`${aboutId}-about-${image.src}`}
-                      className={styles.embla__slide}
-                    >
-                      <Image
-                        width='600'
-                        height='600'
-                        src={image.src}
-                        alt={image.alt}
-                        placeholder='blur'
-                        blurDataURL={image.blurDataUrl}
-                        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                        className={`mx-auto h-[225px] w-[225px] rounded-full object-cover shadow-lg md:h-[265px] md:w-[265px] lg:h-[325px] lg:w-[325px]`}
-                      />
-                    </div>
-                  )
-                })}
-              </Carousel>
-            </div>
+          </div>
 
-            <div className='flex flex-col items-center md:max-w-md md:p-5'>
-              <p className='my-3 text-center text-lg'>
-                My name is Rendy and I am from Krui, South Sumatra. I started
-                surfing at the age of 8 and came to Bali in 2019 to work as a
-                surf instructor at Batu Bolong Beach in Canggu.
-              </p>
-              <MotionLink
-                variants={buttonVariants}
-                whileInView='inView'
-                viewport={{ margin: '-75px' }}
-                className='my-3 w-48 rounded-3xl
-                  bg-gradient-to-r from-cyan-500 to-blue-500
-                  px-8 py-4 text-center font-extrabold text-white outline-none ring-2 hover:ring-blue-500 active:ring-blue-500 md:w-72 md:px-10 md:text-lg'
-                href='/about-me'
-              >
-                More about me
-              </MotionLink>
-            </div>
+          <div className='my-5 md:order-3 md:col-span-3 md:row-span-2'>
+            <CustomCarousel
+              carouselId={aboutId}
+              images={aboutMeImg}
+              carouselKey='about'
+              carouselClasses=''
+              imageClasses='mx-auto h-[225px] w-[225px] rounded-full object-cover shadow-lg md:h-[265px] md:w-[265px] lg:h-[325px] lg:w-[325px]'
+            />
+          </div>
+
+          <div className='flex flex-col items-center justify-center md:order-2 md:col-span-1 md:row-span-1'>
+            <p className='mb-5 text-center text-lg md:mb-0 md:text-2xl'>
+              My name is Rendy and I am from Krui, South Sumatra. I started
+              surfing at the age of 8 and came to Bali in 2019 to work as a Surf
+              Instructor at Batu Bolong Beach in Canggu.
+            </p>
+            <MotionLink
+              variants={buttonVariants}
+              whileInView='inView'
+              viewport={{ margin: '-75px' }}
+              className='w-48 rounded-3xl
+                bg-gradient-to-r from-cyan-500 to-blue-500
+                px-8 py-4
+                text-center font-extrabold
+                text-white outline-none
+                ring-2 hover:ring-blue-500 active:ring-blue-500
+                md:my-8 md:w-2/3 md:text-lg'
+              href='/about-me'
+            >
+              More about me
+            </MotionLink>
           </div>
         </section>
 
-        <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-12 bg-slate-950' />
 
-        <section id='testimonials' className='flex scroll-mt-20 flex-col'>
-          <span ref={testimonialsRef}>
+        <section id='testimonials' className='my-8 scroll-mt-20 md:my-16'>
+          <div ref={testimonialsRef} className='md:mt-8'>
             <motion.h2
               variants={sideSlideVariants}
               initial={!testimonialsIsInView && 'hidden'}
               animate={testimonialsIsInView && 'visible'}
-              className='text-center text-2xl font-bold
-              text-slate-900 dark:text-white
-                sm:text-5xl'
+              className='text-center text-2xl font-bold text-slate-900
+              dark:text-white sm:text-5xl
+                md:mb-0'
             >
               Testimonials
             </motion.h2>
-            <Testimonials />
-          </span>
+          </div>
 
-          <motion.a
-            variants={buttonVariants}
-            whileInView='inView'
-            viewport={{ margin: '-75px' }}
-            className='my-3 w-48 self-center rounded-3xl
-              bg-gradient-to-r from-cyan-500 to-blue-500
-              px-8 py-4
-              text-center font-extrabold text-white
-              outline-none
-              ring-2 hover:ring-blue-500 active:ring-blue-500
-              md:px-12 md:py-6
-              md:text-xl'
-            href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-            target='_blank'
-          >
-            Book now
-          </motion.a>
+          <div className='my-3'>
+            <Testimonials />
+          </div>
+
+          <div className='my-0 flex flex-col items-center'>
+            <TestimonialsLinks />
+          </div>
+
+          <div className='flex flex-col items-center justify-center'>
+            <motion.a
+              variants={buttonVariants}
+              whileInView='inView'
+              viewport={{ margin: '-75px' }}
+              className='w-48 rounded-3xl
+                bg-gradient-to-r
+              from-cyan-500 to-blue-500
+                px-8 py-4
+                text-center font-extrabold
+              text-white outline-none
+                ring-2 
+              hover:ring-blue-500 active:ring-blue-500 md:my-8 md:w-72 md:text-xl'
+              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+              target='_blank'
+            >
+              Book now
+            </motion.a>
+          </div>
         </section>
 
-        <hr className='mx-5 my-5 bg-slate-950' />
+        <hr className='mx-5 my-12 bg-slate-950' />
 
-        <section id='location' className='scroll-mt-20 dark:bg-slate-900'>
-          <span ref={visitRef}>
+        <section id='location' className='my-8 scroll-mt-20 md:my-16'>
+          <div ref={visitRef} className='md:mt-8'>
             <motion.h2
               variants={sideSlideVariants}
               initial={!visitIsInView && 'hidden'}
@@ -211,11 +191,112 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             >
               Visit Us
             </motion.h2>
-          </span>
-          <LocationMap mapMarkers={mapMarkers} />
+          </div>
+          <div className='my-5'>
+            <LocationMap mapMarkers={mapMarkers} />
+          </div>
         </section>
       </main>
     </>
+  )
+}
+
+const HeroTextTop = () => {
+  return (
+    <div className={`flex flex-col items-center justify-center md:gap-y-4`}>
+      <motion.h1
+        variants={textVariants}
+        className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text
+          py-1 text-center text-3xl font-extrabold text-transparent
+          sm:text-4xl md:mb-0 md:text-5xl lg:text-7xl'
+      >
+        Upgrade
+      </motion.h1>
+      <motion.h2
+        className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text py-1
+          text-center text-3xl font-extrabold text-transparent
+          sm:text-4xl md:mb-0 md:text-5xl lg:text-6xl'
+        variants={textVariants}
+      >
+        Your Surfing Skills
+      </motion.h2>
+      <motion.h2
+        className='mb-2 py-1 text-center text-2xl font-bold
+          sm:text-3xl md:mb-0 md:text-4xl lg:text-5xl'
+        variants={textVariants}
+      >
+        Beginner to Advanced
+      </motion.h2>
+    </div>
+  )
+}
+
+const CustomCarousel = ({
+  images,
+  carouselId = '',
+  carouselKey = '',
+  carouselClasses = '',
+  imageClasses = '',
+}) => {
+  return (
+    <motion.div
+      variants={childVariants}
+      className='flex w-full flex-col items-center justify-center md:h-full'
+    >
+      <Carousel>
+        {images.map((image) => {
+          return (
+            <div
+              key={`${carouselId}-${carouselKey}-${image.src}`}
+              className={`${styles.embla__slide} ${carouselClasses}`}
+            >
+              <Image
+                width='600'
+                height='600'
+                src={image.src}
+                alt={image.alt}
+                priority={true}
+                placeholder='blur'
+                blurDataURL={image.blurDataUrl}
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                className={imageClasses}
+              />
+            </div>
+          )
+        })}
+      </Carousel>
+    </motion.div>
+  )
+}
+
+const HeroTextBottom = () => {
+  return (
+    <div className={`flex flex-col items-center justify-center md:gap-y-6`}>
+      <motion.h3
+        className='my-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500
+          bg-clip-text py-1 text-center
+          text-2xl font-extrabold text-transparent sm:text-4xl 
+          md:my-0 md:text-5xl'
+        variants={textVariants}
+      >
+        Best Surf School in Bali
+      </motion.h3>
+      <motion.a
+        className='w-48 rounded-3xl
+          bg-gradient-to-r
+        from-cyan-500 to-blue-500
+          px-8 py-4
+          text-center font-extrabold
+        text-white outline-none
+          ring-2 
+        hover:ring-blue-500 active:ring-blue-500 md:my-8 md:w-2/3 md:text-xl'
+        href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
+        target='_blank'
+        variants={textVariants}
+      >
+        Book now
+      </motion.a>
+    </div>
   )
 }
 
@@ -266,64 +347,4 @@ export async function getStaticProps() {
       mapMarkers,
     },
   }
-}
-
-const HeroTextTop = () => {
-  return (
-    <div className={`flex flex-col items-center justify-center md:gap-y-4`}>
-      <motion.h1
-        variants={textVariants}
-        className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text
-          py-1 text-center text-3xl font-extrabold text-transparent
-          sm:text-4xl md:mb-0 md:text-5xl lg:text-7xl'
-      >
-        Upgrade
-      </motion.h1>
-      <motion.h2
-        className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text py-1
-          text-center text-3xl font-extrabold text-transparent
-          sm:text-4xl md:mb-0 md:text-5xl lg:text-6xl'
-        variants={textVariants}
-      >
-        Your Surfing Skills
-      </motion.h2>
-      <motion.h2
-        className='mb-2 py-1 text-center text-2xl font-bold
-          sm:text-3xl md:mb-0 md:text-4xl lg:text-5xl'
-        variants={textVariants}
-      >
-        Beginner to Advanced
-      </motion.h2>
-    </div>
-  )
-}
-
-const HeroTextBottom = () => {
-  return (
-    <div className={`flex flex-col items-center justify-center md:gap-y-6`}>
-      <motion.h3
-        className='my-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500
-          bg-clip-text py-1 text-center
-          text-2xl font-extrabold text-transparent sm:text-4xl 
-          md:my-0 md:text-5xl'
-        variants={textVariants}
-      >
-        Best Surf School in Bali
-      </motion.h3>
-      <motion.a
-        className='w-48 rounded-3xl bg-gradient-to-r from-cyan-500
-        to-blue-500 px-8
-          py-4 text-center font-extrabold text-white
-          outline-none ring-2
-          hover:ring-blue-500 active:ring-blue-500
-          md:w-2/3 md:py-6
-          md:text-xl'
-        href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-        target='_blank'
-        variants={textVariants}
-      >
-        Book now
-      </motion.a>
-    </div>
-  )
 }

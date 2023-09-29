@@ -78,10 +78,8 @@ const PhotoVideoLayout = ({ children }) => {
           >
             <motion.div
               variants={leftLinkVariants}
-              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
-                !isWaterDroneTab || !isVideoAnalysisTab
-                  ? 'font-extrabold ring-blue-500'
-                  : 'font-bold'
+              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center font-bold ${
+                (!isWaterDroneTab || !isVideoAnalysisTab) && 'ring-blue-500'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
               <Link href='/videos' className='px-1'>
@@ -90,8 +88,8 @@ const PhotoVideoLayout = ({ children }) => {
             </motion.div>
             <motion.div
               variants={leftLinkVariants}
-              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
-                isWaterDroneTab ? 'font-extrabold ring-blue-500' : 'font-bold'
+              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center font-bold ${
+                isWaterDroneTab && 'ring-blue-500'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
               <Link href='/videos/water-drone' className='px-1'>
@@ -100,10 +98,8 @@ const PhotoVideoLayout = ({ children }) => {
             </motion.div>
             <motion.div
               variants={rightLinkVariants}
-              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
-                isVideoAnalysisTab
-                  ? 'font-extrabold ring-blue-500'
-                  : 'font-bold'
+              className={`my-3 min-w-[25%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center font-bold ${
+                isVideoAnalysisTab && 'ring-blue-500'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
               <Link href='/videos/video-analysis' className='px-1'>
