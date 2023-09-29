@@ -53,7 +53,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
         initial='hidden'
         animate='visible'
         id='surf-trips'
-        className='flex scroll-mt-20 flex-col items-center justify-center'
+        className='flex scroll-mt-[8rem] flex-col items-center justify-center'
       >
         <motion.h2
           variants={textVariants}
@@ -128,14 +128,17 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
 
       <hr className='mx-5 my-8 bg-slate-950' />
 
-      <div ref={mapContainerRef} className='scroll-mt-20 p-2 dark:bg-slate-900'>
+      <div
+        ref={mapContainerRef}
+        className='scroll-mt-[8rem] p-2 dark:bg-slate-900'
+      >
         <LocationMap mapMarkers={mapMarkers} />
       </div>
 
       <hr className='mx-5 my-8 bg-slate-950' />
 
       <div className='px-2 dark:bg-slate-900 dark:text-gray-200'>
-        <section id='canggu' className='scroll-mt-20'>
+        <section id='canggu' className='scroll-mt-[8rem]'>
           <h2 className='text-3xl font-semibold'>Canggu, Bali</h2>
           <div
             className='my-2 flex items-center'
@@ -213,7 +216,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
 
         <hr className='mx-5 my-8 bg-slate-950' />
 
-        <section id='medewi' className='scroll-mt-20'>
+        <section id='medewi' className='scroll-mt-[8rem]'>
           <h2 className='text-3xl font-semibold'>Medewi, Bali</h2>{' '}
           <div
             className='my-2 flex items-center'
@@ -278,7 +281,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
 
         <hr className='mx-5 my-8 bg-slate-950' />
 
-        <section id='balangan' className='scroll-mt-20'>
+        <section id='balangan' className='scroll-mt-[8rem]'>
           <h2 className='text-3xl font-semibold'>Balangan Beach, Bali</h2>
           <div
             className='my-2 flex items-center'
@@ -342,7 +345,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
 
         <hr className='mx-5 my-8 bg-slate-950' />
 
-        <section id='uluwatu' className='scroll-mt-20'>
+        <section id='uluwatu' className='scroll-mt-[8rem]'>
           <h2 className='text-3xl font-semibold'>Uluwatu, Bali</h2>{' '}
           <div
             className='my-2 flex items-center'
@@ -416,7 +419,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
 
         <hr className='mx-5 my-8 bg-slate-950' />
 
-        <section id='serangan' className='scroll-mt-20'>
+        <section id='serangan' className='scroll-mt-[8rem]'>
           <h2 className='text-3xl font-semibold'>Serangan, Bali</h2>
           <div
             className='my-2 flex items-center'
@@ -484,7 +487,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
 
         <hr className='mx-5 my-8 bg-slate-950' />
 
-        <section id='nusa-lumboga' className='scroll-mt-20'>
+        <section id='nusa-lumboga' className='scroll-mt-[8rem]'>
           <h2 className='text-3xl font-semibold'>Nusa Lembongan</h2>
           <div
             className='my-2 flex items-center'
@@ -549,7 +552,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
 
         <hr className='mx-5 my-8 bg-slate-950' />
 
-        <section id='lombok' className='scroll-mt-20'>
+        <section id='lombok' className='scroll-mt-[8rem]'>
           <h2 className='text-3xl font-semibold'>Lombok Island</h2>
           <div
             className='my-2 flex items-center'

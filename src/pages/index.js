@@ -110,7 +110,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               className='my-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500
                 bg-clip-text py-1 text-center
                 text-2xl font-extrabold text-transparent md:my-0 
-                md:text-5xl'
+                md:text-4xl'
             >
               Best Surf School in Bali
             </h3>
