@@ -134,7 +134,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
 
         <hr className='mx-5 my-12 bg-slate-950' />
 
-        <section id='testimonials' className='my-8 scroll-mt-20 md:my-16'>
+        <section id='testimonials' className='my-8 scroll-mt-[8rem] md:my-16'>
           <div ref={testimonialsRef} className='md:mt-8'>
             <motion.h2
               variants={sideSlideVariants}
@@ -179,7 +179,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
 
         <hr className='mx-5 my-12 bg-slate-950' />
 
-        <section id='location' className='my-8 scroll-mt-20 md:my-16'>
+        <section id='location' className='my-8 scroll-mt-[8rem] md:my-16'>
           <div ref={visitRef} className='md:mt-8'>
             <motion.h2
               variants={sideSlideVariants}
