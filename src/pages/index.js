@@ -19,6 +19,7 @@ import {
 } from '@/data/homePageImages'
 import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import getMapMarkers from '@/utils/getMapMarkers'
+import CustomButton from '@/components/CustomButton'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Home',
@@ -114,20 +115,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             >
               Best Surf School in Bali
             </h3>
-            <a
-              className='w-48 
-                rounded-3xl
-              bg-gradient-to-r from-cyan-500
-                to-blue-500 px-8
-                py-4 text-center
-              font-extrabold text-white
-                outline-none ring-2 ring-transparent
-              hover:ring-blue-500 active:ring-blue-500 md:my-8 md:w-72 md:text-xl'
-              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-              target='_blank'
-            >
-              Book now
-            </a>
+            <CustomButton />
           </motion.div>
         </motion.section>
 
@@ -172,22 +160,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               surfing at the age of 8 and came to Bali in 2019 to work as a Surf
               Instructor at Batu Bolong Beach in Canggu.
             </p>
-            <MotionLink
-              variants={buttonVariants}
-              whileInView='inView'
-              whileHover='hover'
-              viewport={{ margin: '-75px' }}
-              className='w-48 rounded-3xl
-                bg-gradient-to-r from-cyan-500 to-blue-500
-                px-8 py-4
-                text-center font-extrabold
-                text-white outline-none
-                ring-2 hover:ring-blue-500 active:ring-blue-500
-                md:my-8 md:w-72 md:text-lg'
-              href='/about-me'
-            >
-              More about me
-            </MotionLink>
+            <CustomButton href='/about-me'>About me</CustomButton>
           </div>
         </section>
 
@@ -216,23 +189,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           </div>
 
           <div className='flex flex-col items-center justify-center'>
-            <motion.a
-              variants={buttonVariants}
-              whileInView='inView'
-              whileHover='hover'
-              viewport={{ margin: '-75px' }}
-              className='mt-8 w-48
-              rounded-3xl bg-gradient-to-r from-cyan-500
-              to-blue-500 px-8 py-4
-              text-center font-extrabold
-              text-white outline-none
-              ring-2 hover:ring-blue-500 active:ring-blue-500
-              md:mb-0 md:w-72 md:text-lg'
-              href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
-              target='_blank'
-            >
-              Book now
-            </motion.a>
+            <CustomButton />
           </div>
         </section>
 

@@ -18,6 +18,8 @@ const meta = {
     'Discover our Private and Semi-Private Surf Lessons with experienced instructors. Learn to ride the waves, from beginner basics to advanced techniques. Book your session now!',
 }
 
+const MotionLink = motion(Link)
+
 const LessonsLayout = ({ children }) => {
   const router = useRouter()
   const isSemiPrivateTab = router.asPath.includes('/surf-lessons/semi-private')
@@ -40,14 +42,16 @@ const LessonsLayout = ({ children }) => {
       >
         <motion.h1
           variants={textVariants}
-          className='mb-2 text-center text-4xl font-bold dark:text-white'
+          className='text-center text-2xl font-bold text-slate-900
+          dark:text-white md:mb-5
+            md:text-5xl'
         >
           Surf Lessons
         </motion.h1>
 
         <motion.h2
           variants={textVariants}
-          className='text-center text-xl text-slate-900 dark:text-gray-200'
+          className='text-center text-xl text-slate-900 dark:text-gray-200 md:mb-5 md:text-3xl'
         >
           in Canggu & during your{' '}
           <span>
@@ -60,30 +64,41 @@ const LessonsLayout = ({ children }) => {
           </span>
         </motion.h2>
 
-        <motion.div variants={childVariants} className='mt-5 w-full'>
+        <motion.div
+          variants={childVariants}
+          className='mt-5 w-full md:my-5 md:w-2/3'
+        >
           <motion.nav
             id='lessons-navigation'
             className='flex w-full items-center justify-around text-lg font-bold dark:text-white'
             aria-label='lessons-navigation'
             variants={navVariants}
           >
-            <motion.div
+            <MotionLink
+              href='/surf-lessons'
               variants={leftLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
-                !isSemiPrivateTab ? 'font-bold' : 'font-extrabold ring-blue-500'
-              } text-white outline-none ring-2 hover:ring-blue-500`}
+              className={`my-3 min-w-[45%] rounded-3xl
+                bg-gradient-to-r from-cyan-500 to-blue-500
+                py-1
+                text-center font-bold md:py-3
+                md:text-2xl md:font-extrabold ${
+                  isSemiPrivateTab && 'ring-blue-500'
+                } text-white outline-none ring-2 hover:ring-blue-500`}
             >
-              <Link href='/surf-lessons'>Private</Link>
-            </motion.div>
+              Private
+            </MotionLink>
 
-            <motion.div
+            <MotionLink
+              href='/surf-lessons/semi-private'
               variants={rightLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 py-1 text-center ${
-                isSemiPrivateTab ? 'font-extrabold ring-blue-500' : 'font-bold'
-              } text-white outline-none ring-2 hover:ring-blue-500`}
+              className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r
+                from-cyan-500 to-blue-500 py-1
+                text-center font-bold md:py-3 md:text-2xl md:font-extrabold ${
+                  isSemiPrivateTab && 'ring-blue-500'
+                } text-white outline-none ring-2 hover:ring-blue-500`}
             >
-              <Link href='/surf-lessons/semi-private'>Semi-Private</Link>
-            </motion.div>
+              Semi-Private
+            </MotionLink>
           </motion.nav>
         </motion.div>
 
