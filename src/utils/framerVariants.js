@@ -52,6 +52,10 @@ export const buttonVariants = {
     scale: 1.1,
     transition: { duration: 3, type: 'spring', stiffness: 180 },
   },
+  hover: {
+    scale: 1.25,
+    transition: { duration: 3, type: 'spring', stiffness: 180 },
+  },
 }
 
 export const navVariants = {

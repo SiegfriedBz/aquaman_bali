@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
-import Carousel from '@/components/carousel'
+import Carousel, { CustomCarousel } from '@/components/carousel'
 import styles from '@/components/carousel.module.css'
 import { Testimonials, TestimonialsLinks } from '../components/testimonials'
 import LocationMap from '../components/LocationMap'
@@ -16,7 +16,6 @@ import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import getMapMarkers from '@/utils/getMapMarkers'
 import {
   containerVariants,
-  childVariants,
   textVariants,
   sideSlideVariants,
   buttonVariants,
@@ -70,6 +69,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               images={heroImg}
               carouselKey='hero'
               carouselClasses='h-60 md:h-[30rem]'
+              priority={true}
               imageClasses='w-full mx-auto h-full md:w-11/12 rounded-xl border-none object-cover shadow-2xl md:shadow-none'
             />
           </div>
@@ -91,8 +91,8 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               initial={!aboutIsInView && 'hidden'}
               animate={aboutIsInView && 'visible'}
               className='text-center text-2xl font-bold text-slate-900
-              dark:text-white sm:text-5xl
-                md:mb-0'
+              dark:text-white md:mb-0
+                md:text-5xl'
             >
               About me
             </motion.h2>
@@ -105,6 +105,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               carouselKey='about'
               carouselClasses=''
               imageClasses='mx-auto h-[225px] w-[225px] rounded-full object-cover shadow-lg md:h-[265px] md:w-[265px] lg:h-[325px] lg:w-[325px]'
+              loading='lazy'
             />
           </div>
 
@@ -117,6 +118,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             <MotionLink
               variants={buttonVariants}
               whileInView='inView'
+              whileHover='hover'
               viewport={{ margin: '-75px' }}
               className='w-48 rounded-3xl
                 bg-gradient-to-r from-cyan-500 to-blue-500
@@ -124,7 +126,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
                 text-center font-extrabold
                 text-white outline-none
                 ring-2 hover:ring-blue-500 active:ring-blue-500
-                md:my-8 md:w-2/3 md:text-lg'
+                md:my-8 md:w-72 md:text-lg'
               href='/about-me'
             >
               More about me
@@ -141,8 +143,8 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               initial={!testimonialsIsInView && 'hidden'}
               animate={testimonialsIsInView && 'visible'}
               className='text-center text-2xl font-bold text-slate-900
-              dark:text-white sm:text-5xl
-                md:mb-0'
+              dark:text-white md:mb-0
+                md:text-5xl'
             >
               Testimonials
             </motion.h2>
@@ -160,15 +162,15 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             <motion.a
               variants={buttonVariants}
               whileInView='inView'
+              whileHover='hover'
               viewport={{ margin: '-75px' }}
-              className='w-48 rounded-3xl
-                bg-gradient-to-r
-              from-cyan-500 to-blue-500
-                px-8 py-4
-                text-center font-extrabold
+              className='mt-8 w-48
+              rounded-3xl bg-gradient-to-r from-cyan-500
+              to-blue-500 px-8 py-4
+              text-center font-extrabold
               text-white outline-none
-                ring-2 
-              hover:ring-blue-500 active:ring-blue-500 md:my-8 md:w-72 md:text-xl'
+              ring-2 hover:ring-blue-500 active:ring-blue-500
+              md:mb-0 md:w-72 md:text-lg'
               href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
               target='_blank'
             >
@@ -187,7 +189,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               animate={visitIsInView && 'visible'}
               className='mb-3 text-center text-2xl font-bold
               text-slate-900 dark:text-white
-              sm:text-5xl'
+              md:text-5xl'
             >
               Visit Us
             </motion.h2>
@@ -208,64 +210,26 @@ const HeroTextTop = () => {
         variants={textVariants}
         className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text
           py-1 text-center text-3xl font-extrabold text-transparent
-          sm:text-4xl md:mb-0 md:text-5xl lg:text-7xl'
+          md:mb-0 md:text-4xl md:text-5xl lg:text-7xl'
       >
         Upgrade
       </motion.h1>
       <motion.h2
         className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text py-1
           text-center text-3xl font-extrabold text-transparent
-          sm:text-4xl md:mb-0 md:text-5xl lg:text-6xl'
+          md:mb-0 md:text-4xl md:text-5xl lg:text-6xl'
         variants={textVariants}
       >
         Your Surfing Skills
       </motion.h2>
       <motion.h2
         className='mb-2 py-1 text-center text-2xl font-bold
-          sm:text-3xl md:mb-0 md:text-4xl lg:text-5xl'
+          md:mb-0 md:text-3xl md:text-4xl lg:text-5xl'
         variants={textVariants}
       >
         Beginner to Advanced
       </motion.h2>
     </div>
-  )
-}
-
-const CustomCarousel = ({
-  images,
-  carouselId = '',
-  carouselKey = '',
-  carouselClasses = '',
-  imageClasses = '',
-}) => {
-  return (
-    <motion.div
-      variants={childVariants}
-      className='flex w-full flex-col items-center justify-center md:h-full'
-    >
-      <Carousel>
-        {images.map((image) => {
-          return (
-            <div
-              key={`${carouselId}-${carouselKey}-${image.src}`}
-              className={`${styles.embla__slide} ${carouselClasses}`}
-            >
-              <Image
-                width='600'
-                height='600'
-                src={image.src}
-                alt={image.alt}
-                priority={true}
-                placeholder='blur'
-                blurDataURL={image.blurDataUrl}
-                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-                className={imageClasses}
-              />
-            </div>
-          )
-        })}
-      </Carousel>
-    </motion.div>
   )
 }
 
@@ -275,21 +239,22 @@ const HeroTextBottom = () => {
       <motion.h3
         className='my-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500
           bg-clip-text py-1 text-center
-          text-2xl font-extrabold text-transparent sm:text-4xl 
-          md:my-0 md:text-5xl'
+          text-2xl font-extrabold text-transparent md:my-0 
+          md:text-5xl'
         variants={textVariants}
       >
         Best Surf School in Bali
       </motion.h3>
       <motion.a
-        className='w-48 rounded-3xl
-          bg-gradient-to-r
-        from-cyan-500 to-blue-500
-          px-8 py-4
-          text-center font-extrabold
-        text-white outline-none
-          ring-2 
-        hover:ring-blue-500 active:ring-blue-500 md:my-8 md:w-2/3 md:text-xl'
+        className='w-48 transform
+          rounded-3xl
+        bg-gradient-to-r from-cyan-500
+          to-blue-500 px-8
+          py-4 text-center
+        font-extrabold text-white
+          outline-none ring-2 ring-transparent
+          transition duration-300 ease-in-out hover:shadow-xl
+        hover:ring-blue-500 active:ring-blue-500 md:my-8 md:w-72 md:text-xl'
         href='https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0'
         target='_blank'
         variants={textVariants}
