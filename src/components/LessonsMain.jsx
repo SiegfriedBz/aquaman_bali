@@ -4,7 +4,7 @@ import CustomButton from '@/components/CustomButton'
 export const LessonsMain = ({ images, children }) => {
   return (
     <div className='md:grid md:grid-flow-col md:grid-rows-1 md:gap-8'>
-      <div className='my-5 md:order-2 md:col-span-4 md:row-span-2'>
+      <div className='md:order-2 md:col-span-4 md:row-span-2 md:my-5'>
         <div className='flex w-full flex-col items-center justify-center md:h-full'>
           <CustomCarousel
             images={images}
