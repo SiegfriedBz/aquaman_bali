@@ -60,7 +60,7 @@ const Navbar = () => {
               className='rounded-full object-contain
                 shadow-2xl ring-2
                ring-slate-900 transition duration-300
-               hover:scale-125 md:h-14 md:w-14'
+               focus:scale-125 md:h-14 md:w-14 md:hover:scale-125'
             />
           </Link>
           <Link href='/' onClick={() => setMobileMenuIsOpen(false)}>
@@ -188,13 +188,13 @@ const Navbar = () => {
             h-screen w-full origin-top
             animate-open-menu flex-col
             justify-center overflow-hidden
-            bg-slate-50 pb-24 text-3xl
+            bg-slate-50 pb-32 text-3xl
             dark:bg-slate-900
             md:hidden'
           onClick={() => setMobileMenuIsOpen(false)}
         >
           <nav
-            className='flex flex-col items-center pb-8 dark:text-white'
+            className='flex flex-col items-center pb-6 dark:text-white'
             aria-label='mobile'
           >
             <div className='mt-8 flex w-full flex-col items-center gap-y-4'>
@@ -245,7 +245,7 @@ const Navbar = () => {
 
               <Link
                 href='/gallery'
-                className='w-full pt-2 text-center hover:opacity-90'
+                className='w-full py-2 text-center hover:opacity-90'
               >
                 Gallery
               </Link>
@@ -253,7 +253,7 @@ const Navbar = () => {
           </nav>
 
           {/* mobile social icons */}
-          <div className='flex w-full items-center justify-between px-2 pt-3'>
+          <div className='flex w-full items-center justify-between px-2'>
             <a href='https://goo.gl/maps/iHPokm4Q943N2f2fA' target='_blank'>
               <FontAwesomeIcon
                 icon={faStreetView}

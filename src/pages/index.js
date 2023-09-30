@@ -7,7 +7,6 @@ import {
   childVariants,
   textVariants,
   sideSlideVariants,
-  buttonVariants,
 } from '@/utils/framerVariants'
 import { CustomCarousel } from '@/components/carousel'
 import { Testimonials, TestimonialsLinks } from '../components/testimonials'
@@ -26,8 +25,6 @@ const meta = {
   description:
     'Discover Aquaman Bali, your Premier Surf School and Surf Trip destination. Grow your surfing skills from beginner to advanced. Book now!',
 }
-
-const MotionLink = motion(Link)
 
 export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
   const topId = useId()
@@ -57,30 +54,32 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           variants={containerVariants}
           initial='hidden'
           animate='visible'
-          className='md:mb-20 md:grid md:grid-flow-col md:grid-rows-2 md:gap-y-8'
+          className='flex flex-col justify-center md:grid md:grid-flow-col md:grid-rows-2 md:gap-y-8'
         >
           <div
-            className={`md:mt-8flex flex-col items-center justify-center md:order-2 md:col-span-2 md:row-span-1 md:gap-y-4`}
+            className={`flex flex-col items-center justify-center
+             md:order-2 md:col-span-2 md:row-span-1 md:mt-16 md:gap-y-4`}
           >
             <motion.h1
               variants={textVariants}
               className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text
-          py-1 text-center text-3xl font-extrabold text-transparent
-          md:mb-0  md:text-5xl lg:text-7xl'
+                py-1 text-center text-3xl font-extrabold text-transparent
+                md:mb-0 md:text-5xl lg:text-7xl'
             >
               Upgrade
             </motion.h1>
             <motion.h2
-              className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text py-1
-          text-center text-3xl font-extrabold text-transparent
-          md:mb-0  md:text-5xl lg:text-6xl'
+              className='mb-2 bg-gradient-to-r
+               from-cyan-500 to-blue-500 bg-clip-text py-1
+                text-center text-3xl font-extrabold text-transparent
+                md:mb-0 md:text-5xl lg:text-6xl'
               variants={textVariants}
             >
               Your Surfing Skills
             </motion.h2>
             <motion.h2
               className='mb-2 py-1 text-center text-2xl font-bold
-          md:mb-0  md:text-4xl lg:text-5xl'
+                md:mb-0 md:text-4xl lg:text-5xl'
               variants={textVariants}
             >
               Beginner to Advanced
@@ -90,27 +89,30 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           <div className='w-full md:order-1 md:col-span-1 md:row-span-2'>
             <motion.div
               variants={childVariants}
-              className='flex w-full flex-col items-center justify-center md:h-full'
+              className='flex w-full flex-col items-center justify-center md:h-full md:px-8'
             >
               <CustomCarousel
                 carouselId={topId}
                 images={heroImg}
                 carouselKey='hero'
-                carouselClasses='h-60 md:h-[30rem]'
+                carouselClasses='h-60 md:h-[32rem]'
                 priority={true}
-                imageClasses='w-full mx-auto h-full md:w-11/12 rounded-xl border-none object-cover shadow-2xl md:shadow-none'
+                imageClasses='w-full mx-auto 
+                  h-full md:w-11/12 rounded-xl
+                  border-none object-cover shadow-2xl md:shadow-none'
               />
             </motion.div>
           </div>
 
           <motion.div
             variants={childVariants}
-            className='flex flex-col items-center justify-center md:order-3 md:col-span-2 md:gap-y-6'
+            className='flex flex-col items-center justify-start
+             md:order-3 md:col-span-2 md:gap-y-8 md:py-8'
           >
             <h3
               className='my-2 max-w-md bg-gradient-to-r from-cyan-500 to-blue-500
                 bg-clip-text py-1 text-center
-                text-2xl font-extrabold text-transparent md:my-0 
+                text-2xl font-extrabold text-transparent md:my-0 md:py-0
                 md:text-4xl'
             >
               Best Surf School in Bali

@@ -40,7 +40,9 @@ const GalleryLayout = ({ children }) => {
       >
         <motion.h1
           variants={textVariants}
-          className='mb-2 text-center text-4xl font-bold dark:text-white'
+          className='text-center text-2xl font-bold text-slate-900
+          dark:text-white md:my-0
+            md:text-5xl'
         >
           Gallery
         </motion.h1>

@@ -43,7 +43,9 @@ const PhotoVideoLayout = ({ children }) => {
       >
         <motion.h1
           variants={textVariants}
-          className='mb-2 text-center text-4xl font-bold dark:text-white'
+          className='text-center text-2xl font-bold text-slate-900
+          dark:text-white md:my-0
+            md:text-5xl'
         >
           Photo | Video | Drone
         </motion.h1>
@@ -91,7 +93,7 @@ const PhotoVideoLayout = ({ children }) => {
                 (!isWaterDroneTab || !isVideoAnalysisTab) && 'ring-blue-500'
               } text-white outline-none ring-2 hover:ring-blue-500`}
             >
-              Photos & Videos
+              Photo & Video
             </MotionLink>
             <div className='flex w-full items-center justify-around md:w-2/3'>
               <MotionLink
