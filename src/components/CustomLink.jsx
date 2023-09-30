@@ -1,10 +1,10 @@
-import { buttonVariants } from '@/utils/framerVariants'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { buttonVariants } from '@/utils/framerVariants'
 
 const MotionLink = motion(Link)
 
-const CustomButton = ({
+const CustomLink = ({
   className = 'mt-8 px-8 py-4',
   href = 'https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0',
   children = 'Book now',
@@ -31,4 +31,4 @@ const CustomButton = ({
   )
 }
 
-export default CustomButton
+export default CustomLink

@@ -1,4 +1,4 @@
-import CustomButton from './CustomButton'
+import CustomLink from './CustomLink'
 
 export const LessonsPageDetails = () => {
   return (
@@ -82,7 +82,7 @@ export const LessonsPageDetails = () => {
       </ul>
 
       <div className='mx-auto mb-4 mt-5 flex flex-col items-center'>
-        <CustomButton />
+        <CustomLink className='my-3 px-8 py-4' />
       </div>
     </>
   )

@@ -7,7 +7,7 @@ import {
   childVariants,
   textVariants,
 } from '@/utils/framerVariants'
-import CustomButton from '../CustomButton'
+import CustomLink from '../CustomLink'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Gallery',
@@ -56,21 +56,21 @@ const GalleryLayout = ({ children }) => {
         >
           <nav
             id='gallery-navigation'
-            className='my-4 flex w-full items-center justify-around text-lg font-bold dark:text-stone-100'
+            className='my-4 flex w-full items-center justify-center gap-8 text-lg font-bold dark:text-stone-100 md:gap-16'
             aria-label='gallery-navigation'
           >
-            <CustomButton
+            <CustomLink
               className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
               href='/gallery'
             >
               Photos
-            </CustomButton>
-            <CustomButton
+            </CustomLink>
+            <CustomLink
               className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
               href='/gallery/videos'
             >
               Videos
-            </CustomButton>
+            </CustomLink>
           </nav>
         </motion.div>
 

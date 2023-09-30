@@ -17,7 +17,7 @@ import {
 } from '@/data/homePageImages'
 import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import getMapMarkers from '@/utils/getMapMarkers'
-import CustomButton from '@/components/CustomButton'
+import CustomLink from '@/components/CustomLink'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Home',
@@ -113,7 +113,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             >
               Best Surf School in Bali
             </h3>
-            <CustomButton className='mt-3 px-8 py-4' />
+            <CustomLink className='mt-3 px-8 py-4' />
           </motion.div>
         </motion.section>
 
@@ -158,7 +158,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               surfing at the age of 8 and came to Bali in 2019 to work as a Surf
               Instructor at Batu Bolong Beach in Canggu.
             </p>
-            <CustomButton href='/about-me'>About me</CustomButton>
+            <CustomLink href='/about-me'>About me</CustomLink>
           </div>
         </section>
 
@@ -190,7 +190,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           </div>
 
           <div className='flex flex-col items-center justify-center'>
-            <CustomButton />
+            <CustomLink />
           </div>
         </section>
 

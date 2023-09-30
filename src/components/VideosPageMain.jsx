@@ -5,7 +5,7 @@ export const VideosPageMain = ({ image, children }) => {
     <div className='md:grid md:grid-flow-col md:grid-rows-1 md:gap-8'>
       <div className='md:order-2 md:col-span-4 md:row-span-2 md:my-5'>
         <div
-          className='mb-2 mt-1 flex h-72 w-full flex-col 
+          className='flex h-72 w-full flex-col 
               items-center justify-center md:h-[34rem]'
         >
           <Image

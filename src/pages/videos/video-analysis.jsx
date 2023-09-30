@@ -3,7 +3,7 @@ import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
 import { videoAnalysis } from '@/data/videoPageImages'
 import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import { VideosPageMain } from '@/components/VideosPageMain'
-import CustomButton from '@/components/CustomButton'
+import CustomLink from '@/components/CustomLink'
 
 const VideoAnalysis = ({ videoAnalysisImg }) => {
   return (
@@ -61,7 +61,7 @@ const VideoAnalysis = ({ videoAnalysisImg }) => {
               uploaded on WeTransfer for you to download on the same day
             </p>
 
-            <CustomButton />
+            <CustomLink className='mt-6 px-8 py-4' />
           </VideosPageMain.Details>
         </VideosPageMain>
       </div>

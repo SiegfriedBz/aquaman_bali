@@ -8,7 +8,7 @@ import {
   childVariants,
   textVariants,
 } from '@/utils/framerVariants'
-import CustomButton from '@/components/CustomButton'
+import CustomLink from '@/components/CustomLink'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | About me',
@@ -82,7 +82,7 @@ const About = ({ aboutMeImg }) => {
             variants={childVariants}
             className='flex flex-col items-center'
           >
-            <CustomButton />
+            <CustomLink />
           </motion.div>
         </div>
       </motion.section>

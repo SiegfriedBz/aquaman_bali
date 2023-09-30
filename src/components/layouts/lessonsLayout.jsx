@@ -7,7 +7,7 @@ import {
   childVariants,
   textVariants,
 } from '@/utils/framerVariants'
-import CustomButton from '../CustomButton'
+import CustomLink from '../CustomLink'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Surf Lessons',
@@ -62,21 +62,21 @@ const LessonsLayout = ({ children }) => {
         >
           <nav
             id='lessons-navigation'
-            className='my-4 flex w-full items-center justify-around text-lg font-bold dark:text-stone-100'
+            className='my-4 flex w-full items-center justify-center gap-x-8 text-lg font-bold dark:text-stone-100 md:gap-16'
             aria-label='lessons-navigation'
           >
-            <CustomButton
+            <CustomLink
               className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
               href='/surf-lessons#private'
             >
               Private
-            </CustomButton>
-            <CustomButton
-              className='w-[42%] px-2 py-2 md:w-[32%]  md:px-16 md:py-4'
+            </CustomLink>
+            <CustomLink
+              className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
               href='/surf-lessons/semi-private#semi-private'
             >
               Semi-Private
-            </CustomButton>
+            </CustomLink>
           </nav>
         </motion.div>
 

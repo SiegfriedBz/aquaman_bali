@@ -1,14 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { CldVideoPlayer } from 'next-cloudinary'
-import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import {
   containerVariants,
   childVariants,
   textVariants,
 } from '@/utils/framerVariants'
-import CustomButton from '../CustomButton'
+import CustomLink from '../CustomLink'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Photo | Video | Drone',
@@ -16,13 +15,7 @@ const meta = {
     'Capture the thrill of your surf sessions with our professional photo and video services. From beginners to experts, preserve your surf memories. Book now!',
 }
 
-const MotionLink = motion(Link)
-
 const PhotoVideoLayout = ({ children }) => {
-  const router = useRouter()
-  const isVideoAnalysisTab = router.asPath.includes('/videos/video-analysis')
-  const isWaterDroneTab = router.asPath.includes('/videos/water-drone')
-
   return (
     <>
       <Head>
@@ -79,26 +72,26 @@ const PhotoVideoLayout = ({ children }) => {
               font-bold dark:text-stone-100 md:mb-0'
             aria-label='gallery-navigation'
           >
-            <CustomButton
+            <CustomLink
               className='w-[42%] px-1 py-2 md:w-[22%] md:px-16 md:py-4'
               href='/videos#photo-video'
             >
               Photo & Video
-            </CustomButton>
+            </CustomLink>
 
             <div className='mt-6 flex w-full items-center justify-around md:w-2/3'>
-              <CustomButton
+              <CustomLink
                 className='w-[42%] px-1 py-2 md:w-[32%] md:px-16 md:py-4'
                 href='/videos/water-drone#water-drone'
               >
                 Water & Drone
-              </CustomButton>
-              <CustomButton
+              </CustomLink>
+              <CustomLink
                 className='w-[42%] px-1 py-2 md:w-[32%] md:px-16 md:py-4'
                 href='/videos/video-analysis#video-analysis'
               >
                 Video Analysis
-              </CustomButton>
+              </CustomLink>
             </div>
           </nav>
         </motion.div>

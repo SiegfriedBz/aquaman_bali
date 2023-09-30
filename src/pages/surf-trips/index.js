@@ -10,7 +10,7 @@ import { surfTripsPageImages } from '@/data/surfTripsPageImages'
 import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
 import getMapMarkers from '@/utils/getMapMarkers'
 import { containerVariants, textVariants } from '@/utils/framerVariants'
-import CustomButton from '@/components/CustomButton'
+import CustomLink from '@/components/CustomLink'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Surf Trips',
@@ -107,7 +107,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 sand beaches can become hazardous.
               </p>
               <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
-                <CustomButton />
+                <CustomLink />
               </div>
             </Destination.TextBottom>
           </Destination>
@@ -147,7 +147,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 motorbike.
               </p>
               <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
-                <CustomButton />
+                <CustomLink />
               </div>
             </Destination.TextBottom>
           </Destination>
@@ -185,7 +185,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 hour, depending on traffic.
               </p>
               <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
-                <CustomButton />
+                <CustomLink />
               </div>
             </Destination.TextBottom>
           </Destination>
@@ -234,7 +234,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 take up to 1.5 hours.
               </p>
               <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
-                <CustomButton />
+                <CustomLink />
               </div>
             </Destination.TextBottom>
           </Destination>
@@ -276,7 +276,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 Canggu takes about 1.5 hours, depending on traffic.
               </p>
               <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
-                <CustomButton />
+                <CustomLink />
               </div>
             </Destination.TextBottom>
           </Destination>
@@ -315,7 +315,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 surfing and relaxation.
               </p>
               <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
-                <CustomButton />
+                <CustomLink />
               </div>
             </Destination.TextBottom>
           </Destination>
@@ -356,7 +356,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 choice for surfers of all levels.
               </p>
               <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
-                <CustomButton />
+                <CustomLink />
               </div>
             </Destination.TextBottom>
           </Destination>
@@ -437,7 +437,7 @@ const SurfTripsHeader = () => {
       <p className='mx-2 my-2 w-full text-center text-lg text-slate-900 dark:text-stone-100 md:text-xl'>
         We&apos;re here to make your journey as convenient as possible.
       </p>
-      <CustomButton />
+      <CustomLink />
     </motion.section>
   )
 }

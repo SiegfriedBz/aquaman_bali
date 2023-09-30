@@ -2,7 +2,7 @@ import Link from 'next/link'
 import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
 import { photoVideo } from '@/data/videoPageImages'
 import { getImageUrl, getBase64ImageUrl } from '@/utils/cloudinaryUtils'
-import CustomButton from '@/components/CustomButton'
+import CustomLink from '@/components/CustomLink'
 import { VideosPageMain } from '@/components/VideosPageMain'
 
 const Videos = ({ photoVideoImg }) => {
@@ -56,7 +56,7 @@ const Videos = ({ photoVideoImg }) => {
               uploaded on WeTransfer for you to download on the same day.
             </p>
 
-            <CustomButton />
+            <CustomLink className='mt-6 px-8 py-4' />
           </VideosPageMain.Details>
         </VideosPageMain>
       </div>

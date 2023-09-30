@@ -28,7 +28,7 @@ const SemiPrivate = ({ groupLessonsImg }) => {
         <LessonsPageMain images={groupLessonsImg}>
           <LessonsPageMain.Prices>
             <p className='mt-8 w-full text-2xl font-bold md:mt-0 md:text-center md:text-3xl'>
-              🏄‍♀️ <span className='mt-2 block'> 1 Surf Lesson</span>
+              🏄‍♀️ <span className='block'> 1 Surf Lesson</span>
             </p>
 
             <p className='w-full text-lg font-bold md:text-center md:text-2xl'>
