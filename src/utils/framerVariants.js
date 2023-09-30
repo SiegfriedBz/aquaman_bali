@@ -4,7 +4,7 @@ export const containerVariants = {
     opacity: 1,
     transition: {
       duration: 1,
-      staggerChildren: 0.75,
+      staggerChildren: 0.55,
     },
   },
 }
@@ -14,7 +14,7 @@ export const childVariants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 1.25,
+      duration: 1,
     },
   },
 }
@@ -25,7 +25,7 @@ export const textVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.25,
+      duration: 1,
     },
   },
 }
@@ -42,7 +42,7 @@ export const sideSlideVariants = {
       delay: 0.25,
       duration: 0.5,
       type: 'spring',
-      stiffness: 100,
+      stiffness: 120,
     },
   },
 }
@@ -53,7 +53,7 @@ export const buttonVariants = {
     transition: { duration: 3, type: 'spring', stiffness: 180 },
   },
   hover: {
-    scale: 1.25,
+    scale: 1.15,
     transition: { duration: 3, type: 'spring', stiffness: 180 },
   },
 }
@@ -63,7 +63,7 @@ export const navVariants = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 1.5,
+      delayChildren: 1,
       staggerChildren: 0.2,
     },
   },
@@ -85,6 +85,6 @@ export const rightLinkVariants = {
     opacity: 1,
     x: 0,
     type: 'spring',
-    stiffness: 120,
+    stiffness: 180,
   },
 }

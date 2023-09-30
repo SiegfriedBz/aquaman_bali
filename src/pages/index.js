@@ -1,6 +1,5 @@
 import { useRef, useId } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import { motion, useInView } from 'framer-motion'
 import {
   containerVariants,
@@ -87,10 +86,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           </div>
 
           <div className='w-full md:order-1 md:col-span-1 md:row-span-2'>
-            <motion.div
-              variants={childVariants}
-              className='flex w-full flex-col items-center justify-center md:h-full md:px-8'
-            >
+            <div className='flex w-full flex-col items-center justify-center md:h-full md:px-8'>
               <CustomCarousel
                 carouselId={topId}
                 images={heroImg}
@@ -101,7 +97,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
                   h-full md:w-11/12 rounded-xl
                   border-none object-cover shadow-2xl md:shadow-none'
               />
-            </motion.div>
+            </div>
           </div>
 
           <motion.div
