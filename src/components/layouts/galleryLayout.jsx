@@ -41,7 +41,7 @@ const GalleryLayout = ({ children }) => {
         <motion.h1
           variants={textVariants}
           className='text-center text-2xl font-bold text-slate-900
-          dark:text-white md:my-0
+          dark:text-stone-100 md:my-0
             md:text-5xl'
         >
           Gallery
@@ -49,7 +49,7 @@ const GalleryLayout = ({ children }) => {
 
         <motion.h2
           variants={textVariants}
-          className='text-center text-xl text-slate-900 dark:text-gray-200'
+          className='text-center text-xl text-slate-900 dark:text-stone-100'
         >
           Explore our best Photos & Videos
         </motion.h2>
@@ -60,7 +60,7 @@ const GalleryLayout = ({ children }) => {
         >
           <motion.nav
             id='gallery-navigation'
-            className='flex w-full items-center justify-around text-lg font-bold dark:text-white'
+            className='flex w-full items-center justify-around text-lg font-bold dark:text-stone-100'
             aria-label='gallery-navigation'
             variants={navVariants}
           >
@@ -73,7 +73,7 @@ const GalleryLayout = ({ children }) => {
               text-center font-bold md:py-3
               md:text-2xl md:font-extrabold ${
                 !isVideoTab ? 'font-bold' : 'font-extrabold ring-blue-500'
-              } text-white outline-none ring-2 hover:ring-blue-500`}
+              } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
             >
               Photos
             </MotionLink>
@@ -87,7 +87,7 @@ const GalleryLayout = ({ children }) => {
               text-center font-bold md:py-3
               md:text-2xl md:font-extrabold ${
                 isVideoTab ? 'font-extrabold ring-blue-500' : 'font-bold'
-              } text-white outline-none ring-2 hover:ring-blue-500`}
+              } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
             >
               Videos
             </MotionLink>

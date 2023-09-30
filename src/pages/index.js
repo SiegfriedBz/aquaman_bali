@@ -121,7 +121,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           </motion.div>
         </motion.section>
 
-        <hr className='mx-5 my-12 bg-slate-950' />
+        <hr className='mx-5 my-12 bg-slate-900' />
 
         <section
           id='about-me-short'
@@ -133,7 +133,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               initial={!aboutIsInView && 'hidden'}
               animate={aboutIsInView && 'visible'}
               className='text-center text-2xl font-bold text-slate-900
-              dark:text-white md:mb-0
+              dark:text-stone-100 md:mb-0
                 md:text-5xl'
             >
               About me
@@ -166,7 +166,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           </div>
         </section>
 
-        <hr className='mx-5 my-12 bg-slate-950' />
+        <hr className='mx-5 my-12 bg-slate-900' />
 
         <section
           id='testimonials'
@@ -178,7 +178,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               initial={!testimonialsIsInView && 'hidden'}
               animate={testimonialsIsInView && 'visible'}
               className='text-center text-2xl font-bold text-slate-900
-              dark:text-white md:mb-0
+              dark:text-stone-100 md:mb-0
                 md:text-5xl'
             >
               Testimonials
@@ -198,7 +198,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
           </div>
         </section>
 
-        <hr className='mx-5 my-12 bg-slate-950' />
+        <hr className='mx-5 my-12 bg-slate-900' />
 
         <section
           id='location'
@@ -210,7 +210,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               initial={!visitIsInView && 'hidden'}
               animate={visitIsInView && 'visible'}
               className='mb-3 text-center text-2xl font-bold
-              text-slate-900 dark:text-white
+              text-slate-900 dark:text-stone-100
               md:text-5xl'
             >
               Visit Us

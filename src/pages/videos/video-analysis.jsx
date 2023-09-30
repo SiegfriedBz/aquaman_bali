@@ -14,7 +14,7 @@ const VideoAnalysis = ({ videoAnalysisImg }) => {
       <h2
         className='mb-1 
             text-center text-2xl font-bold
-          text-slate-900 dark:text-white md:text-3xl'
+          text-slate-900 dark:text-stone-100 md:text-3xl'
       >
         Video Analysis
       </h2>
@@ -28,10 +28,10 @@ const VideoAnalysis = ({ videoAnalysisImg }) => {
         </Link>
       </p>
 
-      <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-950 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
+      <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-900 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <VideosPageMain image={videoAnalysisImg}>
           <VideosPageMain.Details>
-            <p className='self-start font-bold dark:text-white'>
+            <p className='self-start font-bold dark:text-stone-100'>
               Who is it for?
             </p>
             <p className='text-justify'>
@@ -43,7 +43,7 @@ const VideoAnalysis = ({ videoAnalysisImg }) => {
             </p>
             <br />
 
-            <p className='self-start font-bold dark:text-white'>
+            <p className='self-start font-bold dark:text-stone-100'>
               How does it work?{' '}
             </p>
             <p className='text-justify'>

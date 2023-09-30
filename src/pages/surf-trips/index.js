@@ -49,7 +49,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
       <div className='w-full'>
         <SurfTripsHeader />
 
-        <hr className='my-8 bg-slate-950' />
+        <hr className='my-8 bg-slate-900' />
 
         <div
           ref={mapContainerRef}
@@ -58,9 +58,9 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
           <LocationMap mapMarkers={mapMarkers} />
         </div>
 
-        <hr className='my-8 bg-slate-950' />
+        <hr className='my-8 bg-slate-900' />
 
-        <div className='dark:bg-slate-900 dark:text-gray-200'>
+        <div className='dark:bg-slate-900 dark:text-stone-100'>
           <Destination
             id='canggu'
             name='Canggu, Bali'
@@ -112,7 +112,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
             </Destination.TextBottom>
           </Destination>
 
-          <hr className='my-8 bg-slate-950' />
+          <hr className='my-8 bg-slate-900' />
 
           <Destination
             id='medewi'
@@ -152,7 +152,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
             </Destination.TextBottom>
           </Destination>
 
-          <hr className='my-8 bg-slate-950' />
+          <hr className='my-8 bg-slate-900' />
 
           <Destination
             id='balangan'
@@ -190,7 +190,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
             </Destination.TextBottom>
           </Destination>
 
-          <hr className='my-8 bg-slate-950' />
+          <hr className='my-8 bg-slate-900' />
 
           <Destination
             id='uluwatu'
@@ -239,7 +239,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
             </Destination.TextBottom>
           </Destination>
 
-          <hr className='my-8 bg-slate-950' />
+          <hr className='my-8 bg-slate-900' />
 
           <Destination
             id='serangan'
@@ -281,7 +281,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
             </Destination.TextBottom>
           </Destination>
 
-          <hr className='my-8 bg-slate-950' />
+          <hr className='my-8 bg-slate-900' />
 
           <Destination
             id='nusa-lembongan'
@@ -320,7 +320,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
             </Destination.TextBottom>
           </Destination>
 
-          <hr className='my-8 bg-slate-950' />
+          <hr className='my-8 bg-slate-900' />
 
           <Destination
             id='lombok'
@@ -380,61 +380,61 @@ const SurfTripsHeader = () => {
       <motion.h2
         variants={textVariants}
         className='text-center text-2xl font-bold text-slate-900
-        dark:text-white md:my-0
+        dark:text-stone-100 md:my-0
           md:text-5xl'
       >
         Surf Trips
       </motion.h2>
       <motion.h3
         variants={textVariants}
-        className='mt-2 w-full text-center text-2xl text-slate-900 dark:text-gray-200 md:text-2xl'
+        className='mt-2 w-full text-center text-2xl text-slate-900 dark:text-stone-100 md:text-2xl'
       >
         From Lombok to Sumatra
       </motion.h3>
       <motion.h4
         variants={textVariants}
-        className='w-full text-center text-xl text-slate-900 dark:text-gray-200 md:text-2xl'
+        className='w-full text-center text-xl text-slate-900 dark:text-stone-100 md:text-2xl'
       >
         enjoy an amazing surf trip with Us
       </motion.h4>
       <motion.h4
         variants={textVariants}
-        className='my-5 w-full text-center text-xl font-bold text-slate-900 underline underline-offset-2 dark:text-gray-200 md:text-3xl'
+        className='my-5 w-full text-center text-xl font-bold text-slate-900 underline underline-offset-2 dark:text-stone-100 md:text-3xl'
       >
         Starting from 500K IDR
       </motion.h4>
-      <p className='mx-2 mt-2 w-full text-center text-lg font-bold text-slate-900 dark:text-gray-200 md:text-3xl'>
+      <p className='mx-2 mt-2 w-full text-center text-lg font-bold text-slate-900 dark:text-stone-100 md:text-3xl'>
         🏄 Surf Bali 🌴
       </p>
-      <p className='mx-2 mb-5 w-full text-center text-lg text-slate-900 dark:text-gray-200 md:text-xl'>
+      <p className='mx-2 mb-5 w-full text-center text-lg text-slate-900 dark:text-stone-100 md:text-xl'>
         Where Dreams Meet Waves!
       </p>
-      <p className='mx-2 my-2 w-full text-center text-lg text-slate-900 dark:text-gray-200 md:text-xl'>
+      <p className='mx-2 my-2 w-full text-center text-lg text-slate-900 dark:text-stone-100 md:text-xl'>
         Discover Bali&apos;s year-round surf paradise, with legendary waves for
         pros at Uluwatu and gentle breaks for beginners at Batu Bolong Beach.
       </p>
-      <p className='mx-2 mt-4 w-full text-center text-lg font-bold text-slate-900 dark:text-gray-200 md:text-3xl'>
+      <p className='mx-2 mt-4 w-full text-center text-lg font-bold text-slate-900 dark:text-stone-100 md:text-3xl'>
         🏄‍♀️ Your Board or Ours
       </p>
-      <p className='mx-2 mb-5 w-full text-center text-lg text-slate-900 dark:text-gray-200 md:text-xl'>
+      <p className='mx-2 mb-5 w-full text-center text-lg text-slate-900 dark:text-stone-100 md:text-xl'>
         Bring your own board or use one of our{' '}
         <span className='block'>top-quality boards.</span>
       </p>
 
-      <p className='mx-2 mt-4 w-full text-center text-lg font-bold text-slate-900 dark:text-gray-200 md:text-3xl'>
+      <p className='mx-2 mt-4 w-full text-center text-lg font-bold text-slate-900 dark:text-stone-100 md:text-3xl'>
         🏨 Stay Your Way
       </p>
-      <p className='mx-2 mb-5 w-full text-center text-lg text-slate-900 dark:text-gray-200 md:text-xl'>
+      <p className='mx-2 mb-5 w-full text-center text-lg text-slate-900 dark:text-stone-100 md:text-xl'>
         Book your own hotel or let us assist you in finding the perfect spot.
       </p>
-      <p className='mx-2 mt-4 w-full text-center text-lg font-bold text-slate-900 dark:text-gray-200 md:text-3xl'>
+      <p className='mx-2 mt-4 w-full text-center text-lg font-bold text-slate-900 dark:text-stone-100 md:text-3xl'>
         🏄‍♂️ Flexible Departures
       </p>
-      <p className='mx-2 w-full text-center text-lg text-slate-900 dark:text-gray-200 md:text-xl'>
+      <p className='mx-2 w-full text-center text-lg text-slate-900 dark:text-stone-100 md:text-xl'>
         Start your surf adventure right from Canggu or meet us at your chosen
         destination.
       </p>
-      <p className='mx-2 my-2 w-full text-center text-lg text-slate-900 dark:text-gray-200 md:text-xl'>
+      <p className='mx-2 my-2 w-full text-center text-lg text-slate-900 dark:text-stone-100 md:text-xl'>
         We&apos;re here to make your journey as convenient as possible.
       </p>
       <CustomButton />

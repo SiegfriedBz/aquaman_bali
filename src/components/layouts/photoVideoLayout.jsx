@@ -44,26 +44,26 @@ const PhotoVideoLayout = ({ children }) => {
         <motion.h1
           variants={textVariants}
           className='text-center text-2xl font-bold text-slate-900
-          dark:text-white md:my-0
+          dark:text-stone-100 md:my-0
             md:text-5xl'
         >
           Photo | Video | Drone
         </motion.h1>
         <motion.h2
           variants={textVariants}
-          className='mt-2 text-center text-2xl text-slate-900 dark:text-gray-200'
+          className='mt-2 text-center text-2xl text-slate-900 dark:text-stone-100'
         >
           Get an amazing souvenir
         </motion.h2>
         <motion.h2
           variants={textVariants}
-          className='text-center text-2xl text-slate-900 dark:text-gray-200'
+          className='text-center text-2xl text-slate-900 dark:text-stone-100'
         >
           from your surf session
         </motion.h2>
         <motion.h3
           variants={textVariants}
-          className='text-center text-xl text-slate-900 dark:text-gray-200'
+          className='text-center text-xl text-slate-900 dark:text-stone-100'
         >
           in Canggu & during your{' '}
           <span>
@@ -79,7 +79,7 @@ const PhotoVideoLayout = ({ children }) => {
             id='videos-navigation'
             className='flex w-full
               flex-col items-center justify-center
-              text-lg font-bold dark:text-white'
+              text-lg font-bold dark:text-stone-100'
             aria-label='gallery-navigation'
           >
             <MotionLink
@@ -91,7 +91,7 @@ const PhotoVideoLayout = ({ children }) => {
               font-bold md:w-1/4 md:min-w-[25%]
               md:py-3 md:text-2xl md:font-extrabold ${
                 (!isWaterDroneTab || !isVideoAnalysisTab) && 'ring-blue-500'
-              } text-white outline-none ring-2 hover:ring-blue-500`}
+              } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
             >
               Photo & Video
             </MotionLink>
@@ -105,7 +105,7 @@ const PhotoVideoLayout = ({ children }) => {
                 text-center font-bold md:py-3
                 md:text-2xl md:font-extrabold ${
                   isWaterDroneTab && 'ring-blue-500'
-                } text-white outline-none ring-2 hover:ring-blue-500`}
+                } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
               >
                 Water & Drone
               </MotionLink>
@@ -118,7 +118,7 @@ const PhotoVideoLayout = ({ children }) => {
                 text-center font-bold md:py-3
                 md:text-2xl md:font-extrabold ${
                   isVideoAnalysisTab && 'ring-blue-500'
-                } text-white outline-none ring-2 hover:ring-blue-500`}
+                } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
               >
                 Video Analysis
               </MotionLink>

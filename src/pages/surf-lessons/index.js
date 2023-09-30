@@ -12,7 +12,7 @@ const SurfLessons = ({ privateLessonsImg }) => {
     >
       <h2
         className='mb-2 text-center text-2xl font-bold 
-          text-slate-900  dark:text-white
+          text-slate-900  dark:text-stone-100
             md:text-3xl'
       >
         Private Surf Lessons
@@ -21,7 +21,7 @@ const SurfLessons = ({ privateLessonsImg }) => {
 
       <div
         className='mb-3 flex flex-col items-center justify-center
-          rounded-xl border border-solid border-slate-950
+          rounded-xl border border-solid border-slate-900
           p-3
         hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'
       >

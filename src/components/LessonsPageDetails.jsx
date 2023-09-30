@@ -41,8 +41,8 @@ export const LessonsPageDetails = () => {
       <div className='w-full md:my-4'>
         <h2 className='self-start text-lg font-bold md:text-2xl'>Advanced</h2>
         <p className='mb-2 text-justify md:text-xl'>
-          You are able to catch white water or green waves already and want to
-          improve your surfing?
+          You are able to catch stone-100 water or green waves already and want
+          to improve your surfing?
         </p>
         <p className='text-justify md:text-xl'>
           Surfing lessonss in the water with a professional instructor. You will

@@ -34,11 +34,11 @@ const Footer = () => {
     <footer
       className='flex min-w-full flex-col
        border-t border-t-slate-900
-      bg-white
+      bg-stone-100
         px-4 py-6
         shadow-2xl
-      dark:border-t-white dark:bg-slate-900
-      dark:text-gray-200
+      dark:border-t-stone-100 dark:bg-slate-900
+      dark:text-stone-100
         sm:px-16 sm:py-8 md:px-24 lg:px-12 xl:px-32'
     >
       {/* open hours */}
@@ -48,7 +48,7 @@ const Footer = () => {
         initial='initial'
         animate={operatingHoursInInView ? 'animate' : 'initial'}
         className='mb-4 flex flex-row justify-center
-         text-lg text-slate-800 dark:text-white md:text-2xl'
+         text-lg text-slate-800 dark:text-stone-100 md:text-2xl'
       >
         Every day 6:00 am - 6:00 pm
       </motion.div>
@@ -68,7 +68,7 @@ const Footer = () => {
               <span
                 className='text-slate-800
                 hover:text-slate-500
-                dark:text-white dark:hover:text-gray-200
+                dark:text-stone-100 dark:hover:text-stone-100
                   md:py-5 md:text-xl'
               >
                 <a href='mailto:rendy280720@gmail.com?subject=Inquiry About Surf Lessons and Surf Trips 🏄‍♂️🌊'>
@@ -79,7 +79,7 @@ const Footer = () => {
               <span
                 className='text-slate-800
                 hover:text-slate-500
-                dark:text-white dark:hover:text-gray-200
+                dark:text-stone-100 dark:hover:text-stone-100
                   md:py-5 md:text-xl'
               >
                 <a href='tel:+6282289427321'>0822-8942-7321</a>
@@ -136,7 +136,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <h2 className='mb-2 mt-5 text-center text-sm text-slate-800 dark:text-white'>
+        <h2 className='mb-2 mt-5 text-center text-sm text-slate-800 dark:text-stone-100'>
           <span>
             &copy;{new Date().getFullYear()} Aquaman Bali All Rights Reserved.
           </span>
@@ -147,7 +147,7 @@ const Footer = () => {
           href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'
           target='_blank'
         >
-          <span className='flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+          <span className='flex items-center justify-center text-sm text-slate-800 hover:text-slate-500 dark:text-stone-100 dark:hover:text-stone-100'>
             <Image
               src={swissFlag}
               alt='Swiss Flag'

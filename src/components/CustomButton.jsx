@@ -16,7 +16,7 @@ const CustomButton = ({
       rounded-3xl bg-gradient-to-r from-cyan-500
       to-blue-500 px-8 py-4
       text-center font-extrabold
-      text-white outline-none
+      text-stone-100 outline-none
       ring-2 hover:ring-blue-500 active:ring-blue-500
       md:mt-8 md:w-72 md:text-lg ${className}`}
       href={href}

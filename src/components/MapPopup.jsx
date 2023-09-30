@@ -9,7 +9,7 @@ import {
 
 const MapPopup = ({ popup, isSurfTripsRoute }) => {
   return (
-    <div className='flex h-64 w-auto flex-col items-center justify-center text-slate-800 dark:text-white'>
+    <div className='flex h-64 w-auto flex-col items-center justify-center text-slate-800 dark:text-stone-100'>
       <Image
         width='600'
         height='600'
@@ -21,7 +21,7 @@ const MapPopup = ({ popup, isSurfTripsRoute }) => {
         className='h-full rounded-t-lg object-cover shadow-2xl'
       />
       <Footer location={popup.location} isSurfTripsRoute={isSurfTripsRoute}>
-        <span className='text-lg text-slate-950 dark:text-white'>
+        <span className='text-lg text-slate-900 dark:text-stone-100'>
           {popup.location}
         </span>
       </Footer>
@@ -46,7 +46,7 @@ const Footer = ({ location, isSurfTripsRoute, children }) => {
               icon={faHandPointRight}
               className='text-2xl text-sky-500 hover:text-sky-400'
             />
-            <span className='block text-center text-xl text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+            <span className='block text-center text-xl text-slate-800 hover:text-slate-500 dark:text-stone-100 dark:hover:text-stone-100'>
               Visit us
             </span>
             <FontAwesomeIcon
@@ -65,7 +65,7 @@ const Footer = ({ location, isSurfTripsRoute, children }) => {
                 icon={faVanShuttle}
                 className='text-2xl text-amber-400 hover:text-amber-500'
               />
-              <span className='block text-center text-xl text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+              <span className='block text-center text-xl text-slate-800 hover:text-slate-500 dark:text-stone-100 dark:hover:text-stone-100'>
                 Surf Trip
               </span>
             </span>
@@ -81,7 +81,7 @@ const Footer = ({ location, isSurfTripsRoute, children }) => {
                 className='text-2xl text-amber-400 hover:text-amber-500'
               />
 
-              <span className='block text-center text-xl text-slate-800 hover:text-slate-500 dark:text-white dark:hover:text-gray-200'>
+              <span className='block text-center text-xl text-slate-800 hover:text-slate-500 dark:text-stone-100 dark:hover:text-stone-100'>
                 Surf Trip
               </span>
             </Link>

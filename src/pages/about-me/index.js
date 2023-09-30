@@ -37,7 +37,7 @@ const About = ({ aboutMeImg }) => {
           <motion.h1
             variants={textVariants}
             className='text-center text-2xl font-bold text-slate-900
-          dark:text-white md:my-0
+          dark:text-stone-100 md:my-0
             md:text-5xl'
           >
             About Me

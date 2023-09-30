@@ -44,9 +44,9 @@ const Navbar = () => {
       id='header'
       className='sticky top-0 z-50 
         min-w-full
-        border-b border-b-slate-900 bg-white
+        border-b border-b-slate-900 bg-stone-100
         px-4 py-6
-      dark:border-b-gray-200 dark:bg-slate-900 dark:text-gray-200
+      dark:border-b-gray-200 dark:bg-slate-900 dark:text-stone-100
         sm:px-16 sm:py-8 md:px-24 lg:px-12 xl:px-32'
     >
       <section className='mx-auto flex items-center justify-between'>
@@ -65,9 +65,9 @@ const Navbar = () => {
           </Link>
           <Link href='/' onClick={() => setMobileMenuIsOpen(false)}>
             <span
-              className='text-2xl font-extrabold text-slate-950 transition duration-300
+              className='text-2xl font-extrabold text-slate-900 transition duration-300
                hover:scale-110 hover:text-slate-600
-              dark:text-white dark:hover:text-slate-200
+              dark:text-stone-100 dark:hover:text-slate-200
                md:text-3xl'
             >
               Aquaman Bali
@@ -80,7 +80,7 @@ const Navbar = () => {
           <div className='flex items-center'>
             <button
               onClick={toggleColorMode}
-              className='me-5 text-2xl dark:text-white'
+              className='me-5 text-2xl dark:text-stone-100'
             >
               {toggleIcon}
             </button>
@@ -94,7 +94,7 @@ const Navbar = () => {
               <div
                 className={`absolute top-3.5 h-1 w-4 ${
                   !mobileMenuIsOpen ? 'animate-pulse' : ''
-                } rounded bg-amber-500 transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-slate-950 before:transition-all before:duration-500 before:content-[""] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-slate-950 after:transition-all after:duration-500 after:content-[""] before:dark:bg-white after:dark:bg-white`}
+                } rounded bg-amber-500 transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-slate-900 before:transition-all before:duration-500 before:content-[""] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-slate-900 after:transition-all after:duration-500 after:content-[""] before:dark:bg-stone-100 after:dark:bg-stone-100`}
               ></div>
             </button>
           </div>
@@ -102,12 +102,12 @@ const Navbar = () => {
 
         {/* desktop */}
         <nav
-          className='hidden items-center space-x-8 text-xl dark:text-white md:flex'
+          className='hidden items-center space-x-8 text-xl dark:text-stone-100 md:flex'
           aria-label='main-navigation'
         >
           <button
             onClick={toggleColorMode}
-            className='text-2xl hover:opacity-90 dark:text-white'
+            className='text-2xl hover:opacity-90 dark:text-stone-100'
           >
             {toggleIcon}
           </button>
@@ -194,7 +194,7 @@ const Navbar = () => {
           onClick={() => setMobileMenuIsOpen(false)}
         >
           <nav
-            className='flex flex-col items-center pb-6 dark:text-white'
+            className='flex flex-col items-center pb-6 dark:text-stone-100'
             aria-label='mobile'
           >
             <div className='mt-8 flex w-full flex-col items-center gap-y-4'>

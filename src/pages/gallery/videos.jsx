@@ -15,7 +15,7 @@ const Videos = () => {
         className='rounded-lg border-0 shadow-2xl'
       />
 
-      <hr className='mx-5 my-8 bg-slate-950' />
+      <hr className='mx-5 my-8 bg-slate-900' />
 
       <CldVideoPlayer
         id='rendy-teach-video-01'
@@ -28,7 +28,7 @@ const Videos = () => {
         className='rounded-md border-0 shadow-2xl'
       />
 
-      <hr className='mx-5 my-8 bg-slate-950' />
+      <hr className='mx-5 my-8 bg-slate-900' />
 
       <CldVideoPlayer
         id='rendy-video-drone'

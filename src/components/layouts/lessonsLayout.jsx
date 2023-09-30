@@ -43,7 +43,7 @@ const LessonsLayout = ({ children }) => {
         <motion.h1
           variants={textVariants}
           className='text-center text-2xl font-bold text-slate-900
-          dark:text-white md:mb-5
+          dark:text-stone-100 md:mb-5
             md:text-5xl'
         >
           Surf Lessons
@@ -51,13 +51,13 @@ const LessonsLayout = ({ children }) => {
 
         <motion.h2
           variants={textVariants}
-          className='text-center text-xl text-slate-900 dark:text-gray-200 md:mb-5 md:text-3xl'
+          className='text-center text-xl text-slate-900 dark:text-stone-100 md:mb-5 md:text-3xl'
         >
           in Canggu & during your{' '}
           <span>
             <Link
               href='/surf-trips'
-              className='text-slate-900 underline underline-offset-4 dark:text-gray-200'
+              className='text-slate-900 underline underline-offset-4 dark:text-stone-100'
             >
               Surf Trips
             </Link>
@@ -70,7 +70,7 @@ const LessonsLayout = ({ children }) => {
         >
           <motion.nav
             id='lessons-navigation'
-            className='flex w-full items-center justify-around text-lg font-bold dark:text-white'
+            className='flex w-full items-center justify-around text-lg font-bold dark:text-stone-100'
             aria-label='lessons-navigation'
             variants={navVariants}
           >
@@ -83,7 +83,7 @@ const LessonsLayout = ({ children }) => {
                 text-center font-bold md:py-3
                 md:text-2xl md:font-extrabold ${
                   isSemiPrivateTab && 'ring-blue-500'
-                } text-white outline-none ring-2 hover:ring-blue-500`}
+                } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
             >
               Private
             </MotionLink>
@@ -95,7 +95,7 @@ const LessonsLayout = ({ children }) => {
                 from-cyan-500 to-blue-500 py-1
                 text-center font-bold md:py-3 md:text-2xl md:font-extrabold ${
                   isSemiPrivateTab && 'ring-blue-500'
-                } text-white outline-none ring-2 hover:ring-blue-500`}
+                } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
             >
               Semi-Private
             </MotionLink>
