@@ -8,7 +8,7 @@ const SurfLessons = ({ privateLessonsImg }) => {
   return (
     <section
       id='private'
-      className='mb-2 scroll-mt-[11rem] md:scroll-mt-[16rem]'
+      className='mb-2 scroll-mt-[12rem] md:scroll-mt-[16rem]'
     >
       <h2
         className='mb-2 text-center text-2xl font-bold 

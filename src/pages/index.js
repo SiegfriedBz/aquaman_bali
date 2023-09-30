@@ -113,7 +113,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             >
               Best Surf School in Bali
             </h3>
-            <CustomButton className='!mt-3' />
+            <CustomButton className='mt-3 px-8 py-4' />
           </motion.div>
         </motion.section>
 

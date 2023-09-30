@@ -57,34 +57,3 @@ export const buttonVariants = {
     transition: { duration: 3, type: 'spring', stiffness: 180 },
   },
 }
-
-export const navVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delayChildren: 1,
-      staggerChildren: 0.2,
-    },
-  },
-}
-
-export const leftLinkVariants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    type: 'spring',
-    stiffness: 180,
-  },
-}
-
-export const rightLinkVariants = {
-  hidden: { opacity: 0, x: 100 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    type: 'spring',
-    stiffness: 180,
-  },
-}

@@ -7,10 +7,8 @@ import {
   containerVariants,
   childVariants,
   textVariants,
-  navVariants,
-  leftLinkVariants,
-  rightLinkVariants,
 } from '@/utils/framerVariants'
+import CustomButton from '../CustomButton'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Photo | Video | Drone',
@@ -74,56 +72,35 @@ const PhotoVideoLayout = ({ children }) => {
         </motion.h3>
 
         <motion.div variants={childVariants} className='mt-5 w-full md:my-8'>
-          <motion.nav
-            variants={navVariants}
+          <nav
             id='videos-navigation'
-            className='flex w-full
-              flex-col items-center justify-center
-              text-lg font-bold dark:text-stone-100'
+            className='my-4 flex w-full flex-col
+              items-center justify-center text-lg
+              font-bold dark:text-stone-100 md:mb-0'
             aria-label='gallery-navigation'
           >
-            <MotionLink
+            <CustomButton
+              className='w-[42%] px-1 py-2 md:w-[22%] md:px-16 md:py-4'
               href='/videos#photo-video'
-              variants={leftLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl
-              bg-gradient-to-r from-cyan-500 to-blue-500
-              py-1 text-center
-              font-bold md:w-1/4 md:min-w-[25%]
-              md:py-3 md:text-2xl md:font-extrabold ${
-                (!isWaterDroneTab || !isVideoAnalysisTab) && 'ring-blue-500'
-              } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
             >
               Photo & Video
-            </MotionLink>
-            <div className='flex w-full items-center justify-around md:w-2/3'>
-              <MotionLink
+            </CustomButton>
+
+            <div className='mt-6 flex w-full items-center justify-around md:w-2/3'>
+              <CustomButton
+                className='w-[42%] px-1 py-2 md:w-[32%] md:px-16 md:py-4'
                 href='/videos/water-drone#water-drone'
-                variants={leftLinkVariants}
-                className={`my-3 min-w-[45%] rounded-3xl
-                bg-gradient-to-r from-cyan-500 to-blue-500
-                py-1
-                text-center font-bold md:py-3
-                md:text-2xl md:font-extrabold ${
-                  isWaterDroneTab && 'ring-blue-500'
-                } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
               >
                 Water & Drone
-              </MotionLink>
-              <MotionLink
+              </CustomButton>
+              <CustomButton
+                className='w-[42%] px-1 py-2 md:w-[32%] md:px-16 md:py-4'
                 href='/videos/video-analysis#video-analysis'
-                variants={rightLinkVariants}
-                className={`my-3 min-w-[45%] rounded-3xl
-                bg-gradient-to-r from-cyan-500 to-blue-500
-                py-1
-                text-center font-bold md:py-3
-                md:text-2xl md:font-extrabold ${
-                  isVideoAnalysisTab && 'ring-blue-500'
-                } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
               >
                 Video Analysis
-              </MotionLink>
+              </CustomButton>
             </div>
-          </motion.nav>
+          </nav>
         </motion.div>
 
         <motion.div variants={childVariants} className='my-3'>

@@ -9,7 +9,7 @@ const VideoAnalysis = ({ videoAnalysisImg }) => {
   return (
     <section
       id='video-analysis'
-      className='mb-2 scroll-mt-[14rem] md:scroll-mt-[21rem]'
+      className='mb-2 scroll-mt-[16rem] md:scroll-mt-[21rem]'
     >
       <h2
         className='mb-1 

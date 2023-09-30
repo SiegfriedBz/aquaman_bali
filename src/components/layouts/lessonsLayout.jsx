@@ -1,16 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { CldVideoPlayer } from 'next-cloudinary'
 import { motion } from 'framer-motion'
 import {
   containerVariants,
   childVariants,
   textVariants,
-  navVariants,
-  leftLinkVariants,
-  rightLinkVariants,
 } from '@/utils/framerVariants'
+import CustomButton from '../CustomButton'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Surf Lessons',
@@ -18,12 +15,7 @@ const meta = {
     'Discover our Private and Semi-Private Surf Lessons with experienced instructors. Learn to ride the waves, from beginner basics to advanced techniques. Book your session now!',
 }
 
-const MotionLink = motion(Link)
-
 const LessonsLayout = ({ children }) => {
-  const router = useRouter()
-  const isSemiPrivateTab = router.asPath.includes('/surf-lessons/semi-private')
-
   return (
     <div>
       <Head>
@@ -68,38 +60,24 @@ const LessonsLayout = ({ children }) => {
           variants={childVariants}
           className='mt-5 w-full md:my-5 md:w-2/3'
         >
-          <motion.nav
+          <nav
             id='lessons-navigation'
-            className='flex w-full items-center justify-around text-lg font-bold dark:text-stone-100'
+            className='my-4 flex w-full items-center justify-around text-lg font-bold dark:text-stone-100'
             aria-label='lessons-navigation'
-            variants={navVariants}
           >
-            <MotionLink
+            <CustomButton
+              className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
               href='/surf-lessons#private'
-              variants={leftLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl
-                bg-gradient-to-r from-cyan-500 to-blue-500
-                py-1
-                text-center font-bold md:py-3
-                md:text-2xl md:font-extrabold ${
-                  isSemiPrivateTab && 'ring-blue-500'
-                } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
             >
               Private
-            </MotionLink>
-
-            <MotionLink
+            </CustomButton>
+            <CustomButton
+              className='w-[42%] px-2 py-2 md:w-[32%]  md:px-16 md:py-4'
               href='/surf-lessons/semi-private#semi-private'
-              variants={rightLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl bg-gradient-to-r
-                from-cyan-500 to-blue-500 py-1
-                text-center font-bold md:py-3 md:text-2xl md:font-extrabold ${
-                  isSemiPrivateTab && 'ring-blue-500'
-                } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
             >
               Semi-Private
-            </MotionLink>
-          </motion.nav>
+            </CustomButton>
+          </nav>
         </motion.div>
 
         <motion.div variants={childVariants} className='my-3'>

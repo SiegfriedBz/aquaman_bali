@@ -6,17 +6,13 @@ import {
   containerVariants,
   childVariants,
   textVariants,
-  navVariants,
-  leftLinkVariants,
-  rightLinkVariants,
 } from '@/utils/framerVariants'
+import CustomButton from '../CustomButton'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Gallery',
   description: 'Best surf shots',
 }
-
-const MotionLink = motion(Link)
 
 const GalleryLayout = ({ children }) => {
   const router = useRouter()
@@ -58,40 +54,24 @@ const GalleryLayout = ({ children }) => {
           variants={childVariants}
           className='mt-5 w-full md:my-5 md:w-2/3'
         >
-          <motion.nav
+          <nav
             id='gallery-navigation'
-            className='flex w-full items-center justify-around text-lg font-bold dark:text-stone-100'
+            className='my-4 flex w-full items-center justify-around text-lg font-bold dark:text-stone-100'
             aria-label='gallery-navigation'
-            variants={navVariants}
           >
-            <MotionLink
+            <CustomButton
+              className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
               href='/gallery'
-              variants={leftLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl
-              bg-gradient-to-r from-cyan-500 to-blue-500
-              py-1
-              text-center font-bold md:py-3
-              md:text-2xl md:font-extrabold ${
-                !isVideoTab ? 'font-bold' : 'font-extrabold ring-blue-500'
-              } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
             >
               Photos
-            </MotionLink>
-
-            <MotionLink
+            </CustomButton>
+            <CustomButton
+              className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
               href='/gallery/videos'
-              variants={rightLinkVariants}
-              className={`my-3 min-w-[45%] rounded-3xl
-              bg-gradient-to-r from-cyan-500 to-blue-500
-              py-1
-              text-center font-bold md:py-3
-              md:text-2xl md:font-extrabold ${
-                isVideoTab ? 'font-extrabold ring-blue-500' : 'font-bold'
-              } text-stone-100 outline-none ring-2 hover:ring-blue-500`}
             >
               Videos
-            </MotionLink>
-          </motion.nav>
+            </CustomButton>
+          </nav>
         </motion.div>
 
         <hr className='mb-3'></hr>

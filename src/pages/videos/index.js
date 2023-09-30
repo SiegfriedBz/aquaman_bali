@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import PhotoVideoLayout from '@/components/layouts/photoVideoLayout'
 import { photoVideo } from '@/data/videoPageImages'
@@ -10,7 +9,7 @@ const Videos = ({ photoVideoImg }) => {
   return (
     <section
       id='photo-video'
-      className='mb-2 scroll-mt-[14rem] md:scroll-mt-[21rem]'
+      className='mb-2 scroll-mt-[16rem] md:scroll-mt-[21rem]'
     >
       <h2
         className='mb-1 
