@@ -143,7 +143,7 @@ const Footer = () => {
         </h2>
 
         {/* credits */}
-        {/* <a
+        <a
           href='https://api.whatsapp.com/send/?phone=41767294354&text&type=phone_number&app_absent=0'
           target='_blank'
         >
@@ -160,7 +160,7 @@ const Footer = () => {
               <span className='underline underline-offset-2'>SiegfriedB</span>
             </span>
           </span>
-        </a> */}
+        </a>
       </section>
     </footer>
   )
