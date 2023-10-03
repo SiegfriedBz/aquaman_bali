@@ -81,8 +81,8 @@ export const LessonsPageDetails = () => {
         <li className='list-disc md:text-xl'>Video analysis</li>
       </ul>
 
-      <div className='mx-auto mb-4 mt-5 flex flex-col items-center'>
-        <CustomLink className='my-3 px-8 py-4' />
+      <div className='mx-auto my-3 flex flex-col items-center'>
+        <CustomLink />
       </div>
     </>
   )

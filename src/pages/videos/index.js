@@ -7,10 +7,7 @@ import { VideosPageMain } from '@/components/VideosPageMain'
 
 const Videos = ({ photoVideoImg }) => {
   return (
-    <section
-      id='photo-video'
-      className='mb-2 scroll-mt-[16rem] md:scroll-mt-[21rem]'
-    >
+    <section id='photo-video' className='scroll-mt-[15rem]'>
       <h2
         className='mb-1 
           text-center text-2xl font-bold
@@ -28,7 +25,7 @@ const Videos = ({ photoVideoImg }) => {
         </Link>
       </p>
 
-      <div className='mx-2 mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-900 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
+      <div className='mb-3 flex flex-col items-center justify-center rounded-xl border border-solid border-slate-900 p-3 hover:border-blue-400 dark:border-gray-200 dark:hover:border-blue-400'>
         <VideosPageMain image={photoVideoImg}>
           <VideosPageMain.Details>
             <p className='self-start font-bold dark:text-stone-100'>
@@ -56,7 +53,7 @@ const Videos = ({ photoVideoImg }) => {
               uploaded on WeTransfer for you to download on the same day.
             </p>
 
-            <CustomLink className='mt-6 px-8 py-4' />
+            <CustomLink />
           </VideosPageMain.Details>
         </VideosPageMain>
       </div>

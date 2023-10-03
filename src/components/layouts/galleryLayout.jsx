@@ -7,7 +7,6 @@ import {
   childVariants,
   textVariants,
 } from '@/utils/framerVariants'
-import CustomLink from '../CustomLink'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Gallery',
@@ -32,12 +31,12 @@ const GalleryLayout = ({ children }) => {
         initial='hidden'
         animate='visible'
         id='gallery'
-        className='mb-3 flex w-full scroll-mt-20 flex-col items-center justify-center'
+        className='flex w-full scroll-mt-20 flex-col items-center justify-center md:mb-5'
       >
         <motion.h1
           variants={textVariants}
-          className='text-center text-2xl font-bold text-slate-900
-          dark:text-stone-100 md:my-0
+          className='text-center text-3xl font-bold text-slate-900
+          dark:text-stone-100
             md:text-5xl'
         >
           Gallery
@@ -45,43 +44,60 @@ const GalleryLayout = ({ children }) => {
 
         <motion.h2
           variants={textVariants}
-          className='text-center text-xl text-slate-900 dark:text-stone-100'
+          className='mt-2 text-center text-xl text-slate-900 dark:text-stone-100 md:text-2xl'
         >
           Explore our best Photos & Videos
         </motion.h2>
 
         <motion.div
           variants={childVariants}
-          className='mt-5 w-full md:my-5 md:w-2/3'
+          className='my-5 w-full md:my-8 md:w-2/3'
         >
           <nav
             id='gallery-navigation'
-            className='my-4 flex w-full items-center justify-center gap-8 text-lg font-bold dark:text-stone-100 md:gap-16'
+            className='flex
+            w-full items-center justify-center gap-x-3
+            text-lg text-stone-100
+              md:text-xl lg:text-2xl'
             aria-label='gallery-navigation'
           >
-            <CustomLink
-              className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
+            <Link
+              className={`w-1/2 rounded-lg border
+                bg-gradient-to-r from-cyan-500 to-blue-500
+                ${
+                  !isVideoTab
+                    ? 'border-cyan-500 font-extrabold dark:border-stone-100'
+                    : 'border-blue-500 font-bold'
+                }
+                px-2 py-2
+                text-center md:w-[32%] md:px-16 md:py-4`}
               href='/gallery'
             >
               Photos
-            </CustomLink>
-            <CustomLink
-              className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
+            </Link>
+            <Link
+              className={`w-1/2 rounded-lg border
+                bg-gradient-to-r from-cyan-500 to-blue-500
+                ${
+                  isVideoTab
+                    ? 'border-cyan-500 font-extrabold dark:border-stone-100'
+                    : 'border-blue-500 font-bold'
+                }
+                px-2 py-2
+                text-center md:w-[32%] md:px-16 md:py-4`}
               href='/gallery/videos'
             >
               Videos
-            </CustomLink>
+            </Link>
           </nav>
         </motion.div>
 
-        <hr className='mb-3'></hr>
-
-        <motion.div variants={childVariants} className='mx-2'>
+        <motion.div variants={childVariants} className='md:mb-5'>
           {!isVideoTab ? children : null}
         </motion.div>
       </motion.section>
 
-      {isVideoTab && <div className='mx-2'>{children}</div>}
+      {isVideoTab && <div className='md:mb-5'>{children}</div>}
     </>
   )
 }

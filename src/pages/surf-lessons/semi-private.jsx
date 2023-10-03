@@ -8,14 +8,14 @@ const SemiPrivate = ({ groupLessonsImg }) => {
   return (
     <section
       id='semi-private'
-      className='mb-2 scroll-mt-[12rem] md:scroll-mt-[16rem]'
+      className='mb-2 scroll-mt-[11rem] md:scroll-mt-[15rem]'
     >
       <h2
         className='mb-2 text-center text-2xl font-bold 
-          text-slate-900  dark:text-stone-100
+          text-slate-900 dark:text-stone-100
             md:text-3xl'
       >
-        Semi-Private Surf Lessons
+        Semi-Private Lessons
       </h2>
       <p className='mb-2 text-center md:text-2xl'>1 Coach & 2 Guests</p>
 

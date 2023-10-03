@@ -49,11 +49,11 @@ export const sideSlideVariants = {
 
 export const buttonVariants = {
   inView: {
-    scale: 1.1,
+    scale: 1.05,
     transition: { duration: 3, type: 'spring', stiffness: 180 },
   },
   hover: {
-    scale: 1.15,
+    scale: 1.1,
     transition: { duration: 3, type: 'spring', stiffness: 180 },
   },
 }
