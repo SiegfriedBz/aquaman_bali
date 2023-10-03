@@ -9,7 +9,7 @@ export const LessonsPageMain = ({ images, children }) => {
           <CustomCarousel
             images={images}
             carouselKey='private-lessons'
-            carouselClasses='mb-2 h-72 md:h-[30rem]'
+            carouselClasses='mb-5 h-72 md:h-[30rem]'
             imageClasses='h-full w-full md:w-11/12 rounded-xl object-cover shadow-2xl mx-auto'
             priority={true}
           />
@@ -19,7 +19,7 @@ export const LessonsPageMain = ({ images, children }) => {
       <LessonsPageMain.Prices>
         <div className='flex flex-col-reverse items-center justify-center'>
           {children}
-          <CustomLink className='mt-6 px-8 py-4' />
+          <CustomLink />
         </div>
       </LessonsPageMain.Prices>
     </div>

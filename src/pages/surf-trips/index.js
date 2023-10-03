@@ -106,7 +106,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 all levels. However, during high surf conditions, the coral and
                 sand beaches can become hazardous.
               </p>
-              <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
+              <div className='my-3 flex w-full flex-col items-center md:my-8 md:mb-0 md:mt-4'>
                 <CustomLink />
               </div>
             </Destination.TextBottom>
@@ -146,7 +146,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 journey from Canggu takes a maximum of 2 hours by car or
                 motorbike.
               </p>
-              <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
+              <div className='my-3 flex w-full flex-col items-center md:my-8 md:mb-0 md:mt-4'>
                 <CustomLink />
               </div>
             </Destination.TextBottom>
@@ -184,7 +184,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 The journey from Canggu to Balangan takes approximately 1.5
                 hour, depending on traffic.
               </p>
-              <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
+              <div className='my-3 flex w-full flex-col items-center md:my-8 md:mb-0 md:mt-4'>
                 <CustomLink />
               </div>
             </Destination.TextBottom>
@@ -233,7 +233,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 Dreamland Beach, and Balangan Beach. The journey from Canggu can
                 take up to 1.5 hours.
               </p>
-              <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
+              <div className='my-3 flex w-full flex-col items-center md:my-8 md:mb-0 md:mt-4'>
                 <CustomLink />
               </div>
             </Destination.TextBottom>
@@ -275,7 +275,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 seeking an adventure will enjoy Serangan. The journey from
                 Canggu takes about 1.5 hours, depending on traffic.
               </p>
-              <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
+              <div className='my-3 flex w-full flex-col items-center md:my-8 md:mb-0 md:mt-4'>
                 <CustomLink />
               </div>
             </Destination.TextBottom>
@@ -314,7 +314,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 hour by fast boat. Nusa Penida, nearby, is also fantastic for
                 surfing and relaxation.
               </p>
-              <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
+              <div className='my-3 flex w-full flex-col items-center md:my-8 md:mb-0 md:mt-4'>
                 <CustomLink />
               </div>
             </Destination.TextBottom>
@@ -355,7 +355,7 @@ const SurfTrips = ({ surfTripImg, mapMarkers }) => {
                 Airport to Lombok International Airport. Lombok is an excellent
                 choice for surfers of all levels.
               </p>
-              <div className='mb-10 flex w-full flex-col items-center md:mb-0 md:mt-4'>
+              <div className='my-3 flex w-full flex-col items-center md:my-8 md:mb-0 md:mt-4'>
                 <CustomLink />
               </div>
             </Destination.TextBottom>
@@ -379,8 +379,8 @@ const SurfTripsHeader = () => {
     >
       <motion.h2
         variants={textVariants}
-        className='text-center text-2xl font-bold text-slate-900
-        dark:text-stone-100 md:my-0
+        className='text-center text-3xl font-bold text-slate-900
+        dark:text-stone-100
           md:text-5xl'
       >
         Surf Trips
