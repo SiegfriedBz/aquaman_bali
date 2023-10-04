@@ -65,8 +65,8 @@ const WeatherReport = ({ data }) => {
             <Area
               type='monotone'
               dataKey='waveHeight'
-              stroke='#8884d8'
-              fill='#8884d8'
+              stroke='#22d3ee'
+              fill='#22d3ee'
             />
           </AreaChart>
         </ResponsiveContainer>
@@ -101,8 +101,8 @@ const WeatherReport = ({ data }) => {
             <Area
               type='monotone'
               dataKey='wavePeriod'
-              stroke='#8884d8'
-              fill='#8884d8'
+              stroke='#22d3ee'
+              fill='#22d3ee'
             />
           </AreaChart>
         </ResponsiveContainer>
