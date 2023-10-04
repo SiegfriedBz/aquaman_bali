@@ -8,7 +8,7 @@ const Gallery = ({ galleryImg }) => {
   const imageId = useId()
 
   return (
-    <div className='mt-3 grid grid-cols-1 gap-4 md:grid-cols-4'>
+    <div className='mt-3 grid grid-cols-1 gap-4 md:scroll-mt-[15rem] md:grid-cols-4'>
       {galleryImg.map((image, index) => {
         return (
           <div key={`${imageId}-${image.src}`} className='h-72'>

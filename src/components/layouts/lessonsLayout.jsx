@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 import { CldVideoPlayer } from 'next-cloudinary'
 import { motion } from 'framer-motion'
 import {
@@ -7,7 +9,6 @@ import {
   childVariants,
   textVariants,
 } from '@/utils/framerVariants'
-import CustomLink from '../CustomLink'
 
 const meta = {
   title: 'Aquaman Bali | Surf School | Surf Lessons',
@@ -16,6 +17,9 @@ const meta = {
 }
 
 const LessonsLayout = ({ children }) => {
+  const router = useRouter()
+  const isSemiPrivateTab = router.asPath.includes('semi-private')
+
   return (
     <div>
       <Head>
@@ -30,12 +34,12 @@ const LessonsLayout = ({ children }) => {
         initial='hidden'
         animate='visible'
         id='surf-lessons'
-        className='mb-3 flex w-full scroll-mt-20 flex-col items-center justify-center'
+        className='mb-3 flex w-full scroll-mt-20 flex-col items-center justify-center md:mb-5'
       >
         <motion.h1
           variants={textVariants}
-          className='text-center text-2xl font-bold text-slate-900
-          dark:text-stone-100 md:mb-5
+          className='text-center text-3xl font-bold text-slate-900
+          dark:text-stone-100
             md:text-5xl'
         >
           Surf Lessons
@@ -43,7 +47,7 @@ const LessonsLayout = ({ children }) => {
 
         <motion.h2
           variants={textVariants}
-          className='text-center text-xl text-slate-900 dark:text-stone-100 md:mb-5 md:text-3xl'
+          className='mt-2 text-center text-xl text-slate-900 dark:text-stone-100 md:text-2xl'
         >
           in Canggu & during your{' '}
           <span>
@@ -58,34 +62,51 @@ const LessonsLayout = ({ children }) => {
 
         <motion.div
           variants={childVariants}
-          className='mt-5 w-full md:my-5 md:w-2/3'
+          className='my-5 w-full md:my-8 md:w-2/3'
         >
           <nav
             id='lessons-navigation'
-            className='my-4 flex w-full items-center justify-center gap-x-8 text-lg font-bold dark:text-stone-100 md:gap-16'
+            className='flex
+             w-full items-center justify-center gap-x-3
+             text-lg text-stone-100
+               md:text-xl lg:text-2xl'
             aria-label='lessons-navigation'
           >
-            <CustomLink
-              className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
+            <Link
+              className={`w-1/2 rounded-lg border
+              bg-gradient-to-r from-cyan-500 to-blue-500
+              ${
+                !isSemiPrivateTab
+                  ? 'border-cyan-500 font-extrabold dark:border-stone-100'
+                  : 'border-blue-500 font-bold'
+              }
+              px-2 py-2
+               text-center md:w-[32%] md:px-16 md:py-4`}
               href='/surf-lessons#private'
             >
               Private
-            </CustomLink>
-            <CustomLink
-              className='w-[42%] px-2 py-2 md:w-[32%] md:px-16 md:py-4'
+            </Link>
+            <Link
+              className={`w-1/2 rounded-lg border
+              bg-gradient-to-r from-cyan-500 to-blue-500
+             ${
+               isSemiPrivateTab
+                 ? 'border-cyan-500 font-extrabold dark:border-stone-100'
+                 : 'border-blue-500 font-bold'
+             }
+             px-2 py-2
+              text-center md:w-[32%] md:px-16 md:py-4`}
               href='/surf-lessons/semi-private#semi-private'
             >
               Semi-Private
-            </CustomLink>
+            </Link>
           </nav>
         </motion.div>
 
-        <motion.div variants={childVariants} className='my-3'>
-          {children}
-        </motion.div>
+        <motion.div variants={childVariants}>{children}</motion.div>
       </motion.section>
 
-      <div className='mb-5 px-2'>
+      <div className='md:mb-5'>
         <CldVideoPlayer
           id='rendy-teach-video-01'
           width='1920'

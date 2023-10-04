@@ -5,7 +5,7 @@ import { buttonVariants } from '@/utils/framerVariants'
 const MotionLink = motion(Link)
 
 const CustomLink = ({
-  className = 'mt-8 px-8 py-4',
+  className = '',
   href = 'https://api.whatsapp.com/send/?phone=6282289427321&text&type=phone_number&app_absent=0',
   children = 'Book now',
   variants = buttonVariants,
@@ -17,12 +17,15 @@ const CustomLink = ({
       whileHover='hover'
       viewport={{ margin: '-75px' }}
       className={`
-      rounded-3xl bg-gradient-to-r from-cyan-500
+        mt-4 rounded-xl bg-gradient-to-r
+      from-cyan-500
       to-blue-500
-      text-center font-extrabold
-      text-stone-100 outline-none
-      ring-2 hover:ring-blue-500 active:ring-blue-500
-       md:text-lg ${className}`}
+        px-16 py-4
+        text-center text-xl
+        font-extrabold text-stone-100 outline-none
+        ring-2 
+      hover:ring-blue-500 active:ring-blue-500
+        md:text-2xl ${className}`}
       href={href}
       target={children == 'Book now' ? '_blank' : '_self'}
     >

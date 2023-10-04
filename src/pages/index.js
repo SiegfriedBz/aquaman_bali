@@ -62,16 +62,16 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             <motion.h1
               variants={textVariants}
               className='mb-2 bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text
-                py-1 text-center text-3xl font-extrabold text-transparent
-                md:mb-0 md:text-5xl lg:text-7xl'
+                py-1 text-center text-4xl font-extrabold text-transparent
+                md:mb-0 md:text-6xl lg:text-7xl'
             >
               Upgrade
             </motion.h1>
             <motion.h2
               className='mb-2 bg-gradient-to-r
                from-cyan-500 to-blue-500 bg-clip-text py-1
-                text-center text-3xl font-extrabold text-transparent
-                md:mb-0 md:text-5xl lg:text-6xl'
+                text-center text-4xl font-extrabold text-transparent
+                md:mb-0 md:text-6xl lg:text-6xl'
               variants={textVariants}
             >
               Your Surfing Skills
@@ -113,7 +113,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             >
               Best Surf School in Bali
             </h3>
-            <CustomLink className='mt-3 px-8 py-4' />
+            <CustomLink />
           </motion.div>
         </motion.section>
 
@@ -128,7 +128,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               variants={sideSlideVariants}
               initial={!aboutIsInView && 'hidden'}
               animate={aboutIsInView && 'visible'}
-              className='text-center text-2xl font-bold text-slate-900
+              className='text-center text-3xl font-bold text-slate-900
               dark:text-stone-100 md:mb-0
                 md:text-5xl'
             >
@@ -173,7 +173,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               variants={sideSlideVariants}
               initial={!testimonialsIsInView && 'hidden'}
               animate={testimonialsIsInView && 'visible'}
-              className='text-center text-2xl font-bold text-slate-900
+              className='text-center text-3xl font-bold text-slate-900
               dark:text-stone-100 md:mb-0
                 md:text-5xl'
             >
@@ -185,7 +185,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
             <Testimonials />
           </div>
 
-          <div className='my-0 flex flex-col items-center'>
+          <div className='mb-4 flex flex-col items-center'>
             <TestimonialsLinks />
           </div>
 
@@ -205,7 +205,7 @@ export default function Home({ heroImg, aboutMeImg, mapMarkers }) {
               variants={sideSlideVariants}
               initial={!visitIsInView && 'hidden'}
               animate={visitIsInView && 'visible'}
-              className='mb-3 text-center text-2xl font-bold
+              className='mb-3 text-center text-3xl font-bold
               text-slate-900 dark:text-stone-100
               md:text-5xl'
             >
