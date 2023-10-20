@@ -1,11 +1,11 @@
+import Head from 'next/head'
+import Script from 'next/script'
 import '@/styles/globals.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 import RootLayout from '@/components/layouts/rootLayout'
 import generateSocialImage from '../utils/generateSocialImage'
-import Head from 'next/head'
-import { Analytics } from '@vercel/analytics/react'
 
 const socialImageConf = generateSocialImage({
   title: 'Aquaman Bali',
@@ -25,7 +25,18 @@ export default function App({ Component, pageProps }) {
       <RootLayout imageUrl={socialImageConf}>
         <Layout>
           <Component {...pageProps} />
-          <Analytics />
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=G-E75E97WX66`}
+          />
+          <Script id='google-analytics'>
+            {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-E75E97WX66');
+        `}
+          </Script>
         </Layout>
       </RootLayout>
     </>
