@@ -36,22 +36,22 @@ const SemiPrivate = ({ groupLessonsImg }) => {
             </p>
             <p className='w-full text-lg font-bold md:text-center'>
               <span className='text-xl md:text-2xl'>2 hours: </span>
-              650K IDR (USD 42)
+              750K IDR (USD 52)
             </p>
             <br />
             <p className='mt-2 w-full text-2xl font-bold md:text-center md:text-3xl'>
-              🏄‍♀️ 🏄‍♀️ 🏄‍♀️ <span className='mt-2 block'> 3 Surf Lessons</span>
+              🏄‍♀️ 🏄‍♀️ 🏄‍♀️ <span className='mt-2 block'> 5 Surf Lessons</span>
             </p>
 
             <p className='w-full text-lg font-bold md:text-center md:text-2xl'>
               Total for 2 Guests
             </p>
             <p className='w-full text-lg font-bold md:text-center'>
-              <span className='text-xl md:text-2xl'>3 * 2 hours: </span>
-              1.9M IDR (USD 123)
+              <span className='text-xl md:text-2xl'>5 * 2 hours: </span>
+              3.25M IDR (USD 224)
             </p>
             <p className='my-2 w-full text-lg md:text-center'>
-              The 3 sessions can be splitted as you wish, but must be completed
+              The 5 sessions can be splitted as you wish, but must be completed
               within 1 month.
             </p>
           </LessonsPageMain.Prices>
